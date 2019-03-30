@@ -17,12 +17,6 @@
 #include <SFML/Audio.h>
 #include <SFML/Window.h>
 
-typedef struct window {
-    sfRenderWindow *window;
-    sfVector2f position;
-    sfView *view;
-} window_t;
-
 typedef struct game_object {
     int state;
     int hp;
@@ -63,11 +57,11 @@ typedef struct game_scene {
 } game_scene_t;
 
 typedef struct game_inventory {
-    
+
 } game_inventory_t;
 
 typedef struct game_quest {
-    
+
 } game_quest_t;
 
 typedef struct game_stat {
@@ -75,7 +69,9 @@ typedef struct game_stat {
 } game_stat_t;
 
 typedef struct game_setting {
-
+    sfRenderWindow *window;
+    sfVector2f map_position;
+    sfView *map_view;
 } game_setting_t;
 
 typedef struct game {

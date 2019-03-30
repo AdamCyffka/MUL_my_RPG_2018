@@ -2,14 +2,14 @@
 ** EPITECH PROJECT, 2019
 ** RPG
 ** File description:
-** make scenes
+** new content
 */
 
 #include "rpg.h"
 #include "struct.h"
 
 game_text_t new_text(const char *path_to_font, const char *towrite,
-            sfVector2f pos, int size)
+sfVector2f pos, int size)
 {
     game_text_t text;
 
@@ -23,7 +23,7 @@ game_text_t new_text(const char *path_to_font, const char *towrite,
 }
 
 game_button_t new_button(const char *path_to_img,
-            sfVector2f pos, sfIntRect rect)
+sfVector2f pos, sfIntRect rect)
 {
     game_button_t button;
 
@@ -53,7 +53,7 @@ game_sound_t new_sound(const char *path_to_sound, sfBool state, float volume)
 }
 
 game_object_t new_object(const char *path_to_spsheet,
-            sfVector2f pos, sfIntRect rect, float speed)
+sfVector2f pos, sfIntRect rect, float speed)
 {
     game_object_t obj;
 
