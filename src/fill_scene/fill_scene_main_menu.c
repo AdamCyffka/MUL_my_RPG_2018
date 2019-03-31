@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2019
 ** RPG
 ** File description:
-** fill scene exit
+** fill scene main menu
 */
 
 #include "rpg.h"

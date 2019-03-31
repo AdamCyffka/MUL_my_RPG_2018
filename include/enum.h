@@ -8,9 +8,9 @@
 #ifndef ENUM_H_
 #define ENUM_H_
 
-enum scene {main_EXIT, town, boss, forest, beach, camp};
+enum scene {main_menu, town, boss, forest, beach, camp};
 
-enum main_EXIT {LEFT_B_S0, RIGHT_B_S0, OK_B_S0, CLOSE_B_S0, CREDITS_B_S0,
+enum main_menu {LEFT_B_S0, RIGHT_B_S0, OK_B_S0, CLOSE_B_S0, CREDITS_B_S0,
 LOAD_B_S0, EXIT_B_S0, BACK_B_S0, NEW_B_S0, NAME_T_S0, MUSIC_S_S0, CLICK_S_S0,
 BG_O_S0, BG1_O_S0, BG2_O_S0, CLOUD1_O_S0, CLOUD2_O_S0, FLAMINGO_O_S0, LOGO_O_S0,
 HTW_O_S0, CHOOSE_O_S0, CURSOR_O_S0};

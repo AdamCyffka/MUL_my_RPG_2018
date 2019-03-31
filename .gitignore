@@ -3,6 +3,7 @@
 
 # binary
 my_rpg
+v_sync.c
 ### C ###
 # Prerequisites
 *.d

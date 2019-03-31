@@ -33,6 +33,7 @@ void fill_scene_camp2(game_scene_t camp);
 void fill_scene_camp3(game_scene_t camp);
 void fill_scene_forest1(game_scene_t forest);
 void fill_scene_forest2(game_scene_t forest);
+void fill_scene_forest3(game_scene_t forest);
 void fill_scene_main_menu1(game_scene_t main_menu);
 void fill_scene_main_menu2(game_scene_t main_menu);
 void fill_scene_main_menu3(game_scene_t main_menu);

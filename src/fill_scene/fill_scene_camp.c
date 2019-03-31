@@ -51,7 +51,7 @@ void fill_scene_camp2(game_scene_t camp)
     camp.objs[ME_O_S5] = new_object("assets/me.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
     camp.objs[CAMP_O_S5] = new_object("assets/map_camp.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1217, 538}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1637, 985}, 0);
     camp.objs[MINIMAP_O_S5] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
 }
