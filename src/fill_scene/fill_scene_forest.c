@@ -30,6 +30,7 @@ void fill_scene_forest3(game_scene_t forest)
     (sfVector2f) {425, 45}, 16);
     forest.texts[NAME_T_S3] = new_text("assets/font.ttf", "Name:",
     (sfVector2f) {425, 45}, 16);
+    fill_scene_forest2(forest);
 }
 
 void fill_scene_forest2(game_scene_t forest)
@@ -54,6 +55,7 @@ void fill_scene_forest2(game_scene_t forest)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 2878, 1536}, 0);
     forest.objs[MINIMAP_O_S3] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    fill_scene_forest1(forest);
 }
 
 void fill_scene_forest1(game_scene_t forest)

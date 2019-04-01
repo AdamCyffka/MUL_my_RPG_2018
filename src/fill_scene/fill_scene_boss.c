@@ -31,6 +31,7 @@ void fill_scene_boss3(game_scene_t boss)
     (sfVector2f) {425, 45}, 16);
     boss.texts[VSYNC_T_S2] = new_text("assets/font.ttf", "V-sync:",
     (sfVector2f) {425, 45}, 16);
+    fill_scene_boss2(boss);
 }
 
 void fill_scene_boss2(game_scene_t boss)
@@ -55,6 +56,7 @@ void fill_scene_boss2(game_scene_t boss)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
     boss.objs[ME_O_S2] = new_object("assets/me.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    fill_scene_boss1(boss);
 }
 
 void fill_scene_boss1(game_scene_t boss)

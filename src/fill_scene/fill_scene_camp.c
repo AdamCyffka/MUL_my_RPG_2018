@@ -30,6 +30,7 @@ void fill_scene_camp3(game_scene_t camp)
     (sfVector2f) {425, 45}, 16);
     camp.texts[NAME_T_S5] = new_text("assets/font.ttf", "Name:",
     (sfVector2f) {425, 45}, 16);
+    fill_scene_camp2(camp);
 }
 
 void fill_scene_camp2(game_scene_t camp)
@@ -54,6 +55,7 @@ void fill_scene_camp2(game_scene_t camp)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1637, 985}, 0);
     camp.objs[MINIMAP_O_S5] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    fill_scene_camp1(camp);
 }
 
 void fill_scene_camp1(game_scene_t camp)

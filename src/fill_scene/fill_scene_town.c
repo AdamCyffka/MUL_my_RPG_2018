@@ -30,6 +30,7 @@ void fill_scene_town4(game_scene_t town)
     (sfVector2f) {425, 45}, 16);
     town.texts[NAME_T_S1] = new_text("assets/font.ttf", "Name:",
     (sfVector2f) {425, 45}, 16);
+    fill_scene_town3(town);
 }
 
 void fill_scene_town3(game_scene_t town)
@@ -54,6 +55,7 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
     town.objs[PANNEL_O_S1] = new_object("assets/pannel.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 500, 500}, 0);
+    fill_scene_town2(town);
 }
 
 void fill_scene_town2(game_scene_t town)
@@ -78,6 +80,7 @@ void fill_scene_town2(game_scene_t town)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
     town.objs[MINIMAP_O_S1] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    fill_scene_town1(town);
 }
 
 void fill_scene_town1(game_scene_t town)

@@ -31,6 +31,7 @@ void fill_scene_main_menu3(game_scene_t main_menu)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 696, 375}, 0);
     main_menu.objs[CURSOR_O_S0] = new_object("assets/cursor.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
+    fill_scene_main_menu2(main_menu);
 }
 
 void fill_scene_main_menu2(game_scene_t main_menu)
@@ -55,6 +56,7 @@ void fill_scene_main_menu2(game_scene_t main_menu)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 226, 61}, 0);
     main_menu.texts[NAME_T_S0] = new_text("assets/font.ttf", "Name:",
     (sfVector2f) {0, 0}, 16);
+    fill_scene_main_menu1(main_menu);
 }
 
 void fill_scene_main_menu1(game_scene_t main_menu)

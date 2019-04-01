@@ -30,6 +30,7 @@ void fill_scene_beach3(game_scene_t beach)
     (sfVector2f) {425, 45}, 16);
     beach.texts[NAME_T_S4] = new_text("assets/font.ttf", "Name:",
     (sfVector2f) {425, 45}, 16);
+    fill_scene_beach2(beach);
 }
 
 void fill_scene_beach2(game_scene_t beach)
@@ -54,6 +55,7 @@ void fill_scene_beach2(game_scene_t beach)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1217, 538}, 0);
     beach.objs[MINIMAP_O_S4] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    fill_scene_beach1(beach);
 }
 
 void fill_scene_beach1(game_scene_t beach)
