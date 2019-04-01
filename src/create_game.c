@@ -11,7 +11,7 @@
 
 game_t *create_game(game_t *game)
 {
-    game->scenes = malloc(sizeof(game_scene_t) * 6);
+    game->scenes = malloc(sizeof(game_scene_t) * 8);
     create_scene(game->scenes);
     game->inventory = malloc(sizeof(game_inventory_t) * 4);
     create_inventory(game->inventory);
