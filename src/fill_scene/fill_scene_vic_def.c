@@ -15,11 +15,11 @@ void fill_scene_victory(game_scene_t victory)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, 0);
     victory.buttons[DESKTOP_B_S4] = new_button("assets/exit_desktop.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, 0);
-    victory.objs[VICTORY_O_S6] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
-    victory.objs[LOGO_O_S6] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
-    victory.objs[BG2_O_S6] = new_object("assets/cursor.png",
+    victory.objs[LOGO_O_S6] = new_object("assets/logo.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 266, 104}, 0);
+    victory.objs[BG2_O_S6] = new_object("assets/menu_bg3.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
+    victory.objs[CURSOR_O_S6] = new_object("assets/cursor.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
     victory.texts[VICTORY_T_S6] = new_text("assets/font.ttf", "GREAT, YOU WIN",
     (sfVector2f) {425, 45}, 16);
@@ -33,11 +33,11 @@ void fill_scene_defeat(game_scene_t defeat)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, 0);
     defeat.buttons[DESKTOP_B_S7] = new_button("assets/exit_desktop.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, 0);
-    defeat.objs[DEFEAT_O_S7] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
-    defeat.objs[LOGO_O_S7] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
-    defeat.objs[BG2_O_S7] = new_object("assets/cursor.png",
+    defeat.objs[LOGO_O_S7] = new_object("assets/logo.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 266, 104}, 0);
+    defeat.objs[BG2_O_S7] = new_object("assets/men_bg3.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
+    defeat.objs[CURSOR_O_S7] = new_object("assets/cursor.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
     defeat.texts[DEFEAT_T_S7] = new_text("assets/font.ttf", "YOU LOOSE",
     (sfVector2f) {425, 45}, 16);

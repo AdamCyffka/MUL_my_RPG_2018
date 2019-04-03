@@ -23,23 +23,13 @@ int my_rpg(void);
 
 //fill_scene
 void fill_scene_beach1(game_scene_t beach);
-void fill_scene_beach2(game_scene_t beach);
-void fill_scene_beach3(game_scene_t beach);
 void fill_scene_boss1(game_scene_t boss);
-void fill_scene_boss2(game_scene_t boss);
-void fill_scene_boss3(game_scene_t boss);
-void fill_scene_camp1(game_scene_t camp);
-void fill_scene_camp2(game_scene_t camp);
-void fill_scene_camp3(game_scene_t camp);
 void fill_scene_forest1(game_scene_t forest);
-void fill_scene_forest2(game_scene_t forest);
-void fill_scene_forest3(game_scene_t forest);
 void fill_scene_main_menu1(game_scene_t main_menu);
-void fill_scene_main_menu2(game_scene_t main_menu);
-void fill_scene_main_menu3(game_scene_t main_menu);
+void fill_scene_camp1(game_scene_t camp);
 void fill_scene_town1(game_scene_t town);
-void fill_scene_town2(game_scene_t town);
-void fill_scene_town3(game_scene_t town);
-void fill_scene_town4(game_scene_t town);
+void fill_scene_town6(game_scene_t town);
+void fill_scene_victory(game_scene_t victory);
+void fill_scene_defeat(game_scene_t defeat);
 
 #endif /* RPG_H_ */
