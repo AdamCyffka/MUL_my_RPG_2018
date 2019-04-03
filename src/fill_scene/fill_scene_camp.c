@@ -9,8 +9,18 @@
 #include "struct.h"
 #include "enum.h"
 
+void fill_scene_camp4(game_scene_t camp)
+{
+    camp.objs[ICON_O_S5] = new_object("assets/icon.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 56, 56}, 0);
+    camp.objs[CURSOR_O_S5] = new_object("assets/cursor.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
+}
+
 void fill_scene_camp3(game_scene_t camp)
 {
+    camp.texts[LIFE_T_S5] = new_text("assets/font.ttf", "Life:",
+    (sfVector2f) {425, 45}, 16);
     camp.objs[OPTION_O_S5] = new_object("assets/option.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
     camp.objs[INVENTORY_O_S5] = new_object("assets/inventory.png",
@@ -27,14 +37,13 @@ void fill_scene_camp3(game_scene_t camp)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
     camp.objs[QUEST_O_S5] = new_object("assets/quest.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, 0);
-    camp.objs[ICON_O_S5] = new_object("assets/icon.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 56, 56}, 0);
-    camp.objs[CURSOR_O_S5] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
+    fill_scene_camp3(camp);
 }
 
 void fill_scene_camp2(game_scene_t camp)
 {
+    camp.buttons[WALKABLE4_B_S5] = new_button("assets/invisible.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 548, 131}, 0);
     camp.buttons[WALKABLE5_B_S5] = new_button("assets/invisible.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 494, 150}, 0);
     camp.sounds[MUSIC_S_S5] = new_sound("assets/music_camp.ogg", sfFalse,
@@ -51,8 +60,6 @@ void fill_scene_camp2(game_scene_t camp)
     camp.texts[XP_T_S5] = new_text("assets/font.ttf", "XP:",
     (sfVector2f) {425, 45}, 16);
     camp.texts[POS_T_S5] = new_text("assets/font.ttf", "Position:",
-    (sfVector2f) {425, 45}, 16);
-    camp.texts[LIFE_T_S5] = new_text("assets/font.ttf", "Life:",
     (sfVector2f) {425, 45}, 16);
     fill_scene_camp3(camp);
 }
@@ -77,7 +84,5 @@ void fill_scene_camp1(game_scene_t camp)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1395, 256}, 0);
     camp.buttons[WALKABLE3_B_S5] = new_button("assets/invisible.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 740, 102}, 0);
-    camp.buttons[WALKABLE4_B_S5] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 548, 131}, 0);
     fill_scene_camp2(camp);
 }
