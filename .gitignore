@@ -8,6 +8,12 @@ v_sync.c
 # Prerequisites
 *.d
 *.vscode
+vgcore.*
+
+# LionduC
+CMakeLists.txt
+cmake-build-debug
+.idea
 
 # Object files
 *.o

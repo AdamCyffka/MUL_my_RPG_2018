@@ -17,7 +17,7 @@ void fill_scene_beach3(game_scene_t beach)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
     beach.objs[ME_O_S4] = new_object("assets/me.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
-    beach.objs[BEACH_O_S4] = new_object("assets/map_beach.png",
+    beach.objs[BEACH_O_S4] = new_object("assets/map_beach.jpg",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1217, 538}, 0);
     beach.objs[MINIMAP_O_S4] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
@@ -36,7 +36,7 @@ void fill_scene_beach2(game_scene_t beach)
     beach.sounds[MUSIC_S_S4] = new_sound("assets/music_beach.ogg", sfFalse,
     100);
     beach.sounds[CLICK_S_S4] = new_sound("assets/click.ogg", sfFalse, 100);
-    beach.sounds[WALK_S_S4] = new_sound("assets/walk_sand.ogg", sfFalse, 100);
+    beach.sounds[WALK_S_S4] = new_sound("assets/walk_beach.ogg", sfFalse, 100);
     beach.sounds[SWORD_S_S4] = new_sound("assets/swoosh.ogg", sfFalse, 100);
     beach.texts[VOLUME_T_S4] = new_text("assets/font.ttf", "Volume:",
     (sfVector2f) {425, 45}, 16);

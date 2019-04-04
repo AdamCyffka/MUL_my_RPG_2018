@@ -13,7 +13,7 @@ void fill_scene_forest4(game_scene_t forest)
 {
     forest.objs[ME_O_S3] = new_object("assets/me.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
-    forest.objs[FOREST_O_S3] = new_object("assets/forest.png",
+    forest.objs[FOREST_O_S3] = new_object("assets/map_forest.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 2878, 1536}, 0);
     forest.objs[MINIMAP_O_S3] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
@@ -69,7 +69,8 @@ void fill_scene_forest2(game_scene_t forest)
     forest.sounds[MUSIC_S_S3] = new_sound("assets/music_forest.ogg", sfFalse,
     100);
     forest.sounds[CLICK_S_S3] = new_sound("assets/click.ogg", sfFalse, 100);
-    forest.sounds[WALK_S_S3] = new_sound("assets/walk_grass.ogg", sfFalse, 100);
+    forest.sounds[WALK_S_S3] = new_sound("assets/walk_forest.ogg", sfFalse,
+        100);
     forest.sounds[SWORD_S_S3] = new_sound("assets/swoosh.ogg", sfFalse, 100);
     fill_scene_forest3(forest);
 }

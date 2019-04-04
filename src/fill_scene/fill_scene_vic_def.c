@@ -35,7 +35,7 @@ void fill_scene_defeat(game_scene_t defeat)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, 0);
     defeat.objs[LOGO_O_S7] = new_object("assets/logo.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 266, 104}, 0);
-    defeat.objs[BG2_O_S7] = new_object("assets/men_bg3.png",
+    defeat.objs[BG2_O_S7] = new_object("assets/menu_bg3.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     defeat.objs[CURSOR_O_S7] = new_object("assets/cursor.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);

@@ -65,10 +65,10 @@ typedef struct game_quest {
 } game_quest_t;
 
 typedef struct game_stat {
-    int current;
 } game_stat_t;
 
 typedef struct game_setting {
+    int current;
     sfRenderWindow *window;
     sfVector2f map_position;
     sfView *map_view;

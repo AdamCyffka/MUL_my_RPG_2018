@@ -13,16 +13,12 @@ void create_scenes(game_scene_t *scenes)
 {
     scenes[main_menu] = new_scene(10, 2, 9, 1);
     fill_scene_main_menu1(scenes[main_menu]);
-    puts("TRUE");
     scenes[town] = new_scene(19, 5, 23, 6);
     fill_scene_town1(scenes[town]);
-    puts("BITE");
     scenes[boss] = new_scene(12, 4, 23, 6);
     fill_scene_boss1(scenes[boss]);
-    puts("Enorme Queue");
     scenes[forest] = new_scene(10, 4, 17, 6);
     fill_scene_forest1(scenes[forest]);
-    puts("ADAM");
     scenes[beach] = new_scene(10, 4, 9, 6);
     fill_scene_beach1(scenes[beach]);
     scenes[camp] = new_scene(10, 4, 11, 6);
@@ -52,5 +48,5 @@ void create_settings(game_setting_t *settings)
         NULL);
     sfRenderWindow_setFramerateLimit(settings->window, 60);
     //sfRenderWindow_setVerticalSyncEnabled(settings->window, sfTrue);
-    sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
+    //sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }
