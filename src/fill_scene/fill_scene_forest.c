@@ -66,6 +66,8 @@ void fill_scene_forest2(game_scene_t forest)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 530, 74}, 0);
     forest.buttons[WALKABLE10_B_S3] = new_button("assets/invisible.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 328, 197}, 0);
+    forest.buttons[WALKABLE10_B_S3] = new_button("assets/invisible.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 328, 197}, 0);
     forest.sounds[MUSIC_S_S3] = new_sound("assets/music_forest.ogg", sfFalse,
     100);
     forest.sounds[CLICK_S_S3] = new_sound("assets/click.ogg", sfFalse, 100);
