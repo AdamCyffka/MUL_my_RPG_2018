@@ -40,6 +40,12 @@ void create_quests(game_quest_t *quests);
 void create_stats(game_stat_t *stats);
 void create_settings(game_setting_t *settings);
 
+//button_main_menu
+int button_is_clicked(game_setting_t *settings, sfVector2f pos, sfVector2f
+size);
+void button_menu(game_setting_t *settings, game_scene_t scenes, sfRenderWindow
+*window);
+
 //init
 void init_window(game_setting_t *params);
 game_t *create_game();

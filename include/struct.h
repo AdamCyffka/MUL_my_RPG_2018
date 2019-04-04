@@ -71,6 +71,8 @@ typedef struct game_setting {
     int current;
     sfRenderWindow *window;
     sfVector2f map_position;
+    sfVector2f cursor_pos;
+    bool _mouse;
     sfView *map_view;
     sfEvent event;
 } game_setting_t;

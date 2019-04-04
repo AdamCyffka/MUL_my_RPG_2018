@@ -19,6 +19,7 @@ SRCS	= 	src/main.c							\
 			src/my_rpg.c						\
 			src/new_content2.c					\
 			src/new_content.c					\
+			src/button_main_menu.c					\
 			src/fill_scene/fill_scene_beach.c		\
 			src/fill_scene/fill_scene_boss.c		\
 			src/fill_scene/fill_scene_camp.c		\

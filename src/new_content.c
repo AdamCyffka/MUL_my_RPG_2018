@@ -37,7 +37,8 @@ game_button_t new_button(const char *path_to_img,
     sfRectangleShape_setTexture(button.shape, button.texture, sfTrue);
     sfRectangleShape_setTextureRect(button.shape, button.rect);
     sfRectangleShape_setPosition(button.shape, pos);
-    sfRectangleShape_setSize(button.shape, (sfVector2f) {100, 100});
+    sfRectangleShape_setSize(button.shape, (sfVector2f) {rect.width, rect
+    .height});
     return (button);
 }
 
