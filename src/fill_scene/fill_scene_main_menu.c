@@ -12,7 +12,7 @@
 void fill_scene_main_menu3(game_scene_t main_menu)
 {
     main_menu.buttons[NEW_B_S0] = new_button("assets/button_new.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 226, 61}, 0);
+    (sfVector2f) {800, 500}, (sfIntRect) {0, 0, 300, 300}, 0);
     main_menu.texts[NAME_T_S0] = new_text("assets/font.ttf", "Name:",
     (sfVector2f) {0, 0}, 16);
     main_menu.sounds[MUSIC_S_S0] = new_sound("assets/music_menu.ogg", sfFalse,
@@ -33,13 +33,13 @@ void fill_scene_main_menu2(game_scene_t main_menu)
     main_menu.buttons[CLOSE_B_S0] = new_button("assets/close.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, 0);
     main_menu.buttons[CREDITS_B_S0] = new_button("assets/button_credits.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 22, 25}, 0);
+    (sfVector2f) {800, 10}, (sfIntRect) {0, 0, 22, 25}, 0);
     main_menu.buttons[LOAD_B_S0] = new_button("assets/button_load.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 226, 61}, 0);
+    (sfVector2f) {100, 900}, (sfIntRect) {0, 0, 226, 61}, 0);
     main_menu.buttons[EXIT_B_S0] = new_button("assets/button_exit.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 226, 61}, 0);
+    (sfVector2f) {200, 500}, (sfIntRect) {0, 0, 226, 61}, 0);
     main_menu.buttons[BACK_B_S0] = new_button("assets/button_back.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 202, 30}, 0);
+    (sfVector2f) {1000, 500}, (sfIntRect) {0, 0, 202, 30}, 0);
     fill_scene_main_menu3(main_menu);
 }
 
@@ -58,7 +58,7 @@ void fill_scene_main_menu1(game_scene_t main_menu)
     main_menu.objs[FLAMINGO_O_S0] = new_object("assets/flamingo.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 104, 26}, 0);
     main_menu.objs[LOGO_O_S0] = new_object("assets/logo.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 266, 104}, 0);
+    (sfVector2f) {830, 10}, (sfIntRect) {0, 0, 266, 104}, 0);
     main_menu.objs[HTW_O_S0] = new_object("assets/howtoplay.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1289, 708}, 0);
     main_menu.objs[CHOOSE_O_S0] = new_object("assets/choose.png",
