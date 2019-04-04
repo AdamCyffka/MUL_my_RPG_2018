@@ -28,7 +28,11 @@ void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 void draw_scene(game_scene_t scene, sfRenderWindow *window, int state)
 {
     //for (int i = 0; i < 5; i++)
+    sfRenderWindow_drawSprite(window, scene.objs[BG2_O_S0].sprite, NULL);
     sfRenderWindow_drawSprite(window, scene.objs[LOGO_O_S0].sprite, NULL);
+    for (int i = 4; i < 7; i++)
+        sfRenderWindow_drawRectangleShape(window, scene.buttons[i].shape, NULL);
+    sfRenderWindow_drawRectangleShape(window, scene.buttons[NEW_B_S0].shape, NULL);
 }
 
 int my_rpg(void)
