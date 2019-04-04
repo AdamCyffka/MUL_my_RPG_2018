@@ -23,7 +23,7 @@ sfVector2f pos, int size)
 }
 
 game_button_t new_button(const char *path_to_img,
-sfVector2f pos, sfIntRect rect)
+    sfVector2f pos, sfIntRect rect, int state)
 {
     game_button_t button;
 
@@ -31,7 +31,7 @@ sfVector2f pos, sfIntRect rect)
     button.texture = sfTexture_createFromFile(path_to_img, NULL);
     button.position = pos;
     button.rect = rect;
-    button.state = 0;
+    button.state = state;
     button.content = 0;
     button.action = 0;
     sfRectangleShape_setTexture(button.shape, button.texture, sfTrue);

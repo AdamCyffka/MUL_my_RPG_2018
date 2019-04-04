@@ -8,15 +8,16 @@
 #include "rpg.h"
 #include "struct.h"
 
-void init_params(window_t *params)
+void init_params(game_setting_t *params)
 {
     sfVideoMode mode = {1920, 1080, 32};
-    params->window = sfRenderWindow_create
-    (mode, "TRASHDEW VALLEY", sfClose, NULL);
+    params->window = sfRenderWindow_create(mode, "TRASHDEW VALLEY", sfClose,
+                                           NULL);
 }
 
-void init_window(window_t *params)
+void init_window(game_setting_t *params)
 {
-    sfRenderWindow_setFramerateLimit(params->window, 60);
+    init_params(params);
+    sfRenderWindow_setVerticalSyncEnabled(params->window, sfTrue);
     sfRenderWindow_setMouseCursorVisible(params->window, sfFalse);
 }

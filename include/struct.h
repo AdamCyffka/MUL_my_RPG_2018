@@ -13,9 +13,9 @@
 #define false 0
 
 #include <SFML/Graphics.h>
-#include <SFML/System.h>
-#include <SFML/Audio.h>
-#include <SFML/Window.h>
+    #include <SFML/System.h>
+    #include <SFML/Audio.h>
+    #include <SFML/Window.h>
 
 typedef struct game_object {
     int state;
@@ -65,13 +65,14 @@ typedef struct game_quest {
 } game_quest_t;
 
 typedef struct game_stat {
-
+    int current;
 } game_stat_t;
 
 typedef struct game_setting {
     sfRenderWindow *window;
     sfVector2f map_position;
     sfView *map_view;
+    sfEvent event;
 } game_setting_t;
 
 typedef struct game {
