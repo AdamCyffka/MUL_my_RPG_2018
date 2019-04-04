@@ -27,17 +27,25 @@ void game_change(game_setting_t *settings, game_scene_t *scenes, sfRenderWindow
 
 void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 {
-    settings->current = main_menu;
+    settings->current = town;
 }
 
-void draw_scene(game_scene_t scene, sfRenderWindow *window, int state)
+void draw_scene(game_scene_t scene, sfRenderWindow *window, game_stat_t *stats)
 {
-    sfRenderWindow_drawSprite(window, scene.objs[BG2_O_S0].sprite, NULL);
-    sfRenderWindow_drawSprite(window, scene.objs[LOGO_O_S0].sprite, NULL);
-    for (int i = 4; i < 7; i++)
-        sfRenderWindow_drawRectangleShape(window, scene.buttons[i].shape, NULL);
-    sfRenderWindow_drawRectangleShape(window, scene.buttons[NEW_B_S0].shape,
+    /*for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
+        if (scene.objs[tmp].speed >= 0)
+            sfRenderWindow_drawSprite(window, scene.objs[tmp].sprite, NULL);
+    //for (int tmp = 0; tmp < scene.how_many[1]; tmp++)
+        //sfMusic_play(scene.sounds[tmp].music);
+    for (int tmp = 0; tmp < scene.how_many[2]; tmp++)
+        sfRenderWindow_drawRectangleShape(window, scene.buttons[tmp].shape,
         NULL);
+    for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
+        sfRenderWindow_drawText(window, scene.texts[tmp].text, NULL);*/
+    sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
+    sfSprite_setScale(scene.objs[TOWN_O_S1].sprite, (sfVector2f) {3.5, 3.5});
+    sfRenderWindow_drawSprite(window, scene.objs[TOWN_O_S1].sprite, NULL);
+    sfRenderWindow_drawSprite(window, stats->player.sprite, NULL);
 }
 
 int my_rpg(void)
@@ -49,11 +57,11 @@ int my_rpg(void)
         sfRenderWindow_clear(game->settings->window, sfBlack);
         scene_selection(game->settings, game->scenes);
         game_change(game->settings, game->scenes,
-            game->settings->window);
-        draw_scene(game->scenes[main_menu] , game->settings->window,
-                   game->settings->current);
+        game->settings->window);
+        draw_scene(game->scenes[game->settings->current],
+        game->settings->window, game->stats);
         while (sfRenderWindow_pollEvent(game->settings->window,
-            &game->settings->event))
+        &game->settings->event))
             analyse_events(game->settings->window, game->settings);
         sfRenderWindow_display(game->settings->window);
     }

@@ -13,7 +13,7 @@ void create_scenes(game_scene_t *scenes)
 {
     scenes[main_menu] = new_scene(10, 2, 9, 1);
     fill_scene_main_menu1(scenes[main_menu]);
-    scenes[town] = new_scene(19, 5, 23, 6);
+    scenes[town] = new_scene(18, 5, 23, 6);
     fill_scene_town1(scenes[town]);
     scenes[boss] = new_scene(12, 4, 23, 6);
     fill_scene_boss1(scenes[boss]);
@@ -39,14 +39,19 @@ void create_quests(game_quest_t *quests)
 
 void create_stats(game_stat_t *stats)
 {
+    stats->life = 100;
+    stats->xp = 0;
+    stats->name = "Hubert";
+    stats->player = new_object("assets/girl.png",
+    (sfVector2f) {0, 500}, (sfIntRect) {0, 32, 16, 32}, 0);
 }
 
 void create_settings(game_setting_t *settings)
 {
     sfVideoMode mode = {1920, 1080, 32};
     settings->window = sfRenderWindow_create(mode, "TRASHDEW VALLEY", sfClose,
-        NULL);
+    NULL);
+
     sfRenderWindow_setFramerateLimit(settings->window, 60);
-    //sfRenderWindow_setVerticalSyncEnabled(settings->window, sfTrue);
     //sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }

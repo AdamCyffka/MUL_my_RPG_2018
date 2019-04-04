@@ -16,9 +16,9 @@ game_t *create_game(game_t *game)
     /*game->inventory = malloc(sizeof(game_inventory_t) * 4);
     create_inventory(game->inventory);
     game->quests = malloc(sizeof(game_quest_t) * 8);
-    create_quests(game->quests);
+    create_quests(game->quests);*/
     game->stats = malloc(sizeof(game_stat_t) * 1);
-    create_stats(game->stats);*/
+    create_stats(game->stats);
     game->settings = malloc(sizeof(game_setting_t) * 1);
     create_settings(game->settings);
     return game;
