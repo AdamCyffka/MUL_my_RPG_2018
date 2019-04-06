@@ -22,21 +22,21 @@ void fill_scene_camp3(game_scene_t camp)
     camp.texts[LIFE_T_S5] = new_text("assets/font.ttf", "Life:",
     (sfVector2f) {425, 45}, 16);
     camp.objs[OPTION_O_S5] = new_object("assets/option.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[INVENTORY_O_S5] = new_object("assets/inventory.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[EXIT_O_S5] = new_object("assets/exit.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[ME_O_S5] = new_object("assets/me.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[CAMP_O_S5] = new_object("assets/map_camp.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1637, 985}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     camp.objs[MINIMAP_O_S5] = new_object("assets/minimap.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
     camp.objs[GOLEM_O_S5] = new_object("assets/golem.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
     camp.objs[QUEST_O_S5] = new_object("assets/quest.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
     fill_scene_camp4(camp);
 }
 

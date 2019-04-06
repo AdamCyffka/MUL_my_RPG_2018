@@ -60,4 +60,13 @@ game_object_t new_object(const char *path_to_spsheet, sfVector2f pos,
     sfIntRect rect, float speed);
 //destroy
 void destroy_all(game_t **game);
+
+//player_move
+void key_to_move_or_not(sfRenderWindow *window, game_setting_t *settings, game_stat_t *stats);
+void move_player(game_setting_t *settings, game_stat_t *stats);
+void player_stop_moving(game_stat_t *stats);
+
+//player_attack
+void player_attack(game_stat_t *stats);
+
 #endif /* RPG_H_ */
