@@ -11,7 +11,7 @@
 
 void create_scenes(game_scene_t *scenes)
 {
-    scenes[main_menu] = new_scene(10, 2, 9, 1);
+    scenes[main_menu] = new_scene(8, 2, 9, 1);
     fill_scene_main_menu1(scenes[main_menu]);
     scenes[town] = new_scene(18, 5, 23, 6);
     fill_scene_town1(scenes[town]);
@@ -42,7 +42,7 @@ void create_stats(game_stat_t *stats)
     stats->life = 100;
     stats->xp = 0;
     stats->name = "Hubert";
-    stats->player = new_object("assets/girl.png",
+    stats->player = new_object("assets/girl1.png",
     (sfVector2f) {0, 500}, (sfIntRect) {0, 32, 16, 32}, 0);
 }
 

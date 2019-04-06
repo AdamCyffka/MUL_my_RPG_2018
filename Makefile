@@ -13,7 +13,6 @@ RM		= 	rm -f
 
 SRCS	= 	src/main.c							\
 			src/create_game2.c 					\
-			src/init_window.c 					\
 			src/create_game.c					\
 			src/destroy_all.c					\
 			src/my_rpg.c						\

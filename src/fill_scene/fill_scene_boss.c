@@ -12,15 +12,15 @@
 void fill_scene_boss5(game_scene_t boss)
 {
     boss.objs[EXIT_O_S2] = new_object("assets/exit.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     boss.objs[ME_O_S2] = new_object("assets/me.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     boss.objs[PANNEL_O_S2] = new_object("assets/pannel.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 500, 500}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 500, 500}, -1);
     boss.objs[MINIMAP_O_S2] = new_object("assets/minimap.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
     boss.objs[QUEST_O_S2] = new_object("assets/quest.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
     boss.objs[ICON_O_S2] = new_object("assets/icon.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 56, 56}, 0);
     boss.objs[CURSOR_O_S2] = new_object("assets/cursor.png",
@@ -42,11 +42,11 @@ void fill_scene_boss4(game_scene_t boss)
     boss.objs[TOWN_O_S2] = new_object("assets/map_town.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
     boss.objs[SHAMAN_O_S2] = new_object("assets/shaman.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
     boss.objs[OPTION_O_S2] = new_object("assets/option.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     boss.objs[INVENTORY_O_S2] = new_object("assets/inventory.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     fill_scene_boss5(boss);
 }
 

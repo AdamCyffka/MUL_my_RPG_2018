@@ -12,15 +12,15 @@
 void fill_scene_forest4(game_scene_t forest)
 {
     forest.objs[ME_O_S3] = new_object("assets/me.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     forest.objs[FOREST_O_S3] = new_object("assets/map_forest.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 2878, 1536}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     forest.objs[MINIMAP_O_S3] = new_object("assets/minimap.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
     forest.objs[GHOST_O_S3] = new_object("assets/ghost.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
     forest.objs[QUEST_O_S3] = new_object("assets/quest.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
     forest.objs[ICON_O_S3] = new_object("assets/icon.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 56, 56}, 0);
     forest.objs[CURSOR_O_S3] = new_object("assets/cursor.png",
@@ -42,11 +42,11 @@ void fill_scene_forest3(game_scene_t forest)
     forest.texts[LIFE_T_S3] = new_text("assets/font.ttf", "Life:",
     (sfVector2f) {425, 45}, 16);
     forest.objs[OPTION_O_S3] = new_object("assets/option.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     forest.objs[INVENTORY_O_S3] = new_object("assets/inventory.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     forest.objs[EXIT_O_S3] = new_object("assets/exit.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     fill_scene_forest4(forest);
 }
 
@@ -66,7 +66,7 @@ void fill_scene_forest2(game_scene_t forest)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 530, 74}, 0);
     forest.buttons[WALKABLE10_B_S3] = new_button("assets/invisible.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 328, 197}, 0);
-    forest.buttons[WALKABLE10_B_S3] = new_button("assets/invisible.png",
+    forest.buttons[WALKABLE11_B_S3] = new_button("assets/invisible.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 328, 197}, 0);
     forest.sounds[MUSIC_S_S3] = new_sound("assets/music_forest.ogg", sfFalse,
     100);

@@ -12,11 +12,11 @@
 void fill_scene_town5(game_scene_t town)
 {
     town.objs[ME_O_S1] = new_object("assets/me.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[PANNEL_O_S1] = new_object("assets/pannel.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 500, 500}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 500, 500}, -1);
     town.objs[TOWN_O_S1] = new_object("assets/map_town.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0;
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
     town.objs[DICK_O_S1] = new_object("assets/dick.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
     town.objs[EMILY_O_S1] = new_object("assets/emily.png",
@@ -47,11 +47,11 @@ void fill_scene_town4(game_scene_t town)
     town.objs[OBSTACLE_O_S1] = new_object("assets/obstacle.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
     town.objs[OPTION_O_S1] = new_object("assets/option.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[INVENTORY_O_S1] = new_object("assets/inventory.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[EXIT_O_S1] = new_object("assets/exit.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     fill_scene_town5(town);
 }
 
