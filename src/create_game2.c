@@ -35,6 +35,27 @@ void create_inventory(game_inventory_t *inventory)
 
 void create_quests(game_quest_t *quests)
 {
+    quests[0] = new_quest("Introduction.", true, 1, malloc(sizeof(int) * 2));
+    quests[1] = new_quest("Speak to Lewis the blacksmith.",
+    true, 1, malloc(sizeof(int) * 1));
+    quests[2] = new_quest("Speak to Emily at the north of the town.",
+    true, 1, NULL);
+    quests[3] = new_quest("Kill 10 Golems from the occupied camp.",
+    false, 10, malloc(sizeof(int) * 2));
+    quests[4] = new_quest("Give to Robin the golem's head.", true, 1, NULL);
+    quests[5] = new_quest("Find Robin's axe.",
+    false, 1, malloc(sizeof(int) * 1));
+    quests[6] = new_quest("Speak to Pierre the bar tender.", true, 1, NULL);
+    quests[7] = new_quest("Kill 15 Ghosts from the secret forest.",
+    false, 15, malloc(sizeof(int) * 2));
+    quests[8] = new_quest("Speak to George near the sakura's tree.",
+    true, 1, NULL);
+    quests[9] = new_quest("Count the number of sheeps in the town",
+    true, 1, malloc(sizeof(int) * 2));
+    quests[10] = new_quest("Speak to Jodi.", true, 1, NULL);
+    quests[11] = new_quest("Kill 20 Skeletons from the beach.",
+    false, 20, malloc(sizeof(int) * 2));
+    quests[12] = new_quest("KILL THE BOSS !", true, 1, malloc(sizeof(int) * 1));
 }
 
 void create_stats(game_stat_t *stats)
@@ -44,6 +65,7 @@ void create_stats(game_stat_t *stats)
     stats->name = "Hubert";
     stats->player = new_object("assets/girl1.png",
     (sfVector2f) {0, 500}, (sfIntRect) {0, 32, 16, 32}, 0);
+    stats->current_quest = INTRO_Q;
 }
 
 void create_settings(game_setting_t *settings)

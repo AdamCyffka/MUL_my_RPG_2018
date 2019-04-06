@@ -26,11 +26,13 @@ void analyse_events(sfRenderWindow *window, game_setting_t *settings, game_stat_
         player_stop_moving(stats);
 }
 
-void game_change(game_setting_t *settings, game_scene_t *scenes, sfRenderWindow
-*window)
+void game_change(game_t *game)
 {
-    if (settings->current == main_menu)
-        button_menu(settings, scenes[main_menu], window);
+    if (game->settings->current == main_menu)
+        button_menu(game->settings, game->scenes[main_menu],
+        game->settings->window);
+    if (game->settings->current >= town && game->settings->current <= camp)
+        quests_interaction(game);
 }
 
 void scene_selection(game_setting_t *settings, game_scene_t *scenes)
@@ -40,7 +42,7 @@ void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 
 void draw_scene(game_scene_t scene, sfRenderWindow *window, game_stat_t *stats)
 {
-    for (int tmp = 0; tmp < scene.how_many[0]; tmp++) {
+    /*for (int tmp = 0; tmp < scene.how_many[0]; tmp++) {
         if (scene.objs[tmp].speed >= 0)
             sfRenderWindow_drawSprite(window, scene.objs[tmp].sprite, NULL);
     }
@@ -51,11 +53,11 @@ void draw_scene(game_scene_t scene, sfRenderWindow *window, game_stat_t *stats)
         NULL);
     }
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
-        sfRenderWindow_drawText(window, scene.texts[tmp].text, NULL);
-    /*sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
+        sfRenderWindow_drawText(window, scene.texts[tmp].text, NULL);*/
+    sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
     sfSprite_setScale(scene.objs[TOWN_O_S1].sprite, (sfVector2f) {3.5, 3.5});
     sfRenderWindow_drawSprite(window, scene.objs[TOWN_O_S1].sprite, NULL);
-    sfRenderWindow_drawSprite(window, stats->player.sprite, NULL);*/
+    sfRenderWindow_drawSprite(window, stats->player.sprite, NULL);
 }
 
 int my_rpg(void)
@@ -66,8 +68,7 @@ int my_rpg(void)
     while (sfRenderWindow_isOpen(game->settings->window)) {
         sfRenderWindow_clear(game->settings->window, sfBlack);
         scene_selection(game->settings, game->scenes);
-        game_change(game->settings, game->scenes,
-        game->settings->window);
+        game_change(game);
         draw_scene(game->scenes[game->settings->current],
         game->settings->window, game->stats);
         while (sfRenderWindow_pollEvent(game->settings->window,

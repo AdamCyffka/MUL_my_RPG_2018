@@ -33,7 +33,8 @@ void fill_scene_town6(game_scene_t town);
 void fill_scene_victory(game_scene_t victory);
 void fill_scene_defeat(game_scene_t defeat);
 
-//create_game2
+//create_game
+game_t *create_game();
 void create_scenes(game_scene_t *scenes);
 void create_inventory(game_inventory_t *inventory);
 void create_quests(game_quest_t *quests);
@@ -46,20 +47,24 @@ size);
 void button_menu(game_setting_t *settings, game_scene_t scenes, sfRenderWindow
 *window);
 
-//init
-void init_window(game_setting_t *params);
-game_t *create_game();
+//new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons, int
 nb_texts);
 game_text_t new_text(const char *path_to_font, const char *towrite,
-    sfVector2f pos, int size);
+sfVector2f pos, int size);
 game_button_t new_button(const char *path_to_img,
-    sfVector2f pos, sfIntRect rect, int state);
+sfVector2f pos, sfIntRect rect, int state);
 game_sound_t new_sound(const char *path_to_sound, sfBool state, float volume);
 game_object_t new_object(const char *path_to_spsheet, sfVector2f pos,
-    sfIntRect rect, float speed);
+sfIntRect rect, float speed);
+game_quest_t new_quest(const char *quest_statement, bool _instant,
+int nb_of_task, int *rewards_id);
+
+//quest_interaction
+void quests_interaction(game_t *game);
+
 //destroy
-void destroy_all(game_t **game);
+void destroy_all(game_t *game);
 
 //player_move
 void key_to_move_or_not(sfRenderWindow *window, game_setting_t *settings, game_stat_t *stats);

@@ -67,7 +67,7 @@ void move_window(sfRenderWindow *window, game_setting_t *settings)
         if (vector_view.y < 3225)
             vector_view.y += 3;
     }
-    sfView_setCenter(view, vector_view);
+    sfView_setCenter((sfView *) {view}, vector_view);
     sfRenderWindow_setView(window, view);
 }
 

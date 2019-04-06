@@ -8,7 +8,7 @@
 #include "rpg.h"
 #include "struct.h"
 
-void destroy_all(game_t **game)
+void destroy_all(game_t *game)
 {
 
 }

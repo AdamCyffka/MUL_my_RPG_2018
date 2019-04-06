@@ -61,13 +61,18 @@ typedef struct game_inventory {
 } game_inventory_t;
 
 typedef struct game_quest {
-
+    char *quest_statement;
+    bool _instant;
+    int progress;
+    int nb_of_task;
+    int *reward_id;
 } game_quest_t;
 
 typedef struct game_stat {
     int xp;
     int life;
     char *name;
+    int current_quest;
     game_object_t player;
 } game_stat_t;
 
