@@ -10,6 +10,9 @@
 
 enum scene {main_menu, town, boss, forest, beach, camp, victory, defeat};
 
+enum quest {INTRO_Q, BLACKSMITH_Q, KILL_1_Q, FIND_LOST_Q, KILL_2_Q,
+SHEEP_COUNT_Q, KILL_3_Q, BOSS_Q};
+
 enum main_menu {LEFT_B_S0, RIGHT_B_S0, OK_B_S0, CLOSE_B_S0, CREDITS_B_S0,
 LOAD_B_S0, EXIT_B_S0, BACK_B_S0, NEW_B_S0, NAME_T_S0 = 0, MUSIC_S_S0 = 0,
 CLICK_S_S0, BG_O_S0 = 0, CLOUD1_O_S0, CLOUD2_O_S0, FLAMINGO_O_S0, LOGO_O_S0,
