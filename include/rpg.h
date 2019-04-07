@@ -52,12 +52,13 @@ game_t *create_game();
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons, int
 nb_texts);
 game_text_t new_text(const char *path_to_font, const char *towrite,
-    sfVector2f pos, int size);
+sfVector2f pos, int size);
 game_button_t new_button(const char *path_to_img,
-    sfVector2f pos, sfIntRect rect, int state);
+sfVector2f pos, sfIntRect rect, int state);
 game_sound_t new_sound(const char *path_to_sound, sfBool state, float volume);
 game_object_t new_object(const char *path_to_spsheet, sfVector2f pos,
-    sfIntRect rect, float speed);
+sfIntRect rect, float speed);
+
 //destroy
 void destroy_all(game_t **game);
 

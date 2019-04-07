@@ -20,7 +20,7 @@ void analyse_events(sfRenderWindow *window, game_setting_t *settings, game_stat_
     }
     if (settings->event.type == sfEvtKeyPressed)
         key_to_move_or_not(window, settings, stats);
-    else if (settings->event.type == sfEvtMouseButtonPressed)
+    else if (settings->event.type == sfEvtMouseButtonPressed) 
         player_attack(stats);
     else
         player_stop_moving(stats);

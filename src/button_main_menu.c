@@ -24,13 +24,12 @@ int button_is_clicked(game_setting_t *settings, sfVector2f pos, sfVector2f size)
         return 0;
 }
 
-void button_menu(game_setting_t *settings, game_scene_t scenes, sfRenderWindow
-*window)
+void button_menu(game_setting_t *settings, game_scene_t scenes)
 {
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[EXIT_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[EXIT_B_S0].shape)) == true)
-        sfRenderWindow_close(window);
+        sfRenderWindow_close(settings->window);
     else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[NEW_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[NEW_B_S0].shape)) == true)

@@ -49,7 +49,7 @@ void fill_scene_town4(game_scene_t town)
     town.objs[OPTION_O_S1] = new_object("assets/option.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[INVENTORY_O_S1] = new_object("assets/inventory.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
+    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, 0);
     town.objs[EXIT_O_S1] = new_object("assets/exit.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     fill_scene_town5(town);
@@ -107,7 +107,7 @@ void fill_scene_town1(game_scene_t town)
     town.buttons[DESKTOP_B_S1] = new_button("assets/exit_desktop.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, 0);
     town.buttons[CLOSE_B_S1] = new_button("assets/close.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, 0);
+    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, 0);
     town.buttons[PLUS_B_S1] = new_button("assets/plus.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, 0);
     town.buttons[MINUS_B_S1] = new_button("assets/minus.png",
