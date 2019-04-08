@@ -60,6 +60,7 @@ void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 *stat)
 {
+<<<<<<< HEAD
     if (settings->current == main_menu)
         print_all_main_menu(scene, settings);
     else {
@@ -69,6 +70,13 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
                 .sprite, NULL);
         }
         //for (int tmp = 0; tmp < scene.how_many[1]; tmp++)
+=======
+    for (int tmp = 0; tmp < scene.how_many[0]; tmp++) {
+        if (scene.objs[tmp].speed >= 0)
+            sfRenderWindow_drawSprite(window, scene.objs[tmp].sprite, NULL);
+    }
+    //for (int tmp = 0; tmp < scene.how_many[1]; tmp++)
+>>>>>>> 6f6199c19f69aa79681a4eaa82662cc3ec2aac88
         //sfMusic_play(scene.sounds[tmp].music);
         for (int tmp = 0; tmp < scene.how_many[2]; tmp++) {
             sfRenderWindow_drawRectangleShape(settings->window, scene
@@ -82,6 +90,15 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
         sfRenderWindow_drawSprite(window, scene.objs[TOWN_O_S1].sprite, NULL);
         sfRenderWindow_drawSprite(window, stats->player.sprite, NULL);*/
     }
+<<<<<<< HEAD
+=======
+    for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
+        sfRenderWindow_drawText(window, scene.texts[tmp].text, NULL);
+    /*sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
+    sfSprite_setScale(scene.objs[TOWN_O_S1].sprite, (sfVector2f) {3.5, 3.5});
+    sfRenderWindow_drawSprite(window, scene.objs[TOWN_O_S1].sprite, NULL);
+    sfRenderWindow_drawSprite(window, stats->player.sprite, NULL);*/
+>>>>>>> 6f6199c19f69aa79681a4eaa82662cc3ec2aac88
 }
 
 int my_rpg(void)

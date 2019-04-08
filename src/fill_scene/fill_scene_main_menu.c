@@ -47,12 +47,24 @@ void fill_scene_main_menu1(game_scene_t main_menu)
 {
     main_menu.objs[BG_O_S0] = new_object("assets/menu_bg.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
+    main_menu.objs[BG1_O_S0] = new_object("assets/menu_bg.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     main_menu.objs[CLOUD1_O_S0] = new_object("assets/cloud1.png",
     (sfVector2f) {20, 80}, (sfIntRect) {0, 0, 512, 341}, -1);
     main_menu.objs[CLOUD2_O_S0] = new_object("assets/cloud2.png",
+<<<<<<< HEAD
     (sfVector2f) {1500, 120}, (sfIntRect) {0, 0, 133, 64}, -1);
     main_menu.objs[FLAMINGO_O_S0] = new_object("assets/flamingo.png",
     (sfVector2f) {1600, 700}, (sfIntRect) {0, 0, 105, 104}, -1);
+=======
+    (sfVector2f) {800, 100}, (sfIntRect) {0, 0, 133, 64}, -1);
+    main_menu.objs[CLOUD3_O_S0] = new_object("assets/cloud2.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, -1);
+    main_menu.objs[FLAMINGO1_O_S0] = new_object("assets/flamingo1.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, -1);
+    main_menu.objs[FLAMINGO2_O_S0] = new_object("assets/flamingo2.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, -1);
+>>>>>>> 6f6199c19f69aa79681a4eaa82662cc3ec2aac88
     main_menu.objs[LOGO_O_S0] = new_object("assets/logo.png",
     (sfVector2f) {560, 50}, (sfIntRect) {0, 0, 1003, 485}, 0);
     main_menu.objs[HTW_O_S0] = new_object("assets/howtoplay.png",
