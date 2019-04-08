@@ -44,8 +44,7 @@ void create_settings(game_setting_t *settings);
 //button_main_menu
 int button_is_clicked(game_setting_t *settings, sfVector2f pos, sfVector2f
 size);
-void button_menu(game_setting_t *settings, game_scene_t scenes, sfRenderWindow
-*window);
+void button_menu(game_setting_t *settings, game_scene_t scenes);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons, int

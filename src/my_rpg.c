@@ -29,8 +29,7 @@ void analyse_events(sfRenderWindow *window, game_setting_t *settings, game_stat_
 void game_change(game_t *game)
 {
     if (game->settings->current == main_menu)
-        button_menu(game->settings, game->scenes[main_menu],
-        game->settings->window);
+        button_menu(game->settings, game->scenes[main_menu]);
     if (game->settings->current >= town && game->settings->current <= camp)
         quests_interaction(game);
 }
@@ -76,6 +75,6 @@ int my_rpg(void)
             analyse_events(game->settings->window, game->settings, game->stats);
         sfRenderWindow_display(game->settings->window);
     }
-    destroy_all(&game);
+    destroy_all(game);
     return (0);
 }
