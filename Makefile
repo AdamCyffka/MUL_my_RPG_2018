@@ -21,15 +21,16 @@ SRCS	= 	src/main.c							\
 			src/new_content2.c					\
 			src/new_content.c					\
 			src/button_main_menu.c					\
-			src/quests_interaction.c					\
+			src/quests_interaction.c				\
+			src/print_main_menu.c					\
 			src/fill_scene/fill_scene_beach.c		\
 			src/fill_scene/fill_scene_boss.c		\
 			src/fill_scene/fill_scene_camp.c		\
 			src/fill_scene/fill_scene_forest.c	 	\
-			src/fill_scene/fill_scene_main_menu.c	\
+			src/fill_scene/fill_scene_main_menu.c		\
 			src/fill_scene/fill_scene_town1.c		\
-			src/fill_scene/fill_scene_town2.c	    \
-			src/fill_scene/fill_scene_vic_def.c	    \
+			src/fill_scene/fill_scene_town2.c	    	\
+			src/fill_scene/fill_scene_vic_def.c	    	\
 
 OBJS	= $(SRCS:.c=.o)
 

@@ -21,9 +21,9 @@ int nb_of_task, int *rewards_id)
     return (quest);
 }
 
-game_inventory_t new_slot()
+game_inventory_t new_slot(void)
 {
     game_inventory_t slot;
 
-    return(slot);
+    return (slot);
 }
