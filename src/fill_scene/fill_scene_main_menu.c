@@ -23,15 +23,15 @@ void fill_scene_main_menu3(game_scene_t main_menu)
 void fill_scene_main_menu2(game_scene_t main_menu)
 {
     main_menu.objs[CURSOR_O_S0] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, -1);
     main_menu.buttons[LEFT_B_S0] = new_button("assets/left.png",
-    (sfVector2f) {695, 580}, (sfIntRect) {0, 0, 44, 40}, 0);
+    (sfVector2f) {695, 580}, (sfIntRect) {0, 0, 44, 40}, -1);
     main_menu.buttons[RIGHT_B_S0] = new_button("assets/right.png",
-    (sfVector2f) {780, 580}, (sfIntRect) {0, 0, 44, 40}, 0);
+    (sfVector2f) {780, 580}, (sfIntRect) {0, 0, 44, 40}, -1);
     main_menu.buttons[OK_B_S0] = new_button("assets/ok.png",
-    (sfVector2f) {1185, 565}, (sfIntRect) {0, 0, 79, 84}, 0);
+    (sfVector2f) {1185, 565}, (sfIntRect) {0, 0, 79, 84}, -1);
     main_menu.buttons[CLOSE_B_S0] = new_button("assets/close.png",
-    (sfVector2f) {1555, 175}, (sfIntRect) {0, 0, 30, 30}, 0);
+    (sfVector2f) {1555, 175}, (sfIntRect) {0, 0, 30, 30}, -1);
     main_menu.buttons[CREDITS_B_S0] = new_button("assets/button_credits.png",
     (sfVector2f) {1800, 900}, (sfIntRect) {0, 0, 40, 45}, 0);
     main_menu.buttons[LOAD_B_S0] = new_button("assets/button_load.png",
@@ -39,7 +39,7 @@ void fill_scene_main_menu2(game_scene_t main_menu)
     main_menu.buttons[EXIT_B_S0] = new_button("assets/button_exit.png",
     (sfVector2f) {1100, 340}, (sfIntRect) {0, 0, 148, 122}, 0);
     main_menu.buttons[BACK_B_S0] = new_button("assets/button_back.png",
-    (sfVector2f) {1000, 500}, (sfIntRect) {0, 0, 202, 30}, 0);
+    (sfVector2f) {1000, 500}, (sfIntRect) {0, 0, 202, 30}, -1);
     fill_scene_main_menu3(main_menu);
 }
 
@@ -50,15 +50,15 @@ void fill_scene_main_menu1(game_scene_t main_menu)
     main_menu.objs[BG1_O_S0] = new_object("assets/menu_bg1.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     main_menu.objs[CLOUD1_O_S0] = new_object("assets/cloud1.png",
-    (sfVector2f) {20, 80}, (sfIntRect) {0, 0, 512, 341}, -1);
+    (sfVector2f) {20, 80}, (sfIntRect) {0, 0, 512, 341}, 1);
     main_menu.objs[CLOUD2_O_S0] = new_object("assets/cloud2.png",
-    (sfVector2f) {1350, 120}, (sfIntRect) {0, 0, 133, 64}, -1);
+    (sfVector2f) {1350, 120}, (sfIntRect) {0, 0, 133, 64}, 3);
     main_menu.objs[CLOUD3_O_S0] = new_object("assets/cloud2.png",
-    (sfVector2f) {1750, 200}, (sfIntRect) {0, 0, 133, 64}, -1);
+    (sfVector2f) {1750, 200}, (sfIntRect) {0, 0, 133, 64}, 2);
     main_menu.objs[FLAMINGO1_O_S0] = new_object("assets/flamingo1.png",
-    (sfVector2f) {1940, 700}, (sfIntRect) {0, 0, 105, 104}, -1);
+    (sfVector2f) {1940, 700}, (sfIntRect) {0, 0, 105, 104}, 5);
     main_menu.objs[FLAMINGO2_O_S0] = new_object("assets/flamingo2.png",
-    (sfVector2f) {2050, 800}, (sfIntRect) {0, 0, 52, 52}, -1);
+    (sfVector2f) {2050, 800}, (sfIntRect) {0, 0, 52, 52}, 5);
     main_menu.objs[LOGO_O_S0] = new_object("assets/logo.png",
     (sfVector2f) {560, 50}, (sfIntRect) {0, 0, 1003, 485}, 0);
     main_menu.objs[HTW_O_S0] = new_object("assets/howtoplay.png",

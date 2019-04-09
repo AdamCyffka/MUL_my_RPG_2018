@@ -66,15 +66,30 @@ void men_game_button(game_setting_t *settings, game_scene_t scenes, int nbr)
 
 void button_menu(game_setting_t *settings, game_scene_t scenes)
 {
-    men_game_button(settings, scenes, NEW_B_S0);
-    men_game_button(settings, scenes, EXIT_B_S0);
-    men_game_button(settings, scenes, LOAD_B_S0);
+    if (scenes.buttons[NEW_B_S0].state >= 0 &&
+    scenes.buttons[EXIT_B_S0].state >= 0 &&
+    scenes.buttons[LOAD_B_S0].state >= 0) {
+        men_game_button(settings, scenes, NEW_B_S0);
+        men_game_button(settings, scenes, EXIT_B_S0);
+        men_game_button(settings, scenes, LOAD_B_S0);
+    }
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CREDITS_B_S0].shape), sfRectangleShape_getSize(scenes
-    .buttons[CREDITS_B_S0].shape)) == true)
+    .buttons[CREDITS_B_S0].shape)) == true) {
         scenes.buttons[CREDITS_B_S0].state = true;
-    else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+        scenes.buttons[CLOSE_B_S0].state = true;
+        scenes.buttons[NEW_B_S0].state = -1;
+        scenes.buttons[EXIT_B_S0].state = -1;
+        scenes.buttons[LOAD_B_S0].state = -1;
+        scenes.objs[HTW_O_S0].speed = true;
+    } else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CLOSE_B_S0].shape), sfRectangleShape_getSize(scenes
-    .buttons[CLOSE_B_S0].shape)) == true)
+    .buttons[CLOSE_B_S0].shape)) == true) {
         scenes.buttons[CREDITS_B_S0].state = false;
+        scenes.buttons[CLOSE_B_S0].state = -1;
+        scenes.buttons[NEW_B_S0].state = 0;
+        scenes.buttons[EXIT_B_S0].state = 0;
+        scenes.buttons[LOAD_B_S0].state = 0;
+        scenes.objs[HTW_O_S0].speed = -1;
+    }
 }

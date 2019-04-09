@@ -44,6 +44,7 @@ typedef struct game_sound {
 } game_sound_t;
 
 typedef struct game_text {
+    int state;
     sfText *text;
     sfFont *font;
 } game_text_t;
