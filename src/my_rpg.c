@@ -9,18 +9,19 @@
 #include "struct.h"
 #include "enum.h"
 
-void analyse_events(sfRenderWindow *window, game_setting_t *settings,
-    game_stat_t *stats)
+void analyse_events(game_setting_t *settings, game_stat_t *stats)
 {
     if (settings->event.type == sfEvtClosed || sfKeyboard_isKeyPressed(sfKeyTab)
     == sfTrue)
-        sfRenderWindow_close(window);
+        sfRenderWindow_close(settings->window);
     if (settings->event.type == sfEvtMouseMoved) {
         settings->cursor_pos.x = settings->event.mouseMove.x;
         settings->cursor_pos.y = settings->event.mouseMove.y;
     }
-    if (settings->event.type == sfEvtKeyPressed)
-        key_to_move_or_not(window, settings, stats);
+    if (settings->event.type == sfEvtKeyPressed) {
+        keyboard_checker(settings->window);
+        key_to_move_or_not(settings->window, settings, stats);
+    }
     else if (settings->event.type == sfEvtMouseButtonPressed)
         player_attack(stats);
     else
@@ -102,7 +103,7 @@ int my_rpg(void)
         game->settings, game->stats);
         while (sfRenderWindow_pollEvent(game->settings->window,
         &game->settings->event))
-            analyse_events(game->settings->window, game->settings, game->stats);
+            analyse_events(game->settings, game->stats);
         sfRenderWindow_display(game->settings->window);
     }
     destroy_all(game);

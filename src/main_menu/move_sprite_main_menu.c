@@ -25,7 +25,7 @@ void move_my_first_flamingo(game_scene_t *scene)
         scene->objs[FLAMINGO1_O_S0].rect.left += 105;
 }
 
-void move_sprite_main_menu(game_scene_t *scene)
+void move_sprite_main_menu(game_scene_t *scene);
 {
     move_my_first_flamingo(scene);
     move_my_second_flamingo(scene);

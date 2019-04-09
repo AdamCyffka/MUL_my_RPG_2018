@@ -11,18 +11,18 @@ CC		= 	gcc
 
 RM		= 	rm -f
 
-SRCS	= 	src/main.c							\
-			src/create_game2.c 					\
-			src/create_game.c					\
-			src/destroy_all.c					\
-			src/my_rpg.c						\
-			src/player_move.c					\
-			src/player_attack.c					\
-			src/new_content2.c					\
-			src/new_content.c					\
-			src/button_main_menu.c					\
-			src/quests_interaction.c				\
-			src/move_sprite_main_menu.c				\
+SRCS	= 	src/main.c								\
+			src/create_game2.c 						\
+			src/create_game.c						\
+			src/destroy_all.c						\
+			src/my_rpg.c							\
+			src/new_content2.c						\
+			src/new_content.c						\
+			src/town/quests_interaction.c			\
+			src/town/player_move.c					\
+			src/town/player_attack.c				\
+			src/main_menu/move_sprite_main_menu.c	\
+			src/main_menu/button_main_menu.c		\
 			src/fill_scene/fill_scene_beach.c		\
 			src/fill_scene/fill_scene_boss.c		\
 			src/fill_scene/fill_scene_camp.c		\
