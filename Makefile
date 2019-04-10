@@ -20,9 +20,10 @@ SRCS	= 	src/main.c								\
 			src/player_attack.c						\
 			src/new_content2.c						\
 			src/new_content.c						\
+			src/button_event.c 						\
 			src/quests_interaction.c				\
 			src/main_menu/button_main_menu.c		\
-			src/main_menu/move_sprite_main_menu.c	\
+			src/main_menu/change_main_menu.c		\
 			src/fill_scene/fill_scene_beach.c		\
 			src/fill_scene/fill_scene_boss.c		\
 			src/fill_scene/fill_scene_camp.c		\

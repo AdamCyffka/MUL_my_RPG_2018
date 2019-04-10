@@ -9,35 +9,6 @@
 #include "struct.h"
 #include "enum.h"
 
-int button_is_clicked(game_setting_t *settings, sfVector2f pos, sfVector2f size)
-{
-    int ret;
-    int x = (int)settings->cursor_pos.x;
-    int y = (int)settings->cursor_pos.y;
-
-    settings->_mouse = (sfMouse_isButtonPressed(sfMouseLeft)) ? true : false;
-    if (settings->_mouse == true) {
-        ((x >= pos.x && x <= pos.x + size.x) && (y >= pos.y && y <= pos.y
-        + size.y)) ? (ret = true) : (ret = false);
-        return ret;
-    } else
-        return 0;
-}
-
-void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr)
-{
-    int x = (int)settings->cursor_pos.x;
-    int y = (int)settings->cursor_pos.y;
-    sfVector2f pos = sfRectangleShape_getPosition(scenes.buttons[nbr].shape);
-    sfVector2f size = sfRectangleShape_getSize(scenes.buttons[nbr].shape);
-
-    if ((x >= pos.x && x <= pos.x + size.x) && (y >= pos.y && y <= pos.y
-    + size.y))
-        scenes.buttons[nbr].state = 2;
-    else
-        scenes.buttons[nbr].state = 0;
-}
-
 void state_men_button(game_scene_t scenes, int but)
 {
     if (scenes.buttons[but].state == 2)
@@ -64,6 +35,16 @@ void men_game_button(game_setting_t *settings, game_scene_t scenes, int nbr)
         sfRenderWindow_close(settings->window);
 }
 
+void utils_button_menu(game_scene_t scenes, int enable, int disable)
+{
+    scenes.buttons[CLOSE_B_S0].state = ((enable == 1) ? enable : disable); 
+    scenes.buttons[CREDITS_B_S0].state = enable;
+    scenes.buttons[NEW_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.buttons[EXIT_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.buttons[LOAD_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.objs[HTW_O_S0].speed = ((enable == 1) ? enable : disable);
+}
+
 void button_menu(game_setting_t *settings, game_scene_t scenes)
 {
     if (scenes.buttons[NEW_B_S0].state >= 0 &&
@@ -75,21 +56,10 @@ void button_menu(game_setting_t *settings, game_scene_t scenes)
     }
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CREDITS_B_S0].shape), sfRectangleShape_getSize(scenes
-    .buttons[CREDITS_B_S0].shape)) == true) {
-        scenes.buttons[CREDITS_B_S0].state = true;
-        scenes.buttons[CLOSE_B_S0].state = true;
-        scenes.buttons[NEW_B_S0].state = -1;
-        scenes.buttons[EXIT_B_S0].state = -1;
-        scenes.buttons[LOAD_B_S0].state = -1;
-        scenes.objs[HTW_O_S0].speed = true;
-    } else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+    .buttons[CREDITS_B_S0].shape)) == true)
+        utils_button_menu(scenes, 1, -1);
+    else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CLOSE_B_S0].shape), sfRectangleShape_getSize(scenes
-    .buttons[CLOSE_B_S0].shape)) == true) {
-        scenes.buttons[CREDITS_B_S0].state = false;
-        scenes.buttons[CLOSE_B_S0].state = -1;
-        scenes.buttons[NEW_B_S0].state = 0;
-        scenes.buttons[EXIT_B_S0].state = 0;
-        scenes.buttons[LOAD_B_S0].state = 0;
-        scenes.objs[HTW_O_S0].speed = -1;
-    }
+    .buttons[CLOSE_B_S0].shape)) == true)
+        utils_button_menu(scenes, 0, -1);
 }

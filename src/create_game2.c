@@ -73,7 +73,7 @@ void create_settings(game_setting_t *settings)
     sfVideoMode mode = {1920, 1080, 32};
     settings->window = sfRenderWindow_create(mode, "TRASHDEW VALLEY", sfClose,
     NULL);
-
+    settings->clock = sfClock_create();
     sfRenderWindow_setFramerateLimit(settings->window, 60);
     //sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }

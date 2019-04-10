@@ -30,15 +30,14 @@ void analyse_events(game_t *game)
 
 void clock(game_scene_t *scene, game_setting_t *settings)
 {
-    sfClock *clock = sfClock_create();
     sfTime time;
     float seconds;
     while (1) {
-        time = sfClock_getElapsedTime(clock);
+        time = sfClock_getElapsedTime(settings->clock);
         seconds = time.microseconds / 1000000.0;
         if (seconds > 0.1) {
             move_sprite_main_menu(scene);
-            sfClock_restart(clock);
+            sfClock_restart(settings->clock);
             break;
         }
     }
@@ -46,15 +45,8 @@ void clock(game_scene_t *scene, game_setting_t *settings)
 
 void game_change(game_t *game)
 {
-    if (game->settings->current == main_menu) {
-        button_menu(game->settings, game->scenes[main_menu]);
-        for (int i = 0; i < game->scenes->how_many[0]; i++) {
-            sfSprite_setTextureRect(game->scenes->objs[i].sprite,
-            game->scenes->objs[i].rect);
-            sfSprite_setPosition(game->scenes->objs[i].sprite,
-            game->scenes->objs[i].position);
-        }
-    }
+    if (game->settings->current == main_menu)
+        change_main_menu(game->settings, game->scenes);
     if (game->settings->current >= town && game->settings->current <= camp)
         quests_interaction(game);
     clock(game->scenes, game->settings);
@@ -62,7 +54,7 @@ void game_change(game_t *game)
 
 void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 {
-    settings->current = town;
+    settings->current = main_menu;
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
