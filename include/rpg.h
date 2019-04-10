@@ -45,6 +45,7 @@ void create_settings(game_setting_t *settings);
 void change_main_menu(game_setting_t *settings, game_scene_t *scene);
 int button_is_clicked(game_setting_t *settings, sfVector2f pos, sfVector2f
 size);
+void utils_button_menu(game_scene_t scenes, int enable, int disable);
 void button_menu(game_setting_t *settings, game_scene_t scenes);
 void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 

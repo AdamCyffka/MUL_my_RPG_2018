@@ -31,6 +31,7 @@ void create_scenes(game_scene_t *scenes)
 
 void create_inventory(game_inventory_t *inventory)
 {
+    
 }
 
 void create_quests(game_quest_t *quests)

@@ -13,6 +13,8 @@ void keyboard_checker(game_t *game)
 {
     if (sfKeyboard_isKeyPressed(sfKeyE) == true)
         game->scenes->objs[INVENTORY_O_S1].speed = -1;
+    else if (sfKeyboard_isKeyPressed(sfKeyH))
+        utils_button_menu(game->scenes[main_menu], 1, -1);
     else if (sfKeyboard_isKeyPressed(sfKeyEscape) == sfTrue)
         printf("Echap");
     else if (sfKeyboard_isKeyPressed(sfKeyA) == sfTrue)
