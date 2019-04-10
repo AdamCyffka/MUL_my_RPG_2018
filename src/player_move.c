@@ -31,9 +31,9 @@ void player_stop_moving(game_stat_t *stats)
     sfSprite_setTextureRect(stats->player.sprite, stats->player.rect);
 }
 
-int bordure_crossed(sfRenderWindow *window, game_setting_t *settings, game_stat_t *stats)
+int bordure_crossed(game_setting_t *settings, game_stat_t *stats)
 {
-    const sfView *view = sfRenderWindow_getView(window);
+    const sfView *view = sfRenderWindow_getView(settings->window);
     sfVector2f vector_view = sfView_getCenter(view);
 
     if (settings->event.key.code == sfKeyRight) {
@@ -47,9 +47,9 @@ int bordure_crossed(sfRenderWindow *window, game_setting_t *settings, game_stat_
     return 0;
 }
 
-void move_window(sfRenderWindow *window, game_setting_t *settings)
+void move_window(game_setting_t *settings)
 {
-    const sfView *view = sfRenderWindow_getView(window);
+    const sfView *view = sfRenderWindow_getView(settings->window);
     sfVector2f vector_view = sfView_getCenter(view);
 
     if (settings->event.key.code == sfKeyRight) {
@@ -68,7 +68,7 @@ void move_window(sfRenderWindow *window, game_setting_t *settings)
             vector_view.y += 3;
     }
     sfView_setCenter((sfView *) {view}, vector_view);
-    sfRenderWindow_setView(window, view);
+    sfRenderWindow_setView(settings->window, view);
 }
 
 void move_player(game_setting_t *settings, game_stat_t *stats)
@@ -93,18 +93,18 @@ void move_player(game_setting_t *settings, game_stat_t *stats)
     }
 }
 
-void key_to_move_or_not(sfRenderWindow *window, game_setting_t *settings, game_stat_t *stats)
+void key_to_move_or_not(game_setting_t *settings, game_stat_t *stats)
 {
     if (settings->event.key.code == sfKeyRight
         || settings->event.key.code == sfKeyLeft
         || settings->event.key.code == sfKeyUp
         || settings->event.key.code == sfKeyDown) {
-        move_window(window, settings);
+        move_window(settings);
         if (stats->player.rect.left < 48)
             stats->player.rect.left += 16;
         else
             stats->player.rect.left = 0;
-        if (bordure_crossed(window, settings, stats) == 1)
+        if (bordure_crossed(settings, stats) == 1)
             return;
         move_player(settings, stats);
         sfSprite_setPosition(stats->player.sprite, stats->player.position);

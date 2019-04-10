@@ -20,7 +20,7 @@
 #include <stdbool.h>
 
 int main(int ac, char **av, char **env);
-int my_rpg(void);
+int my_rpg();
 
 //fill_scene
 void fill_scene_beach1(game_scene_t beach);
@@ -70,7 +70,7 @@ void quests_interaction(game_t *game);
 void destroy_all(game_t *game);
 
 //player_move
-void key_to_move_or_not(sfRenderWindow *window, game_setting_t *settings, game_stat_t *stats);
+void key_to_move_or_not(game_setting_t *settings, game_stat_t *stats);
 void move_player(game_setting_t *settings, game_stat_t *stats);
 void player_stop_moving(game_stat_t *stats);
 
@@ -78,3 +78,5 @@ void player_stop_moving(game_stat_t *stats);
 void player_attack(game_stat_t *stats);
 
 #endif /* RPG_H_ */
+
+void keyboard_checker(game_t *game);

@@ -9,22 +9,23 @@
 #include "struct.h"
 #include "enum.h"
 
-void analyse_events(sfRenderWindow *window, game_setting_t *settings,
-    game_stat_t *stats)
+void analyse_events(game_t *game)
 {
-    if (settings->event.type == sfEvtClosed || sfKeyboard_isKeyPressed(sfKeyTab)
-    == sfTrue)
-        sfRenderWindow_close(window);
-    if (settings->event.type == sfEvtMouseMoved) {
-        settings->cursor_pos.x = settings->event.mouseMove.x;
-        settings->cursor_pos.y = settings->event.mouseMove.y;
+    if (game->settings->event.type == sfEvtClosed ||
+    sfKeyboard_isKeyPressed(sfKeyTab) == sfTrue)
+        sfRenderWindow_close(game->settings->window);
+    if (game->settings->event.type == sfEvtMouseMoved) {
+        game->settings->cursor_pos.x = game->settings->event.mouseMove.x;
+        game->settings->cursor_pos.y = game->settings->event.mouseMove.y;
     }
-    if (settings->event.type == sfEvtKeyPressed)
-        key_to_move_or_not(window, settings, stats);
-    else if (settings->event.type == sfEvtMouseButtonPressed)
-        player_attack(stats);
+    if (game->settings->event.type == sfEvtKeyPressed) {
+        keyboard_checker(game);
+        key_to_move_or_not(game->settings, game->stats);
+    }
+    else if (game->settings->event.type == sfEvtMouseButtonPressed)
+        player_attack(game->stats);
     else
-        player_stop_moving(stats);
+        player_stop_moving(game->stats);
 }
 
 void clock(game_scene_t *scene, game_setting_t *settings)
@@ -61,11 +62,11 @@ void game_change(game_t *game)
 
 void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 {
-    settings->current = main_menu;
+    settings->current = town;
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
-*stat)
+*stats)
 {
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++) {
         if (scene.objs[tmp].speed >= 0)
@@ -85,11 +86,11 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
             NULL);
     /*sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
     sfSprite_setScale(scene.objs[TOWN_O_S1].sprite, (sfVector2f) {3.5, 3.5});
-    sfRenderWindow_drawSprite(window, scene.objs[TOWN_O_S1].sprite, NULL);
-    sfRenderWindow_drawSprite(window, stats->player.sprite, NULL);*/
+    sfRenderWindow_drawSprite(settings->window, scene.objs[TOWN_O_S1].sprite, NULL);
+    sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);*/
 }
 
-int my_rpg(void)
+int my_rpg()
 {
     game_t *game = malloc(sizeof(game_t));
     game = create_game(game);
@@ -102,7 +103,7 @@ int my_rpg(void)
         game->settings, game->stats);
         while (sfRenderWindow_pollEvent(game->settings->window,
         &game->settings->event))
-            analyse_events(game->settings->window, game->settings, game->stats);
+            analyse_events(game);
         sfRenderWindow_display(game->settings->window);
     }
     destroy_all(game);
