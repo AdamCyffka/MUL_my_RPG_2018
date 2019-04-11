@@ -22,7 +22,10 @@ SRCS	= 	src/main.c								\
 			src/new_content.c						\
 			src/button_event.c 						\
 			src/quests_interaction.c				\
-			src/keyboard_checker.c 					\
+			src/analyser.c 							\
+			src/draw_cursor.c 						\
+			src/set_scale.c 						\
+			src/clock.c 							\
 			src/main_menu/button_main_menu.c		\
 			src/main_menu/change_main_menu.c		\
 			src/fill_scene/fill_scene_beach.c		\
@@ -40,10 +43,12 @@ CFLAGS = -Iinclude
 CFLAGS += -L./lib/printf -lprintf
 CFLAGS += -lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window
 CFLAGS += -W -Wall -Wextra -g
+CFLAGS += -lm
 
 LDFLAGS = -L./lib/printf -lprintf
 LDFLAGS += -lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window
 LDFLAGS += -W -Wall -Wextra -g
+LDFLAGS += -lm
 
 all: mklib $(NAME)
 

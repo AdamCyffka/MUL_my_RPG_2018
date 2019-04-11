@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2019
 ** RPG
 ** File description:
-**
+** buttons
 */
 
 #include "rpg.h"
