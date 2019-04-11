@@ -22,6 +22,7 @@ SRCS	= 	src/main.c								\
 			src/new_content.c						\
 			src/button_event.c 						\
 			src/quests_interaction.c				\
+			src/keyboard_checker.c 					\
 			src/main_menu/button_main_menu.c		\
 			src/main_menu/change_main_menu.c		\
 			src/fill_scene/fill_scene_beach.c		\
@@ -32,7 +33,6 @@ SRCS	= 	src/main.c								\
 			src/fill_scene/fill_scene_town1.c		\
 			src/fill_scene/fill_scene_town2.c	    \
 			src/fill_scene/fill_scene_vic_def.c	   	\
-			src/inventory.c 
 
 OBJS	= $(SRCS:.c=.o)
 

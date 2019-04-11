@@ -12,6 +12,10 @@
 #define true 1
 #define false 0
 
+#define SUCCESS 0
+#define WRONG_PATH -2
+#define WRONG_CONFIG_PATH -3
+
 #include <SFML/Graphics.h>
 #include <SFML/System.h>
 #include <SFML/Audio.h>
