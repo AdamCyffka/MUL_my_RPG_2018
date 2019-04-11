@@ -45,7 +45,7 @@ void fill_scene_town4(game_scene_t town)
     town.texts[LIFE_T_S1] = new_text("assets/font.ttf", "Life:",
     (sfVector2f) {425, 45}, 16);
     town.objs[OBSTACLE_O_S1] = new_object("assets/obstacle.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, -1);
     town.objs[OPTION_O_S1] = new_object("assets/option.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[INVENTORY_O_S1] = new_object("assets/inventory.png",

@@ -60,6 +60,10 @@ void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 *stats)
 {
+    sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
+    sfSprite_setScale(scene.objs[TOWN_O_S1].sprite, (sfVector2f) {3.5, 3.5});
+    sfRenderWindow_drawSprite(settings->window, scene.objs[TOWN_O_S1].sprite, NULL);
+    sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++) {
         if (scene.objs[tmp].speed >= 0)
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
@@ -76,10 +80,6 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
         if (scene.texts[tmp].state >= 0)
             sfRenderWindow_drawText(settings->window, scene.texts[tmp].text,
             NULL);
-    /*sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
-    sfSprite_setScale(scene.objs[TOWN_O_S1].sprite, (sfVector2f) {3.5, 3.5});
-    sfRenderWindow_drawSprite(settings->window, scene.objs[TOWN_O_S1].sprite, NULL);
-    sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);*/
 }
 
 int my_rpg()
