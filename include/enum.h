@@ -6,7 +6,7 @@
 */
 
 #ifndef ENUM_H_
-#define ENUM_H_
+    #define ENUM_H_
 
 enum scene {main_menu, town, boss, forest, beach, camp, victory, defeat};
 
