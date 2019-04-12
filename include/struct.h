@@ -100,4 +100,10 @@ typedef struct game {
     game_setting_t *settings;
 } game_t;
 
+typedef struct timer_clock {
+    float main_menu;
+    float timer2;
+    float timer3;
+} timer_clock_t;
+
 #endif /* STRUCT_H_ */

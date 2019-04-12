@@ -68,7 +68,7 @@ game_quest_t new_quest(const char *quest_statement, bool _instant,
 int nb_of_task, int *rewards_id);
 
 //quest_interaction
-void quests_interaction(game_t *game);
+void quests_interaction(void);
 
 //destroy
 void destroy_all(game_t *game);
@@ -81,6 +81,18 @@ void player_stop_moving(game_stat_t *stats);
 //player_attack
 void player_attack(game_stat_t *stats);
 
-#endif /* RPG_H_ */
-
+//analyser
+void analyse_events(game_t *game);
 void keyboard_checker(game_t *game);
+
+//draw_cursor
+void draw_cursor(game_scene_t *scenes, game_setting_t *settings);
+
+//set_scale
+void set_scale_town(game_scene_t scene, game_stat_t *stats, game_setting_t
+*settings);
+
+//clock
+void clock(game_scene_t *scene, game_setting_t *settings);
+
+#endif /* RPG_H_ */

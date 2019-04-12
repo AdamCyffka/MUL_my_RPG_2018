@@ -9,46 +9,17 @@
 #include "struct.h"
 #include "enum.h"
 
-void analyse_events(game_t *game)
-{
-    if (game->settings->event.type == sfEvtClosed ||
-    sfKeyboard_isKeyPressed(sfKeyTab) == sfTrue)
-        sfRenderWindow_close(game->settings->window);
-    if (game->settings->event.type == sfEvtMouseMoved) {
-        game->settings->cursor_pos.x = game->settings->event.mouseMove.x;
-        game->settings->cursor_pos.y = game->settings->event.mouseMove.y;
-    }
-    if (game->settings->event.type == sfEvtKeyPressed) {
-        keyboard_checker(game);
-        key_to_move_or_not(game->settings, game->stats);
-    }
-    else if (game->settings->event.type == sfEvtMouseButtonPressed)
-        player_attack(game->stats);
-    else
-        player_stop_moving(game->stats);
-}
-
-void clock(game_scene_t *scene, game_setting_t *settings)
-{
-    sfTime time;
-    float seconds;
-    while (1) {
-        time = sfClock_getElapsedTime(settings->clock);
-        seconds = time.microseconds / 1000000.0;
-        if (seconds > 0.1) {
-            move_sprite_main_menu(scene);
-            sfClock_restart(settings->clock);
-            break;
-        }
-    }
-}
-
 void game_change(game_t *game)
 {
     if (game->settings->current == main_menu)
         change_main_menu(game->settings, game->scenes);
+    if (game->settings->current == town)
+        set_scale_town(game->scenes[town], game->stats, game->settings);
     if (game->settings->current >= town && game->settings->current <= camp)
-        quests_interaction(game);
+        quests_interaction();
+    //if (game->settings->current >= main_menu && game->settings->current <=
+    //defeat)
+      //  draw_cursor(game->scenes, game->settings);
     clock(game->scenes, game->settings);
 }
 
@@ -60,17 +31,14 @@ void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 *stats)
 {
-    sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
-    sfSprite_setScale(scene.objs[TOWN_O_S1].sprite, (sfVector2f) {3.5, 3.5});
-    sfRenderWindow_drawSprite(settings->window, scene.objs[TOWN_O_S1].sprite, NULL);
-    sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++) {
         if (scene.objs[tmp].speed >= 0)
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
             .sprite, NULL);
     }
+    sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     //for (int tmp = 0; tmp < scene.how_many[1]; tmp++)
-    //sfMusic_play(scene.sounds[tmp].music);
+        //sfMusic_play(scene.sounds[tmp].music);
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++) {
         if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene

@@ -23,7 +23,7 @@ void fill_scene_main_menu3(game_scene_t main_menu)
 void fill_scene_main_menu2(game_scene_t main_menu)
 {
     main_menu.objs[CURSOR_O_S0] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, -1);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
     main_menu.buttons[LEFT_B_S0] = new_button("assets/left.png",
     (sfVector2f) {695, 580}, (sfIntRect) {0, 0, 44, 40}, -1);
     main_menu.buttons[RIGHT_B_S0] = new_button("assets/right.png",

@@ -17,7 +17,7 @@ void quests_validation(void)
 {
 }
 
-void quests_interaction(game_t *game)
+void quests_interaction(void)
 {
     quests_validation();
     quests_display();
