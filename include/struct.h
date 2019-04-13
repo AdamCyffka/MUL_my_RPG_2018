@@ -65,8 +65,8 @@ typedef struct game_inventory {
 } game_inventory_t;
 
 typedef struct game_quest {
+    char *quest_dialog;
     char *quest_statement;
-    bool _instant;
     int progress;
     int nb_of_task;
     int *reward_id;

@@ -8,6 +8,7 @@
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
+#include "define.h"
 
 void create_scenes(game_scene_t *scenes)
 {
@@ -34,30 +35,22 @@ void create_inventory(game_inventory_t *inventory)
     
 }
 
-void create_quests(game_quest_t *quests)
+/*void create_quests(game_quest_t *quests)
 {
-    quests[0] = new_quest("Introduction.", true, 1, malloc(sizeof(int) * 2)); // quest_book && map
-    quests[1] = new_quest("Speak to Lewis the blacksmith.",
-    true, 1, malloc(sizeof(int) * 1)); // sword
-    quests[2] = new_quest("Speak to Emily at the north of the town.",
-    true, 1, NULL);
-    quests[3] = new_quest("Kill 10 Golems from the occupied camp.",
-    false, 10, malloc(sizeof(int) * 2)); // boots && xp
-    quests[4] = new_quest("Give to Robin the golem's head.", true, 1, NULL);
-    quests[5] = new_quest("Find Robin's axe.",
-    false, 1, malloc(sizeof(int) * 1)); // xp
-    quests[6] = new_quest("Speak to Pierre the bar tender.", true, 1, NULL);
-    quests[7] = new_quest("Kill 15 Ghosts from the secret forest.",
-    false, 15, malloc(sizeof(int) * 2)); // sword upgrade && xp
-    quests[8] = new_quest("Speak to George near the sakura's tree.",
-    true, 1, NULL);
-    quests[9] = new_quest("Count the number of sheeps in the town",
-    true, 1, malloc(sizeof(int) * 2)); // life upgrade && xp
-    quests[10] = new_quest("Speak to Jodi.", true, 1, NULL);
-    quests[11] = new_quest("Kill 20 Skeletons from the beach.",
-    false, 20, malloc(sizeof(int) * 2)); // damage upgrade + xp
-    quests[12] = new_quest("KILL THE BOSS !", true, 1, malloc(sizeof(int) * 1)); // XP MAX
-}
+    quests[INTRO_Q] = new_quest(); // quest_book && map
+    quests[BLACKSMITH1_Q] = new_quest(); // sword
+    quests[BLACKSMITH2_Q] = new_quest();
+    quests[GOLEMS1_Q] = new_quest(); // boots && xp
+    quests[GOLEMS2_Q] = new_quest();
+    quests[FIND_LOST1_Q] = new_quest(); // xp
+    quests[FIND_LOST2_Q] = new_quest();
+    quests[GHOSTS1_Q] = new_quest(); // sword upgrade && xp
+    quests[GHOSTS2_Q] = new_quest();
+    quests[SHEEP_COUNT1_Q] = new_quest(); // life upgrade && xp
+    quests[SHEEP_COUNT2_Q] = new_quest();
+    quests[SKELETON1_Q] = new_quest(); // damage upgrade + xp
+    quests[SKELETON2_Q] = new_quest(); // XP MAX
+}*/
 
 void create_stats(game_stat_t *stats)
 {
