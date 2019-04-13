@@ -60,7 +60,6 @@ sfVector2f pos, sfIntRect rect, float speed)
     game_object_t obj;
 
     obj.state = 0;
-    obj.hp = 3;
     obj.speed = speed;
     obj.sprite = sfSprite_create();
     obj.texture = sfTexture_createFromFile(path_to_spsheet, NULL);

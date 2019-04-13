@@ -26,6 +26,7 @@ SRCS	= 	src/main.c								\
 			src/draw_cursor.c 						\
 			src/set_scale.c 						\
 			src/clock.c 							\
+			src/my_libc_functions.c 				\
 			src/main_menu/button_main_menu.c		\
 			src/main_menu/change_main_menu.c		\
 			src/fill_scene/fill_scene_beach.c		\

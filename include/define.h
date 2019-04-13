@@ -8,7 +8,8 @@
 #ifndef DEFINE_H_
     #define DEFINE_H_
 
-    #define QUEST0_1_1 "Hello my friend, it's been a while we didn't see you.\nIs Samwell sending you to help us ?\n"
+    #define QUEST0_1_1 "Hello my friend, it's been a while we didn't see you.\n\
+Is Samwell sending you to help us ?\n"
     #define QUEST0_1_2 "Perfect, We definitely need your help.\nTake this map, open it if you are lost.\n"
     #define QUEST0_1_3 "I almost forgot ! This is your 'Book Of Quest'.\nGo see Josh, it's our blacksmith, he'll give you what you need to fight.\n"
 
