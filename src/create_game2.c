@@ -58,7 +58,7 @@ void create_stats(game_stat_t *stats)
     stats->xp = 0;
     stats->name = "Hubert";
     stats->player = new_object("assets/girl1.png",
-    (sfVector2f) {0, 500}, (sfIntRect) {0, 32, 16, 32}, 0);
+    (sfVector2f) {20, 500}, (sfIntRect) {0, 32, 16, 32}, 0);
     stats->current_quest = INTRO_Q;
 }
 

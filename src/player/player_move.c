@@ -93,12 +93,15 @@ void move_player(game_setting_t *settings, game_stat_t *stats)
     }
 }
 
-void key_to_move_or_not(game_setting_t *settings, game_stat_t *stats)
+void key_to_move_or_not(game_scene_t scenes,
+    game_setting_t *settings, game_stat_t *stats)
 {
     if (settings->event.key.code == sfKeyRight
         || settings->event.key.code == sfKeyLeft
         || settings->event.key.code == sfKeyUp
         || settings->event.key.code == sfKeyDown) {
+        if (player_is_on_rectangle(settings, stats, scenes) == 0)
+            return;
         move_window(settings);
         if (stats->player.rect.left < 48)
             stats->player.rect.left += 16;

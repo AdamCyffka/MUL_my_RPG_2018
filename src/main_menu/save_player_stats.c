@@ -7,6 +7,9 @@
 
 #include "rpg.h"
 #include "struct.h"
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 static int write_player_stat(char *str, int nb, int fd)
 {
@@ -19,16 +22,15 @@ static int write_player_stat(char *str, int nb, int fd)
     return (SUCCESS);
 }
 
-int save_player_stats(player_t *player)
+int save_player_stats(game_t *game)
 {
     int fd = open("data/player_stats.cfg", O_WRONLY, O_TRUNC);
 
     if (fd < 0)
         return (WRONG_PATH);
-    (write_player_stat("level = ", player->stats->level, fd));
-    (write_player_stat("xp = ", player->stats->xp, fd));
-    (write_player_stat("xp_to_up = ", player->stats->xp_to_up, fd));
-    (write_player_stat("light_radius = ", player->stats->light_radius, fd));
-    (write_player_stat("nb_orb = ", player->stats->nb_orbe, fd));
+    (write_player_stat("current quest = ", game->stats->current_quest, fd));
+    (write_player_stat("life = ", game->stats->life, fd));
+    (write_player_stat("name = ", game->stats->name, fd));
+    (write_player_stat("xp = ", game->stats->xp, fd));
     return (SUCCESS);
 }

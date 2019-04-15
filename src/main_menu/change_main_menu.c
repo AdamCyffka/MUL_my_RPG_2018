@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2019
-** print_main_menu.c
+** RPG
 ** File description:
 ** All function to print main_menu
 */

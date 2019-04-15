@@ -23,7 +23,6 @@
 
 typedef struct game_object {
     int state;
-    int hp;
     float speed;
     sfSprite *sprite;
     sfTexture *texture;
