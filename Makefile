@@ -11,22 +11,24 @@ CC		= 	gcc
 
 RM		= 	rm -f
 
+OBJS	= $(SRCS:.c=.o)
+
 SRCS	= 	src/main.c								\
 			src/create_game2.c 						\
 			src/create_game.c						\
 			src/destroy_all.c						\
 			src/my_rpg.c							\
-			src/player_move.c						\
-			src/player_attack.c						\
+			src/player/player_move.c				\
+			src/player/player_attack.c				\
 			src/new_content2.c						\
 			src/new_content.c						\
-			src/button_event.c 						\
 			src/quests_interaction.c				\
 			src/analyser.c 							\
 			src/draw_cursor.c 						\
 			src/set_scale.c 						\
 			src/clock.c 							\
 			src/my_libc_functions.c 				\
+			src/buttons/button_event.c 				\
 			src/main_menu/button_main_menu.c		\
 			src/main_menu/change_main_menu.c		\
 			src/fill_scene/fill_scene_beach.c		\
@@ -37,8 +39,6 @@ SRCS	= 	src/main.c								\
 			src/fill_scene/fill_scene_town1.c		\
 			src/fill_scene/fill_scene_town2.c	    \
 			src/fill_scene/fill_scene_vic_def.c	   	\
-
-OBJS	= $(SRCS:.c=.o)
 
 CFLAGS = -Iinclude
 CFLAGS += -L./lib/printf -lprintf
