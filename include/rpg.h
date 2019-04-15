@@ -67,12 +67,13 @@ void quests_interaction(void);
 void destroy_all(game_t *game);
 
 //player_move
-void key_to_move_or_not(game_setting_t *settings, game_stat_t *stats);
+void key_to_move_or_not(game_scene_t scenes, game_setting_t *settings, game_stat_t *stats);
 void move_player(game_setting_t *settings, game_stat_t *stats);
 void player_stop_moving(game_stat_t *stats);
 
 //player_attack
 void player_attack(game_stat_t *stats);
+int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat, game_scene_t scene);
 
 //analyser
 void analyse_events(game_t *game);

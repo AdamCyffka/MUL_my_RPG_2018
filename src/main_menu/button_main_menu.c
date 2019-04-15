@@ -37,7 +37,7 @@ void men_game_button(game_setting_t *settings, game_scene_t scenes, int nbr)
 
 void utils_button_menu(game_scene_t scenes, int enable, int disable)
 {
-    scenes.buttons[CLOSE_B_S0].state = ((enable == 1) ? enable : disable); 
+    scenes.buttons[CLOSE_B_S0].state = ((enable == 1) ? enable : disable);
     scenes.buttons[CREDITS_B_S0].state = enable;
     scenes.buttons[NEW_B_S0].state = ((enable == 1) ? disable : enable);
     scenes.buttons[EXIT_B_S0].state = ((enable == 1) ? disable : enable);
