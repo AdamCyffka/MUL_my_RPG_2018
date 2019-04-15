@@ -58,15 +58,15 @@ void fill_scene_town4(game_scene_t town)
 void fill_scene_town3(game_scene_t town)
 {
     town.buttons[WALKABLE13_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {440, 500}, (sfIntRect) {0, 0, 47, 280}, 0);
+    (sfVector2f) {1540, 1750}, (sfIntRect) {0, 0, 164.5, 980}, 0);
     town.buttons[WALKABLE14_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {155, 735}, (sfIntRect) {0, 0, 287, 42}, 0);
+    (sfVector2f) {542.5, 2572.5}, (sfIntRect) {0, 0, 1004.5, 147}, 0);
     town.buttons[WALKABLE15_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {485, 590}, (sfIntRect) {0, 0, 402, 45}, 0);
+    (sfVector2f) {1697.5, 2065}, (sfIntRect) {0, 0, 1407, 157.5}, 0);
     town.buttons[WALKABLE16_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 41, 428}, 0);
+    (sfVector2f) {2975, 2100}, (sfIntRect) {0, 0, 143.5, 1498}, 0);
     town.buttons[WALKABLE17_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {890, 790}, (sfIntRect) {0, 0, 359, 36}, 0);
+    (sfVector2f) {3115, 2765}, (sfIntRect) {0, 0, 1256.5, 126}, 0);
     town.sounds[BOSS_S_S1] = new_sound("assets/music_boss.ogg", sfFalse, 100);
     town.sounds[MUSIC_S_S1] = new_sound("assets/music_town.ogg", sfFalse, 100);
     town.sounds[CLICK_S_S1] = new_sound("assets/click.ogg", sfFalse, 100);
@@ -80,23 +80,23 @@ void fill_scene_town3(game_scene_t town)
 void fill_scene_town2(game_scene_t town)
 {
     town.buttons[WALKABLE4_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {760, 90}, (sfIntRect) {0, 0, 49, 150}, 0);
+    (sfVector2f) {2660, 315}, (sfIntRect) {0, 0, 171.5, 525}, 0);
     town.buttons[WALKABLE5_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {805, 140}, (sfIntRect) {0, 0, 438, 35}, 0);
+    (sfVector2f) {2817.5, 490}, (sfIntRect) {0, 0, 1533, 122}, 0);
     town.buttons[WALKABLE6_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {730, 290}, (sfIntRect) {0, 0, 35, 62}, 0);
+    (sfVector2f) {2555, 1015}, (sfIntRect) {0, 0, 122.5, 217}, 0);
     town.buttons[WALKABLE7_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {760, 320}, (sfIntRect) {0, 0, 186, 31}, 0);
+    (sfVector2f) {2660, 1120}, (sfIntRect) {0, 0, 651, 108.5}, 0);
     town.buttons[WALKABLE8_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {770, 350}, (sfIntRect) {0, 0, 35, 111}, 0);
+    (sfVector2f) {2695, 1225}, (sfIntRect) {0, 0, 122.5, 388.5}, 0);
     town.buttons[WALKABLE9_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {900, 340}, (sfIntRect) {0, 0, 202, 157}, 0);
+    (sfVector2f) {3150, 1190}, (sfIntRect) {0, 0, 707, 549.5}, 0);
     town.buttons[WALKABLE10_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {1100, 400}, (sfIntRect) {0, 0, 76, 105}, 0);
+    (sfVector2f) {3850, 1400}, (sfIntRect) {0, 0, 266, 367.5}, 0);
     town.buttons[WALKABLE11_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {747, 450}, (sfIntRect) {0, 0, 134, 92}, 0);
+    (sfVector2f) {2614.5, 1575}, (sfIntRect) {0, 0, 469, 322}, 0);
     town.buttons[WALKABLE12_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {615, 450}, (sfIntRect) {0, 0, 132, 28}, 0);
+    (sfVector2f) {2152.5, 1575}, (sfIntRect) {0, 0, 462, 98}, 0);
     fill_scene_town3(town);
 }
 
@@ -115,10 +115,10 @@ void fill_scene_town1(game_scene_t town)
     town.buttons[MUTE_B_S1] = new_button("assets/mute.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 48, 48}, 0);
     town.buttons[WALKABLE1_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 160}, (sfIntRect) {0, 0, 453, 43}, 0);
+    (sfVector2f) {0, 560}, (sfIntRect) {0, 0, 1585.5, 150.5}, 0);
     town.buttons[WALKABLE2_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {400, 201}, (sfIntRect) {0, 0, 362, 89}, 0);
+    (sfVector2f) {1400, 703.5}, (sfIntRect) {0, 0, 1267, 311.5}, 0);
     town.buttons[WALKABLE3_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {350, 290}, (sfIntRect) {0, 0, 265, 213}, 0);
+    (sfVector2f) {1225, 1015}, (sfIntRect) {0, 0, 927.5, 745.5}, 0);
     fill_scene_town2(town);
 }
