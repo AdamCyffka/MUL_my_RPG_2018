@@ -11,19 +11,19 @@
 
 void game_change(game_t *game)
 {
-    //buttons_activation(game);
+    set_scale(game);
     if (game->settings->current == main_menu)
         change_main_menu(game->settings, game->scenes);
-    if (game->settings->current == town)
-        set_scale_town(game->scenes[town], game->stats, game->settings);
     if (game->settings->current >= town && game->settings->current <= camp)
-        quests_interaction();
+        change_maps(game);
+    if (game->settings->current >= victory && game->settings->current <= defeat)
+        change_vic_def(game);
     clock(game->scenes, game->settings);
 }
 
 void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 {
-    settings->current = town;
+    settings->current = main_menu;
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t

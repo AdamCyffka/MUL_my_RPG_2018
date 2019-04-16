@@ -2,19 +2,19 @@
 ** EPITECH PROJECT, 2019
 ** RPG
 ** File description:
-** victory and defeat buttons
+** change victory and defeat
 */
 
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
 
-void button_mainmenu(void)
+void change_victory(void)
 {
 
 }
 
-void button_desktop(void)
+void change_defeat(void)
 {
 
 }
