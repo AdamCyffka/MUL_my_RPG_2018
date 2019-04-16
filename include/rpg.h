@@ -43,7 +43,7 @@ void create_settings(game_setting_t *settings);
 
 //main_menu
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
-void move_sprite_main_menu(game_scene_t *scene);
+void move_sprite_main_menu(game_scene_t *scene, float delta_time);
 void change_main_menu(game_setting_t *settings, game_scene_t *scene);
 int button_is_clicked(game_setting_t *settings, sfVector2f pos,
 sfVector2f size);

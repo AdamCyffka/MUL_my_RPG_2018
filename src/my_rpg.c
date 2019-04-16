@@ -23,7 +23,7 @@ void game_change(game_t *game)
 
 void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 {
-    settings->current = main_menu;
+    settings->current = town;
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
@@ -34,6 +34,8 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
             .sprite, NULL);
     }
+    if (settings->current >= town && settings->current <= camp)
+        sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     //for (int tmp = 0; tmp < scene.how_many[1]; tmp++)
         //sfMusic_play(scene.sounds[tmp].music);
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++) {
