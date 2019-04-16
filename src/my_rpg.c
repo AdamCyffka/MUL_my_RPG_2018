@@ -34,7 +34,6 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
             .sprite, NULL);
     }
-    sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     //for (int tmp = 0; tmp < scene.how_many[1]; tmp++)
         //sfMusic_play(scene.sounds[tmp].music);
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++) {

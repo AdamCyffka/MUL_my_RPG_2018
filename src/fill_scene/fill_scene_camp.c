@@ -43,9 +43,9 @@ void fill_scene_camp3(game_scene_t camp)
 void fill_scene_camp2(game_scene_t camp)
 {
     camp.buttons[WALKABLE4_B_S5] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 548, 131}, 0);
+    (sfVector2f) {450, 380}, (sfIntRect) {0, 0, 588, 131}, 0);
     camp.buttons[WALKABLE5_B_S5] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 494, 150}, 0);
+    (sfVector2f) {1200, 380}, (sfIntRect) {0, 0, 584, 150}, 0);
     camp.sounds[MUSIC_S_S5] = new_sound("assets/music_camp.ogg", sfFalse,
     100);
     camp.sounds[CLICK_S_S5] = new_sound("assets/click.ogg", sfFalse, 100);
@@ -79,10 +79,10 @@ void fill_scene_camp1(game_scene_t camp)
     camp.buttons[MUTE_B_S5] = new_button("assets/mute.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 48, 48}, 0);
     camp.buttons[WALKABLE1_B_S5] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1443, 146}, 0);
+    (sfVector2f) {0, 800}, (sfIntRect) {0, 0, 1700, 146}, 0);
     camp.buttons[WALKABLE2_B_S5] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1395, 256}, 0);
+    (sfVector2f) {290, 500}, (sfIntRect) {0, 0, 1630, 300}, 0);
     camp.buttons[WALKABLE3_B_S5] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 740, 102}, 0);
+    (sfVector2f) {840, 910}, (sfIntRect) {0, 0, 860, 102}, 0);
     fill_scene_camp2(camp);
 }
