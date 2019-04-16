@@ -19,7 +19,7 @@ static int write_player_stat(char *str, int nb, int fd)
     write(fd, level, my_strlen(level));
     write(fd, "\n", 1);
     free(level);
-    return (SUCCESS);
+    return (0);
 }
 
 int save_player_stats(game_t *game)
@@ -27,10 +27,10 @@ int save_player_stats(game_t *game)
     int fd = open("data/player_stats.cfg", O_WRONLY, O_TRUNC);
 
     if (fd < 0)
-        return (WRONG_PATH);
+        return (84);
     (write_player_stat("current quest = ", game->stats->current_quest, fd));
     (write_player_stat("life = ", game->stats->life, fd));
     (write_player_stat("name = ", game->stats->name, fd));
     (write_player_stat("xp = ", game->stats->xp, fd));
-    return (SUCCESS);
+    return (0);
 }

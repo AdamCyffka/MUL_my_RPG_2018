@@ -87,6 +87,8 @@ typedef struct game_setting {
     sfVector2f cursor_pos;
     bool _mouse;
     sfClock *clock;
+    float last_time;
+    float delta_time;
     sfView *map_view;
     sfEvent event;
 } game_setting_t;

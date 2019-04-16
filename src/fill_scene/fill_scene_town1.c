@@ -49,7 +49,7 @@ void fill_scene_town4(game_scene_t town)
     town.objs[OPTION_O_S1] = new_object("assets/option.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[INVENTORY_O_S1] = new_object("assets/inventory.png",
-    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, 0);
+    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[EXIT_O_S1] = new_object("assets/exit.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     fill_scene_town5(town);

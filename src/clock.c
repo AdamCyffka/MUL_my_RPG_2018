@@ -12,11 +12,14 @@
 void clock(game_scene_t *scene, game_setting_t *settings)
 {
     sfTime time = sfClock_getElapsedTime(settings->clock);
-    float seconds = time.microseconds / 1000000.0;
+    float seconds = time.microseconds / 100000.0;
     static timer_clock_t timers = {0, 0, 0};
 
-    if (seconds >= (timers.main_menu + 0.1)) {
+    settings->delta_time = (seconds - settings->last_time);
+    settings->last_time = seconds;
+    move_sprite_main_menu(scene, settings->delta_time);
+    /*if (seconds >= (timers.main_menu + 0.1)) {
         timers.main_menu = seconds;
-        move_sprite_main_menu(scene);
-    }
+        move_sprite_main_menu(scene, settings->delta_time);
+        }*/
 }

@@ -2,34 +2,34 @@
 ** EPITECH PROJECT, 2019
 ** RPG
 ** File description:
-** all scenes buttons
+** change maps
 */
 
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
 
-void button_mute(void)
+void change_town(void)
 {
 
 }
 
-void button_inventory(void)
+void change_boss(void)
 {
 
 }
 
-void button_me(void)
+void change_forest(void)
 {
 
 }
 
-void button_options(void)
+void change_beach(void)
 {
 
 }
 
-void button_exit(void)
+void change_camp(void)
 {
 
 }

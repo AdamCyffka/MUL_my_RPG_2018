@@ -42,6 +42,8 @@ void create_stats(game_stat_t *stats);
 void create_settings(game_setting_t *settings);
 
 //main_menu
+void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
+void move_sprite_main_menu(game_scene_t *scene, float delta_time);
 void change_main_menu(game_setting_t *settings, game_scene_t *scene);
 int button_is_clicked(game_setting_t *settings, sfVector2f pos,
 sfVector2f size);
@@ -56,22 +58,16 @@ int button_new_game(game_t *game);
 int load_game(game_t *game);
 int button_save(game_t *game);
 
-//print_main_menu
-void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
-void move_sprite_main_menu(game_scene_t *scene);
-
 //quest_interaction
 void quests_interaction(void);
 
 //destroy
 void destroy_all(game_t *game);
 
-//player_move
+//player
 void key_to_move_or_not(game_scene_t scenes, game_setting_t *settings, game_stat_t *stats);
 void move_player(game_setting_t *settings, game_stat_t *stats);
 void player_stop_moving(game_stat_t *stats);
-
-//player_attack
 void player_attack(game_stat_t *stats);
 int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat, game_scene_t scene);
 
@@ -84,11 +80,21 @@ void draw_cursor(game_scene_t scene, game_setting_t *settings);
 void check_mouse_pos(game_t *game);
 
 //set_scale
-void set_scale_town(game_scene_t scene, game_stat_t *stats, game_setting_t
-*settings);
+void set_scale(game_t *game);
 
 //clock
 void clock(game_scene_t *scene, game_setting_t *settings);
+
+//change_maps
+void change_maps(game_t *game);
+void change_vic_def(game_t *game);
+void change_town(void);
+void change_boss(void);
+void change_forest(void);
+void change_beach(void);
+void change_camp(void);
+void change_victory(void);
+void change_defeat(void);
 
 //basic functions
 int my_strlen(char const *str);
