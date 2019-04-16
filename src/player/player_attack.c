@@ -25,7 +25,7 @@ int button_crossed(game_stat_t *stats,
         y -= 4;
     if (settings->event.key.code == sfKeyDown)
         y += 4;
-    if ((x >= pos.x && x <= pos.x - 50 + size.x)
+    if ((x >= pos.x && x <= pos.x + size.x)
         && (y >= pos.y - 120 && y <= pos.y - 120
         + size.y))
         return 1;

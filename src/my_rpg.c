@@ -16,6 +16,8 @@ void game_change(game_t *game)
         change_main_menu(game->settings, game->scenes);
     if (game->settings->current == town)
         set_scale_town(game->scenes[town], game->stats, game->settings);
+    if (game->settings->current == forest)
+        set_scale_forest(game->scenes[forest], game->stats, game->settings);
     if (game->settings->current >= town && game->settings->current <= camp)
         quests_interaction();
     clock(game->scenes, game->settings);
