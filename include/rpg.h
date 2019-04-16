@@ -58,7 +58,7 @@ int button_save(game_t *game);
 
 //print_main_menu
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
-void move_sprite_main_menu(game_scene_t *scene);
+void move_sprite_main_menu(game_scene_t *scene, float delta_time);
 
 //quest_interaction
 void quests_interaction(void);

@@ -70,10 +70,10 @@ void fill_scene_beach1(game_scene_t beach)
     beach.buttons[MUTE_B_S4] = new_button("assets/mute.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 48, 48}, 0);
     beach.buttons[WALKABLE1_B_S4] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 92, 159}, 0);
+    (sfVector2f) {1100, 0}, (sfIntRect) {0, 0, 98 * 1.6, 159 * 1.6}, 0);
     beach.buttons[WALKABLE2_B_S4] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 751, 332}, 0);
+    (sfVector2f) {190, 159 * 1.6}, (sfIntRect) {0, 0, 731 * 1.6, 452 * 1.6}, 0);
     beach.buttons[WALKABLE3_B_S4] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 307, 200}, 0);
+    (sfVector2f) {1300, 529}, (sfIntRect) {0, 0, 317 * 1.6, 250 * 1.6}, 0);
     fill_scene_beach2(beach);
 }
