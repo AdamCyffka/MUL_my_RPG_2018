@@ -18,7 +18,7 @@ void create_scenes(game_scene_t *scenes)
     fill_scene_town1(scenes[town]);
     scenes[boss] = new_scene(12, 4, 23, 6);
     fill_scene_boss1(scenes[boss]);
-    scenes[forest] = new_scene(10, 4, 17, 6);
+    scenes[forest] = new_scene(10, 4, 16, 6);
     fill_scene_forest1(scenes[forest]);
     scenes[beach] = new_scene(10, 4, 9, 6);
     fill_scene_beach1(scenes[beach]);
