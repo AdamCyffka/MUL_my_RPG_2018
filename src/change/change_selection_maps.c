@@ -12,7 +12,7 @@
 void change_maps(game_t *game)
 {
     if (game->settings->current == town)
-        change_town();
+        change_town(game->settings, game->scenes[town]);
     if (game->settings->current == boss)
         change_boss();
     if (game->settings->current == forest)

@@ -41,25 +41,30 @@ void create_quests(game_quest_t *quests);
 void create_stats(game_stat_t *stats);
 void create_settings(game_setting_t *settings);
 
-//main_menu
+//change
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
 void move_sprite_main_menu(game_scene_t *scene, float delta_time);
 void change_main_menu(game_setting_t *settings, game_scene_t *scene);
+
+//buttons
 int button_is_clicked(game_setting_t *settings, sfVector2f pos,
 sfVector2f size);
-void utils_button_menu(game_scene_t scenes, int enable, int disable);
+void disp_button_menu(game_scene_t scenes, int enable, int disable);
 void button_menu(game_setting_t *settings, game_scene_t scenes);
 void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
+
+//save
 int save_player_stats(game_t *game);
 int load_player_stats(game_t *game);
 
 //buttons
-int button_new_game(game_t *game);
-int load_game(game_t *game);
-int button_save(game_t *game);
+void button_town(game_setting_t *settings, game_scene_t scenes);
 
 //quest_interaction
 void quests_interaction(void);
+
+//play_sounds
+void check_bg_music(game_t *game);
 
 //destroy
 //void destroy_all(game_t *game);
@@ -88,7 +93,7 @@ void clock(game_scene_t *scene, game_setting_t *settings);
 //change_maps
 void change_maps(game_t *game);
 void change_vic_def(game_t *game);
-void change_town(void);
+void change_town(game_setting_t *settings, game_scene_t scenes);
 void change_boss(void);
 void change_forest(void);
 void change_beach(void);

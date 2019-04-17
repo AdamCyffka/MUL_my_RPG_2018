@@ -9,9 +9,9 @@
 #include "struct.h"
 #include "enum.h"
 
-void change_town(void)
+void change_town(game_setting_t *settings, game_scene_t scenes)
 {
-
+    button_town(settings, scenes);
 }
 
 void change_boss(void)

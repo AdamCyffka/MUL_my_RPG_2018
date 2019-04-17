@@ -19,9 +19,9 @@ SRCS	= 	src/main.c								\
 			src/my_rpg.c							\
 			src/player/player_move.c				\
 			src/player/player_attack.c				\
-			src/enemies/enemies_die.c					\
-			src/enemies/enemies_moves.c					\
-			src/enemies/enemies_positions.c					\
+			src/enemies/enemies_die.c				\
+			src/enemies/enemies_moves.c				\
+			src/enemies/enemies_positions.c			\
 			src/new_content2.c						\
 			src/new_content.c						\
 			src/quests_interaction.c				\
@@ -30,12 +30,14 @@ SRCS	= 	src/main.c								\
 			src/set_scale.c 						\
 			src/clock.c 							\
 			src/my_libc_functions.c 				\
-			src/change_maps.c 						\
-			src/change_selection_maps.c 			\
-			src/change_vic_def.c 					\
+			src/play_sounds.c 						\
 			src/buttons/button_event.c 				\
-			src/main_menu/button_main_menu.c		\
-			src/main_menu/change_main_menu.c		\
+			src/buttons/button_main_menu.c			\
+			src/buttons/button_town.c 				\
+			src/change/change_main_menu.c			\
+			src/change/change_maps.c 				\
+			src/change/change_selection_maps.c 		\
+			src/change/change_vic_def.c 			\
 			src/fill_scene/fill_scene_beach.c		\
 			src/fill_scene/fill_scene_boss.c		\
 			src/fill_scene/fill_scene_camp.c		\

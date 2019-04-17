@@ -30,7 +30,7 @@ void move_sprite_main_menu(game_scene_t *scene, float delta_time)
     move_my_first_flamingo(scene);
     move_my_second_flamingo(scene);
     for (int i = 1; i < 4; i++)
-        if (scene->objs[i].position.x <= -150)
+        if (scene->objs[i].position.x <= -512)
             scene->objs[i].position.x = 1950;
     scene->objs[CLOUD1_O_S0].position.x -= scene->objs[CLOUD1_O_S0].speed * delta_time;
     scene->objs[CLOUD2_O_S0].position.x -= scene->objs[CLOUD2_O_S0].speed * delta_time;
