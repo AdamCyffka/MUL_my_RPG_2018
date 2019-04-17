@@ -54,8 +54,6 @@ void fill_scene_forest2(game_scene_t forest)
 {
     forest.buttons[WALKABLE4_B_S3] = new_button("assets/invisible.png",
     (sfVector2f) {400, 400}, (sfIntRect) {0, 0, 900, 211}, 0);
-    forest.buttons[WALKABLE5_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {700, 200}, (sfIntRect) {0, 0, 487, 308}, 0);
     forest.buttons[WALKABLE6_B_S3] = new_button("assets/invisible.png",
     (sfVector2f) {1200, 520}, (sfIntRect) {0, 0, 620, 120}, 0);
     forest.buttons[WALKABLE7_B_S3] = new_button("assets/invisible.png",

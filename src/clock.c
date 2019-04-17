@@ -9,7 +9,7 @@
 #include "struct.h"
 #include "enum.h"
 
-void clock(game_scene_t *scene, game_setting_t *settings)
+void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests)
 {
     sfTime time = sfClock_getElapsedTime(settings->clock);
     float seconds = time.microseconds / 100000.0;
@@ -22,4 +22,8 @@ void clock(game_scene_t *scene, game_setting_t *settings)
         timers.main_menu = seconds;
         move_sprite_main_menu(scene, settings->delta_time);
         }*/
+    if (seconds >= (timers.timer2 + 10)) { //FONCTION TEST VALENTIN
+        timers.timer2 = seconds;
+        test_quest(quests);
+    }
 }

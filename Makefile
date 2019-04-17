@@ -14,6 +14,7 @@ RM		= 	rm -f
 OBJS	= $(SRCS:.c=.o)
 
 SRCS	= 	src/main.c								\
+			src/create_game3.c 						\
 			src/create_game2.c 						\
 			src/create_game.c						\
 			src/destroy_all.c						\
@@ -25,7 +26,9 @@ SRCS	= 	src/main.c								\
 			src/quests_interaction.c				\
 			src/analyser.c 							\
 			src/draw_cursor.c 						\
+			src/draw_quest.c						\
 			src/set_scale.c 						\
+			src/my_strcpy.c							\
 			src/clock.c 							\
 			src/my_libc_functions.c 				\
 			src/change_maps.c 						\
@@ -42,6 +45,9 @@ SRCS	= 	src/main.c								\
 			src/fill_scene/fill_scene_town1.c		\
 			src/fill_scene/fill_scene_town2.c	    \
 			src/fill_scene/fill_scene_vic_def.c	   	\
+			src/fill_quest/fill_quest0_4.c			\
+			src/fill_quest/fill_quest5_9.c			\
+			src/fill_quest/fill_quest10_12.c
 
 CFLAGS = -Iinclude
 CFLAGS += -L./lib/printf -lprintf

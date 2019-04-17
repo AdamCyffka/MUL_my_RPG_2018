@@ -8,12 +8,21 @@
 #ifndef DEFINE_H_
     #define DEFINE_H_
 
+    #define bool _Bool
+    #define true 1
+    #define false 0
+
+    #define EOA -1
+
+    #define SUCCESS 0
+    #define WRONG_PATH -2
+    #define WRONG_CONFIG_PATH -3
 
 //QUEST INTRO_Q
     #define Q0_BOOK "INTRODUCTION"
-    #define Q0_DIAL0 "Hello my friend, it's been a while we didn't see you.\n\
+    #define Q0_DIAL0 "Hello my friend, it's been a while we didn't see you. \
 Is Samwell sending you to help us ?\n"
-    #define Q0_DIAL1 "Perfect, We definitely need your help.\nTake this map, \
+    #define Q0_DIAL1 "Perfect, We definitely need your help. Take this map, \
 open it if you are lost.\n"
     #define Q0_DIAL2 "I almost forgot ! This is your 'Book Of Quest'.\nGo see \
 Josh, it's our blacksmith, he'll give you what you need to fight.\n"
@@ -25,12 +34,12 @@ forged it.\n"
 
 //QUEST BLACKSMITH2_Q
     #define Q2_DIAL0 "You should speak to Emily, she lives at the north of the \
-city,\nshe'll have things for you to do.\n"
+city,she'll have things for you to do.\n"
     #define Q2_BOOK "SPEAK TO EMILY AT THE NORTH OF THE TOWN"
 
 //QUEST GOLEMS1_Q
-    #define Q3_DIAL0 "Hello, nice to meet you.\nThere are golems blocking the \
-passage across the bridge to the camp, could you help me with this ?\n"
+    #define Q3_DIAL0 "Hello, nice to meet you. There are golems blocking the \
+passage across the bridge to the camp,\ncould you help me with this ?\n"
     #define Q3_DIAL1 "Wonderful ! Kill them all !\n"
     #define Q3_BOOK "KILL 10 GOLEMS FROM THE OCCUPIED CAMP"
 
@@ -42,7 +51,7 @@ golem' to Robin.\n"
 //QUEST FIND_LOST1_Q
     #define Q5_DIAL0 "Hello dear, I've lost my axe, I can't fight without it, \
 if you find it could you return it to me please ?\n"
-    #define Q_BOOK5 "FIND ROBIN'S AXE"
+    #define Q5_BOOK "FIND ROBIN'S AXE"
 
 //QUEST FIND_LOST2_Q
     #define Q6_DIAL0 "Oh ! Thank you a lot, I did not hope to see her again.\n"
@@ -61,7 +70,7 @@ this place is haunted\n"
 //QUEST GHOSTS2_Q
     #define Q8_DIAL0 "Robin was right ! You are one of the best fighter \
 I've ever seen.\n"
-    #define Q8_DIAL1 "Take my sword, I think you deserve it more than me.\n\
+    #define Q8_DIAL1 "Take my sword, I think you deserve it more than me. \
 Have you ever visited the south east of the town ?\n\
 They are beautiful trees down there\n"
     #define Q8_BOOK "SPEAK TO GEORGE NEAR THE SAKURA'S TREE"
@@ -69,7 +78,7 @@ They are beautiful trees down there\n"
 //QUEST SHEEP_COUNT1_Q
     #define Q9_DIAL0 "See this wonderful pink tree. He's older than everyone \
 in this town\n Anyway, Let's play a game...\n"
-    #define Q9_DIAL1 "If you win, i'll give you a better armor to fight.\n\
+    #define Q9_DIAL1 "If you win, i'll give you a better armor to fight. \
 Count the number of sheeps in the town,\nyou'll have to tell me the right \
 number if you want the armor\n"
 

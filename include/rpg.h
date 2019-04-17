@@ -33,6 +33,21 @@ void fill_scene_town6(game_scene_t town);
 void fill_scene_victory(game_scene_t victory);
 void fill_scene_defeat(game_scene_t defeat);
 
+//fill_quest
+void fill_quest0(game_quest_t quest0);
+void fill_quest1(game_quest_t quest1);
+void fill_quest2(game_quest_t quest2);
+void fill_quest3(game_quest_t quest3);
+void fill_quest4(game_quest_t quest4);
+void fill_quest5(game_quest_t quest5);
+void fill_quest6(game_quest_t quest6);
+void fill_quest7(game_quest_t quest7);
+void fill_quest8(game_quest_t quest8);
+void fill_quest9(game_quest_t quest9);
+void fill_quest10(game_quest_t quest10);
+void fill_quest11(game_quest_t quest11);
+void fill_quest12(game_quest_t quest12);
+
 //create_game
 game_t *create_game();
 void create_scenes(game_scene_t *scenes);
@@ -79,11 +94,14 @@ void keyboard_checker(game_t *game);
 void draw_cursor(game_scene_t scene, game_setting_t *settings);
 void check_mouse_pos(game_t *game);
 
+//draw_quest
+void draw_quest(game_quest_t *quests, game_setting_t *settings);
+
 //set_scale
 void set_scale(game_t *game);
 
 //clock
-void clock(game_scene_t *scene, game_setting_t *settings);
+void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests);
 
 //change_maps
 void change_maps(game_t *game);
@@ -99,6 +117,7 @@ void change_defeat(void);
 //basic functions
 int my_strlen(char const *str);
 char *my_itoa(int nb);
+char *my_strcpy(char *str, char *dest);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
@@ -110,7 +129,10 @@ sfVector2f pos, sfIntRect rect, int state);
 game_sound_t new_sound(const char *path_to_sound, sfBool state, float volume);
 game_object_t new_object(const char *path_to_spsheet, sfVector2f pos,
 sfIntRect rect, float speed);
-game_quest_t new_quest(const char *quest_statement, bool _instant,
-int nb_of_task, int *rewards_id);
+game_quest_t new_quest(int nb_dial, char *statement, int nb_of_task,
+int nb_reward);
+
+//TEST A RETIRER A LA FIN
+void test_quest(game_quest_t *quests);
 
 #endif /* RPG_H_ */

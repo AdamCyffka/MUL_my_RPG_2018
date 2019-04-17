@@ -18,7 +18,7 @@ void game_change(game_t *game)
         change_maps(game);
     if (game->settings->current >= victory && game->settings->current <= defeat)
         change_vic_def(game);
-    clock(game->scenes, game->settings);
+    clock(game->scenes, game->settings, game->quests);
 }
 
 void scene_selection(game_setting_t *settings, game_scene_t *scenes)
@@ -37,14 +37,13 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
     //for (int tmp = 0; tmp < scene.how_many[1]; tmp++)
         //sfMusic_play(scene.sounds[tmp].music);
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++)
-        if (scene.buttons[tmp].state >= 0)
+        //if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene
             .buttons[tmp].shape, NULL);
-    if (settings->current >= town && settings->current <= camp
-    && stats->player.speed >= 0)
+    if (settings->current >= town && settings->current <= camp && stats->player.speed != -1)
         sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
-        if (scene.texts[tmp].state >= 0)
+        //if (scene.texts[tmp].state >= 0)
             sfRenderWindow_drawText(settings->window, scene.texts[tmp].text,
             NULL);
 }
@@ -60,6 +59,7 @@ int my_rpg(void)
         game_change(game);
         draw_scene(game->scenes[game->settings->current],
         game->settings, game->stats);
+        draw_quest(game->quests, game->settings);
         while (sfRenderWindow_pollEvent(game->settings->window,
         &game->settings->event))
             analyse_events(game);

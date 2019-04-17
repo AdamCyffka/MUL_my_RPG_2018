@@ -8,18 +8,11 @@
 #ifndef STRUCT_H_
 #define STRUCT_H_
 
-#define bool _Bool
-#define true 1
-#define false 0
-
-#define SUCCESS 0
-#define WRONG_PATH -2
-#define WRONG_CONFIG_PATH -3
-
 #include <SFML/Graphics.h>
 #include <SFML/System.h>
 #include <SFML/Audio.h>
 #include <SFML/Window.h>
+#include "define.h"
 
 typedef struct game_object {
     int state;
@@ -50,6 +43,7 @@ typedef struct game_text {
     int state;
     sfText *text;
     sfFont *font;
+    sfVector2f position;
 } game_text_t;
 
 typedef struct game_scene {
@@ -65,11 +59,12 @@ typedef struct game_inventory {
 } game_inventory_t;
 
 typedef struct game_quest {
-    char *quest_dialog;
-    char *quest_statement;
+    game_text_t statement_text;
+    game_text_t *dialogs_text;
+    int nb_of_dial;
     int progress;
     int nb_of_task;
-    int *reward_id;
+    int *rewards;
 } game_quest_t;
 
 typedef struct game_stat {

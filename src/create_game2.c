@@ -14,11 +14,11 @@ void create_scenes(game_scene_t *scenes)
 {
     scenes[main_menu] = new_scene(11, 2, 9, 1);
     fill_scene_main_menu1(scenes[main_menu]);
-    scenes[town] = new_scene(19, 5, 23, 6);
+    scenes[town] = new_scene(23, 4, 27, 6);
     fill_scene_town1(scenes[town]);
     scenes[boss] = new_scene(12, 4, 23, 6);
     fill_scene_boss1(scenes[boss]);
-    scenes[forest] = new_scene(10, 4, 17, 6);
+    scenes[forest] = new_scene(10, 4, 16, 6);
     fill_scene_forest1(scenes[forest]);
     scenes[beach] = new_scene(10, 4, 9, 6);
     fill_scene_beach1(scenes[beach]);
@@ -35,41 +35,37 @@ void create_inventory(game_inventory_t *inventory)
     
 }
 
-/*void create_quests(game_quest_t *quests)
+void create_quest2(game_quest_t *quests)
 {
-    quests[INTRO_Q] = new_quest(); // quest_book && map
-    quests[BLACKSMITH1_Q] = new_quest(); // sword
-    quests[BLACKSMITH2_Q] = new_quest();
-    quests[GOLEMS1_Q] = new_quest(); // boots && xp
-    quests[GOLEMS2_Q] = new_quest();
-    quests[FIND_LOST1_Q] = new_quest(); // xp
-    quests[FIND_LOST2_Q] = new_quest();
-    quests[GHOSTS1_Q] = new_quest(); // sword upgrade && xp
-    quests[GHOSTS2_Q] = new_quest();
-    quests[SHEEP_COUNT1_Q] = new_quest(); // life upgrade && xp
-    quests[SHEEP_COUNT2_Q] = new_quest();
-    quests[SKELETON1_Q] = new_quest(); // damage upgrade + xp
-    quests[SKELETON2_Q] = new_quest(); // XP MAX
-}*/
-
-void create_stats(game_stat_t *stats)
-{
-    stats->life = 100;
-    stats->xp = 0;
-    stats->name = "Hubert";
-    stats->player = new_object("assets/girl1.png",
-    (sfVector2f) {20, 500}, (sfIntRect) {0, 32, 16, 32}, 0);
-    stats->current_quest = INTRO_Q;
+    quests[FIND_LOST2_Q] = new_quest(2, Q6_BOOK, 1, 0);
+    fill_quest6(quests[FIND_LOST2_Q]);
+    quests[GHOSTS1_Q] = new_quest(2, Q7_BOOK, 15, 2);
+    fill_quest7(quests[GHOSTS1_Q]);
+    quests[GHOSTS2_Q] = new_quest(2, Q8_BOOK, 1, 0);
+    fill_quest8(quests[GHOSTS2_Q]);
+    quests[SHEEP_COUNT1_Q] = new_quest(3, Q9_BOOK, 1, 2);
+    fill_quest9(quests[SHEEP_COUNT1_Q]);
+    quests[SHEEP_COUNT2_Q] = new_quest(1, Q10_BOOK, 1, 0);
+    fill_quest10(quests[SHEEP_COUNT2_Q]);
+    quests[SKELETON1_Q] = new_quest(2, Q11_BOOK, 20, 2);
+    fill_quest11(quests[SKELETON1_Q]);
+    quests[SKELETON2_Q] = new_quest(4, Q12_BOOK, 1, 1);
+    fill_quest12(quests[SKELETON2_Q]);
 }
 
-void create_settings(game_setting_t *settings)
+void create_quests(game_quest_t *quests)
 {
-    sfVideoMode mode = {1920, 1080, 32};
-    settings->window = sfRenderWindow_create(mode, "TRASHDEW VALLEY", sfClose | sfResize,
-    NULL);
-    settings->clock = sfClock_create();
-    settings->last_time = 0;
-    settings->delta_time = 0;
-    sfRenderWindow_setFramerateLimit(settings->window, 60);
-    //sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
+    quests[INTRO_Q] = new_quest(3, Q0_BOOK, 1, 2);
+    fill_quest0(quests[INTRO_Q]);
+    quests[BLACKSMITH1_Q] = new_quest(1, Q1_BOOK, 1, 1);
+    fill_quest1(quests[BLACKSMITH1_Q]);
+    quests[BLACKSMITH2_Q] = new_quest(1, Q2_BOOK, 1, 0);
+    fill_quest2(quests[BLACKSMITH2_Q]);
+    quests[GOLEMS1_Q] = new_quest(2, Q3_BOOK, 10, 2);
+    fill_quest3(quests[GOLEMS1_Q]);
+    quests[GOLEMS2_Q] = new_quest(1, Q4_BOOK, 1, 0);
+    fill_quest4(quests[GOLEMS2_Q]);
+    quests[FIND_LOST1_Q] = new_quest(1, Q5_BOOK, 1, 1);
+    fill_quest5(quests[FIND_LOST1_Q]);
+    create_quest2(quests);
 }

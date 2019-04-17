@@ -72,6 +72,14 @@ void fill_scene_boss3(game_scene_t boss)
     (sfVector2f) {425, 45}, 16);
     boss.texts[NAME_T_S2] = new_text("assets/font.ttf", "Name:",
     (sfVector2f) {425, 45}, 16);
+    boss.texts[VSYNC_T_S2] = new_text("assets/font.ttf", "V-sync:",
+    (sfVector2f) {425, 45}, 16);
+    boss.texts[XP_T_S2] = new_text("assets/font.ttf", "XP:",
+    (sfVector2f) {425, 45}, 16);
+    boss.texts[POS_T_S2] = new_text("assets/font.ttf", "Position:",
+    (sfVector2f) {425, 45}, 16);
+    boss.texts[LIFE_T_S2] = new_text("assets/font.ttf", "Life:",
+    (sfVector2f) {425, 45}, 16);
     fill_scene_boss4(boss);
 }
 

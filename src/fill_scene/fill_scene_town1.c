@@ -14,21 +14,21 @@ void fill_scene_town5(game_scene_t town)
     town.objs[ME_O_S1] = new_object("assets/me.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[PANNEL_O_S1] = new_object("assets/pannel.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 500, 500}, -1);
+    (sfVector2f) {350, 750}, (sfIntRect) {0, 0, 1292, 482}, 0);
     town.objs[TOWN_O_S1] = new_object("assets/map_town.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
     town.objs[DICK_O_S1] = new_object("assets/dick.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
+    (sfVector2f) {575 * 3.5, 190 * 3.5}, (sfIntRect) {0, 0, 16, 32}, 0);
     town.objs[EMILY_O_S1] = new_object("assets/emily.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
-    town.objs[SHEEP_O_S1] = new_object("assets/sheep.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
-    town.objs[JODI_O_S1] = new_object("assets/jodi.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
-    town.objs[LEWIS_O_S1] = new_object("assets/lewis.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
-    town.objs[PIERRE_O_S1] = new_object("assets/pierre.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
+    (sfVector2f) {695 * 3.5, 190 * 3.5}, (sfIntRect) {0, 0, 16, 32}, 0);
+    town.objs[SHEEP1_O_S1] = new_object("assets/sheep.png",
+    (sfVector2f) {310 * 3.5, 90 * 3.5}, (sfIntRect) {0, 0, 32, 32}, 0);
+    town.objs[SHEEP2_O_S1] = new_object("assets/sheep.png",
+    (sfVector2f) {180 * 3.5, 385 * 3.5}, (sfIntRect) {0, 0, 32, 32}, 0);
+    town.objs[SHEEP3_O_S1] = new_object("assets/sheep.png",
+    (sfVector2f) {1000 * 3.5, 840 * 3.5}, (sfIntRect) {0, 0, 32, 32}, 0);
+    town.objs[SHEEP4_O_S1] = new_object("assets/sheep.png",
+    (sfVector2f) {590 * 3.5, 510 * 3.5}, (sfIntRect) {0, 0, 32, 32}, 0);
     fill_scene_town6(town);
 }
 
@@ -75,7 +75,6 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
     town.buttons[ME_B_S1] = new_button("assets/invisible.png",
     (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
-    town.sounds[BOSS_S_S1] = new_sound("assets/music_boss.ogg", sfFalse, 100);
     town.sounds[MUSIC_S_S1] = new_sound("assets/music_town.ogg", sfFalse, 100);
     town.sounds[CLICK_S_S1] = new_sound("assets/click.ogg", sfFalse, 100);
     town.sounds[WALK_S_S1] = new_sound("assets/walk_rock.ogg", sfFalse, 100);

@@ -16,6 +16,7 @@ sfVector2f pos, int size)
     text.text = sfText_create();
     text.font = sfFont_createFromFile(path_to_font);
     text.state = -1;
+    text.position = pos;
     sfText_setPosition(text.text, pos);
     sfText_setString(text.text, towrite);
     sfText_setFont(text.text, text.font);
