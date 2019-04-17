@@ -62,6 +62,7 @@ int button_save(game_t *game);
 void quests_interaction(void);
 
 //destroy
+//void destroy_all(game_t *game);
 
 //player
 void key_to_move_or_not(game_scene_t scenes, game_setting_t *settings, game_stat_t *stats);

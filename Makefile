@@ -16,7 +16,6 @@ OBJS	= $(SRCS:.c=.o)
 SRCS	= 	src/main.c								\
 			src/create_game2.c 						\
 			src/create_game.c						\
-			src/destroy_all.c						\
 			src/my_rpg.c							\
 			src/player/player_move.c				\
 			src/player/player_attack.c				\

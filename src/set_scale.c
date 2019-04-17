@@ -15,9 +15,13 @@ void set_scale(game_t *game)
     if (game->settings->current == town) {
         sfSprite_setScale(game->scenes[town].objs[TOWN_O_S1].sprite,
         (sfVector2f) {3.5, 3.5});
+        sfSprite_setScale(game->scenes[town].objs[OBSTACLE_O_S1].sprite,
+        (sfVector2f) {3.5, 3.5});
     }
     if (game->settings->current == boss) {
         sfSprite_setScale(game->scenes[boss].objs[TOWN_O_S2].sprite,
+        (sfVector2f) {3.5, 3.5});
+        sfSprite_setScale(game->scenes[boss].objs[OBSTACLE_O_S2].sprite,
         (sfVector2f) {3.5, 3.5});
     }
     if (game->settings->current == forest) {

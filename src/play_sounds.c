@@ -12,6 +12,7 @@
 void check_bg_music(game_t *game)
 {
     if (game->settings->current == main_menu) {
+        
     }
     if (game->settings->current == town) {
 
