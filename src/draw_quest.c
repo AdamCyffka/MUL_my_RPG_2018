@@ -14,7 +14,6 @@ void test_quest(game_quest_t *quests)
 {
     static int num_quest = 0;
     static int num_dial = 0;
-
     if (num_dial > quests[num_quest].nb_of_dial - 1) {
         num_dial = 0;
         num_quest++;

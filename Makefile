@@ -30,7 +30,6 @@ SRCS	= 	src/main.c								\
 			src/draw_cursor.c 						\
 			src/draw_quest.c						\
 			src/set_scale.c 						\
-			src/my_strcpy.c							\
 			src/clock.c 							\
 			src/my_libc_functions.c 				\
 			src/play_sounds.c 						\
