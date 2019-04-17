@@ -20,6 +20,9 @@ SRCS	= 	src/main.c								\
 			src/my_rpg.c							\
 			src/player/player_move.c				\
 			src/player/player_attack.c				\
+			src/enemies/enemies_die.c					\
+			src/enemies/enemies_moves.c					\
+			src/enemies/enemies_positions.c					\
 			src/new_content2.c						\
 			src/new_content.c						\
 			src/quests_interaction.c				\
