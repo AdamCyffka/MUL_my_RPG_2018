@@ -33,9 +33,23 @@ void men_game_button(game_setting_t *settings, game_scene_t scenes, int nbr)
         scenes.buttons[nbr].rect);
     if (nbr == EXIT_B_S0 && scenes.buttons[nbr].state == 1)
         sfRenderWindow_close(settings->window);
+
 }
 
-void utils_button_menu(game_scene_t scenes, int enable, int disable)
+void disp_new_options(game_scene_t scenes, int enable, int disable)
+{
+    scenes.buttons[NEW_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.buttons[EXIT_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.buttons[LOAD_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.buttons[BACK_B_S0].state = ((enable == 1) ? enable : disable);
+    scenes.buttons[OK_B_S0].state = ((enable == 1) ? enable : disable);
+    scenes.buttons[RIGHT_B_S0].state = ((enable == 1) ? enable : disable);
+    scenes.buttons[LEFT_B_S0].state = ((enable == 1) ? enable : disable);
+    scenes.texts[NAME_T_S0].state = ((enable == 1) ? enable : disable);
+    scenes.objs[CHOOSE_O_S0].speed = ((enable == 1) ? enable : disable);
+}
+
+void disp_button_menu(game_scene_t scenes, int enable, int disable)
 {
     scenes.buttons[CLOSE_B_S0].state = ((enable == 1) ? enable : disable);
     scenes.buttons[CREDITS_B_S0].state = enable;
@@ -57,9 +71,17 @@ void button_menu(game_setting_t *settings, game_scene_t scenes)
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CREDITS_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[CREDITS_B_S0].shape)) == true)
-        utils_button_menu(scenes, 1, -1);
+        disp_button_menu(scenes, 1, -1);
+    if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+    .buttons[NEW_B_S0].shape), sfRectangleShape_getSize(scenes
+    .buttons[NEW_B_S0].shape)) == true)
+        disp_new_options(scenes, 1, -1);
+    if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+    .buttons[BACK_B_S0].shape), sfRectangleShape_getSize(scenes
+    .buttons[BACK_B_S0].shape)) == true)
+        disp_new_options(scenes, 0, -1);
     else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CLOSE_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[CLOSE_B_S0].shape)) == true)
-        utils_button_menu(scenes, 0, -1);
+        disp_button_menu(scenes, 0, -1);
 }

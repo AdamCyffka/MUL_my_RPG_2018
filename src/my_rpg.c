@@ -12,6 +12,9 @@
 void game_change(game_t *game)
 {
     set_scale(game);
+    //for (int tmp = 0; tmp < game->scenes->how_many[1]; tmp++)
+        //if (game->scenes->sounds[tmp]._activated == true)
+            //sfMusic_play(game->scenes->sounds[MUSIC_S_S0].music);
     if (game->settings->current == main_menu)
         change_main_menu(game->settings, game->scenes);
     if (game->settings->current >= town && game->settings->current <= camp)
@@ -34,8 +37,6 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
             .sprite, NULL);
     }
-    //for (int tmp = 0; tmp < scene.how_many[1]; tmp++)
-        //sfMusic_play(scene.sounds[tmp].music);
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++)
         //if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene
@@ -65,6 +66,5 @@ int my_rpg(void)
             analyse_events(game);
         sfRenderWindow_display(game->settings->window);
     }
-    destroy_all(game);
     return (0);
 }

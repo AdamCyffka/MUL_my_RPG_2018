@@ -45,7 +45,7 @@ void fill_scene_town4(game_scene_t town)
     town.texts[LIFE_T_S1] = new_text("assets/font.ttf", "Life:",
     (sfVector2f) {425, 45}, 16);
     town.objs[OBSTACLE_O_S1] = new_object("assets/obstacle.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, -1);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
     town.objs[OPTION_O_S1] = new_object("assets/option.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[INVENTORY_O_S1] = new_object("assets/inventory.png",
@@ -68,11 +68,11 @@ void fill_scene_town3(game_scene_t town)
     town.buttons[WALKABLE17_B_S1] = new_button("assets/invisible.png",
     (sfVector2f) {3115, 2765}, (sfIntRect) {0, 0, 1256.5, 126}, 0);
     town.buttons[OPTION_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
+    (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[INVENTORY_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
+    (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[EXIT_B_S1] = new_button("assets/invisible.png",
-    (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
+    (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[ME_B_S1] = new_button("assets/invisible.png",
     (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
     town.sounds[MUSIC_S_S1] = new_sound("assets/music_town.ogg", sfFalse, 100);

@@ -26,9 +26,9 @@ void fill_scene_beach3(game_scene_t beach)
     beach.objs[QUEST_O_S4] = new_object("assets/quest.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
     beach.objs[ICON_O_S4] = new_object("assets/icon.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 56, 56}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 100, 100}, 0);
     beach.objs[CURSOR_O_S4] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 40, 40}, 0);
 }
 
 void fill_scene_beach2(game_scene_t beach)
@@ -58,17 +58,17 @@ void fill_scene_beach2(game_scene_t beach)
 void fill_scene_beach1(game_scene_t beach)
 {
     beach.buttons[EXIT_B_S4] = new_button("assets/exit_menu.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, -1);
     beach.buttons[DESKTOP_B_S4] = new_button("assets/exit_desktop.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);
     beach.buttons[CLOSE_B_S4] = new_button("assets/close.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, -1);
     beach.buttons[PLUS_B_S4] = new_button("assets/plus.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, -1);
     beach.buttons[MINUS_B_S4] = new_button("assets/minus.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, -1);
     beach.buttons[MUTE_B_S4] = new_button("assets/mute.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 48, 48}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 48, 48}, -1);
     beach.buttons[WALKABLE1_B_S4] = new_button("assets/invisible.png",
     (sfVector2f) {1100, 0}, (sfIntRect) {0, 0, 98 * 1.6, 159 * 1.6}, 0);
     beach.buttons[WALKABLE2_B_S4] = new_button("assets/invisible.png",

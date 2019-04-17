@@ -74,7 +74,7 @@ void change_maps(game_t *game)
     change_static_objs_pos(game->scenes, game->settings, game->quests,
     game->inventory);
     if (game->settings->current == town)
-        change_town();
+        change_town(game->settings, game->scenes[town]);
     if (game->settings->current == boss)
         change_boss();
     if (game->settings->current == forest)
