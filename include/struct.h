@@ -61,10 +61,12 @@ typedef struct game_inventory {
 typedef struct game_quest {
     game_text_t statement_text;
     game_text_t *dialogs_text;
+    int npc;
     int nb_of_dial;
     int progress;
     int nb_of_task;
     int *rewards;
+    int state;
 } game_quest_t;
 
 typedef struct game_stat {
@@ -72,6 +74,7 @@ typedef struct game_stat {
     int life;
     char *name;
     int current_quest;
+    bool _mov_allowed;
     game_object_t player;
 } game_stat_t;
 

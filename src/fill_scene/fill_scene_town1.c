@@ -14,7 +14,7 @@ void fill_scene_town5(game_scene_t town)
     town.objs[ME_O_S1] = new_object("assets/me.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
     town.objs[PANNEL_O_S1] = new_object("assets/pannel.png",
-    (sfVector2f) {350, 750}, (sfIntRect) {0, 0, 1292, 482}, 0);
+    (sfVector2f) {350, 750}, (sfIntRect) {0, 0, 1292, 482}, -1);
     town.objs[TOWN_O_S1] = new_object("assets/map_town.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
     town.objs[DICK_O_S1] = new_object("assets/dick.png",

@@ -111,11 +111,11 @@ void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests);
 //change_maps
 void change_maps(game_t *game);
 void change_vic_def(game_t *game);
-void change_town(game_setting_t *settings, game_scene_t scenes);
-void change_boss(game_setting_t *settings, game_scene_t scene);
-void change_forest(game_setting_t *settings, game_scene_t scene);
-void change_beach(game_setting_t *settings, game_scene_t scene);
-void change_camp(game_setting_t *settings, game_scene_t scene);
+void change_town(game_t *game);
+void change_boss(game_setting_t *settings, game_scene_t scene, game_quest_t *quests);
+void change_forest(game_setting_t *settings, game_scene_t scene, game_quest_t *quests);
+void change_beach(game_setting_t *settings, game_scene_t scene, game_quest_t *quests);
+void change_camp(game_setting_t *settings, game_scene_t scene, game_quest_t *quests);
 void change_victory(void);
 void change_defeat(void);
 

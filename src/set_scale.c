@@ -11,7 +11,7 @@
 
 void set_scale_NPC(game_object_t *objs)
 {
-    for (int tmp = DICK_O_S1; tmp <= GEORGE_O_S1; tmp++)
+    for (int tmp = DICK_O_S1; tmp <= SHEEP5_O_S1; tmp++)
         sfSprite_setScale(objs[tmp].sprite, (sfVector2f) {4, 4});
 }
 
