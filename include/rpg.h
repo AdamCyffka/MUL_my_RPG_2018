@@ -112,12 +112,19 @@ void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests);
 void change_maps(game_t *game);
 void change_vic_def(game_t *game);
 void change_town(game_setting_t *settings, game_scene_t scenes);
-void change_boss(void);
-void change_forest(void);
-void change_beach(void);
-void change_camp(void);
+void change_boss(game_setting_t *settings, game_scene_t scene);
+void change_forest(game_setting_t *settings, game_scene_t scene);
+void change_beach(game_setting_t *settings, game_scene_t scene);
+void change_camp(game_setting_t *settings, game_scene_t scene);
 void change_victory(void);
 void change_defeat(void);
+
+//change_statics_pos
+void change_statics_pos_town(game_scene_t scene, game_setting_t *settings);
+void change_statics_pos_boss(game_scene_t scene, game_setting_t *settings);
+void change_statics_pos_forest(game_scene_t scene, game_setting_t *settings);
+void change_statics_pos_beach(game_scene_t scene, game_setting_t *settings);
+void change_statics_pos_camp(game_scene_t scene, game_setting_t *settings);
 
 //basic functions
 int my_strlen(char const *str);

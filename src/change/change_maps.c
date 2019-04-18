@@ -9,27 +9,28 @@
 #include "struct.h"
 #include "enum.h"
 
-void change_town(game_setting_t *settings, game_scene_t scenes)
+void change_town(game_setting_t *settings, game_scene_t scene)
 {
-    button_town(settings, scenes);
+    button_town(settings, scene);
+    change_statics_pos_town(scene, settings);
 }
 
-void change_boss(void)
+void change_boss(game_setting_t *settings, game_scene_t scene)
 {
-
+    change_statics_pos_boss(scene, settings);
 }
 
-void change_forest(void)
+void change_forest(game_setting_t *settings, game_scene_t scene)
 {
-
+    change_statics_pos_forest(scene, settings);
 }
 
-void change_beach(void)
+void change_beach(game_setting_t *settings, game_scene_t scene)
 {
-
+    change_statics_pos_beach(scene, settings);
 }
 
-void change_camp(void)
+void change_camp(game_setting_t *settings, game_scene_t scene)
 {
-
+    change_statics_pos_camp(scene, settings);
 }

@@ -50,7 +50,8 @@ SRCS	= 	src/main.c								\
 			src/fill_scene/fill_scene_vic_def.c	   	\
 			src/fill_quest/fill_quest0_4.c			\
 			src/fill_quest/fill_quest5_9.c			\
-			src/fill_quest/fill_quest10_12.c
+			src/fill_quest/fill_quest10_12.c		\
+			src/change/change_statics_pos.c
 
 CFLAGS = -Iinclude
 CFLAGS += -L./lib/printf -lprintf
