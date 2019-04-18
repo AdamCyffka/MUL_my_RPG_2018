@@ -26,7 +26,7 @@ void game_change(game_t *game)
 
 void scene_selection(game_setting_t *settings, game_scene_t *scenes)
 {
-    settings->current = main_menu;
+    settings->current = town;
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
