@@ -57,7 +57,6 @@ SRCS	= 	src/main.c								\
 
 CFLAGS = -Iinclude
 
-LDFLAGS = -L./lib/printf -lprintf
 LDFLAGS += -lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window
 LDFLAGS += -W -Wall -Wextra -g
 LDFLAGS += -lm
