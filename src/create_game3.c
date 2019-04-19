@@ -17,15 +17,15 @@ void create_stats(game_stat_t *stats)
     stats->name = "ENTER A NAME";
     stats->_mov_allowed = false;
     stats->player = new_object("assets/girl1.png",
-    (sfVector2f) {20, 500}, (sfIntRect) {0, 32, 16, 32}, 5);
+    (sfVector2f) {300, 500}, (sfIntRect) {0, 32, 16, 32}, 5);
     stats->current_quest = INTRO_Q;
 }
 
 void create_settings(game_setting_t *settings)
 {
     sfVideoMode mode = {1920, 1080, 32};
-    settings->window = sfRenderWindow_create(mode, "TRASHDEW VALLEY", sfClose | sfResize,
-    NULL);
+    settings->window = sfRenderWindow_create(mode, "TRASHDEW VALLEY", sfClose |
+    sfResize, NULL);
     settings->clock = sfClock_create();
     settings->last_time = 0;
     settings->delta_time = 0;

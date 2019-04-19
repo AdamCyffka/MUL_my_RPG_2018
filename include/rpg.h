@@ -71,8 +71,14 @@ void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 int save_player_stats(game_t *game);
 int load_player_stats(game_t *game);
 
-//buttons
+//buttons_town
 void button_town(game_setting_t *settings, game_scene_t scenes);
+void disp_button_menu(game_scene_t scenes, int enable, int disable);
+void disp_button_inventory(game_scene_t scenes, int enable, int disable);
+void disp_button_option(game_scene_t scenes, int enable, int disable);
+void disp_button_exit(game_scene_t scenes, int enable, int disable);
+void disp_button_me(game_scene_t scenes, int enable, int disable);
+void buttons_action(game_setting_t *settings, game_scene_t scenes);
 
 //quest_interaction
 void quests_interaction(void);
@@ -142,7 +148,7 @@ char *my_strcpy(char *str, char *dest);
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
 int nb_texts);
 game_text_t new_text(const char *path_to_font, const char *towrite,
-sfVector2f pos, int size);
+sfVector2f pos,  int size);
 game_button_t new_button(const char *path_to_img,
 sfVector2f pos, sfIntRect rect, int state);
 game_sound_t new_sound(const char *path_to_sound, sfBool state, float volume);
