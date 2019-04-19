@@ -43,6 +43,13 @@ void npc_interaction(game_t *game)
 
     if (player_in_zone == false)
         return;
+    if (sfRenderWindow_pollEvent(game->settings->window,
+    &game->settings->event)) {
+        analyse_events(game);
+        if (game->settings->event.type == sfEvtKeyPressed &&
+        game->settings->event.key.code == sfKeyE)
+            printf("TEST\n");
+    }
     give_rewards_if_validated(game->stats, game->quests, game->inventory);
     change_quest_if_validated(game->stats, game->quests);
 }

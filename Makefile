@@ -56,33 +56,24 @@ SRCS	= 	src/main.c								\
 			src/npc_interaction.c
 
 CFLAGS = -Iinclude
-CFLAGS += -L./lib/printf -lprintf
-CFLAGS += -lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window
-CFLAGS += -W -Wall -Wextra -g
-CFLAGS += -lm
 
 LDFLAGS = -L./lib/printf -lprintf
 LDFLAGS += -lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window
 LDFLAGS += -W -Wall -Wextra -g
 LDFLAGS += -lm
 
-all: mklib $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
 
 clean:
 	$(RM) $(OBJS)
-	cd lib/printf && make clean
 
 fclean: clean
 	$(RM) $(NAME)
 	$(RM) *~ -f $(NAME)
 	$(RM) *# -f $(NAME)
-	cd lib/printf && make fclean
-
-mklib:
-	cd lib/printf && make
 
 re	: 	fclean all
 

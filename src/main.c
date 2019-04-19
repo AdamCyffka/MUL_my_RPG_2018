@@ -10,10 +10,9 @@
 
 void help(void)
 {
-    my_printf("RPG made with CSFML\n");
-    my_printf("\n");
-    my_printf("USAGE:\n");
-    my_printf("DESCRIPTION:");
+    write(1, "RPG made with CSFML\n\n", 21);
+    write(1, "USAGE:\n", 7);
+    write(1, "DESCRIPTION:", 12);
 }
 
 int main(int ac, char **av, char **env)
@@ -23,7 +22,7 @@ int main(int ac, char **av, char **env)
     if (ac == 2 && av[1][0] == '-' && av[1][1] == 'h' && av[1][2] == '\0')
         help();
     else if (ac != 1) {
-        my_printf("Usage : my_rpg -h\n");
+        write(1, "Usage : my_rpg -h\n", 18);
         return (84);
     } else
         my_rpg();
