@@ -23,7 +23,7 @@ void analyse_events(game_t *game)
     else if (game->settings->event.type == sfEvtMouseButtonPressed)
         player_attack(game->stats);
     else
-        player_stop_moving(game->stats);
+        player_stop_moving(game->stats, game->settings);
 }
 
 void keyboard_checker(game_t *game)

@@ -85,11 +85,16 @@ void check_bg_music(game_t *game);
 //void destroy_all(game_t *game);
 
 //player
-void key_to_move_or_not(game_scene_t scenes, game_setting_t *settings, game_stat_t *stats);
+void key_to_move_or_not(game_scene_t scenes,
+    game_setting_t *settings, game_stat_t *stats);
 void move_player(game_setting_t *settings, game_stat_t *stats);
-void player_stop_moving(game_stat_t *stats);
+void player_stop_moving(game_stat_t *stats, game_setting_t *settings);
 void player_attack(game_stat_t *stats);
-int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat, game_scene_t scene);
+int player_is_on_rectangle(game_setting_t *settings,
+    game_stat_t *stat, game_scene_t scene);
+void player_rect_move(game_scene_t scenes, game_stat_t *stats,
+    timer_clock_t *timers, game_setting_t *settings);
+int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
 
 //analyser
 void analyse_events(game_t *game);
@@ -112,10 +117,14 @@ void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests);
 void change_maps(game_t *game);
 void change_vic_def(game_t *game);
 void change_town(game_t *game);
-void change_boss(game_setting_t *settings, game_scene_t scene, game_quest_t *quests);
-void change_forest(game_setting_t *settings, game_scene_t scene, game_quest_t *quests);
-void change_beach(game_setting_t *settings, game_scene_t scene, game_quest_t *quests);
-void change_camp(game_setting_t *settings, game_scene_t scene, game_quest_t *quests);
+void change_boss(game_setting_t *settings,
+    game_scene_t scene, game_quest_t *quests);
+void change_forest(game_setting_t *settings,
+    game_scene_t scene, game_quest_t *quests);
+void change_beach(game_setting_t *settings,
+    game_scene_t scene, game_quest_t *quests);
+void change_camp(game_setting_t *settings,
+    game_scene_t scene, game_quest_t *quests);
 void change_victory(void);
 void change_defeat(void);
 
