@@ -20,7 +20,7 @@ int nb_reward)
     (sfVector2f) {500, 500}, 24);
     quest.nb_of_dial = nb_dial;
     quest.state = Q_NOT_STARTED;
-    quest.npc = DICK_O_S1;
+    quest.npc_zone = ZONESPECIAL_B_S1;
     quest.progress = 0;
     quest.nb_of_task = nb_of_task;
     quest.rewards = malloc(sizeof(int) * (nb_reward + 1));

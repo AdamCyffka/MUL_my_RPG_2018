@@ -61,7 +61,7 @@ typedef struct game_inventory {
 typedef struct game_quest {
     game_text_t statement_text;
     game_text_t *dialogs_text;
-    int npc;
+    int npc_zone;
     int nb_of_dial;
     int progress;
     int nb_of_task;

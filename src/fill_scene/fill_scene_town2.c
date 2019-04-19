@@ -23,6 +23,8 @@ void fill_scene_town8(game_scene_t town)
     (sfVector2f) {320 * 3.5, 750 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[ZONE6_B_S1] = new_button("assets/invisible1.png",
     (sfVector2f) {695 * 3.5, 230 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    town.buttons[ZONESPECIAL_B_S1] = new_button("assets/invisible1.png",
+    (sfVector2f) {70 * 3.5, 170 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
 }
 
 void fill_scene_town7(game_scene_t town)

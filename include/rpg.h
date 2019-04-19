@@ -34,19 +34,19 @@ void fill_scene_victory(game_scene_t victory);
 void fill_scene_defeat(game_scene_t defeat);
 
 //fill_quest
-void fill_quest0(game_quest_t quest0);
-void fill_quest1(game_quest_t quest1);
-void fill_quest2(game_quest_t quest2);
-void fill_quest3(game_quest_t quest3);
-void fill_quest4(game_quest_t quest4);
-void fill_quest5(game_quest_t quest5);
-void fill_quest6(game_quest_t quest6);
-void fill_quest7(game_quest_t quest7);
-void fill_quest8(game_quest_t quest8);
-void fill_quest9(game_quest_t quest9);
-void fill_quest10(game_quest_t quest10);
-void fill_quest11(game_quest_t quest11);
-void fill_quest12(game_quest_t quest12);
+void fill_quest0(game_quest_t *quest0);
+void fill_quest1(game_quest_t *quest1);
+void fill_quest2(game_quest_t *quest2);
+void fill_quest3(game_quest_t *quest3);
+void fill_quest4(game_quest_t *quest4);
+void fill_quest5(game_quest_t *quest5);
+void fill_quest6(game_quest_t *quest6);
+void fill_quest7(game_quest_t *quest7);
+void fill_quest8(game_quest_t *quest8);
+void fill_quest9(game_quest_t *quest9);
+void fill_quest10(game_quest_t *quest10);
+void fill_quest11(game_quest_t *quest11);
+void fill_quest12(game_quest_t *quest12);
 
 //create_game
 game_t *create_game();
@@ -93,7 +93,6 @@ int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat, game_sce
 
 //analyser
 void analyse_events(game_t *game);
-void keyboard_checker(game_t *game);
 
 //draw_cursor
 void draw_cursor(game_scene_t scene, game_setting_t *settings);

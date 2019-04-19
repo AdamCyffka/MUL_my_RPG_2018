@@ -9,6 +9,12 @@
 #include "struct.h"
 #include "enum.h"
 
+void keyboard_checker(game_t *game)
+{
+    if (sfKeyboard_isKeyPressed(sfKeyTab))
+        sfRenderWindow_close(game->settings->window);
+}
+
 void analyse_events(game_t *game)
 {
     if (game->settings->event.type == sfEvtClosed)
@@ -26,18 +32,3 @@ void analyse_events(game_t *game)
         player_stop_moving(game->stats);
 }
 
-void keyboard_checker(game_t *game)
-{
-    if (sfKeyboard_isKeyPressed(sfKeyTab))
-        sfRenderWindow_close(game->settings->window);
-    if (sfKeyboard_isKeyPressed(sfKeyE))
-        printf("Echap");
-    if (sfKeyboard_isKeyPressed(sfKeyUnknown))
-        printf("Echap");
-    if (sfKeyboard_isKeyPressed(sfKeyB))
-        printf("Echap");
-    if (sfKeyboard_isKeyPressed(sfKeyF))
-        printf("Echap");
-    if (sfKeyboard_isKeyPressed(sfKeyJ))
-        printf("Echap");
-}
