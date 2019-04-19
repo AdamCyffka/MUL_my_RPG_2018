@@ -155,4 +155,7 @@ int nb_reward);
 //TEST A RETIRER A LA FIN
 void test_quest(game_quest_t *quests);
 
+//npc_interaction.c
+void npc_interaction(game_t *game);
+
 #endif /* RPG_H_ */
