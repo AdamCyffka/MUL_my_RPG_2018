@@ -25,7 +25,7 @@ void set_scale(game_t *game)
         (sfVector2f) {3.5, 3.5});
         sfSprite_setScale(game->scenes[town].objs[PANNEL_O_S1].sprite,
         (sfVector2f) {1, 0.5});
-        set_scale_NPC(game->scenes[town].objs); 
+        set_scale_NPC(game->scenes[town].objs);
     }
     if (game->settings->current == boss) {
         sfSprite_setScale(game->scenes[boss].objs[TOWN_O_S2].sprite,
