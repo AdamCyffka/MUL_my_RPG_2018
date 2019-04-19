@@ -12,7 +12,7 @@
 void fill_scene_camp4(game_scene_t camp)
 {
     camp.objs[ICON_O_S5] = new_object("assets/icon.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 100, 100}, 0);
+    (sfVector2f) {10, 910}, (sfIntRect) {0, 0, 100, 100}, 0);
     camp.objs[CURSOR_O_S5] = new_object("assets/cursor.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 40, 40}, 0);
 }
@@ -22,13 +22,13 @@ void fill_scene_camp3(game_scene_t camp)
     camp.texts[LIFE_T_S5] = new_text("assets/font.ttf", "Life:",
     (sfVector2f) {425, 45}, 16);
     camp.objs[OPTION_O_S5] = new_object("assets/option.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
+    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[INVENTORY_O_S5] = new_object("assets/inventory.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
+    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[EXIT_O_S5] = new_object("assets/exit.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
+    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[ME_O_S5] = new_object("assets/me.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 902, 696}, -1);
+    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[CAMP_O_S5] = new_object("assets/map_camp.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     camp.objs[MINIMAP_O_S5] = new_object("assets/minimap.png",
@@ -46,6 +46,14 @@ void fill_scene_camp2(game_scene_t camp)
     (sfVector2f) {450, 380}, (sfIntRect) {0, 0, 588, 131}, 0);
     camp.buttons[WALKABLE5_B_S5] = new_button("assets/invisible.png",
     (sfVector2f) {1200, 380}, (sfIntRect) {0, 0, 584, 150}, 0);
+    camp.buttons[INVENTORY_B_S5] = new_button("assets/invisible.png",
+    (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
+    camp.buttons[ME_B_S5] = new_button("assets/invisible.png",
+    (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
+    camp.buttons[OPTION_B_S5] = new_button("assets/invisible.png",
+    (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
+    camp.buttons[EXIT_B_S5] = new_button("assets/invisible.png",
+    (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     camp.sounds[MUSIC_S_S5] = new_sound("assets/music_camp.ogg", sfFalse,
     100);
     camp.sounds[CLICK_S_S5] = new_sound("assets/click.ogg", sfFalse, 100);
@@ -66,7 +74,7 @@ void fill_scene_camp2(game_scene_t camp)
 
 void fill_scene_camp1(game_scene_t camp)
 {
-    camp.buttons[EXIT_B_S5] = new_button("assets/exit_menu.png",
+    camp.buttons[TITLE_B_S5] = new_button("assets/exit_menu.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, -1);
     camp.buttons[DESKTOP_B_S5] = new_button("assets/exit_desktop.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);

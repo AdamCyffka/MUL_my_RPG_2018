@@ -30,5 +30,5 @@ void fill_scene_town6(game_scene_t town)
     town.objs[ICON_O_S1] = new_object("assets/icon.png",
     (sfVector2f) {10, 910}, (sfIntRect) {0, 0, 100, 100}, 0);
     town.objs[CURSOR_O_S1] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 10, 10}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 40, 40}, 0);
 }
