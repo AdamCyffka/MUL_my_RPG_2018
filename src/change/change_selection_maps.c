@@ -21,6 +21,11 @@ game_quest_t *quests, game_inventory_t *inventory)
             sfText_setPosition(scenes[tmp].texts[tmp2].text, (sfVector2f)
             {center.x - size.x / 2 + scenes[tmp].texts[tmp2].position.x,
             center.y - size.y / 2 + scenes[tmp].texts[tmp2].position.y});
+    for (int tmp = INTRO_Q; tmp <= BOSS_Q; tmp++)
+        for (int tmp2 = 0; tmp2 < quests[tmp].nb_of_dial; tmp2++)
+            sfText_setPosition(quests[tmp].dialogs_text[tmp2].text, (sfVector2f)
+            {center.x - size.x / 2 + quests[tmp].dialogs_text[tmp2].position.x,
+            center.y - size.y / 2 + quests[tmp].dialogs_text[tmp2].position.y});
 }
 
 void change_maps(game_t *game)
@@ -28,15 +33,15 @@ void change_maps(game_t *game)
     change_statics_pos_common(game->scenes, game->settings, game->quests,
     game->inventory);
     if (game->settings->current == town)
-        change_town(game->settings, game->scenes[town]);
+        change_town(game);
     if (game->settings->current == boss)
-        change_boss(game->settings, game->scenes[boss]);
+        change_boss(game->settings, game->scenes[boss], game->quests);
     if (game->settings->current == forest)
-        change_forest(game->settings, game->scenes[forest]);
+        change_forest(game->settings, game->scenes[forest], game->quests);
     if (game->settings->current == beach)
-        change_beach(game->settings, game->scenes[beach]);
+        change_beach(game->settings, game->scenes[beach], game->quests);
     if (game->settings->current == camp)
-        change_camp(game->settings, game->scenes[camp]);
+        change_camp(game->settings, game->scenes[camp], game->quests);
 }
 
 void change_vic_def(game_t *game)

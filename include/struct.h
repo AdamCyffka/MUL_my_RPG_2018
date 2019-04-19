@@ -61,10 +61,12 @@ typedef struct game_inventory {
 typedef struct game_quest {
     game_text_t statement_text;
     game_text_t *dialogs_text;
+    int npc_zone;
     int nb_of_dial;
     int progress;
     int nb_of_task;
     int *rewards;
+    int state;
 } game_quest_t;
 
 typedef struct game_stat {
@@ -72,6 +74,7 @@ typedef struct game_stat {
     int life;
     char *name;
     int current_quest;
+    bool _mov_allowed;
     game_object_t player;
 } game_stat_t;
 
@@ -98,6 +101,7 @@ typedef struct game {
 
 typedef struct timer_clock {
     float main_menu;
+    float player_timer;
     float timer2;
     float timer3;
 } timer_clock_t;

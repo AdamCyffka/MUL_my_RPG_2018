@@ -23,6 +23,12 @@ void keyboard_checker_town(game_t *game)
         disp_button_exit(game->scenes[town], 1, -1);
 }
 
+void keyboard_checker(game_t *game)
+{
+    if (sfKeyboard_isKeyPressed(sfKeyTab))
+        sfRenderWindow_close(game->settings->window);
+}
+
 void analyse_events(game_t *game)
 {
     if (game->settings->event.type == sfEvtClosed)
@@ -37,5 +43,5 @@ void analyse_events(game_t *game)
     else if (game->settings->event.type == sfEvtMouseButtonPressed)
         player_attack(game->stats);
     else
-        player_stop_moving(game->stats);
+        player_stop_moving(game->stats, game->settings);
 }

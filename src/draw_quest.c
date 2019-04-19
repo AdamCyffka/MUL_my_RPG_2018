@@ -31,7 +31,7 @@ void test_quest(game_quest_t *quests)
 
 void draw_quest(game_quest_t *quests, game_setting_t *settings)
 {
-    for (int tmp = INTRO_Q; tmp <= SKELETON2_Q; tmp++) {
+    for (int tmp = INTRO_Q; tmp <= BOSS_Q; tmp++) {
         for (int tmp2 = 0; tmp2 < quests[tmp].nb_of_dial; tmp2++)
             if (quests[tmp].dialogs_text[tmp2].state == 0)
                 sfRenderWindow_drawText(settings->window,

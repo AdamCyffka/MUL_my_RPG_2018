@@ -34,19 +34,19 @@ void fill_scene_victory(game_scene_t victory);
 void fill_scene_defeat(game_scene_t defeat);
 
 //fill_quest
-void fill_quest0(game_quest_t quest0);
-void fill_quest1(game_quest_t quest1);
-void fill_quest2(game_quest_t quest2);
-void fill_quest3(game_quest_t quest3);
-void fill_quest4(game_quest_t quest4);
-void fill_quest5(game_quest_t quest5);
-void fill_quest6(game_quest_t quest6);
-void fill_quest7(game_quest_t quest7);
-void fill_quest8(game_quest_t quest8);
-void fill_quest9(game_quest_t quest9);
-void fill_quest10(game_quest_t quest10);
-void fill_quest11(game_quest_t quest11);
-void fill_quest12(game_quest_t quest12);
+void fill_quest0(game_quest_t *quest0);
+void fill_quest1(game_quest_t *quest1);
+void fill_quest2(game_quest_t *quest2);
+void fill_quest3(game_quest_t *quest3);
+void fill_quest4(game_quest_t *quest4);
+void fill_quest5(game_quest_t *quest5);
+void fill_quest6(game_quest_t *quest6);
+void fill_quest7(game_quest_t *quest7);
+void fill_quest8(game_quest_t *quest8);
+void fill_quest9(game_quest_t *quest9);
+void fill_quest10(game_quest_t *quest10);
+void fill_quest11(game_quest_t *quest11);
+void fill_quest12(game_quest_t *quest12);
 
 //create_game
 game_t *create_game();
@@ -91,15 +91,19 @@ void check_bg_music(game_t *game);
 //void destroy_all(game_t *game);
 
 //player
-void key_to_move_or_not(game_scene_t scenes, game_setting_t *settings, game_stat_t *stats);
+void key_to_move_or_not(game_scene_t scenes,
+    game_setting_t *settings, game_stat_t *stats);
 void move_player(game_setting_t *settings, game_stat_t *stats);
-void player_stop_moving(game_stat_t *stats);
+void player_stop_moving(game_stat_t *stats, game_setting_t *settings);
 void player_attack(game_stat_t *stats);
-int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat, game_scene_t scene);
+int player_is_on_rectangle(game_setting_t *settings,
+    game_stat_t *stat, game_scene_t scene);
+void player_rect_move(game_scene_t scenes, game_stat_t *stats,
+    timer_clock_t *timers, game_setting_t *settings);
+int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
 
 //analyser
 void analyse_events(game_t *game);
-void keyboard_checker(game_t *game);
 
 //draw_cursor
 void draw_cursor(game_scene_t scene, game_setting_t *settings);
@@ -117,11 +121,15 @@ void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests);
 //change_maps
 void change_maps(game_t *game);
 void change_vic_def(game_t *game);
-void change_town(game_setting_t *settings, game_scene_t scenes);
-void change_boss(game_setting_t *settings, game_scene_t scene);
-void change_forest(game_setting_t *settings, game_scene_t scene);
-void change_beach(game_setting_t *settings, game_scene_t scene);
-void change_camp(game_setting_t *settings, game_scene_t scene);
+void change_town(game_t *game);
+void change_boss(game_setting_t *settings,
+    game_scene_t scene, game_quest_t *quests);
+void change_forest(game_setting_t *settings,
+    game_scene_t scene, game_quest_t *quests);
+void change_beach(game_setting_t *settings,
+    game_scene_t scene, game_quest_t *quests);
+void change_camp(game_setting_t *settings,
+    game_scene_t scene, game_quest_t *quests);
 void change_victory(void);
 void change_defeat(void);
 
@@ -152,5 +160,8 @@ int nb_reward);
 
 //TEST A RETIRER A LA FIN
 void test_quest(game_quest_t *quests);
+
+//npc_interaction.c
+void npc_interaction(game_t *game);
 
 #endif /* RPG_H_ */

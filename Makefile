@@ -20,6 +20,7 @@ SRCS	= 	src/main.c								\
 			src/my_rpg.c							\
 			src/player/player_move.c				\
 			src/player/player_attack.c				\
+			src/player/player_rect.c				\
 			src/enemies/enemies_die.c				\
 			src/enemies/enemies_moves.c				\
 			src/enemies/enemies_positions.c			\
@@ -51,7 +52,8 @@ SRCS	= 	src/main.c								\
 			src/fill_quest/fill_quest0_4.c			\
 			src/fill_quest/fill_quest5_9.c			\
 			src/fill_quest/fill_quest10_12.c		\
-			src/change/change_statics_pos.c
+			src/change/change_statics_pos.c			\
+			src/npc_interaction.c
 
 CFLAGS = -Iinclude
 CFLAGS += -L./lib/printf -lprintf
