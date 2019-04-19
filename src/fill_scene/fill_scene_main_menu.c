@@ -39,7 +39,7 @@ void fill_scene_main_menu2(game_scene_t main_menu)
     main_menu.buttons[EXIT_B_S0] = new_button("assets/button_exit.png",
     (sfVector2f) {1100, 340}, (sfIntRect) {0, 0, 148, 122}, 0);
     main_menu.buttons[BACK_B_S0] = new_button("assets/button_back.png",
-    (sfVector2f) {655, 635}, (sfIntRect) {0, 0, 130, 60}, -1);
+    (sfVector2f) {655, 635}, (sfIntRect) {0, 0, 118, 54}, -1);
     fill_scene_main_menu3(main_menu);
 }
 

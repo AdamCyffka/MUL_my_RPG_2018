@@ -18,12 +18,6 @@ SRCS	= 	src/main.c								\
 			src/create_game2.c 						\
 			src/create_game.c						\
 			src/my_rpg.c							\
-			src/player/player_move.c				\
-			src/player/player_attack.c				\
-			src/player/player_rect.c				\
-			src/enemies/enemies_die.c				\
-			src/enemies/enemies_moves.c				\
-			src/enemies/enemies_positions.c			\
 			src/new_content2.c						\
 			src/new_content.c						\
 			src/quests_interaction.c				\
@@ -34,6 +28,7 @@ SRCS	= 	src/main.c								\
 			src/clock.c 							\
 			src/my_libc_functions.c 				\
 			src/play_sounds.c 						\
+			src/npc_interaction.c 					\
 			src/buttons/button_event.c 				\
 			src/buttons/button_main_menu.c			\
 			src/buttons/button_town.c 				\
@@ -41,6 +36,13 @@ SRCS	= 	src/main.c								\
 			src/change/change_maps.c 				\
 			src/change/change_selection_maps.c 		\
 			src/change/change_vic_def.c 			\
+			src/change/change_statics_pos.c			\
+			src/player/player_move.c				\
+			src/player/player_attack.c				\
+			src/player/player_rect.c				\
+			src/enemies/enemies_die.c				\
+			src/enemies/enemies_moves.c				\
+			src/enemies/enemies_positions.c			\
 			src/fill_scene/fill_scene_beach.c		\
 			src/fill_scene/fill_scene_boss.c		\
 			src/fill_scene/fill_scene_camp.c		\
@@ -51,9 +53,7 @@ SRCS	= 	src/main.c								\
 			src/fill_scene/fill_scene_vic_def.c	   	\
 			src/fill_quest/fill_quest0_4.c			\
 			src/fill_quest/fill_quest5_9.c			\
-			src/fill_quest/fill_quest10_12.c		\
-			src/change/change_statics_pos.c			\
-			src/npc_interaction.c
+			src/fill_quest/fill_quest10_12.c 
 
 CFLAGS = -Iinclude
 

@@ -9,6 +9,14 @@
 #include "struct.h"
 #include "enum.h"
 
+void get_mouse_pos(game_t *game)
+{
+    game->settings->cursor_pos.x =
+    sfMouse_getPositionRenderWindow(game->settings->window).x;
+    game->settings->cursor_pos.y =
+    sfMouse_getPositionRenderWindow(game->settings->window).y;
+}
+
 void check_mouse_pos(game_t *game)
 {
     game->settings->cursor_pos.x = game->settings->event.mouseMove.x;

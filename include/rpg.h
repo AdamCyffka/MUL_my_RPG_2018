@@ -95,11 +95,12 @@ void key_to_move_or_not(game_scene_t scenes,
 void move_player(game_setting_t *settings, game_stat_t *stats);
 void player_stop_moving(game_stat_t *stats, game_setting_t *settings);
 void player_attack(game_stat_t *stats);
-int player_is_on_rectangle(game_setting_t *settings,
-    game_stat_t *stat, game_scene_t scene);
+int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat,
+game_scene_t scene);
 void player_rect_move(game_scene_t scenes, game_stat_t *stats,
-    timer_clock_t *timers, game_setting_t *settings);
+timer_clock_t *timers, game_setting_t *settings);
 int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
+void change_vector_view(game_setting_t *settings, sfVector2f vector_view);
 
 //analyser
 void analyse_events(game_t *game);
