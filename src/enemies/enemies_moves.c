@@ -94,10 +94,10 @@ void enemies_move_to_player(game_scene_t *scenes,
 }
 
 void enemies_detect_player(game_setting_t *settings,
-    game_scene_t *scenes, game_stat_t *stats, float delta_time)
+    game_scene_t *scenes, game_stat_t *stats)
 {
     if (settings->current == beach) {
         if (scenes[beach].objs[SKELETON_O_S4].speed > 0)
-            enemies_move_to_player(scenes, stats, SKELETON_O_S4, delta_time);
+            enemies_move_to_player(scenes, stats, SKELETON_O_S4, settings->delta_time);
     }
 }
