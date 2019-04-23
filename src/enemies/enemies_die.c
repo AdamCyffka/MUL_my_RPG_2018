@@ -17,7 +17,15 @@ void rect_die(game_t *game, int tmp)
     sfSprite_setTextureRect(game->scenes[game->settings->current].objs[tmp].sprite,
                                 game->scenes[game->settings->current].objs[tmp].rect);
     game->scenes[game->settings->current].objs[tmp].speed = 0;
-    
+    if (game->settings->current == camp
+        && game->quests[GOLEMS_Q].progress < game->quests[GOLEMS_Q].nb_of_task)
+        game->quests[GOLEMS_Q].progress++;
+    if (game->settings->current == beach
+        && game->quests[SKELETON_Q].progress < game->quests[SKELETON_Q].nb_of_task)
+        game->quests[SKELETON_Q].progress++;
+    if (game->settings->current == forest
+        && game->quests[GHOSTS_Q].progress < game->quests[GHOSTS_Q].nb_of_task)
+        game->quests[GHOSTS_Q].progress++;
 }
 
 void enemies_die2(game_t *game, int tmp)
