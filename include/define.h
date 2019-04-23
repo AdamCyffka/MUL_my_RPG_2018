@@ -101,7 +101,7 @@ number if you want the armor\n"
 me killing skeletons on the beach ?\n"
     #define Q10_DIAL1 "I knew you were a kind person.\n"
 
-//QUEST SKELETON_Q
+//QUEST SKELETONS_Q
     #define Q11_BOOK "KILL 20 SKELETONS FROM THE BEACH"
     #define Q11_DIAL0 "Well done, I would not have succeeded without\
 your help\n"

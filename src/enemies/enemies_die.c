@@ -9,66 +9,72 @@
 #include "struct.h"
 #include "enum.h"
 
-void rect_die(game_scene_t *scenes, int tmp, game_setting_t *settings)
+void rect_die(game_t *game, int tmp)
 {
-    scenes[settings->current].objs[tmp].rect.left = 0;
-    scenes[settings->current].objs[tmp].rect.top = 128;
-    scenes[settings->current].objs[tmp].rect.height = 17;
-    sfSprite_setTextureRect(scenes[settings->current].objs[tmp].sprite,
-                                scenes[settings->current].objs[tmp].rect);
-    scenes[settings->current].objs[SKELETON_O_S4].speed = 0;
+    game->scenes[game->settings->current].objs[tmp].rect.left = 0;
+    game->scenes[game->settings->current].objs[tmp].rect.top = 128;
+    game->scenes[game->settings->current].objs[tmp].rect.height = 17;
+    sfSprite_setTextureRect(game->scenes[game->settings->current].objs[tmp].sprite,
+                                game->scenes[game->settings->current].objs[tmp].rect);
+    game->scenes[game->settings->current].objs[tmp].speed = 0;
+    if (game->settings->current == camp
+        && game->quests[GOLEMS_Q].progress < game->quests[GOLEMS_Q].nb_of_task)
+        game->quests[GOLEMS_Q].progress++;
+    if (game->settings->current == beach
+        && game->quests[SKELETON_Q].progress < game->quests[SKELETON_Q].nb_of_task)
+        game->quests[SKELETON_Q].progress++;
+    if (game->settings->current == forest
+        && game->quests[GHOSTS_Q].progress < game->quests[GHOSTS_Q].nb_of_task)
+        game->quests[GHOSTS_Q].progress++;
 }
 
-void enemies_die2(game_scene_t *scenes, game_stat_t *stats,
-    int tmp, game_setting_t *settings)
+void enemies_die2(game_t *game, int tmp)
 {
     sfVector2f vector = sfSprite_getPosition(
-    scenes[settings->current].objs[tmp].sprite);
+    game->scenes[game->settings->current].objs[tmp].sprite);
 
-    if (stats->player.rect.top == 157 && stats->player.rect.left == 0) {
-        if ((vector.y > stats->player.position.y &&
-            vector.y - 120 < stats->player.position.y)
-            && (vector.x - 10 < stats->player.position.x &&
-            vector.x + 50 > stats->player.position.x))
-            rect_die(scenes, tmp, settings);
+    if (game->stats->player.rect.top == 157 && game->stats->player.rect.left == 0) {
+        if ((vector.y > game->stats->player.position.y &&
+            vector.y - 120 < game->stats->player.position.y)
+            && (vector.x - 10 < game->stats->player.position.x &&
+            vector.x + 50 > game->stats->player.position.x))
+            rect_die(game, tmp);
     }
-    if (stats->player.rect.top == 157 && stats->player.rect.left == 16) {
-        if ((vector.y < stats->player.position.y &&
-            vector.y + 120 > stats->player.position.y)
-            && (vector.x - 10 < stats->player.position.x &&
-                vector.x + 50 > stats->player.position.x))
-            rect_die(scenes, tmp, settings);
+    if (game->stats->player.rect.top == 157 && game->stats->player.rect.left == 16) {
+        if ((vector.y < game->stats->player.position.y &&
+            vector.y + 120 > game->stats->player.position.y)
+            && (vector.x - 10 < game->stats->player.position.x &&
+                vector.x + 50 > game->stats->player.position.x))
+            rect_die(game, tmp);
     }
 }
 
-void enemies_die(game_scene_t *scenes, game_stat_t *stats,
-    int tmp, game_setting_t *settings)
+void enemies_die(game_t *game, int tmp)
 {
     sfVector2f vector = sfSprite_getPosition(
-    scenes[settings->current].objs[tmp].sprite);
+    game->scenes[game->settings->current].objs[tmp].sprite);
 
-    if (stats->player.rect.top == 129 && stats->player.rect.left == 0) {
-        if ((vector.x > stats->player.position.x &&
-            vector.x - 100 < stats->player.position.x)
-            && (vector.y - 50 < stats->player.position.y &&
-            vector.y + 80 > stats->player.position.y))
-            rect_die(scenes, tmp, settings);
+    if (game->stats->player.rect.top == 129 && game->stats->player.rect.left == 0) {
+        if ((vector.x > game->stats->player.position.x &&
+            vector.x - 100 < game->stats->player.position.x)
+            && (vector.y - 50 < game->stats->player.position.y &&
+            vector.y + 80 > game->stats->player.position.y))
+            rect_die(game, tmp);
     }
-    if (stats->player.rect.top == 129 && stats->player.rect.left == 32) {
-        if ((vector.x < stats->player.position.x &&
-            vector.x + 100 > stats->player.position.x)
-            && (vector.y - 50 < stats->player.position.y &&
-            vector.y + 80 > stats->player.position.y))
-            rect_die(scenes, tmp, settings);
+    if (game->stats->player.rect.top == 129 && game->stats->player.rect.left == 32) {
+        if ((vector.x < game->stats->player.position.x &&
+            vector.x + 100 > game->stats->player.position.x)
+            && (vector.y - 50 < game->stats->player.position.y &&
+            vector.y + 80 > game->stats->player.position.y))
+            rect_die(game, tmp);
     }
-    enemies_die2(scenes, stats, SKELETON_O_S4, settings);
+    enemies_die2(game, SKELETON_O_S4);
 }
 
-void enemies_detect_hit(game_setting_t *settings, game_scene_t *scenes,
-    game_stat_t *stats)
+void enemies_detect_hit(game_t *game)
 {
-    if (settings->current == beach) {
-        if (scenes[beach].objs[SKELETON_O_S4].speed > 0)
-            enemies_die(scenes, stats, SKELETON_O_S4, settings);
+    if (game->settings->current == beach) {
+        if (game->scenes[beach].objs[SKELETON_O_S4].speed > 0)
+            enemies_die(game, SKELETON_O_S4);
     }
 }
