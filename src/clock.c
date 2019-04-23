@@ -21,9 +21,5 @@ void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests)
     /*if (seconds >= (timers.main_menu + 0.1)) {
         timers.main_menu = seconds;
         move_sprite_main_menu(scene, settings->delta_time);
-        }*/
-    if (seconds >= (timers.timer2 + 10)) { //FONCTION TEST VALENTIN
-        timers.timer2 = seconds;
-        test_quest(quests);
-    }
+    }*/
 }

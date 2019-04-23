@@ -22,6 +22,7 @@ int nb_reward)
     quest.state = Q_NOT_STARTED;
     quest.npc_zone = ZONESPECIAL_B_S1;
     quest.progress = 0;
+    quest.current_dial = 0;
     quest.nb_of_task = nb_of_task;
     quest.rewards = malloc(sizeof(int) * (nb_reward + 1));
     quest.rewards[nb_reward] = EOA;

@@ -46,8 +46,8 @@ void create_quest2(game_quest_t *quests)
     fill_quest9(&(quests[SHEEP_COUNT_Q]));
     quests[JODI_Q] = new_quest(2, Q10_BOOK, 1, 0);
     fill_quest10(&(quests[JODI_Q]));
-    quests[SKELETON_Q] = new_quest(1, Q11_BOOK, 20, 2);
-    fill_quest11(&(quests[SKELETON_Q]));
+    quests[SKELETONS_Q] = new_quest(1, Q11_BOOK, 20, 2);
+    fill_quest11(&(quests[SKELETONS_Q]));
     quests[BOSS_Q] = new_quest(3, Q12_BOOK, 1, 1);
     fill_quest12(&(quests[BOSS_Q]));
 }
