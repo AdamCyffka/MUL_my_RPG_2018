@@ -26,4 +26,8 @@ void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests)
         timers.timer2 = seconds;
         test_quest(quests);
     }
+    /*if (seconds >= (timers.timer3 + 2.5)) {
+        timers.timer3 = seconds;
+        sfMusic_play(scene[town].sounds[WALK_S_S1].music);
+    }*/
 }

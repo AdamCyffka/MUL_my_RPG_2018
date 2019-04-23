@@ -29,6 +29,7 @@ void create_settings(game_setting_t *settings)
     settings->clock = sfClock_create();
     settings->last_time = 0;
     settings->delta_time = 0;
+    settings->current = town;
     sfRenderWindow_setFramerateLimit(settings->window, 60);
     //sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }

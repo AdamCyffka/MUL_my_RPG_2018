@@ -67,14 +67,14 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {2975, 2100}, (sfIntRect) {0, 0, 143.5, 1498}, 0);
     town.buttons[WALKABLE17_B_S1] = new_button("assets/invisible.png",
     (sfVector2f) {3115, 2765}, (sfIntRect) {0, 0, 1256.5, 126}, 0);
-    town.buttons[INVENTORY_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
-    town.buttons[ME_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
-    town.buttons[OPTION_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
-    town.buttons[EXIT_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
+    town.buttons[INVENTORY_B_S1] = new_button("assets/invisible.png",
+    (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
+    town.buttons[ME_B_S1] = new_button("assets/invisible.png",
+    (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
+    town.buttons[OPTION_B_S1] = new_button("assets/invisible.png",
+    (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
+    town.buttons[EXIT_B_S1] = new_button("assets/invisible.png",
+    (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.sounds[MUSIC_S_S1] = new_sound("assets/music_town.ogg", sfFalse, 100);
     town.sounds[CLICK_S_S1] = new_sound("assets/click.ogg", sfFalse, 100);
     town.sounds[WALK_S_S1] = new_sound("assets/walk_rock.ogg", sfFalse, 100);

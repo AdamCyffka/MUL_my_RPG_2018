@@ -73,12 +73,11 @@ int load_player_stats(game_t *game);
 
 //buttons_town
 void button_town(game_setting_t *settings, game_scene_t scenes);
-void disp_button_menu(game_scene_t scenes, int enable, int disable);
-void disp_button_inventory(game_scene_t scenes, int enable, int disable);
-void disp_button_option(game_scene_t scenes, int enable, int disable);
-void disp_button_exit(game_scene_t scenes, int enable, int disable);
-void disp_button_me(game_scene_t scenes, int enable, int disable);
-void buttons_action(game_setting_t *settings, game_scene_t scenes);
+void button_town_inventory(game_scene_t scenes, int enable, int disable);
+void button_town_option(game_scene_t scenes, int enable, int disable);
+void button_town_exit(game_scene_t scenes, int enable, int disable);
+void button_town_me(game_scene_t scenes, int enable, int disable);
+void button_town_close(game_scene_t scenes, int enable, int disable);
 
 //quest_interaction
 void quests_interaction(void);
@@ -87,11 +86,18 @@ void quests_interaction(void);
 void check_bg_music(game_t *game);
 
 //destroy
-//void destroy_all(game_t *game);
+void destroy_all(game_t *game);
+void destroy_window(game_t *game);
+void destroy_texts(game_t *game, int nbr);
+void destroy_buttons(game_t *game, int nbr);
+void destroy_sounds(game_t *game, int nbr);
+void destroy_objs(game_t *game, int nbr);
+void destroy_views(game_t *game);
+void destroy_clock(game_t *game);
 
 //player
 void key_to_move_or_not(game_scene_t scenes,
-    game_setting_t *settings, game_stat_t *stats);
+game_setting_t *settings, game_stat_t *stats);
 void move_player(game_setting_t *settings, game_stat_t *stats);
 void player_stop_moving(game_stat_t *stats, game_setting_t *settings);
 void player_attack(game_stat_t *stats);
