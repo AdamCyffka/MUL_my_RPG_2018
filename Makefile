@@ -60,6 +60,7 @@ SRCS	= 	src/main.c								\
 			src/fill_quest/fill_quest10_12.c 
 
 CFLAGS = -Iinclude
+CFLAGS += -g
 
 LDFLAGS += -lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window
 LDFLAGS += -W -Wall -Wextra -g

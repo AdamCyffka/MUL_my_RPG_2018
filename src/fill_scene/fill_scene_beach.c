@@ -40,6 +40,8 @@ void fill_scene_beach3(game_scene_t beach)
     beach.objs[SKELETON9_O_S4] = new_object("assets/skeleton.png",
     (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
     beach.objs[SKELETON10_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {500, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON11_O_S4] = new_object("assets/skeleton.png",
     (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
     beach.objs[SKELETON12_O_S4] = new_object("assets/skeleton.png",
     (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);

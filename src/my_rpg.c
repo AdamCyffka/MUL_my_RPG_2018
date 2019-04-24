@@ -21,8 +21,9 @@ void game_change(game_t *game)
         change_maps(game);
     if (game->settings->current >= victory && game->settings->current <= defeat)
         change_vic_def(game);
+    enemies_detect_player(game->settings, game->scenes, game->stats);
     clock(game->scenes, game->settings, game->quests);
-    player_rect_move(game->scenes, game->stats, game->settings);
+    //player_rect_move(game->scenes, game->stats, game->settings);
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
