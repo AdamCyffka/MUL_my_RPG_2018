@@ -34,7 +34,7 @@ void set_scale(game_t *game)
         (sfVector2f) {3.5, 3.5});
     }
     if (game->settings->current == beach) {
-        sfSprite_setScale(game->scenes[beach].objs[SKELETON_O_S4].sprite,
+        sfSprite_setScale(game->scenes[beach].objs[SKELETON1_O_S4].sprite,
         (sfVector2f) {3.5, 3.5});
     }
     if (game->settings->current == forest) {

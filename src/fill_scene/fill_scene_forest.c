@@ -17,8 +17,36 @@ void fill_scene_forest4(game_scene_t forest)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     forest.objs[MINIMAP_O_S3] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
-    forest.objs[GHOST_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
+    forest.objs[GHOST1_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST2_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST3_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST4_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST5_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST6_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST7_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST8_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST9_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST10_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST11_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST12_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST13_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST14_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    forest.objs[GHOST15_O_S3] = new_object("assets/ghost.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[QUEST_O_S3] = new_object("assets/quest.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
     forest.objs[ICON_O_S3] = new_object("assets/icon.png",

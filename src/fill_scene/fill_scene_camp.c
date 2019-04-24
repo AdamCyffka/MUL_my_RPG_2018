@@ -33,8 +33,24 @@ void fill_scene_camp3(game_scene_t camp)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     camp.objs[MINIMAP_O_S5] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
-    camp.objs[GOLEM_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
+    camp.objs[GOLEM1_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM2_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM4_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM5_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM6_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM7_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM8_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM9_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM10_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[QUEST_O_S5] = new_object("assets/quest.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
     fill_scene_camp4(camp);

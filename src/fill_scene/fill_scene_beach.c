@@ -21,7 +21,43 @@ void fill_scene_beach3(game_scene_t beach)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     beach.objs[MINIMAP_O_S4] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
-    beach.objs[SKELETON_O_S4] = new_object("assets/skeleton.png",
+    beach.objs[SKELETON1_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON2_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON3_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON4_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON5_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON6_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON7_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON8_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON9_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON10_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON12_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON13_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON14_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON15_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON16_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON17_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON18_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON19_O_S4] = new_object("assets/skeleton.png",
+    (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
+    beach.objs[SKELETON20_O_S4] = new_object("assets/skeleton.png",
     (sfVector2f) {1000, 400}, (sfIntRect) {0, 0, 16, 32}, 4);
     beach.objs[QUEST_O_S4] = new_object("assets/quest.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
