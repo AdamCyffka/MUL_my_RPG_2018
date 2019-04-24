@@ -79,6 +79,13 @@ typedef struct game_stat {
     game_object_t player;
 } game_stat_t;
 
+typedef struct timer_clock {
+    float main_menu;
+    float player_timer;
+    float timer2;
+    float timer3;
+} timer_clock_t;
+
 typedef struct game_setting {
     int current;
     sfRenderWindow *window;
@@ -86,6 +93,7 @@ typedef struct game_setting {
     sfVector2f cursor_pos;
     bool _mouse;
     sfClock *clock;
+    timer_clock_t timers;
     float last_time;
     float delta_time;
     sfView *map_view;
@@ -99,12 +107,5 @@ typedef struct game {
     game_stat_t *stats;
     game_setting_t *settings;
 } game_t;
-
-typedef struct timer_clock {
-    float main_menu;
-    float player_timer;
-    float timer2;
-    float timer3;
-} timer_clock_t;
 
 #endif /* STRUCT_H_ */

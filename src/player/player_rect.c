@@ -17,12 +17,12 @@ void change_vector_view(game_setting_t *settings, sfVector2f vector_view)
     sfRenderWindow_setView(settings->window, view);
 }
 
-void player_rect_move(game_scene_t scenes, game_stat_t *stats,
-    timer_clock_t *timers, game_setting_t *settings)
+void player_rect_move(game_scene_t *scenes, game_stat_t *stats, game_setting_t *settings)
 {
-    if (player_is_on_rectangle(settings, stats, scenes) == 0)
+    if (player_is_on_rectangle(settings, stats, scenes[settings->current]) == 0)
         return;
-    if (settings->last_time >= (timers->main_menu + 0.1)) {
+    if (settings->last_time >= (settings->timers.player_timer + 1)) {
+        settings->timers.player_timer = settings->last_time;
         if (stats->player.rect.left < 48)
             stats->player.rect.left += 16;
         else

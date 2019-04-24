@@ -33,6 +33,10 @@ void set_scale(game_t *game)
         sfSprite_setScale(game->scenes[boss].objs[OBSTACLE_O_S2].sprite,
         (sfVector2f) {3.5, 3.5});
     }
+    if (game->settings->current == beach) {
+        sfSprite_setScale(game->scenes[beach].objs[SKELETON_O_S4].sprite,
+        (sfVector2f) {3.5, 3.5});
+    }
     if (game->settings->current == forest) {
         //sfSprite_setScale(game->scenes[forest].objs[TOWN_O_S2].sprite,
         //(sfVector2f) {2.5, 2.5});

@@ -21,8 +21,8 @@ void rect_die(game_t *game, int tmp)
         && game->quests[GOLEMS_Q].progress < game->quests[GOLEMS_Q].nb_of_task)
         game->quests[GOLEMS_Q].progress++;
     if (game->settings->current == beach
-        && game->quests[SKELETON_Q].progress < game->quests[SKELETON_Q].nb_of_task)
-        game->quests[SKELETON_Q].progress++;
+        && game->quests[SKELETONS_Q].progress < game->quests[SKELETONS_Q].nb_of_task)
+        game->quests[SKELETONS_Q].progress++;
     if (game->settings->current == forest
         && game->quests[GHOSTS_Q].progress < game->quests[GHOSTS_Q].nb_of_task)
         game->quests[GHOSTS_Q].progress++;
