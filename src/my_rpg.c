@@ -12,10 +12,13 @@
 void game_change(game_t *game)
 {
     set_scale(game);
-    //for (int tmp = 0; tmp < game->scenes->how_many[1]; tmp++)
-        //if (game->scenes->sounds[tmp]._activated == true)
-            //sfMusic_play(game->scenes->sounds[MUSIC_S_S0].music);
+    /*for (int tmp = 0; tmp < game->scenes->how_many[1]; tmp++) {
+        if (game->scenes->sounds[tmp]._activated == true)
+            if (game->settings->current == town)
+                sfMusic_play(game->scenes->sounds[MUSIC_S_S0].music);
+    }*/
     if (game->settings->current == main_menu)
+        sfSprite_setPosition(game->scenes->objs[CURSOR_O_S0].sprite, game->settings->cursor_pos);
         change_main_menu(game->settings, game->scenes);
     if (game->settings->current >= town && game->settings->current <= camp)
         change_maps(game);
@@ -43,6 +46,8 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
         if (scene.texts[tmp].state >= 0)
             sfRenderWindow_drawText(settings->window, scene.texts[tmp].text,
             NULL);
+    if (settings->current == main_menu)
+        sfRenderWindow_drawSprite(settings->window, scene.objs[CURSOR_O_S0].sprite, NULL);
 }
 
 int my_rpg(void)
