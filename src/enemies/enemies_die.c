@@ -68,13 +68,13 @@ void enemies_die(game_t *game, int tmp)
             vector.y + 80 > game->stats->player.position.y))
             rect_die(game, tmp);
     }
-    enemies_die2(game, SKELETON_O_S4);
+    enemies_die2(game, tmp);
 }
 
 void enemies_detect_hit(game_t *game)
 {
     if (game->settings->current == beach) {
-        if (game->scenes[beach].objs[SKELETON_O_S4].speed > 0)
-            enemies_die(game, SKELETON_O_S4);
+        if (game->scenes[beach].objs[SKELETON1_O_S4].speed > 0)
+            enemies_die(game, SKELETON1_O_S4);
     }
 }
