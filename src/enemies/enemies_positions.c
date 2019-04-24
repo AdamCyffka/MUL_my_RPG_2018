@@ -9,6 +9,15 @@
 #include "struct.h"
 #include "enum.h"
 
+void loop_rect_enemies(game_t *game)
+{
+    if (game->settings->last_time >= (game->settings->timers.enemies_timer + 1)) {
+        game->settings->timers.enemies_timer = game->settings->last_time;
+        for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++)
+            move_rect_enemies(game->scenes, game->stats, tmp, game->settings);
+    }
+}
+
 void enemies_positions(game_scene_t *scenes,
     game_stat_t *stats, int tmp, float delta_time)
 {

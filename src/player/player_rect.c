@@ -23,6 +23,8 @@ void player_rect_move(game_scene_t *scenes, game_stat_t *stats, game_setting_t *
         return;
     if (settings->last_time >= (settings->timers.player_timer + 1)) {
         settings->timers.player_timer = settings->last_time;
+        if (stats->player.rect.top >= 128)
+            return;
         if (stats->player.rect.left < 48)
             stats->player.rect.left += 16;
         else

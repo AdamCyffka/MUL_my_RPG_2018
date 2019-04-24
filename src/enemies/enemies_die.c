@@ -74,7 +74,9 @@ void enemies_die(game_t *game, int tmp)
 void enemies_detect_hit(game_t *game)
 {
     if (game->settings->current == beach) {
-        if (game->scenes[beach].objs[SKELETON1_O_S4].speed > 0)
-            enemies_die(game, SKELETON1_O_S4);
+        for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++) {
+            if (game->scenes[beach].objs[tmp].speed > 0)
+                enemies_die(game, tmp);
+        }
     }
 }
