@@ -17,7 +17,8 @@ void change_vector_view(game_setting_t *settings, sfVector2f vector_view)
     sfRenderWindow_setView(settings->window, view);
 }
 
-void player_rect_move(game_scene_t *scenes, game_stat_t *stats, game_setting_t *settings)
+void player_rect_move(game_scene_t *scenes, game_stat_t *stats,
+    game_setting_t *settings)
 {
     if (player_is_on_rectangle(settings, stats, scenes[settings->current]) == 0)
         return;

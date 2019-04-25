@@ -47,6 +47,7 @@ void analyse_events(game_t *game)
         keyboard_checker_maps(game);
         key_to_move_or_not(game->scenes[game->settings->current],
         game->settings, game->stats);
+        player_change_map(game->stats, game->settings);
     }
     else if (game->settings->event.type == sfEvtMouseButtonPressed)
         player_attack(game->stats);
