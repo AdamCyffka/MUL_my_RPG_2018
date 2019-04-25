@@ -172,5 +172,8 @@ void npc_interaction(game_t *game);
 
 //enemies_positions.c
 void enemies_positions(game_t *game, int tmp, float delta_time);
+void enemies_detect_player(game_t *game);
+void enemies_detect_hit(game_t *game);
+void loop_rect_enemies(game_t *game);
 
 #endif /* RPG_H_ */

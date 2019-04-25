@@ -42,7 +42,6 @@ SRCS	= 	src/main.c								\
 			src/player/player_change_map.c			\
 			src/player/player_attack.c				\
 			src/player/player_rect.c				\
-			src/player/player_change_map.c				\
 			src/enemies/enemies_die.c				\
 			src/enemies/enemies_moves.c				\
 			src/enemies/enemies_positions.c			\
