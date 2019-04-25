@@ -85,4 +85,16 @@ void enemies_detect_hit(game_t *game)
                 enemies_die(game, tmp);
         }
     }
+    if (game->settings->current == camp) {
+        for (int tmp = GOLEM1_O_S5; tmp <= GOLEM10_O_S5; tmp++) {
+            if (game->scenes[camp].objs[tmp].speed > 0)
+                enemies_die(game, tmp);
+        }
+    }
+    if (game->settings->current == forest) {
+        for (int tmp = GHOST1_O_S3; tmp <= GHOST15_O_S3; tmp++) {
+            if (game->scenes[forest].objs[tmp].speed > 0)
+                enemies_die(game, tmp);
+        }
+    }
 }

@@ -170,7 +170,6 @@ void test_quest(game_quest_t *quests);
 void npc_interaction(game_t *game);
 
 //enemies_positions.c
-void enemies_positions(game_scene_t *scenes,
-game_stat_t *stats, int tmp, float delta_time);
+void enemies_positions(game_t *game, int tmp, float delta_time);
 
 #endif /* RPG_H_ */
