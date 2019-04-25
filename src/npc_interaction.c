@@ -106,5 +106,6 @@ void npc_interaction(game_t *game)
     quest_validation(game);
     give_rewards_if_validated(game->stats, game->quests, game->inventory);
     change_quest_if_validated(game->stats, game->quests);
-    printf("current_quest = %i | state = %i\n", game->stats->current_quest, game->quests[game->stats->current_quest].state);
+    printf("current_quest = %i | state = %i\n", game->stats->current_quest,
+    game->quests[game->stats->current_quest].state);
 }

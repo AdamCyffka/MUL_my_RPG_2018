@@ -103,8 +103,6 @@ void key_to_move_or_not(game_scene_t scenes,
         if (player_is_on_rectangle(settings, stats, scenes) == 0)
             return;
         move_window(settings, stats);
-        //printf("%f\n", stats->player.position.x);
-        //printf("%f\n\n", stats->player.position.y);
         if (bordure_crossed(settings, stats) == 1)
             return;
         move_player(settings, stats);

@@ -14,7 +14,7 @@ void fill_scene_main_menu3(game_scene_t main_menu)
     main_menu.buttons[NEW_B_S0] = new_button("assets/button_new.png",
     (sfVector2f) {700, 340}, (sfIntRect) {0, 0, 148, 122}, 0);
     main_menu.texts[NAME_T_S0] = new_text("assets/font.ttf", "Name:",
-    (sfVector2f) {875, 495}, 40); 
+    (sfVector2f) {875, 495}, 40);
     main_menu.sounds[MUSIC_S_S0] = new_sound("assets/music_menu.ogg", sfFalse,
     100);
     main_menu.sounds[CLICK_S_S0] = new_sound("assets/click.ogg", sfFalse, 100);

@@ -79,7 +79,10 @@ void button_menu(game_setting_t *settings, game_scene_t scenes)
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[BACK_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[BACK_B_S0].shape)) == true)
-        disp_new_options(scenes, 0, -1);
+    if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+    .buttons[OK_B_S0].shape), sfRectangleShape_getSize(scenes
+    .buttons[OK_B_S0].shape)) == true)
+        settings->current = town;
     else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CLOSE_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[CLOSE_B_S0].shape)) == true)

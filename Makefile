@@ -32,6 +32,7 @@ SRCS	= 	src/main.c								\
 			src/buttons/button_event.c 				\
 			src/buttons/button_main_menu.c			\
 			src/buttons/button_town.c 				\
+			src/buttons/button_town2.c 				\
 			src/change/change_main_menu.c			\
 			src/change/change_maps.c 				\
 			src/change/change_selection_maps.c 		\
@@ -41,9 +42,13 @@ SRCS	= 	src/main.c								\
 			src/player/player_change_map.c			\
 			src/player/player_attack.c				\
 			src/player/player_rect.c				\
+			src/player/player_change_map.c				\
 			src/enemies/enemies_die.c				\
 			src/enemies/enemies_moves.c				\
 			src/enemies/enemies_positions.c			\
+			src/destroy/destroy_all.c 				\
+			src/destroy/destroy.c 					\
+			src/destroy/destroy2.c 					\
 			src/fill_scene/fill_scene_beach.c		\
 			src/fill_scene/fill_scene_boss.c		\
 			src/fill_scene/fill_scene_camp.c		\
@@ -57,6 +62,7 @@ SRCS	= 	src/main.c								\
 			src/fill_quest/fill_quest10_12.c
 
 CFLAGS = -Iinclude
+CFLAGS += -g
 
 LDFLAGS += -lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window
 LDFLAGS += -W -Wall -Wextra -g
