@@ -39,6 +39,12 @@ void set_scale(game_t *game)
             (sfVector2f) {3.5, 3.5});
         }
     }
+    if (game->settings->current == camp) {
+        for (int tmp = GOLEM1_O_S5; tmp <= GOLEM10_O_S5; tmp++) {
+            sfSprite_setScale(game->scenes[camp].objs[tmp].sprite,
+            (sfVector2f) {3.5, 3.5});
+        }
+    }
     if (game->settings->current == forest) {
         //sfSprite_setScale(game->scenes[forest].objs[TOWN_O_S2].sprite,
         //(sfVector2f) {2.5, 2.5});
