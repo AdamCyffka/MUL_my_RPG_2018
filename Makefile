@@ -38,6 +38,7 @@ SRCS	= 	src/main.c								\
 			src/change/change_vic_def.c 			\
 			src/change/change_statics_pos.c			\
 			src/player/player_move.c				\
+			src/player/player_change_map.c			\
 			src/player/player_attack.c				\
 			src/player/player_rect.c				\
 			src/enemies/enemies_die.c				\
@@ -53,7 +54,7 @@ SRCS	= 	src/main.c								\
 			src/fill_scene/fill_scene_vic_def.c	   	\
 			src/fill_quest/fill_quest0_4.c			\
 			src/fill_quest/fill_quest5_9.c			\
-			src/fill_quest/fill_quest10_12.c 
+			src/fill_quest/fill_quest10_12.c
 
 CFLAGS = -Iinclude
 

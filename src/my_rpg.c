@@ -24,11 +24,6 @@ void game_change(game_t *game)
     clock(game->scenes, game->settings, game->quests);
 }
 
-void scene_selection(game_setting_t *settings, game_scene_t *scenes)
-{
-    settings->current = town;
-}
-
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 *stats)
 {
@@ -56,7 +51,6 @@ int my_rpg(void)
 
     while (sfRenderWindow_isOpen(game->settings->window)) {
         sfRenderWindow_clear(game->settings->window, sfBlack);
-        scene_selection(game->settings, game->scenes);
         game_change(game);
         draw_scene(game->scenes[game->settings->current],
         game->settings, game->stats);
