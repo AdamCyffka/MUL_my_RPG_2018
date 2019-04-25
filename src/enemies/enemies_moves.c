@@ -66,7 +66,7 @@ void move_rect_enemies(game_scene_t *scenes,
         if (scenes[settings->current].objs[tmp].rect.left < 48)
             scenes[settings->current].objs[tmp].rect.left += 16;
         else if (scenes[settings->current].objs[tmp].rect.top != 128)
-            scenes[beach].objs[tmp].rect.left = 0;
+            scenes[settings->current].objs[tmp].rect.left = 0;
         if (scenes[settings->current].objs[tmp].rect.top == 128)
             scenes[settings->current].objs[tmp].rect.left += 16;
         sfSprite_setTextureRect(scenes[settings->current].objs[tmp].sprite,
