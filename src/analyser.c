@@ -40,8 +40,6 @@ void analyse_events(game_t *game)
     if (game->settings->event.type == sfEvtClosed)
         sfRenderWindow_close(game->settings->window);
     if (game->settings->event.type == sfEvtMouseMoved)
-        game->settings->cursor_pos.x = sfMouse_getPositionRenderWindow(game->settings->window).x;
-        game->settings->cursor_pos.y = sfMouse_getPositionRenderWindow(game->settings->window).y;
         check_mouse_pos(game);
     if (game->settings->event.type == sfEvtKeyPressed) {
         keyboard_checker_maps(game);

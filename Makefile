@@ -22,7 +22,7 @@ SRCS	= 	src/main.c								\
 			src/new_content.c						\
 			src/quests_interaction.c				\
 			src/analyser.c 							\
-			src/draw_cursor.c 						\
+			src/cursor_interaction.c 				\
 			src/draw_quest.c						\
 			src/set_scale.c 						\
 			src/clock.c 							\

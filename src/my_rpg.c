@@ -12,13 +12,13 @@
 void game_change(game_t *game)
 {
     set_scale(game);
-    /*for (int tmp = 0; tmp < game->scenes->how_many[1]; tmp++) {
-        if (game->scenes->sounds[tmp]._activated == true)
+    set_cursor_pos(game->scenes[game->settings->current], game->settings);
+    /*for (int tmp = 0; tmp < game->scenes[game->settings->current].how_many[1]; tmp++) {
+        if (game->scenes[game->settings->current].sounds[tmp]._activated == true)
             if (game->settings->current == town)
-                sfMusic_play(game->scenes->sounds[MUSIC_S_S0].music);
+                sfMusic_play(game->scenes->sounds[MUSIC_S_S1].music);
     }*/
     if (game->settings->current == main_menu)
-        sfSprite_setPosition(game->scenes->objs[CURSOR_O_S0].sprite, game->settings->cursor_pos);
         change_main_menu(game->settings, game->scenes);
     if (game->settings->current >= town && game->settings->current <= camp)
         change_maps(game);
@@ -32,23 +32,22 @@ void game_change(game_t *game)
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 *stats)
 {
-    for (int tmp = 0; tmp < scene.how_many[0]; tmp++) {
+    for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
         if (scene.objs[tmp].speed >= 0)
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
             .sprite, NULL);
-    }
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++)
         if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene
             .buttons[tmp].shape, NULL);
-    if (settings->current >= town && settings->current <= camp && stats->player.speed != -1)
+    if (settings->current >= town && settings->current <= camp &&
+    stats->player.speed != -1)
         sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
         if (scene.texts[tmp].state >= 0)
             sfRenderWindow_drawText(settings->window, scene.texts[tmp].text,
             NULL);
-    if (settings->current == main_menu)
-        sfRenderWindow_drawSprite(settings->window, scene.objs[CURSOR_O_S0].sprite, NULL);
+    draw_cursor(scene, settings);
 }
 
 int my_rpg(void)

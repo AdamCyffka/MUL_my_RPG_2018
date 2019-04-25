@@ -32,5 +32,5 @@ void create_settings(game_setting_t *settings)
     settings->delta_time = 0;
     settings->current = beach;
     sfRenderWindow_setFramerateLimit(settings->window, 60);
-    //sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
+    sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }

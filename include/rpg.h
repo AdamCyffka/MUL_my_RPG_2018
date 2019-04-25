@@ -111,8 +111,9 @@ void change_vector_view(game_setting_t *settings, sfVector2f vector_view);
 void analyse_events(game_t *game);
 
 //draw_cursor
-void draw_cursor(game_scene_t scene, game_setting_t *settings);
 void check_mouse_pos(game_t *game);
+void set_cursor_pos(game_scene_t scene, game_setting_t *settings);
+void draw_cursor(game_scene_t scene, game_setting_t *settings);
 
 //draw_quest
 void draw_quest(game_quest_t *quests, game_setting_t *settings);
