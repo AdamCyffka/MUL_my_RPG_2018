@@ -53,7 +53,8 @@ void rect_chose(sfVector2f vector, game_t *game, int tmp)
 void move_rect_enemies(game_scene_t *scenes,
     game_stat_t *stats, int tmp, game_setting_t *settings)
 {
-    sfVector2f vector = sfSprite_getPosition(scenes[settings->current].objs[tmp].sprite);
+    sfVector2f vector = sfSprite_getPosition(
+    scenes[settings->current].objs[tmp].sprite);
     if (((stats->player.position.y < vector.y
         && stats->player.position.y > vector.y - 700)
         || (stats->player.position.y > vector.y
@@ -75,7 +76,8 @@ void move_rect_enemies(game_scene_t *scenes,
 
 void enemies_move_to_player(game_t *game, int tmp, float delta_time)
 {
-    sfVector2f vector = sfSprite_getPosition(game->scenes[game->settings->current].objs[tmp].sprite);
+    sfVector2f vector = sfSprite_getPosition(
+    game->scenes[game->settings->current].objs[tmp].sprite);
 
     if (((game->stats->player.position.y < vector.y
         && game->stats->player.position.y > vector.y - 700)
