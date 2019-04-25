@@ -24,9 +24,11 @@ void game_change(game_t *game)
         change_maps(game);
     if (game->settings->current >= victory && game->settings->current <= defeat)
         change_vic_def(game);
-    enemies_detect_player(game->settings, game->scenes, game->stats);
+    enemies_detect_player(game);
+    enemies_detect_hit(game);
     clock(game->scenes, game->settings, game->quests);
-    //player_rect_move(game->scenes, game->stats, game->settings);
+    loop_rect_enemies(game);
+    player_rect_move(game->scenes, game->stats, game->settings);
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
@@ -40,8 +42,8 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
         if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene
             .buttons[tmp].shape, NULL);
-    if (settings->current >= town && settings->current <= camp &&
-    stats->player.speed != -1)
+    if (settings->current >= town
+        && settings->current <= camp && stats->player.speed != -1)
         sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
         if (scene.texts[tmp].state >= 0)

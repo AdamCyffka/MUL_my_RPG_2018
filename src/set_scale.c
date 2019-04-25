@@ -20,27 +20,33 @@ void set_scale(game_t *game)
     sfSprite_setScale(game->stats->player.sprite, (sfVector2f) {4, 4});
     if (game->settings->current == town) {
         sfSprite_setScale(game->scenes[town].objs[TOWN_O_S1].sprite,
-                          (sfVector2f) {3.5, 3.5});
+        (sfVector2f) {3.5, 3.5});
         sfSprite_setScale(game->scenes[town].objs[OBSTACLE_O_S1].sprite,
-                          (sfVector2f) {3.5, 3.5});
+        (sfVector2f) {3.5, 3.5});
         sfSprite_setScale(game->scenes[town].objs[PANNEL_O_S1].sprite,
-                          (sfVector2f) {1, 0.5});
-        set_scale_npc(game->scenes[town].objs); 
+        (sfVector2f) {1, 0.5});
+        set_scale_npc(game->scenes[town].objs);
     }
     if (game->settings->current == boss) {
         sfSprite_setScale(game->scenes[boss].objs[TOWN_O_S2].sprite,
-                          (sfVector2f) {3.5, 3.5});
+        (sfVector2f) {3.5, 3.5});
         sfSprite_setScale(game->scenes[boss].objs[OBSTACLE_O_S2].sprite,
-                          (sfVector2f) {3.5, 3.5});
+        (sfVector2f) {3.5, 3.5});
     }
     if (game->settings->current == beach) {
         for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++) {
             sfSprite_setScale(game->scenes[beach].objs[tmp].sprite,
-                              (sfVector2f) {3.5, 3.5});
+            (sfVector2f) {3.5, 3.5});
+        }
+    }
+    if (game->settings->current == camp) {
+        for (int tmp = GOLEM1_O_S5; tmp <= GOLEM10_O_S5; tmp++) {
+            sfSprite_setScale(game->scenes[camp].objs[tmp].sprite,
+            (sfVector2f) {3.5, 3.5});
         }
     }
     if (game->settings->current == forest) {
-        //sfSprite_setScale(game->scenes[forest].objs[TOWN_O_S2].sprite,
-        //(sfVector2f) {2.5, 2.5});
+        sfSprite_setScale(game->scenes[forest].objs[TOWN_O_S2].sprite,
+        (sfVector2f) {1.5, 1.5});
     }
 }

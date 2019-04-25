@@ -37,6 +37,8 @@ void fill_scene_camp3(game_scene_t camp)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM2_O_S5] = new_object("assets/golem.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    camp.objs[GOLEM3_O_S5] = new_object("assets/golem.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM4_O_S5] = new_object("assets/golem.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM5_O_S5] = new_object("assets/golem.png",

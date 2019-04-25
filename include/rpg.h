@@ -106,6 +106,7 @@ game_scene_t scene);
 void player_rect_move(game_scene_t *scenes, game_stat_t *stats, game_setting_t *settings);
 int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
 void change_vector_view(game_setting_t *settings, sfVector2f vector_view);
+void player_change_map(game_stat_t *stats, game_setting_t *settings);
 
 //analyser
 void analyse_events(game_t *game);
@@ -171,7 +172,9 @@ void test_quest(game_quest_t *quests);
 void npc_interaction(game_t *game);
 
 //enemies_positions.c
-void enemies_positions(game_scene_t *scenes,
-game_stat_t *stats, int tmp, float delta_time);
+void enemies_positions(game_t *game, int tmp, float delta_time);
+void enemies_detect_player(game_t *game);
+void enemies_detect_hit(game_t *game);
+void loop_rect_enemies(game_t *game);
 
 #endif /* RPG_H_ */

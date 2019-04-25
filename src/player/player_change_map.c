@@ -9,36 +9,25 @@
 #include "struct.h"
 #include "enum.h"
 
-void player_change_map(game_stat_t *stats, game_setting_t *settings)
+void player_change_map4(game_stat_t *stats, game_setting_t *settings)
 {
     sfView *view = sfRenderWindow_getView(settings->window);
 
-    if (settings->current == town) {
-        if (stats->player.position.x >= 4320 && stats->player.position.y < 1000) {
-            settings->current = camp;
-            sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
+    if (settings->current == beach) {
+        if (stats->player.position.y <= 20) {
+            settings->current = town;
+            sfView_setCenter((sfView *) {view}, (sfVector2f) {3000, 3300});
             sfRenderWindow_setView(settings->window, view);
-            stats->player.position.x = 40;
-            stats->player.position.y = 750;
-            sfSprite_setPosition(stats->player.sprite, stats->player.position);
-        }
-        if (stats->player.position.x >= 4320 && stats->player.position.y > 1000) {
-            settings->current = forest;
-            sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
-            sfRenderWindow_setView(settings->window, view);
-            stats->player.position.x = 40;
-            stats->player.position.y = 750;
-            sfSprite_setPosition(stats->player.sprite, stats->player.position);
-        }
-        if (stats->player.position.y > 3400) {
-            settings->current = beach;
-            sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
-            sfRenderWindow_setView(settings->window, view);
-            stats->player.position.x = 1200;
-            stats->player.position.y = 40;
+            stats->player.position.x = 3000;
+            stats->player.position.y = 3390;
             sfSprite_setPosition(stats->player.sprite, stats->player.position);
         }
     }
+}
+
+void player_change_map3(game_stat_t *stats,
+    game_setting_t *settings, sfView *view)
+{
     if (settings->current == camp) {
         if (stats->player.position.x <= 20) {
             settings->current = town;
@@ -59,4 +48,46 @@ void player_change_map(game_stat_t *stats, game_setting_t *settings)
             sfSprite_setPosition(stats->player.sprite, stats->player.position);
         }
     }
+}
+
+void player_change_map2(game_stat_t *stats, game_setting_t *settings)
+{
+    sfView *view = sfRenderWindow_getView(settings->window);
+
+    if (stats->player.position.x >= 4320 && stats->player.position.y > 1000) {
+        settings->current = forest;
+        sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
+        sfRenderWindow_setView(settings->window, view);
+        stats->player.position.x = 40;
+        stats->player.position.y = 750;
+        sfSprite_setPosition(stats->player.sprite, stats->player.position);
+    }
+    if (stats->player.position.y > 3400) {
+        settings->current = beach;
+        sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
+        sfRenderWindow_setView(settings->window, view);
+        stats->player.position.x = 1200;
+        stats->player.position.y = 40;
+        sfSprite_setPosition(stats->player.sprite, stats->player.position);
+    }
+}
+
+void player_change_map(game_stat_t *stats, game_setting_t *settings)
+{
+    sfView *view = sfRenderWindow_getView(settings->window);
+
+    if (settings->current == town) {
+        if (stats->player.position.x >= 4320
+            && stats->player.position.y < 1000) {
+            settings->current = camp;
+            sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
+            sfRenderWindow_setView(settings->window, view);
+            stats->player.position.x = 40;
+            stats->player.position.y = 750;
+            sfSprite_setPosition(stats->player.sprite, stats->player.position);
+        }
+        player_change_map2(stats, settings);
+    }
+    player_change_map3(stats, settings, view);
+    player_change_map4(stats, settings);
 }

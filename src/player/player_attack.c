@@ -59,7 +59,7 @@ void player_attack2(game_stat_t *stats)
         stats->player.rect.width = 32;
         stats->player.rect.height = 28;
         stats->player.position.y += 4;
-        stats->player.position.x -= 50;
+        stats->player.position.x -= 80;
     }
     sfSprite_setPosition(stats->player.sprite, stats->player.position);
     sfSprite_setTextureRect(stats->player.sprite, stats->player.rect);

@@ -27,10 +27,10 @@ void create_settings(game_setting_t *settings)
     settings->window = sfRenderWindow_create(mode, "TRASHDEW VALLEY", sfClose |
     sfResize, NULL);
     settings->clock = sfClock_create();
-    settings->timers = (timer_clock_t) {0, 0, 0, 0};
+    settings->timers = (timer_clock_t) {0, 0, 0, 0, 0};
     settings->last_time = 0;
     settings->delta_time = 0;
-    settings->current = beach;
+    settings->current = main_menu;
     sfRenderWindow_setFramerateLimit(settings->window, 60);
     sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }

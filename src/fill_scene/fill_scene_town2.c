@@ -11,19 +11,19 @@
 
 void fill_scene_town8(game_scene_t town)
 {
-    town.buttons[ZONE1_B_S1] = new_button("assets/invisible1.png",
+    town.buttons[ZONE1_B_S1] = new_button("assets/zone.png",
     (sfVector2f) {185 * 3.5, 750 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
-    town.buttons[ZONE2_B_S1] = new_button("assets/invisible1.png",
+    town.buttons[ZONE2_B_S1] = new_button("assets/zone.png",
     (sfVector2f) {912 * 3.5, 340 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
-    town.buttons[ZONE3_B_S1] = new_button("assets/invisible1.png",
+    town.buttons[ZONE3_B_S1] = new_button("assets/zone.png",
     (sfVector2f) {718 * 3.5, 450 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
-    town.buttons[ZONE4_B_S1] = new_button("assets/invisible1.png",
+    town.buttons[ZONE4_B_S1] = new_button("assets/zone.png",
     (sfVector2f) {1152 * 3.5, 420 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
-    town.buttons[ZONE5_B_S1] = new_button("assets/invisible1.png",
+    town.buttons[ZONE5_B_S1] = new_button("assets/zone.png",
     (sfVector2f) {320 * 3.5, 750 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
-    town.buttons[ZONE6_B_S1] = new_button("assets/invisible1.png",
+    town.buttons[ZONE6_B_S1] = new_button("assets/zone.png",
     (sfVector2f) {695 * 3.5, 230 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
-    town.buttons[ZONESPECIAL_B_S1] = new_button("assets/invisible1.png",
+    town.buttons[ZONESPECIAL_B_S1] = new_button("assets/zone.png",
     (sfVector2f) {70 * 3.5, 170 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
 }
 
@@ -32,19 +32,26 @@ void fill_scene_town7(game_scene_t town)
     town.objs[CURSOR_O_S1] = new_object("assets/cursor.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 40, 40}, 0);
     town.buttons[OBSTACLE1_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {185 * 3.5, 730 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {185 * 3.5, 730 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[OBSTACLE2_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {912 * 3.5, 320 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {912 * 3.5, 320 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[OBSTACLE3_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {718 * 3.5, 430 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {718 * 3.5, 430 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[OBSTACLE4_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {1152 * 3.5, 400 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {1152 * 3.5, 400 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[OBSTACLE5_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {320 * 3.5, 730 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {320 * 3.5, 730 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[OBSTACLE6_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {575 * 3.5, 210 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {575 * 3.5, 210 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[OBSTACLE7_B_S1] = new_button("assets/invisible1.png",
-    (sfVector2f) {695 * 3.5, 210 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {695 * 3.5, 210 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     fill_scene_town8(town);
 }
 
