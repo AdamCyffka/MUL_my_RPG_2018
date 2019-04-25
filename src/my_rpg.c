@@ -18,7 +18,8 @@ void game_change(game_t *game)
                 sfMusic_play(game->scenes->sounds[MUSIC_S_S0].music);
     }*/
     if (game->settings->current == main_menu)
-        sfSprite_setPosition(game->scenes->objs[CURSOR_O_S0].sprite, game->settings->cursor_pos);
+        sfSprite_setPosition(game->scenes->objs[CURSOR_O_S0].sprite,
+        game->settings->cursor_pos);
         change_main_menu(game->settings, game->scenes);
     if (game->settings->current >= town && game->settings->current <= camp)
         change_maps(game);
@@ -43,14 +44,16 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
         if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene
             .buttons[tmp].shape, NULL);
-    if (settings->current >= town && settings->current <= camp && stats->player.speed != -1)
+    if (settings->current >= town
+        && settings->current <= camp && stats->player.speed != -1)
         sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
         if (scene.texts[tmp].state >= 0)
             sfRenderWindow_drawText(settings->window, scene.texts[tmp].text,
             NULL);
     if (settings->current == main_menu)
-        sfRenderWindow_drawSprite(settings->window, scene.objs[CURSOR_O_S0].sprite, NULL);
+        sfRenderWindow_drawSprite(settings->window,
+        scene.objs[CURSOR_O_S0].sprite, NULL);
 }
 
 int my_rpg(void)
