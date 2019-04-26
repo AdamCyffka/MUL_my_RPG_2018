@@ -11,8 +11,8 @@
 
 void change_town(game_t *game)
 {
-    button_town(game->settings, game->scenes[town]);
-    change_statics_pos_town(game->scenes[town], game->settings);
+    button_town(game->settings, game->scenes[TOWN]);
+    change_statics_pos_town(game->scenes[TOWN], game->settings);
 }
 
 void change_boss(game_setting_t *settings, game_scene_t scene,

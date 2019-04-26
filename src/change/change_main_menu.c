@@ -54,7 +54,7 @@ void change_view_main_menu(game_setting_t *settings)
 
 void change_main_menu(game_setting_t *settings, game_scene_t *scene)
 {
-    button_menu(settings, scene[main_menu]);
+    button_menu(settings, scene[MAIN_MENU]);
     for (int i = 0; i < scene->how_many[0]; i++) {
         sfSprite_setTextureRect(scene->objs[i].sprite, scene->objs[i].rect);
         sfSprite_setPosition(scene->objs[i].sprite,

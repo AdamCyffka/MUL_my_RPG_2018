@@ -19,7 +19,7 @@ void buttons_town_action(game_setting_t *settings, game_scene_t scenes)
     (sfVector2f) {scenes.buttons[TITLE_B_S1].rect.width,
     scenes.buttons[TITLE_B_S1].rect.height}) == true) {
         button_town_close(scenes, 1, -1);
-        settings->current = main_menu;
+        settings->current = MAIN_MENU;
         change_view_main_menu(settings);
     }
 }

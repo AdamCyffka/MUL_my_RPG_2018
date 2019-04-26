@@ -99,7 +99,7 @@ game_quest_t *quests)
 void npc_interaction(game_t *game)
 {
     bool player_in_zone = check_player_in_npc_zone(game->stats,
-    game->scenes[town], game->quests);
+    game->scenes[TOWN], game->quests);
 
     printf("current quest: %i, quest state: %i, quest progress: %i/%i\n", game->stats->current_quest, game->quests[game->stats->current_quest].state, game->quests[game->stats->current_quest].progress, game->quests[game->stats->current_quest].nb_of_task);
     if (player_in_zone == false)

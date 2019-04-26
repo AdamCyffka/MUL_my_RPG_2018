@@ -59,6 +59,19 @@ void disp_button_menu(game_scene_t scenes, int enable, int disable)
     scenes.objs[HTW_O_S0].speed = ((enable == 1) ? enable : disable);
 }
 
+void disp_button_back(game_scene_t scenes, int enable, int disable)
+{
+    scenes.buttons[NEW_B_S0].state = ((enable == 1) ? enable : disable);
+    scenes.buttons[EXIT_B_S0].state = ((enable == 1) ? enable : disable);
+    scenes.buttons[LOAD_B_S0].state = ((enable == 1) ? enable : disable);
+    scenes.buttons[BACK_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.buttons[OK_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.buttons[RIGHT_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.buttons[LEFT_B_S0].state = ((enable == 1) ? disable : enable);
+    scenes.texts[NAME_T_S0].state = ((enable == 1) ? disable : enable);
+    scenes.objs[CHOOSE_O_S0].speed = ((enable == 1) ? disable : enable);
+}
+
 void button_menu(game_setting_t *settings, game_scene_t scenes)
 {
     if (scenes.buttons[NEW_B_S0].state >= 0 &&
@@ -79,10 +92,13 @@ void button_menu(game_setting_t *settings, game_scene_t scenes)
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[BACK_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[BACK_B_S0].shape)) == true)
+        disp_button_back(scenes, 1, -1);
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[OK_B_S0].shape), sfRectangleShape_getSize(scenes
-    .buttons[OK_B_S0].shape)) == true)
-        settings->current = town;
+    .buttons[OK_B_S0].shape)) == true) {
+        disp_button_back(scenes, 1, -1);
+        settings->current = TOWN;
+    }
     else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CLOSE_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[CLOSE_B_S0].shape)) == true)

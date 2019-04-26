@@ -8,17 +8,57 @@
 #ifndef ENUM_H_
     #define ENUM_H_
 
-enum scene {main_menu, town, boss, forest, beach, camp, victory, defeat};
+enum scene {
+    MAIN_MENU,
+    TOWN,
+    BOSS,
+    FOREST,
+    BEACH,
+    CAMP,
+    VICTORY,
+    DEFEAT
+};
 
-enum quest_state {Q_NOT_STARTED, Q_ACCEPTED, Q_IN_PROGRESS, Q_VALIDATED,
-Q_FINISHED};
+enum quest_state {
+    Q_NOT_STARTED,
+    Q_ACCEPTED,
+    Q_IN_PROGRESS,
+    Q_VALIDATED,
+    Q_FINISHED
+};
 
-enum rewards {EMPTY, SWORD1_R, SWORD2_R, QBOOK_R, MINIMAP_R, BOOTS_R, AXE_R,
-GOLEMHEAD_R, LIFE_R, DAMAGE_R, XP50_R, XP100_R, XP500_R, XPMAX_R};
+enum rewards {
+    EMPTY,
+    SWORD1_R,
+    SWORD2_R,
+    QBOOK_R,
+    MINIMAP_R,
+    BOOTS_R,
+    AXE_R,
+    GOLEMHEAD_R,
+    LIFE_R,
+    DAMAGE_R,
+    XP50_R,
+    XP100_R,
+    XP500_R,
+    XPMAX_R
+};
 
-enum quest {INTRO_Q, BLACKSMITH_Q, EMILY_Q, GOLEMS_Q, ROBIN_Q,
-FIND_LOST_Q, PIERRE_Q, GHOSTS_Q, GEORGE_Q,
-SHEEP_COUNT_Q, JODI_Q, SKELETONS_Q, BOSS_Q};
+enum quest {
+    INTRO_Q,
+    BLACKSMITH_Q,
+    EMILY_Q,
+    GOLEMS_Q,
+    ROBIN_Q,
+    FIND_LOST_Q,
+    PIERRE_Q,
+    GHOSTS_Q,
+    GEORGE_Q,
+    SHEEP_COUNT_Q,
+    JODI_Q,
+    SKELETONS_Q,
+    BOSS_Q
+};
 
 enum main_menu {LEFT_B_S0, RIGHT_B_S0, OK_B_S0, CLOSE_B_S0, CREDITS_B_S0,
 LOAD_B_S0, EXIT_B_S0, BACK_B_S0, NEW_B_S0, NAME_T_S0 = 0, MUSIC_S_S0 = 0,
