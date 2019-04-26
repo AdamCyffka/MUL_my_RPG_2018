@@ -15,14 +15,14 @@ void game_change(game_t *game)
     set_cursor_pos(game->scenes[game->settings->current], game->settings);
     /*for (int tmp = 0; tmp < game->scenes[game->settings->current].how_many[1]; tmp++) {
         if (game->scenes[game->settings->current].sounds[tmp]._activated == true)
-            if (game->settings->current == town)
+            if (game->settings->current == TOWN)
                 sfMusic_play(game->scenes->sounds[MUSIC_S_S1].music);
     }*/
-    if (game->settings->current == main_menu)
+    if (game->settings->current == MAIN_MENU)
         change_main_menu(game->settings, game->scenes);
-    if (game->settings->current >= town && game->settings->current <= camp)
+    if (game->settings->current >= TOWN && game->settings->current <= CAMP)
         change_maps(game);
-    if (game->settings->current >= victory && game->settings->current <= defeat)
+    if (game->settings->current >= VICTORY && game->settings->current <= DEFEAT)
         change_vic_def(game);
     enemies_detect_player(game);
     enemies_detect_hit(game);
@@ -42,8 +42,8 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
         if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene
             .buttons[tmp].shape, NULL);
-    if (settings->current >= town
-        && settings->current <= camp && stats->player.speed != -1)
+    if (settings->current >= TOWN
+        && settings->current <= CAMP && stats->player.speed != -1)
         sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
         if (scene.texts[tmp].state >= 0)

@@ -12,26 +12,26 @@
 void keyboard_checker_town(game_t *game)
 {
     if (sfKeyboard_isKeyPressed(sfKeyI))
-        button_town_inventory(game->scenes[town], 1, -1);
+        button_town_inventory(game->scenes[TOWN], 1, -1);
     if (sfKeyboard_isKeyPressed(sfKeyM))
-        button_town_me(game->scenes[town], 1, -1);
+        button_town_me(game->scenes[TOWN], 1, -1);
     if (sfKeyboard_isKeyPressed(sfKeyO))
-        button_town_option(game->scenes[town], 1, -1);
+        button_town_option(game->scenes[TOWN], 1, -1);
     if (sfKeyboard_isKeyPressed(sfKeyEscape))
-        button_town_exit(game->scenes[town], 1, -1);
+        button_town_exit(game->scenes[TOWN], 1, -1);
 }
 
 void keyboard_checker_maps(game_t *game)
 {
     if (sfKeyboard_isKeyPressed(sfKeyTab))
         sfRenderWindow_close(game->settings->window);
-    if (game->settings->current == town)
+    if (game->settings->current == TOWN)
         keyboard_checker_town(game);
-    if (game->settings->current == camp)
+    if (game->settings->current == CAMP)
         keyboard_checker_town(game);
-    if (game->settings->current == forest)
+    if (game->settings->current == FOREST)
         keyboard_checker_town(game);
-    if (game->settings->current == beach)
+    if (game->settings->current == BEACH)
         keyboard_checker_town(game);
 }
 

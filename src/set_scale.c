@@ -18,35 +18,35 @@ void set_scale_npc(game_object_t *objs)
 void set_scale(game_t *game)
 {
     sfSprite_setScale(game->stats->player.sprite, (sfVector2f) {4, 4});
-    if (game->settings->current == town) {
-        sfSprite_setScale(game->scenes[town].objs[TOWN_O_S1].sprite,
+    if (game->settings->current == TOWN) {
+        sfSprite_setScale(game->scenes[TOWN].objs[TOWN_O_S1].sprite,
         (sfVector2f) {3.5, 3.5});
-        sfSprite_setScale(game->scenes[town].objs[OBSTACLE_O_S1].sprite,
+        sfSprite_setScale(game->scenes[TOWN].objs[OBSTACLE_O_S1].sprite,
         (sfVector2f) {3.5, 3.5});
-        sfSprite_setScale(game->scenes[town].objs[PANNEL_O_S1].sprite,
+        sfSprite_setScale(game->scenes[TOWN].objs[PANNEL_O_S1].sprite,
         (sfVector2f) {1, 0.5});
-        set_scale_npc(game->scenes[town].objs);
+        set_scale_npc(game->scenes[TOWN].objs);
     }
-    if (game->settings->current == boss) {
-        sfSprite_setScale(game->scenes[boss].objs[TOWN_O_S2].sprite,
+    if (game->settings->current == BOSS) {
+        sfSprite_setScale(game->scenes[BOSS].objs[TOWN_O_S2].sprite,
         (sfVector2f) {3.5, 3.5});
-        sfSprite_setScale(game->scenes[boss].objs[OBSTACLE_O_S2].sprite,
+        sfSprite_setScale(game->scenes[BOSS].objs[OBSTACLE_O_S2].sprite,
         (sfVector2f) {3.5, 3.5});
     }
-    if (game->settings->current == beach) {
+    if (game->settings->current == BEACH) {
         for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++) {
-            sfSprite_setScale(game->scenes[beach].objs[tmp].sprite,
+            sfSprite_setScale(game->scenes[BEACH].objs[tmp].sprite,
             (sfVector2f) {3.5, 3.5});
         }
     }
-    if (game->settings->current == camp) {
+    if (game->settings->current == CAMP) {
         for (int tmp = GOLEM1_O_S5; tmp <= GOLEM10_O_S5; tmp++) {
-            sfSprite_setScale(game->scenes[camp].objs[tmp].sprite,
+            sfSprite_setScale(game->scenes[CAMP].objs[tmp].sprite,
             (sfVector2f) {3.5, 3.5});
         }
     }
-    if (game->settings->current == forest) {
-        sfSprite_setScale(game->scenes[forest].objs[TOWN_O_S2].sprite,
+    if (game->settings->current == FOREST) {
+        sfSprite_setScale(game->scenes[FOREST].objs[TOWN_O_S2].sprite,
         (sfVector2f) {1.5, 1.5});
     }
 }

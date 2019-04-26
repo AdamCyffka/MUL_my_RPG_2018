@@ -14,15 +14,15 @@ void loop_rect_enemies(game_t *game)
     if (game->settings->last_time >=
         (game->settings->timers.enemies_timer + 1)) {
         game->settings->timers.enemies_timer = game->settings->last_time;
-        if (game->settings->current == beach)
+        if (game->settings->current == BEACH)
             for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++)
                 move_rect_enemies(
                 game->scenes, game->stats, tmp, game->settings);
-        if (game->settings->current == camp)
+        if (game->settings->current == CAMP)
             for (int tmp = GOLEM1_O_S5; tmp <= GOLEM10_O_S5; tmp++)
                 move_rect_enemies(
                 game->scenes, game->stats, tmp, game->settings);
-        if (game->settings->current == forest)
+        if (game->settings->current == FOREST)
             for (int tmp = GHOST1_O_S3; tmp <= GHOST15_O_S3; tmp++)
                 move_rect_enemies(
                 game->scenes, game->stats, tmp, game->settings);

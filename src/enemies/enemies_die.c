@@ -18,14 +18,14 @@ void rect_die(game_t *game, int tmp)
     game->scenes[game->settings->current].objs[tmp].sprite,
     game->scenes[game->settings->current].objs[tmp].rect);
     game->scenes[game->settings->current].objs[tmp].speed = 0;
-    if (game->settings->current == camp
+    if (game->settings->current == CAMP
         && game->quests[GOLEMS_Q].progress < game->quests[GOLEMS_Q].nb_of_task)
         game->quests[GOLEMS_Q].progress++;
-    if (game->settings->current == beach
+    if (game->settings->current == BEACH
         && game->quests[SKELETONS_Q].progress <
         game->quests[SKELETONS_Q].nb_of_task)
         game->quests[SKELETONS_Q].progress++;
-    if (game->settings->current == forest
+    if (game->settings->current == FOREST
         && game->quests[GHOSTS_Q].progress < game->quests[GHOSTS_Q].nb_of_task)
         game->quests[GHOSTS_Q].progress++;
 }
@@ -79,21 +79,21 @@ void enemies_die(game_t *game, int tmp)
 
 void enemies_detect_hit(game_t *game)
 {
-    if (game->settings->current == beach) {
+    if (game->settings->current == BEACH) {
         for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++) {
-            if (game->scenes[beach].objs[tmp].speed > 0)
+            if (game->scenes[BEACH].objs[tmp].speed > 0)
                 enemies_die(game, tmp);
         }
     }
-    if (game->settings->current == camp) {
+    if (game->settings->current == CAMP) {
         for (int tmp = GOLEM1_O_S5; tmp <= GOLEM10_O_S5; tmp++) {
-            if (game->scenes[camp].objs[tmp].speed > 0)
+            if (game->scenes[CAMP].objs[tmp].speed > 0)
                 enemies_die(game, tmp);
         }
     }
-    if (game->settings->current == forest) {
+    if (game->settings->current == FOREST) {
         for (int tmp = GHOST1_O_S3; tmp <= GHOST15_O_S3; tmp++) {
-            if (game->scenes[forest].objs[tmp].speed > 0)
+            if (game->scenes[FOREST].objs[tmp].speed > 0)
                 enemies_die(game, tmp);
         }
     }
