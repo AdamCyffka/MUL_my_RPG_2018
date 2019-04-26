@@ -44,6 +44,14 @@ void move_sprite_main_menu(game_scene_t *scene, float delta_time)
     * delta_time;
 }
 
+void change_view_main_menu(game_setting_t *settings)
+{
+    sfView *view = sfRenderWindow_getView(settings->window);
+
+    sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
+    sfRenderWindow_setView(settings->window, view);
+}
+
 void change_main_menu(game_setting_t *settings, game_scene_t *scene)
 {
     button_menu(settings, scene[main_menu]);

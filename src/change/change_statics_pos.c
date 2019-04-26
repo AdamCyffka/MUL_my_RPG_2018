@@ -19,7 +19,7 @@ void change_statics_pos_camp(game_scene_t scene, game_setting_t *settings)
         sfSprite_setPosition(scene.objs[tmp].sprite, (sfVector2f)
         {center.x - size.x / 2 + scene.objs[tmp].position.x,
         center.y - size.y / 2 + scene.objs[tmp].position.y});
-    for (int tmp = TITLE_B_S5; tmp <= CURSOR_O_S5; tmp++)
+    for (int tmp = TITLE_B_S5; tmp <= EXIT_B_S5; tmp++)
         sfRectangleShape_setPosition(scene.buttons[tmp].shape,
         (sfVector2f) {center.x - size.x / 2 +
         scene.buttons[tmp].position.x, center.y - size.y / 2 +
@@ -36,11 +36,12 @@ void change_statics_pos_beach(game_scene_t scene, game_setting_t *settings)
         sfSprite_setPosition(scene.objs[tmp].sprite, (sfVector2f)
         {center.x - size.x / 2 + scene.objs[tmp].position.x,
         center.y - size.y / 2 + scene.objs[tmp].position.y});
-    for (int tmp = TITLE_B_S4; tmp <= CURSOR_O_S4; tmp++)
+    for (int tmp = TITLE_B_S4; tmp <= EXIT_B_S4; tmp++) {
         sfRectangleShape_setPosition(scene.buttons[tmp].shape,
         (sfVector2f) {center.x - size.x / 2 +
         scene.buttons[tmp].position.x, center.y - size.y / 2 +
         scene.buttons[tmp].position.y});
+    }
 }
 
 void change_statics_pos_forest(game_scene_t scene, game_setting_t *settings)
@@ -53,7 +54,7 @@ void change_statics_pos_forest(game_scene_t scene, game_setting_t *settings)
         sfSprite_setPosition(scene.objs[tmp].sprite, (sfVector2f)
         {center.x - size.x / 2 + scene.objs[tmp].position.x,
         center.y - size.y / 2 + scene.objs[tmp].position.y});
-    for (int tmp = TITLE_B_S3; tmp <= CURSOR_O_S3; tmp++)
+    for (int tmp = TITLE_B_S3; tmp <= EXIT_B_S3; tmp++)
         sfRectangleShape_setPosition(scene.buttons[tmp].shape,
         (sfVector2f) {center.x - size.x / 2 +
         scene.buttons[tmp].position.x, center.y - size.y / 2 +
@@ -70,7 +71,7 @@ void change_statics_pos_boss(game_scene_t scene, game_setting_t *settings)
         sfSprite_setPosition(scene.objs[tmp].sprite, (sfVector2f)
         {center.x - size.x / 2 + scene.objs[tmp].position.x,
         center.y - size.y / 2 + scene.objs[tmp].position.y});
-    for (int tmp = TITLE_B_S2; tmp <= CURSOR_O_S2; tmp++)
+    for (int tmp = TITLE_B_S2; tmp <= EXIT_B_S2; tmp++)
         sfRectangleShape_setPosition(scene.buttons[tmp].shape,
         (sfVector2f) {center.x - size.x / 2 +
         scene.buttons[tmp].position.x, center.y - size.y / 2 +
@@ -87,7 +88,7 @@ void change_statics_pos_town(game_scene_t scene, game_setting_t *settings)
         sfSprite_setPosition(scene.objs[tmp].sprite, (sfVector2f)
         {center.x - size.x / 2 + scene.objs[tmp].position.x,
         center.y - size.y / 2 + scene.objs[tmp].position.y});
-    for (int tmp = TITLE_B_S1; tmp <= CURSOR_O_S1; tmp++)
+    for (int tmp = TITLE_B_S1; tmp <= EXIT_B_S1; tmp++)
         sfRectangleShape_setPosition(scene.buttons[tmp].shape,
         (sfVector2f) {center.x - size.x / 2 +
         scene.buttons[tmp].position.x, center.y - size.y / 2 +
