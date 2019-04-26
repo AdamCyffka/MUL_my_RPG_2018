@@ -12,7 +12,6 @@
 void change_town(game_t *game)
 {
     button_town(game->settings, game->scenes[town]);
-    npc_interaction(game);
     change_statics_pos_town(game->scenes[town], game->settings);
 }
 

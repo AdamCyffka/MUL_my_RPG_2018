@@ -20,7 +20,6 @@ SRCS	= 	src/main.c								\
 			src/my_rpg.c							\
 			src/new_content2.c						\
 			src/new_content.c						\
-			src/quests_interaction.c				\
 			src/analyser.c 							\
 			src/cursor_interaction.c 				\
 			src/draw_quest.c						\

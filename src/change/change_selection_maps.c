@@ -30,6 +30,7 @@ game_quest_t *quests, game_inventory_t *inventory)
 
 void change_maps(game_t *game)
 {
+    npc_interaction(game);
     if (game->quests[INTRO_Q].state == Q_NOT_STARTED)
         game->quests[INTRO_Q].state = Q_ACCEPTED;
     change_statics_pos_common(game->scenes, game->settings, game->quests,

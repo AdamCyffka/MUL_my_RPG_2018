@@ -55,7 +55,10 @@ typedef struct game_scene {
 } game_scene_t;
 
 typedef struct game_inventory {
-
+    game_button_t item;
+    bool _selected;
+    int content;
+    int state;
 } game_inventory_t;
 
 typedef struct game_quest {

@@ -13,7 +13,7 @@ enum scene {main_menu, town, boss, forest, beach, camp, victory, defeat};
 enum quest_state {Q_NOT_STARTED, Q_ACCEPTED, Q_IN_PROGRESS, Q_VALIDATED,
 Q_FINISHED};
 
-enum rewards {SWORD1_R, SWORD2_R, QBOOK_R, MINIMAP_R, BOOTS_R, AXE_R,
+enum rewards {EMPTY, SWORD1_R, SWORD2_R, QBOOK_R, MINIMAP_R, BOOTS_R, AXE_R,
 GOLEMHEAD_R, LIFE_R, DAMAGE_R, XP50_R, XP100_R, XP500_R, XPMAX_R};
 
 enum quest {INTRO_Q, BLACKSMITH_Q, EMILY_Q, GOLEMS_Q, ROBIN_Q,

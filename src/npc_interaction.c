@@ -10,6 +10,13 @@
 #include "struct.h"
 #include "define.h"
 
+void quest_action(game_t *game)
+{
+    if (game->quests[game->stats->current_quest].current_dial >
+    game->quests[game->stats->current_quest].nb_of_dial)
+        game->quests[game->stats->current_quest].state = Q_VALIDATED;
+}
+
 void quest_speak(game_t *game)
 {
     if (game->quests[game->stats->current_quest].current_dial >
@@ -27,6 +34,8 @@ void quest_validation(game_t *game)
     PIERRE_Q || game->stats->current_quest == GEORGE_Q ||
     game->stats->current_quest == JODI_Q)
         quest_speak(game);
+    else
+        quest_action(game);
 }
 
 void player_is_interacting(game_scene_t *scenes, game_stat_t *stats,
@@ -92,6 +101,7 @@ void npc_interaction(game_t *game)
     bool player_in_zone = check_player_in_npc_zone(game->stats,
     game->scenes[town], game->quests);
 
+    printf("current quest: %i, quest state: %i, quest progress: %i/%i\n", game->stats->current_quest, game->quests[game->stats->current_quest].state, game->quests[game->stats->current_quest].progress, game->quests[game->stats->current_quest].nb_of_task);
     if (player_in_zone == false)
         return;
     change_quest_objective(game->stats, game->quests);

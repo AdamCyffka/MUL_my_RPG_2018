@@ -164,9 +164,7 @@ game_object_t new_object(const char *path_to_spsheet, sfVector2f pos,
 sfIntRect rect, float speed);
 game_quest_t new_quest(int nb_dial, char *statement, int nb_of_task,
 int nb_reward);
-
-//TEST A RETIRER A LA FIN
-void test_quest(game_quest_t *quests);
+game_inventory_t new_slot(sfVector2f position, bool _selected);
 
 //npc_interaction.c
 void npc_interaction(game_t *game);
