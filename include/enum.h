@@ -27,6 +27,14 @@ enum quest_state {
     Q_FINISHED
 };
 
+enum inventory {
+    SLOT_0,
+    SLOT_1,
+    SLOT_2,
+    SLOT_3,
+    SLOT_4,
+};
+
 enum rewards {
     EMPTY,
     SWORD1_R,

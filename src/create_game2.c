@@ -32,7 +32,11 @@ void create_scenes(game_scene_t *scenes)
 
 void create_inventory(game_inventory_t *inventory)
 {
-    
+    inventory[SLOT_0] = new_slot((sfVector2f) {35, 935}, true);
+    inventory[SLOT_1] = new_slot((sfVector2f) {825, 495}, false);
+    inventory[SLOT_2] = new_slot((sfVector2f) {890, 495}, false);
+    inventory[SLOT_3] = new_slot((sfVector2f) {955, 495}, false);
+    inventory[SLOT_4] = new_slot((sfVector2f) {1020, 495}, false);
 }
 
 void create_quest2(game_quest_t *quests)
