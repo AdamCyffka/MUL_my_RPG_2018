@@ -52,6 +52,8 @@ void move_window(game_setting_t *settings, game_stat_t *stats)
     const sfView *view = sfRenderWindow_getView(settings->window);
     sfVector2f vector_view = sfView_getCenter(view);
 
+    if (settings->current == camp || settings->current == beach)
+        return;
     if (player_pos_view(vector_view, stats) == 1) return;
     if (settings->event.key.code == sfKeyRight) {
         if (vector_view.x < 3390)
