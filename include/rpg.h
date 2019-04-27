@@ -120,6 +120,9 @@ void draw_cursor(game_scene_t scene, game_setting_t *settings);
 //draw_quest
 void draw_quest(game_quest_t *quests, game_setting_t *settings);
 
+//draw_inventory
+void draw_inventory(game_inventory_t *inventory, game_setting_t *settings);
+
 //set_scale
 void set_scale(game_t *game);
 

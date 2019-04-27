@@ -30,6 +30,7 @@ SRC		=	src/main.c								\
 			src/analyser.c 							\
 			src/cursor_interaction.c 				\
 			src/draw_quest.c						\
+			src/draw_inventory.c					\
 			src/set_scale.c 						\
 			src/clock.c 							\
 			src/my_libc_functions.c 				\
