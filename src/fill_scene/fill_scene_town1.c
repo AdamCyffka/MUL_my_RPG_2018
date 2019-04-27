@@ -36,8 +36,6 @@ void fill_scene_town4(game_scene_t town)
 {
     town.texts[NAME_T_S1] = new_text("assets/font.ttf", "Name:",
     (sfVector2f) {700, 400}, 40);
-    town.texts[VSYNC_T_S1] = new_text("assets/font.ttf", "V-sync:",
-    (sfVector2f) {700, 500}, 40);
     town.texts[XP_T_S1] = new_text("assets/font.ttf", "XP:",
     (sfVector2f) {700, 450}, 40);
     town.texts[POS_T_S1] = new_text("assets/font.ttf", "Position:",
@@ -67,11 +65,11 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {2975, 2100}, (sfIntRect) {0, 0, 143.5, 1498}, 0);
     town.buttons[WALKABLE17_B_S1] = new_button("assets/invisible.png",
     (sfVector2f) {3115, 2765}, (sfIntRect) {0, 0, 1256.5, 126}, 0);
-    town.buttons[INVENTORY_B_S1] = new_button("assets/invisible.png",
+    town.buttons[INVENTORY_B_S1] = new_button("assets/invisible1.png",
     (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[ME_B_S1] = new_button("assets/invisible.png",
     (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
-    town.buttons[OPTION_B_S1] = new_button("assets/invisible.png",
+    town.buttons[OPTION_B_S1] = new_button("assets/invisible1.png",
     (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[EXIT_B_S1] = new_button("assets/invisible.png",
     (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
@@ -81,6 +79,8 @@ void fill_scene_town3(game_scene_t town)
     town.sounds[SWORD_S_S1] = new_sound("assets/swoosh.ogg", sfFalse, 100);
     town.texts[VOLUME_T_S1] = new_text("assets/font.ttf", "Volume:",
     (sfVector2f) {700, 400}, 40);
+    town.texts[VSYNC_T_S1] = new_text("assets/font.ttf", "V-sync:",
+    (sfVector2f) {700, 500}, 40);
     fill_scene_town4(town);
 }
 
@@ -115,18 +115,22 @@ void fill_scene_town1(game_scene_t town)
     (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
     town.buttons[CLOSE_B_S1] = new_button("assets/close.png",
     (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
-    town.buttons[PLUS_B_S1] = new_button("assets/plus.png",
-    (sfVector2f) {920, 415}, (sfIntRect) {0, 0, 28, 32}, -1);
-    town.buttons[MINUS_B_S1] = new_button("assets/minus.png",
-    (sfVector2f) {850, 415}, (sfIntRect) {0, 0, 28, 32}, -1);
-    town.buttons[MUTE_B_S1] = new_button("assets/mute.png",
-    (sfVector2f) {1050, 410}, (sfIntRect) {0, 0, 48, 48}, -1);
-    town.buttons[UNMUTE_B_S1] = new_button("assets/unmute.png",
-    (sfVector2f) {1050, 410}, (sfIntRect) {0, 0, 48, 48}, -1);
-    town.buttons[CHECK_B_S1] = new_button("assets/check.png",
-    (sfVector2f) {885, 515}, (sfIntRect) {0, 0, 30, 30}, -1);
-    town.buttons[UNCHECK_B_S1] = new_button("assets/uncheck.png",
-    (sfVector2f) {885, 515}, (sfIntRect) {0, 0, 30, 30}, -1);
+    town.buttons[V0_B_S1] = new_button("assets/0.png",
+    (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    town.buttons[V25_B_S1] = new_button("assets/25.png",
+    (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    town.buttons[V50_B_S1] = new_button("assets/50.png",
+    (sfVector2f) {970, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    town.buttons[V100_B_S1] = new_button("assets/100.png",
+    (sfVector2f) {1030, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    town.buttons[ON_B_S1] = new_button("assets/on.png",
+    (sfVector2f) {850, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
+    town.buttons[OFF_B_S1] = new_button("assets/off.png",
+    (sfVector2f) {955, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
+    town.buttons[F30_B_S1] = new_button("assets/30.png",
+    (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
+    town.buttons[F60_B_S1] = new_button("assets/60.png",
+    (sfVector2f) {955, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
     town.buttons[WALKABLE1_B_S1] = new_button("assets/invisible.png",
     (sfVector2f) {0, 560}, (sfIntRect) {0, 0, 1585.5, 150.5}, 0);
     town.buttons[WALKABLE2_B_S1] = new_button("assets/invisible.png",

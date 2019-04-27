@@ -35,6 +35,7 @@ typedef struct game_button {
 
 typedef struct game_sound {
     sfMusic *music;
+    int volume;
     sfBool _loop;
     bool _activated;
 } game_sound_t;
