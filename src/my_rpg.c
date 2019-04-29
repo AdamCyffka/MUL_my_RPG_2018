@@ -25,6 +25,7 @@ void game_change(game_t *game)
         change_vic_def(game);
     enemies_detect_player(game);
     enemies_detect_hit(game);
+    enemies_attack_player(game);
     clock(game->scenes, game->settings, game->quests);
     loop_rect_enemies(game);
     player_rect_move(game->scenes, game->stats, game->settings);

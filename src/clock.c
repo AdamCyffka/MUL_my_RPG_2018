@@ -13,13 +13,9 @@ void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests)
 {
     sfTime time = sfClock_getElapsedTime(settings->clock);
     float seconds = time.microseconds / 100000.0;
-    static timer_clock_t timers = {0, 0, 0, 0, 0};
+    static timer_clock_t timers = {0, 0, 0, 0, 0, 0};
 
     settings->delta_time = (seconds - settings->last_time);
     settings->last_time = seconds;
-    move_sprite_main_menu(scene, settings->delta_time);
-    /*if (seconds >= (timers.main_menu + 0.1)) {
-        timers.main_menu = seconds;
-        move_sprite_main_menu(scene, settings->delta_time);
-    }*/
+    move_sprite_main_menu(settings, scene, settings->delta_time);
 }
