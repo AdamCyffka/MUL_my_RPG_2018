@@ -24,7 +24,7 @@ void fill_scene_boss5(game_scene_t boss)
     boss.objs[ICON_O_S2] = new_object("assets/icon.png",
     (sfVector2f) {10, 910}, (sfIntRect) {0, 0, 100, 100}, 0);
     boss.objs[CURSOR_O_S2] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 40, 40}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, 0);
 }
 
 void fill_scene_boss4(game_scene_t boss)
@@ -122,12 +122,22 @@ void fill_scene_boss1(game_scene_t boss)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);
     boss.buttons[CLOSE_B_S2] = new_button("assets/close.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, -1);
-    boss.buttons[PLUS_B_S2] = new_button("assets/plus.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, -1);
-    boss.buttons[MINUS_B_S2] = new_button("assets/minus.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, -1);
-    boss.buttons[MUTE_B_S2] = new_button("assets/mute.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 48, 48}, -1);
+    boss.buttons[V0_B_S2] = new_button("assets/0.png",
+    (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    boss.buttons[V25_B_S2] = new_button("assets/25.png",
+    (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    boss.buttons[V50_B_S2] = new_button("assets/50.png",
+    (sfVector2f) {970, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    boss.buttons[V100_B_S2] = new_button("assets/100.png",
+    (sfVector2f) {1030, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    boss.buttons[ON_B_S2] = new_button("assets/on.png",
+    (sfVector2f) {850, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
+    boss.buttons[OFF_B_S2] = new_button("assets/off.png",
+    (sfVector2f) {955, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
+    boss.buttons[F30_B_S2] = new_button("assets/30.png",
+    (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
+    boss.buttons[F60_B_S2] = new_button("assets/60.png",
+    (sfVector2f) {955, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
     boss.buttons[WALKABLE1_B_S2] = new_button("assets/invisible.png",
     (sfVector2f) {0, 560}, (sfIntRect) {0, 0, 1585.5, 150.5}, 0);
     boss.buttons[WALKABLE2_B_S2] = new_button("assets/invisible.png",

@@ -66,7 +66,7 @@ void fill_scene_beach3(game_scene_t beach)
     beach.objs[ICON_O_S4] = new_object("assets/icon.png",
     (sfVector2f) {10, 910}, (sfIntRect) {0, 0, 100, 100}, 0);
     beach.objs[CURSOR_O_S4] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 40, 40}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, 0);
 }
 
 void fill_scene_beach2(game_scene_t beach)
@@ -101,17 +101,27 @@ void fill_scene_beach1(game_scene_t beach)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);
     beach.buttons[CLOSE_B_S4] = new_button("assets/close.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, -1);
-    beach.buttons[PLUS_B_S4] = new_button("assets/plus.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, -1);
-    beach.buttons[MINUS_B_S4] = new_button("assets/minus.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, -1);
-    beach.buttons[MUTE_B_S4] = new_button("assets/mute.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 48, 48}, -1);
+    beach.buttons[V0_B_S4] = new_button("assets/0.png",
+    (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    beach.buttons[V25_B_S4] = new_button("assets/25.png",
+    (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    beach.buttons[V50_B_S4] = new_button("assets/50.png",
+    (sfVector2f) {970, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    beach.buttons[V100_B_S4] = new_button("assets/100.png",
+    (sfVector2f) {1030, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    beach.buttons[ON_B_S4] = new_button("assets/on.png",
+    (sfVector2f) {850, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
+    beach.buttons[OFF_B_S4] = new_button("assets/off.png",
+    (sfVector2f) {955, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
+    beach.buttons[F30_B_S4] = new_button("assets/30.png",
+    (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
+    beach.buttons[F60_B_S4] = new_button("assets/60.png",
+    (sfVector2f) {955, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
     beach.buttons[WALKABLE1_B_S4] = new_button("assets/invisible.png",
     (sfVector2f) {1100, 0}, (sfIntRect) {0, 0, 98 * 1.6, 159 * 1.6}, 0);
     beach.buttons[WALKABLE2_B_S4] = new_button("assets/invisible.png",
     (sfVector2f) {190, 159 * 1.6}, (sfIntRect) {0, 0, 731 * 1.6, 452 * 1.6}, 0);
-    beach.buttons[WALKABLE3_B_S4] = new_button("assets/invisible.png",
+    beach.buttons[WALKABLE3_B_S4] = new_button("assets/invisible1.png",
     (sfVector2f) {1300, 529}, (sfIntRect) {0, 0, 317 * 1.6, 250 * 1.6}, 0);
     beach.buttons[INVENTORY_B_S4] = new_button("assets/invisible.png",
     (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
