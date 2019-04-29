@@ -19,6 +19,7 @@ void buttons_town_action(game_setting_t *settings, game_scene_t scenes)
     (sfVector2f) {scenes.buttons[TITLE_B_S1].rect.width,
     scenes.buttons[TITLE_B_S1].rect.height}) == true) {
         button_town_close(scenes, 1, -1);
+        settings->_paused = false;
         settings->current = MAIN_MENU;
         change_view_main_menu(settings);
     }
@@ -36,8 +37,10 @@ void button_town2(game_setting_t *settings, game_scene_t scenes)
         button_town_exit(scenes, 1, -1);
     else if (button_is_clicked(settings, scenes.buttons[CLOSE_B_S1].position,
     (sfVector2f) {scenes.buttons[CLOSE_B_S1].rect.width,
-    scenes.buttons[CLOSE_B_S1].rect.height}) == true)
+    scenes.buttons[CLOSE_B_S1].rect.height}) == true) {
         button_town_close(scenes, 1, -1);
+        settings->_paused = false;
+    }
 }
 
 void button_town(game_setting_t *settings, game_scene_t scenes)

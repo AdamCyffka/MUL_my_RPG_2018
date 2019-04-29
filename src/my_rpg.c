@@ -23,11 +23,14 @@ void game_change(game_t *game)
         change_maps(game);
     if (game->settings->current >= VICTORY && game->settings->current <= DEFEAT)
         change_vic_def(game);
-    enemies_detect_player(game);
-    enemies_detect_hit(game);
-    enemies_attack_player(game);
     clock(game->scenes, game->settings, game->quests);
-    loop_rect_enemies(game);
+    if (game->settings->_paused == false) {
+        player_interaction(game);
+        enemies_detect_player(game);
+        enemies_detect_hit(game);
+        enemies_attack_player(game);
+        loop_rect_enemies(game);
+    }
     player_rect_move(game->scenes, game->stats, game->settings);
 }
 
@@ -35,16 +38,18 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 *stats)
 {
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
-        if (scene.objs[tmp].speed >= 0)
+        if (scene.objs[tmp].speed == 0)
+            sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
+            .sprite, NULL);
+    sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
+    for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
+        if (scene.objs[tmp].speed >= 1)
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
             .sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++)
         if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene
             .buttons[tmp].shape, NULL);
-    if (settings->current >= TOWN
-        && settings->current <= CAMP && stats->player.speed != -1)
-        sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
         if (scene.texts[tmp].state >= 0)
             sfRenderWindow_drawText(settings->window, scene.texts[tmp].text,

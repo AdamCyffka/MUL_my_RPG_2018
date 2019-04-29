@@ -108,6 +108,7 @@ void player_rect_move(game_scene_t *scenes, game_stat_t *stats, game_setting_t *
 int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
 void change_vector_view(game_setting_t *settings, sfVector2f vector_view);
 void player_change_map(game_stat_t *stats, game_setting_t *settings);
+void player_interaction(game_t *game);
 
 //analyser
 void analyse_events(game_t *game);

@@ -102,6 +102,7 @@ typedef struct game_setting {
     timer_clock_t timers;
     float last_time;
     float delta_time;
+    bool _paused;
     sfView *map_view;
     sfEvent event;
 } game_setting_t;
