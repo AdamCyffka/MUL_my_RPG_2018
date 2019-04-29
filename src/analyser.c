@@ -46,9 +46,14 @@ void analyse_events(game_t *game)
         key_to_move_or_not(game->scenes[game->settings->current],
         game->settings, game->stats);
         player_change_map(game->stats, game->settings);
-    }
-    else if (game->settings->event.type == sfEvtMouseButtonPressed)
+    } else if (game->settings->event.type == sfEvtMouseButtonPressed) {
         player_attack(game->stats);
-    else
-        player_stop_moving(game->stats, game->settings);
+    } else {
+        if (sfKeyboard_isKeyPressed(sfKeyZ) == false &&
+        sfKeyboard_isKeyPressed(sfKeyS) == false &&
+        sfKeyboard_isKeyPressed(sfKeyQ) == false &&
+        sfKeyboard_isKeyPressed(sfKeyD) == false) {
+            player_stop_moving(game->stats, game->settings);
+        }
+    }
 }

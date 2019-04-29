@@ -53,6 +53,7 @@ SRC		=	./src/create_game3.c 					\
 			./src/enemies/enemies_die.c				\
 			./src/enemies/enemies_moves.c			\
 			./src/enemies/enemies_positions.c		\
+			./src/enemies/enemies_attack.c			\
 			./src/fill_scene/fill_scene_beach.c		\
 			./src/fill_scene/fill_scene_boss.c		\
 			./src/fill_scene/fill_scene_camp.c		\
