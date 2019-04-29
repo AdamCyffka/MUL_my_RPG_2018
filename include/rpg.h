@@ -135,13 +135,13 @@ void change_maps(game_t *game);
 void change_vic_def(game_t *game);
 void change_town(game_t *game);
 void change_boss(game_setting_t *settings,
-    game_scene_t scene, game_quest_t *quests);
+game_scene_t scene, game_quest_t *quests);
 void change_forest(game_setting_t *settings,
-    game_scene_t scene, game_quest_t *quests);
+game_scene_t scene, game_quest_t *quests);
 void change_beach(game_setting_t *settings,
-    game_scene_t scene, game_quest_t *quests);
+game_scene_t scene, game_quest_t *quests);
 void change_camp(game_setting_t *settings,
-    game_scene_t scene, game_quest_t *quests);
+game_scene_t scene, game_quest_t *quests);
 void change_victory(void);
 void change_defeat(void);
 
@@ -156,6 +156,7 @@ void change_statics_pos_camp(game_scene_t scene, game_setting_t *settings);
 int my_strlen(char const *str);
 char *my_itoa(int nb);
 char *my_strcpy(char *str, char *dest);
+void my_putstr(char *str);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,

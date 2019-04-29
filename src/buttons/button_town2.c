@@ -27,6 +27,7 @@ void button_town_close(game_scene_t scenes, int enable, int disable)
     scenes.buttons[V100_B_S1].state = ((enable == 1) ? disable : enable);
     scenes.buttons[CLOSE_B_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[VOLUME_T_S1].state = ((enable == 1) ? disable : enable);
+    scenes.texts[FRAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[VSYNC_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[NAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[XP_T_S1].state = ((enable == 1) ? disable : enable);
@@ -52,6 +53,7 @@ void button_town_inventory(game_scene_t scenes, int enable, int disable)
     scenes.buttons[CLOSE_B_S1].state = ((enable == 1) ? enable : disable);
     scenes.texts[VOLUME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[VSYNC_T_S1].state = ((enable == 1) ? disable : enable);
+    scenes.texts[FRAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[NAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[XP_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[LIFE_T_S1].state = ((enable == 1) ? disable : enable);
@@ -76,6 +78,7 @@ void button_town_me(game_scene_t scenes, int enable, int disable)
     scenes.buttons[CLOSE_B_S1].state = ((enable == 1) ? enable : disable);
     scenes.texts[VOLUME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[VSYNC_T_S1].state = ((enable == 1) ? disable : enable);
+    scenes.texts[FRAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[NAME_T_S1].state = ((enable == 1) ? enable : disable);
     scenes.texts[XP_T_S1].state = ((enable == 1) ? enable : disable);
     scenes.texts[LIFE_T_S1].state = ((enable == 1) ? enable : disable);
@@ -100,6 +103,7 @@ void button_town_option(game_scene_t scenes, int enable, int disable)
     scenes.buttons[CLOSE_B_S1].state = ((enable == 1) ? enable : disable);
     scenes.texts[VOLUME_T_S1].state = ((enable == 1) ? enable : disable);
     scenes.texts[VSYNC_T_S1].state = ((enable == 1) ? enable : disable);
+    scenes.texts[FRAME_T_S1].state = ((enable == 1) ? enable : disable);
     scenes.texts[NAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[XP_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[LIFE_T_S1].state = ((enable == 1) ? disable : enable);
@@ -124,6 +128,7 @@ void button_town_exit(game_scene_t scenes, int enable, int disable)
     scenes.buttons[CLOSE_B_S1].state = ((enable == 1) ? enable : disable);
     scenes.texts[VOLUME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[VSYNC_T_S1].state = ((enable == 1) ? disable : enable);
+    scenes.texts[FRAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[NAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[XP_T_S1].state = ((enable == 1) ? disable : enable);
     scenes.texts[LIFE_T_S1].state = ((enable == 1) ? disable : enable);

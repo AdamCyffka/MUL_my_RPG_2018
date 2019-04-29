@@ -20,52 +20,58 @@ CYAN	=	\033[36;1m
 #								 SOURCES VARIABLES 							   #
 ## ========================================================================== ##
 
-SRC		=	src/main.c								\
-			src/create_game3.c 						\
-			src/create_game2.c 						\
-			src/create_game.c						\
-			src/my_rpg.c							\
-			src/new_content2.c						\
-			src/new_content.c						\
-			src/analyser.c 							\
-			src/cursor_interaction.c 				\
-			src/draw_quest.c						\
-			src/draw_inventory.c					\
-			src/set_scale.c 						\
-			src/clock.c 							\
-			src/my_libc_functions.c 				\
-			src/npc_interaction.c 					\
-			src/buttons/button_event.c 				\
-			src/buttons/button_main_menu.c			\
-			src/buttons/button_town.c 				\
-			src/buttons/button_town2.c 				\
-			src/change/change_main_menu.c			\
-			src/change/change_maps.c 				\
-			src/change/change_selection_maps.c 		\
-			src/change/change_vic_def.c 			\
-			src/change/change_statics_pos.c			\
-			src/player/player_move.c				\
-			src/player/player_change_map.c			\
-			src/player/player_attack.c				\
-			src/player/player_rect.c				\
-			src/player/player_interaction.c			\
-			src/enemies/enemies_die.c				\
-			src/enemies/enemies_moves.c				\
-			src/enemies/enemies_positions.c			\
-			src/enemies/enemies_attack.c			\
-			src/fill_scene/fill_scene_beach.c		\
-			src/fill_scene/fill_scene_boss.c		\
-			src/fill_scene/fill_scene_camp.c		\
-			src/fill_scene/fill_scene_forest.c	 	\
-			src/fill_scene/fill_scene_main_menu.c	\
-			src/fill_scene/fill_scene_town1.c		\
-			src/fill_scene/fill_scene_town2.c	    \
-			src/fill_scene/fill_scene_vic_def.c	   	\
-			src/fill_quest/fill_quest0_4.c			\
-			src/fill_quest/fill_quest5_9.c			\
-			src/fill_quest/fill_quest10_12.c
+SRC_MAIN =	./src/main.c
 
-OBJS    =	$(SRC:.c=.o)
+SRC		=	./src/create_game3.c 					\
+			./src/create_game2.c 					\
+			./src/create_game.c						\
+			./src/my_rpg.c							\
+			./src/new_content2.c					\
+			./src/new_content.c						\
+			./src/analyser.c 						\
+			./src/cursor_interaction.c 				\
+			./src/draw_quest.c						\
+			./src/draw_inventory.c					\
+			./src/set_scale.c 						\
+			./src/clock.c 							\
+			./src/my_libc_functions.c 				\
+			./src/my_libc_functions2.c 				\
+			./src/npc_interaction.c 				\
+			./src/buttons/button_event.c 			\
+			./src/buttons/button_main_menu.c		\
+			./src/buttons/button_town.c 			\
+			./src/buttons/button_town2.c 			\
+			./src/change/change_main_menu.c			\
+			./src/change/change_maps.c 				\
+			./src/change/change_selection_maps.c 	\
+			./src/change/change_vic_def.c 			\
+			./src/change/change_statics_pos.c		\
+			./src/player/player_move.c				\
+			./src/player/player_change_map.c		\
+			./src/player/player_attack.c			\
+			./src/player/player_rect.c				\
+			./src/player/player_interaction.c			\
+			./src/enemies/enemies_die.c				\
+			./src/enemies/enemies_moves.c			\
+			./src/enemies/enemies_positions.c		\
+			./src/enemies/enemies_attack.c			\
+			./src/fill_scene/fill_scene_beach.c		\
+			./src/fill_scene/fill_scene_boss.c		\
+			./src/fill_scene/fill_scene_camp.c		\
+			./src/fill_scene/fill_scene_forest.c	\
+			./src/fill_scene/fill_scene_main_menu.c	\
+			./src/fill_scene/fill_scene_town1.c		\
+			./src/fill_scene/fill_scene_town2.c	    \
+			./src/fill_scene/fill_scene_vic_def.c	\
+			./src/fill_quest/fill_quest0_4.c		\
+			./src/fill_quest/fill_quest5_9.c		\
+			./src/fill_quest/fill_quest10_12.c
+
+SRC_TEST	= 	./tests/my_putstr_test.c \
+				./tests/my_strlen_test.c
+
+OBJS    =	$(SRC:.c=.o) \
+			$(SRC_MAIN:.c=.o)
 
 ## ========================================================================== ##
 #								 PROJECT VARIABLES 							   #
@@ -73,27 +79,47 @@ OBJS    =	$(SRC:.c=.o)
 
 NAME	=	my_rpg
 
+TEST_NAME = units
+
 MFLAG 	=	-lm
 
-GFLAG 	=	-lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window $(MFLAG)
+GFLAG 	=	-lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window \
+$(MFLAG)
 
 IFLAG	=	-Iinclude/ $(GFLAG)
 
-CFLAGS  =	-W -Wall -Wextra -g $(IFLAG)
+CFLAGS  =	-W -Wall -Wextra $(IFLAG)
 
 CC      =	gcc $(CFLAGS)
+
+TEST_FLAGS = -I ./include/ -lcriterion --coverage
 
 ## ========================================================================== ##
 #								 PROJECT RULES 								   #
 ## ========================================================================== ##
 
+all		:	$(NAME)
+			@$(ECHO) "$(GREEN)$(WHITE)"
+			@$(ECHO) "$(GREEN)  [$(WHITE)MY_RPG$(GREEN)] → $(WHITE)Compilation \
+completed. $ Binary : $(CYAN) ./$(NAME)"
+
 $(NAME)	:	$(OBJS)
 			@$(ECHO) "$(GREEN)\n> Compiling project\t >>>>> \t DONE\n$(WHITE)"
 			@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
-all		:	$(NAME)
-			@$(ECHO) "$(GREEN)$(WHITE)"
-			@$(ECHO) "$(GREEN)  [$(WHITE)MY_RPG$(GREEN)] → $(WHITE)Compilation completed. $ Binary : $(CYAN) ./$(NAME)"
+tests_run:
+	$(CC) $(SRC) $(SRC_TEST) -o $(TEST_NAME) $(TEST_FLAGS)
+	./$(TEST_NAME)
+
+show_coverage:
+	$(CC) $(SRC_TEST) $(SRC) -o $(TEST_NAME) $(TEST_FLAGS)
+	./units
+	lcov --directory ./ -c -o rapport.info
+	genhtml -o ./report -t "code coverage report" rapport.info
+	xdg-open ./report/index.html &>/dev/null
+
+wc:
+	wc $(SRC) $(SRC_MAIN) $(SRCS_TEST) ./include/*
 
 clean	:
 			@$(RM) $(OBJS)
@@ -104,6 +130,9 @@ fclean	: 	clean
 			@$(ECHO) "$(GREEN)\n> Cleaning exec\t\t >>>>> \t DONE\n$(WHITE)"
 
 re		:	fclean all
+
+debug 	:	CFLAGS += -g
+debug 	:	re
 
 .c.o	:
 			@$(CC) -c $< -o $@
