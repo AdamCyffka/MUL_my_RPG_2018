@@ -36,11 +36,11 @@ int bordure_crossed(game_setting_t *settings, game_stat_t *stats)
     const sfView *view = sfRenderWindow_getView(settings->window);
     sfVector2f vector_view = sfView_getCenter(view);
 
-    if (settings->event.key.code == sfKeyRight) {
+    if (settings->event.key.code == sfKeyD) {
         if (stats->player.position.x + 4 >= (vector_view.x - 960) + 1900)
             return 1;
     }
-    if (settings->event.key.code == sfKeyDown) {
+    if (settings->event.key.code == sfKeyS) {
         if (stats->player.position.y + 4 >= (vector_view.y - 540) + 870)
             return 1;
     }
@@ -55,18 +55,18 @@ void move_window(game_setting_t *settings, game_stat_t *stats)
     if (settings->current == CAMP || settings->current == BEACH)
         return;
     if (player_pos_view(vector_view, stats) == 1) return;
-    if (settings->event.key.code == sfKeyRight) {
+    if (settings->event.key.code == sfKeyD) {
         if (vector_view.x < 3390)
             vector_view.x += 80 * settings->delta_time;
     }
-    if (settings->event.key.code == sfKeyLeft) {
+    if (settings->event.key.code == sfKeyQ) {
         if (vector_view.x > 960)
             vector_view.x -= 80 * settings->delta_time;
     }
-    if (settings->event.key.code == sfKeyUp)
+    if (settings->event.key.code == sfKeyZ)
         if (vector_view.y > 540)
             vector_view.y -= 80 * settings->delta_time;
-    if (settings->event.key.code == sfKeyDown) {
+    if (settings->event.key.code == sfKeyS) {
         if (vector_view.y < 3225)
             vector_view.y += 80 * settings->delta_time;
     }
@@ -75,21 +75,21 @@ void move_window(game_setting_t *settings, game_stat_t *stats)
 
 void move_player(game_setting_t *settings, game_stat_t *stats)
 {
-    if (settings->event.key.code == sfKeyRight) {
+    if (settings->event.key.code == sfKeyD) {
         stats->player.position.x += 80 * settings->delta_time;
         stats->player.rect.top = 32;
     }
-    if (settings->event.key.code == sfKeyLeft) {
+    if (settings->event.key.code == sfKeyQ) {
         if (stats->player.position.x - 4 > 10)
             stats->player.position.x -= 80 * settings->delta_time;
         stats->player.rect.top = 96;
     }
-    if (settings->event.key.code == sfKeyUp) {
+    if (settings->event.key.code == sfKeyZ) {
         if (stats->player.position.y - 4 > 10)
             stats->player.position.y -= 80 * settings->delta_time;
         stats->player.rect.top = 64;
     }
-    if (settings->event.key.code == sfKeyDown) {
+    if (settings->event.key.code == sfKeyS) {
         stats->player.position.y += 80 * settings->delta_time;
         stats->player.rect.top = 0;
     }
@@ -98,10 +98,10 @@ void move_player(game_setting_t *settings, game_stat_t *stats)
 void key_to_move_or_not(game_scene_t scenes,
     game_setting_t *settings, game_stat_t *stats)
 {
-    if (settings->event.key.code == sfKeyRight
-        || settings->event.key.code == sfKeyLeft
-        || settings->event.key.code == sfKeyUp
-        || settings->event.key.code == sfKeyDown) {
+    if (settings->event.key.code == sfKeyD
+        || settings->event.key.code == sfKeyQ
+        || settings->event.key.code == sfKeyZ
+        || settings->event.key.code == sfKeyS) {
         if (player_is_on_rectangle(settings, stats, scenes) == 0)
             return;
         move_window(settings, stats);
