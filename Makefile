@@ -1,19 +1,26 @@
 ##
 ## EPITECH PROJECT, 2019
-## Makefile
+## MUL_my_rpg_2018
 ## File description:
 ## Makefile
 ##
 
-NAME	= 	my_rpg
+## ========================================================================== ##
+#								 USEFUL VARIABLES 							   #
+## ========================================================================== ##
 
-CC		= 	gcc
+RM      =	rm -rf
+ECHO	=	echo -e
 
-RM		= 	rm -f
+GREEN	=	\033[1;32m
+WHITE	=	\033[0m
+CYAN	=	\033[36;1m
 
-OBJS	= $(SRCS:.c=.o)
+## ========================================================================== ##
+#								 SOURCES VARIABLES 							   #
+## ========================================================================== ##
 
-SRCS	= 	src/main.c								\
+SRC		=	src/main.c								\
 			src/create_game3.c 						\
 			src/create_game2.c 						\
 			src/create_game.c						\
@@ -27,7 +34,6 @@ SRCS	= 	src/main.c								\
 			src/set_scale.c 						\
 			src/clock.c 							\
 			src/my_libc_functions.c 				\
-			src/play_sounds.c 						\
 			src/npc_interaction.c 					\
 			src/buttons/button_event.c 				\
 			src/buttons/button_main_menu.c			\
@@ -45,9 +51,7 @@ SRCS	= 	src/main.c								\
 			src/enemies/enemies_die.c				\
 			src/enemies/enemies_moves.c				\
 			src/enemies/enemies_positions.c			\
-			src/destroy/destroy_all.c 				\
-			src/destroy/destroy.c 					\
-			src/destroy/destroy2.c 					\
+			src/enemies/enemies_attack.c			\
 			src/fill_scene/fill_scene_beach.c		\
 			src/fill_scene/fill_scene_boss.c		\
 			src/fill_scene/fill_scene_camp.c		\
@@ -60,26 +64,46 @@ SRCS	= 	src/main.c								\
 			src/fill_quest/fill_quest5_9.c			\
 			src/fill_quest/fill_quest10_12.c
 
-CFLAGS = -Iinclude
-CFLAGS += -g
+OBJS    =	$(SRC:.c=.o)
 
-LDFLAGS += -lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window
-LDFLAGS += -W -Wall -Wextra -g
-LDFLAGS += -lm
+## ========================================================================== ##
+#								 PROJECT VARIABLES 							   #
+## ========================================================================== ##
 
-all: $(NAME)
+NAME	=	my_rpg
 
-$(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
+MFLAG 	=	-lm
 
-clean:
-	$(RM) $(OBJS)
+GFLAG 	=	-lcsfml-system -lcsfml-audio -lcsfml-graphics -lcsfml-window $(MFLAG)
 
-fclean: clean
-	$(RM) $(NAME)
-	$(RM) *~ -f $(NAME)
-	$(RM) *# -f $(NAME)
+IFLAG	=	-Iinclude/ $(GFLAG)
 
-re	: 	fclean all
+CFLAGS  =	-W -Wall -Wextra -g $(IFLAG)
 
-.PHONY	: 	all clean fclean re
+CC      =	gcc $(CFLAGS)
+
+## ========================================================================== ##
+#								 PROJECT RULES 								   #
+## ========================================================================== ##
+
+$(NAME)	:	$(OBJS)
+			@$(ECHO) "$(GREEN)\n> Compiling project\t >>>>> \t DONE\n$(WHITE)"
+			@$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
+
+all		:	$(NAME)
+			@$(ECHO) "$(GREEN)$(WHITE)"
+			@$(ECHO) "$(GREEN)  [$(WHITE)MY_RPG$(GREEN)] → $(WHITE)Compilation completed. $ Binary : $(CYAN) ./$(NAME)"
+
+clean	:
+			@$(RM) $(OBJS)
+			@$(ECHO) "$(GREEN)\n> Cleaning repository\t >>>>> \t DONE\n$(WHITE)"
+
+fclean	: 	clean
+			@$(RM) $(NAME)
+			@$(ECHO) "$(GREEN)\n> Cleaning exec\t\t >>>>> \t DONE\n$(WHITE)"
+
+re		:	fclean all
+
+.c.o	:
+			@$(CC) -c $< -o $@
+			@$(ECHO) "$(GREEN)[OK] > $<\t \t $(WHITE)"

@@ -14,7 +14,7 @@ void create_scenes(game_scene_t *scenes)
 {
     scenes[MAIN_MENU] = new_scene(11, 2, 9, 1);
     fill_scene_main_menu1(scenes[MAIN_MENU]);
-    scenes[TOWN] = new_scene(23, 4, 44, 6);
+    scenes[TOWN] = new_scene(23, 4, 46, 6);
     fill_scene_town1(scenes[TOWN]);
     scenes[BOSS] = new_scene(12, 4, 27, 6);
     fill_scene_boss1(scenes[BOSS]);

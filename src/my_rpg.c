@@ -15,7 +15,6 @@ void game_change(game_t *game)
     set_cursor_pos(game->scenes[game->settings->current], game->settings);
     /*for (int tmp = 0; tmp < game->scenes[game->settings->current].how_many[1]; tmp++) {
         if (game->scenes[game->settings->current].sounds[tmp]._activated == true)
-            if (game->settings->current == TOWN)
                 sfMusic_play(game->scenes->sounds[MUSIC_S_S1].music);
     }*/
     if (game->settings->current == MAIN_MENU)
@@ -26,6 +25,7 @@ void game_change(game_t *game)
         change_vic_def(game);
     enemies_detect_player(game);
     enemies_detect_hit(game);
+    enemies_attack_player(game);
     clock(game->scenes, game->settings, game->quests);
     loop_rect_enemies(game);
     player_rect_move(game->scenes, game->stats, game->settings);

@@ -57,8 +57,9 @@ void create_settings(game_setting_t *settings);
 
 //change
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
-void move_sprite_main_menu(game_scene_t *scene, float delta_time);
+void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene, float delta_time);
 void change_main_menu(game_setting_t *settings, game_scene_t *scene);
+void change_view_main_menu(game_setting_t *settings);
 
 //buttons
 int button_is_clicked(game_setting_t *settings, sfVector2f pos,
@@ -177,5 +178,8 @@ void enemies_positions(game_t *game, int tmp, float delta_time);
 void enemies_detect_player(game_t *game);
 void enemies_detect_hit(game_t *game);
 void loop_rect_enemies(game_t *game);
+void move_rect_enemies(game_scene_t *scenes,
+game_stat_t *stats, int tmp, game_setting_t *settings);
+void enemies_attack_player(game_t *game);
 
 #endif /* RPG_H_ */

@@ -68,8 +68,8 @@ void enemies_die(game_t *game, int tmp)
     }
     if (game->stats->player.rect.top == 129
         && game->stats->player.rect.left == 32) {
-        if ((vector.x < game->stats->player.position.x &&
-            vector.x + 100 > game->stats->player.position.x)
+        if ((vector.x + 10 > game->stats->player.position.x &&
+            vector.x - 40 < game->stats->player.position.x)
             && (vector.y - 50 < game->stats->player.position.y &&
             vector.y + 80 > game->stats->player.position.y))
             rect_die(game, tmp);

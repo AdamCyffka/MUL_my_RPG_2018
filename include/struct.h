@@ -35,6 +35,7 @@ typedef struct game_button {
 
 typedef struct game_sound {
     sfMusic *music;
+    int volume;
     sfBool _loop;
     bool _activated;
 } game_sound_t;
@@ -86,6 +87,7 @@ typedef struct timer_clock {
     float main_menu;
     float player_timer;
     float enemies_timer;
+    float enemies_attack;
     float timer2;
     float timer3;
 } timer_clock_t;
