@@ -52,8 +52,5 @@ void analyse_events(game_t *game)
     if (game->settings->event.type == sfEvtKeyPressed) {
         keyboard_checker_maps(game);
         player_change_map(game->stats, game->settings);
-        if (game->settings->event.key.code == sfKeySpace &&
-        game->settings->_paused == false)
-            player_attack(game->stats);
     }
 }
