@@ -57,18 +57,18 @@ void move_window(game_setting_t *settings, game_stat_t *stats)
     if (player_pos_view(vector_view, stats) == 1) return;
     if (sfKeyboard_isKeyPressed(sfKeyD)) {
         if (vector_view.x < 3390)
-            vector_view.x += 80 * settings->delta_time;
+            vector_view.x += 40 * settings->delta_time;
     }
     if (sfKeyboard_isKeyPressed(sfKeyQ)) {
         if (vector_view.x > 960)
-            vector_view.x -= 80 * settings->delta_time;
+            vector_view.x -= 40 * settings->delta_time;
     }
     if (sfKeyboard_isKeyPressed(sfKeyZ))
         if (vector_view.y > 540)
-            vector_view.y -= 80 * settings->delta_time;
+            vector_view.y -= 40 * settings->delta_time;
     if (sfKeyboard_isKeyPressed(sfKeyS)) {
         if (vector_view.y < 3225)
-            vector_view.y += 80 * settings->delta_time;
+            vector_view.y += 40 * settings->delta_time;
     }
     change_vector_view(settings, vector_view);
 }
@@ -76,21 +76,21 @@ void move_window(game_setting_t *settings, game_stat_t *stats)
 void move_player(game_setting_t *settings, game_stat_t *stats)
 {
     if (sfKeyboard_isKeyPressed(sfKeyD)) {
-        stats->player.position.x += 80 * settings->delta_time;
+        stats->player.position.x += 40 * settings->delta_time;
         stats->player.rect.top = 32;
     }
     if (sfKeyboard_isKeyPressed(sfKeyQ)) {
         if (stats->player.position.x - 4 > 10)
-            stats->player.position.x -= 80 * settings->delta_time;
+            stats->player.position.x -= 40 * settings->delta_time;
         stats->player.rect.top = 96;
     }
     if (sfKeyboard_isKeyPressed(sfKeyZ)) {
         if (stats->player.position.y - 4 > 10)
-            stats->player.position.y -= 80 * settings->delta_time;
+            stats->player.position.y -= 40 * settings->delta_time;
         stats->player.rect.top = 64;
     }
     if (sfKeyboard_isKeyPressed(sfKeyS)) {
-        stats->player.position.y += 80 * settings->delta_time;
+        stats->player.position.y += 40 * settings->delta_time;
         stats->player.rect.top = 0;
     }
 }
