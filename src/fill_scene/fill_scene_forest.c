@@ -18,35 +18,35 @@ void fill_scene_forest4(game_scene_t forest)
     forest.objs[MINIMAP_O_S3] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
     forest.objs[GHOST1_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {500, 500}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST2_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {300, 300}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST3_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {700, 700}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST4_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {1450, 450}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST5_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {1300, 300}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST6_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {1550, 250}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST7_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {2400, 1150}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST8_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {2200, 1150}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST9_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {2000, 1150}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST10_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {1700, 850}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST11_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {2520, 320}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST12_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {2340, 350}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST13_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {2380, 520}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST14_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {2300, 430}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[GHOST15_O_S3] = new_object("assets/ghost.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 3);
+    (sfVector2f) {2500, 450}, (sfIntRect) {0, 0, 16, 32}, 3);
     forest.objs[QUEST_O_S3] = new_object("assets/quest.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
     forest.objs[ICON_O_S3] = new_object("assets/icon.png",
@@ -81,19 +81,19 @@ void fill_scene_forest3(game_scene_t forest)
 void fill_scene_forest2(game_scene_t forest)
 {
     forest.buttons[WALKABLE4_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {400, 400}, (sfIntRect) {0, 0, 900, 211}, 0);
+    (sfVector2f) {400 * 1.5, 400 * 1.5}, (sfIntRect) {0, 0, 900 * 1.5, 211 * 1.5}, 0);
     forest.buttons[WALKABLE6_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {1200, 520}, (sfIntRect) {0, 0, 620, 120}, 0);
+    (sfVector2f) {1200 * 1.5, 520 * 1.5}, (sfIntRect) {0, 0, 620 * 1.5, 120 * 1.5}, 0);
     forest.buttons[WALKABLE7_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {1100, 570}, (sfIntRect) {0, 0, 218, 139}, 0);
+    (sfVector2f) {1100 * 1.5, 570 * 1.5}, (sfIntRect) {0, 0, 218 * 1.5, 139 * 1.5}, 0);
     forest.buttons[WALKABLE8_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {1500, 380}, (sfIntRect) {0, 0, 170, 141}, 0);
+    (sfVector2f) {1500 * 1.5, 380 * 1.5}, (sfIntRect) {0, 0, 170 * 1.5, 141 * 1.5}, 0);
     forest.buttons[WALKABLE9_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {1300, 390}, (sfIntRect) {0, 0, 330, 50}, 0);
+    (sfVector2f) {1300 * 1.5, 390 * 1.5}, (sfIntRect) {0, 0, 330 * 1.5, 50 * 1.5}, 0);
     forest.buttons[WALKABLE10_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {800, 205}, (sfIntRect) {0, 0, 328, 197}, 0);
+    (sfVector2f) {800 * 1.5, 205 * 1.5}, (sfIntRect) {0, 0, 328 * 1.5, 197 * 1.5}, 0);
     forest.buttons[WALKABLE11_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {1480, 250}, (sfIntRect) {0, 0, 230, 147}, 0);
+    (sfVector2f) {1480 * 1.5, 250 * 1.5}, (sfIntRect) {0, 0, 230 * 1.5, 147 * 1.5}, 0);
     forest.buttons[INVENTORY_B_S3] = new_button("assets/invisible.png",
     (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     forest.buttons[ME_B_S3] = new_button("assets/invisible.png",
@@ -136,10 +136,10 @@ void fill_scene_forest1(game_scene_t forest)
     forest.buttons[F60_B_S3] = new_button("assets/60.png",
     (sfVector2f) {955, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
     forest.buttons[WALKABLE1_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {0, 500}, (sfIntRect) {0, 0, 341, 124}, 0);
+    (sfVector2f) {0, 500 * 1.5}, (sfIntRect) {0, 0, 341 * 1.5, 124 * 1.5}, 0);
     forest.buttons[WALKABLE2_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {100, 200}, (sfIntRect) {0, 0, 241, 307}, 0);
+    (sfVector2f) {100 * 1.5, 200 * 1.5}, (sfIntRect) {0, 0, 241 * 1.5, 307 * 1.5}, 0);
     forest.buttons[WALKABLE3_B_S3] = new_button("assets/invisible.png",
-    (sfVector2f) {260, 220}, (sfIntRect) {0, 0, 307, 192}, 0);
+    (sfVector2f) {260 * 1.5, 220 * 1.5}, (sfIntRect) {0, 0, 307 * 1.5, 192 * 1.5}, 0);
     fill_scene_forest2(forest);
 }

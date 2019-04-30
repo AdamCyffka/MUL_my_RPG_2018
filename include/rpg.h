@@ -195,4 +195,6 @@ int text_entered(game_setting_t *settings);
 void enter_quest_answer(game_t *game);
 void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
+void fill_inventory(game_inventory_t *inventory, int content);
+
 #endif /* RPG_H_ */
