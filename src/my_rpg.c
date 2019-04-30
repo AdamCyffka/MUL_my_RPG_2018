@@ -18,7 +18,7 @@ void game_change(game_t *game)
                 sfMusic_play(game->scenes->sounds[MUSIC_S_S1].music);
     }*/
     if (game->settings->current == MAIN_MENU)
-        change_main_menu(game->settings, game->scenes);
+        change_main_menu(game->settings, game->scenes, game->stats);
     if (game->settings->current >= TOWN && game->settings->current <= CAMP)
         change_maps(game);
     if (game->settings->current >= VICTORY && game->settings->current <= DEFEAT)
@@ -35,25 +35,28 @@ void game_change(game_t *game)
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
-*stats)
+                *stats)
 {
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
         if (scene.objs[tmp].speed == 0)
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
-            .sprite, NULL);
-    sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
+                                      .sprite, NULL);
+    if (stats->player.speed > 0)
+        sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
         if (scene.objs[tmp].speed >= 1)
             sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
-            .sprite, NULL);
+                                      .sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++)
         if (scene.buttons[tmp].state >= 0)
             sfRenderWindow_drawRectangleShape(settings->window, scene
-            .buttons[tmp].shape, NULL);
+                                              .buttons[tmp].shape, NULL);
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
         if (scene.texts[tmp].state >= 0)
             sfRenderWindow_drawText(settings->window, scene.texts[tmp].text,
-            NULL);
+                                    NULL);
+    if (settings->current == MAIN_MENU && stats->player.speed > 0)
+        sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     draw_cursor(scene, settings);
 }
 

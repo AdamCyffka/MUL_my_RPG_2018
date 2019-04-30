@@ -58,14 +58,14 @@ void create_settings(game_setting_t *settings);
 //change
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
 void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene, float delta_time);
-void change_main_menu(game_setting_t *settings, game_scene_t *scene);
+void change_main_menu(game_setting_t *settings, game_scene_t *scene, game_stat_t *stats);
 void change_view_main_menu(game_setting_t *settings);
 
 //buttons
 int button_is_clicked(game_setting_t *settings, sfVector2f pos,
 sfVector2f size);
 void disp_button_menu(game_scene_t scenes, int enable, int disable);
-void button_menu(game_setting_t *settings, game_scene_t scenes);
+void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *stats);
 void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 
 //save
