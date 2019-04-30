@@ -90,6 +90,7 @@ typedef struct timer_clock {
     float enemies_attack;
     float timer2;
     float timer3;
+    float walk;
 } timer_clock_t;
 
 typedef struct game_setting {
@@ -102,6 +103,7 @@ typedef struct game_setting {
     timer_clock_t timers;
     float last_time;
     float delta_time;
+    bool _paused;
     sfView *map_view;
     sfEvent event;
 } game_setting_t;

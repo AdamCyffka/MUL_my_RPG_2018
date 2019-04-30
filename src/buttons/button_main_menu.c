@@ -72,7 +72,7 @@ void disp_button_back(game_scene_t scenes, int enable, int disable)
     scenes.objs[CHOOSE_O_S0].speed = ((enable == 1) ? disable : enable);
 }
 
-void button_menu(game_setting_t *settings, game_scene_t scenes)
+void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *stats)
 {
     if (scenes.buttons[NEW_B_S0].state >= 0 &&
     scenes.buttons[EXIT_B_S0].state >= 0 &&
@@ -82,6 +82,22 @@ void button_menu(game_setting_t *settings, game_scene_t scenes)
         men_game_button(settings, scenes, LOAD_B_S0);
     }
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+    .buttons[LEFT_B_S0].shape), sfRectangleShape_getSize(scenes
+    .buttons[LEFT_B_S0].shape)) == true) {
+        disp_button_back(scenes, 1, -1);
+        stats->player = new_object("assets/girl1.png",
+        (sfVector2f) {750, 450}, (sfIntRect) {0, 0, 16, 32}, 5);
+        sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
+    }
+    if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+    .buttons[RIGHT_B_S0].shape), sfRectangleShape_getSize(scenes
+    .buttons[RIGHT_B_S0].shape)) == true) {
+        disp_button_back(scenes, 1, -1);
+        stats->player = new_object("assets/boy1.png",
+        (sfVector2f) {750, 450}, (sfIntRect) {0, 0, 16, 32}, 5);
+        sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
+    }
+    if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CREDITS_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[CREDITS_B_S0].shape)) == true)
         disp_button_menu(scenes, 1, -1);
@@ -89,6 +105,10 @@ void button_menu(game_setting_t *settings, game_scene_t scenes)
     .buttons[NEW_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[NEW_B_S0].shape)) == true)
         disp_new_options(scenes, 1, -1);
+    if (scenes.texts[NAME_T_S0].state == 1)
+        stats->player.speed = 5;
+    else
+        stats->player.speed = -1;
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[BACK_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[BACK_B_S0].shape)) == true)
@@ -97,6 +117,9 @@ void button_menu(game_setting_t *settings, game_scene_t scenes)
     .buttons[OK_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[OK_B_S0].shape)) == true) {
         disp_button_back(scenes, 1, -1);
+        sfSprite_setPosition(stats->player.sprite,(sfVector2f) {300, 500});
+        sfSprite_setTextureRect(stats->player.sprite, (sfIntRect) {0, 32, 16, 32});
+        stats->player.speed = 5;
         settings->current = TOWN;
     }
     else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes

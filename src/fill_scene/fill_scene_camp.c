@@ -14,7 +14,7 @@ void fill_scene_camp4(game_scene_t camp)
     camp.objs[ICON_O_S5] = new_object("assets/icon.png",
     (sfVector2f) {10, 910}, (sfIntRect) {0, 0, 100, 100}, 0);
     camp.objs[CURSOR_O_S5] = new_object("assets/cursor.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 40, 40}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, 0);
 }
 
 void fill_scene_camp3(game_scene_t camp)
@@ -34,25 +34,25 @@ void fill_scene_camp3(game_scene_t camp)
     camp.objs[MINIMAP_O_S5] = new_object("assets/minimap.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
     camp.objs[GOLEM1_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {550, 450}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM2_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {850, 450}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM3_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {1400, 800}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM4_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {1250, 550}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM5_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {1000, 730}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM6_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {880, 620}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM7_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {600, 750}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM8_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {1500, 450}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM9_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {1470, 620}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[GOLEM10_O_S5] = new_object("assets/golem.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 16, 32}, 2);
+    (sfVector2f) {580, 580}, (sfIntRect) {0, 0, 16, 32}, 2);
     camp.objs[QUEST_O_S5] = new_object("assets/quest.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 848, 584}, -1);
     fill_scene_camp4(camp);
@@ -98,12 +98,24 @@ void fill_scene_camp1(game_scene_t camp)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);
     camp.buttons[CLOSE_B_S5] = new_button("assets/close.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, -1);
-    camp.buttons[PLUS_B_S5] = new_button("assets/plus.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, -1);
-    camp.buttons[MINUS_B_S5] = new_button("assets/minus.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 28, 32}, -1);
-    camp.buttons[MUTE_B_S5] = new_button("assets/mute.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 48, 48}, -1);
+    camp.buttons[V0_B_S5] = new_button("assets/0.png",
+    (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    camp.buttons[V25_B_S5] = new_button("assets/25.png",
+    (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    camp.buttons[V50_B_S5] = new_button("assets/50.png",
+    (sfVector2f) {970, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    camp.buttons[V100_B_S5] = new_button("assets/100.png",
+    (sfVector2f) {1030, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    camp.buttons[ON_B_S5] = new_button("assets/on.png",
+    (sfVector2f) {850, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
+    camp.buttons[OFF_B_S5] = new_button("assets/off.png",
+    (sfVector2f) {955, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
+    camp.buttons[F30_B_S5] = new_button("assets/30.png",
+    (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
+    camp.buttons[F30_B_S5] = new_button("assets/30.png",
+    (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
+    camp.buttons[F60_B_S5] = new_button("assets/60.png",
+    (sfVector2f) {955, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
     camp.buttons[WALKABLE1_B_S5] = new_button("assets/invisible.png",
     (sfVector2f) {0, 800}, (sfIntRect) {0, 0, 1700, 146}, 0);
     camp.buttons[WALKABLE2_B_S5] = new_button("assets/invisible.png",

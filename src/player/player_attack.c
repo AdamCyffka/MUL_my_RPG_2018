@@ -17,13 +17,13 @@ int button_crossed(game_stat_t *stats,
     sfVector2f pos = sfRectangleShape_getPosition(scenes.buttons[nbr].shape);
     sfVector2f size = sfRectangleShape_getSize(scenes.buttons[nbr].shape);
 
-    if (settings->event.key.code == sfKeyD)
+    if (sfKeyboard_isKeyPressed(sfKeyD))
         x += 4;
-    if (settings->event.key.code == sfKeyQ)
+    if (sfKeyboard_isKeyPressed(sfKeyQ))
         x -= 4;
-    if (settings->event.key.code == sfKeyZ)
+    if (sfKeyboard_isKeyPressed(sfKeyZ))
         y -= 4;
-    if (settings->event.key.code == sfKeyS)
+    if (sfKeyboard_isKeyPressed(sfKeyS))
         y += 4;
     if ((x >= pos.x && x <= pos.x + size.x)
         && (y >= pos.y - 120 && y <= pos.y - 120

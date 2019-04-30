@@ -58,14 +58,14 @@ void create_settings(game_setting_t *settings);
 //change
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
 void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene, float delta_time);
-void change_main_menu(game_setting_t *settings, game_scene_t *scene);
+void change_main_menu(game_setting_t *settings, game_scene_t *scene, game_stat_t *stats);
 void change_view_main_menu(game_setting_t *settings);
 
 //buttons
 int button_is_clicked(game_setting_t *settings, sfVector2f pos,
 sfVector2f size);
 void disp_button_menu(game_scene_t scenes, int enable, int disable);
-void button_menu(game_setting_t *settings, game_scene_t scenes);
+void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *stats);
 void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 
 //save
@@ -108,6 +108,8 @@ void player_rect_move(game_scene_t *scenes, game_stat_t *stats, game_setting_t *
 int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
 void change_vector_view(game_setting_t *settings, sfVector2f vector_view);
 void player_change_map(game_stat_t *stats, game_setting_t *settings);
+void player_interaction(game_t *game);
+void play_song_walk(game_scene_t scenes, game_setting_t *settings);
 
 //analyser
 void analyse_events(game_t *game);
@@ -134,15 +136,15 @@ void change_maps(game_t *game);
 void change_vic_def(game_t *game);
 void change_town(game_t *game);
 void change_boss(game_setting_t *settings,
-    game_scene_t scene, game_quest_t *quests);
+game_scene_t scene, game_quest_t *quests);
 void change_forest(game_setting_t *settings,
-    game_scene_t scene, game_quest_t *quests);
+game_scene_t scene, game_quest_t *quests);
 void change_beach(game_setting_t *settings,
-    game_scene_t scene, game_quest_t *quests);
+game_scene_t scene, game_quest_t *quests);
 void change_camp(game_setting_t *settings,
-    game_scene_t scene, game_quest_t *quests);
+game_scene_t scene, game_quest_t *quests);
 void change_victory(void);
-void change_defeat(void);
+void change_defeat(game_setting_t *settings);
 
 //change_statics_pos
 void change_statics_pos_town(game_scene_t scene, game_setting_t *settings);
@@ -155,6 +157,7 @@ void change_statics_pos_camp(game_scene_t scene, game_setting_t *settings);
 int my_strlen(char const *str);
 char *my_itoa(int nb);
 char *my_strcpy(char *str, char *dest);
+void my_putstr(char *str);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,

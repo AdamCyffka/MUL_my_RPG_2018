@@ -6,11 +6,10 @@
 */
 
 #ifndef DEFINE_H_
-    #define DEFINE_H_
 
-    #define bool _Bool
-    #define true 1
-    #define false 0
+    #include <stdbool.h>
+
+    #define DEFINE_H_
 
     #define EOA -1
 

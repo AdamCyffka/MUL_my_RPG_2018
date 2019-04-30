@@ -11,14 +11,22 @@
 
 void keyboard_checker_town(game_t *game)
 {
-    if (sfKeyboard_isKeyPressed(sfKeyI))
+    if (sfKeyboard_isKeyPressed(sfKeyI)) {
         button_town_inventory(game->scenes[TOWN], 1, -1);
-    if (sfKeyboard_isKeyPressed(sfKeyM))
+        game->settings->_paused = true;
+    }
+    if (sfKeyboard_isKeyPressed(sfKeyM)) {
         button_town_me(game->scenes[TOWN], 1, -1);
-    if (sfKeyboard_isKeyPressed(sfKeyO))
+        game->settings->_paused = true;
+    }
+    if (sfKeyboard_isKeyPressed(sfKeyO)) {
         button_town_option(game->scenes[TOWN], 1, -1);
-    if (sfKeyboard_isKeyPressed(sfKeyEscape))
+        game->settings->_paused = true;
+    }
+    if (sfKeyboard_isKeyPressed(sfKeyEscape)) {
         button_town_exit(game->scenes[TOWN], 1, -1);
+        game->settings->_paused = true;
+    }
 }
 
 void keyboard_checker_maps(game_t *game)
@@ -43,17 +51,6 @@ void analyse_events(game_t *game)
         check_mouse_pos(game);
     if (game->settings->event.type == sfEvtKeyPressed) {
         keyboard_checker_maps(game);
-        key_to_move_or_not(game->scenes[game->settings->current],
-        game->settings, game->stats);
         player_change_map(game->stats, game->settings);
-    } else if (game->settings->event.type == sfEvtMouseButtonPressed) {
-        player_attack(game->stats);
-    } else {
-        if (sfKeyboard_isKeyPressed(sfKeyZ) == false &&
-        sfKeyboard_isKeyPressed(sfKeyS) == false &&
-        sfKeyboard_isKeyPressed(sfKeyQ) == false &&
-        sfKeyboard_isKeyPressed(sfKeyD) == false) {
-            player_stop_moving(game->stats, game->settings);
-        }
     }
 }

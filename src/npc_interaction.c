@@ -52,7 +52,7 @@ game_setting_t *settings, game_quest_t *quests)
             [quests[stats->current_quest].current_dial - 1].state = -1;
         quests[stats->current_quest].dialogs_text
         [quests[stats->current_quest].current_dial].state = 0;
-        scenes[settings->current].objs[PANNEL_O_S1].speed = 0;
+        scenes[settings->current].objs[PANNEL_O_S1].speed = 1;
         quests[stats->current_quest].current_dial++;
         if (quests[stats->current_quest].current_dial >
         quests[stats->current_quest].nb_of_dial)
