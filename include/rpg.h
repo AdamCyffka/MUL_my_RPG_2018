@@ -143,7 +143,7 @@ game_scene_t scene, game_quest_t *quests);
 void change_camp(game_setting_t *settings,
 game_scene_t scene, game_quest_t *quests);
 void change_victory(void);
-void change_defeat(void);
+void change_defeat(game_setting_t *settings);
 
 //change_statics_pos
 void change_statics_pos_town(game_scene_t scene, game_setting_t *settings);

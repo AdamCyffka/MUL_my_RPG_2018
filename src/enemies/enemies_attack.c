@@ -12,7 +12,11 @@
 void attack_player(game_scene_t *scenes,
     game_stat_t *stats, int tmp, game_setting_t *settings)
 {
-    sfVector2f vector = sfSprite_getPosition(
+    sfVector2f vector;
+
+    if (settings->current == DEFEAT)
+        return;
+    vector = sfSprite_getPosition(
     scenes[settings->current].objs[tmp].sprite);
     if (((stats->player.position.y < vector.y
         && stats->player.position.y > vector.y - 80)
@@ -23,9 +27,9 @@ void attack_player(game_scene_t *scenes,
         || (stats->player.position.x > vector.x
         && stats->player.position.x < vector.x + 80))) {
         stats->life -= scenes[settings->current].objs[tmp].speed;
-        if (stats->life <= 0)
+        if (stats->life <= 0) {
             settings->current = DEFEAT;
-        printf("%d\n", stats->life);
+        }
     }
 }
 
