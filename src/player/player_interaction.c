@@ -10,6 +10,22 @@
 #include "enum.h"
 #include "define.h"
 
+void play_song_walk(game_scene_t scenes, game_setting_t *settings)
+{
+    if (settings->last_time < (settings->timers.walk + 3))
+        return;
+    else
+        settings->timers.walk = settings->last_time;
+    if (settings->current == TOWN)
+        sfMusic_play(scenes.sounds[WALK_S_S1].music);
+    if (settings->current == BEACH)
+        sfMusic_play(scenes.sounds[WALK_S_S4].music);
+    if (settings->current == CAMP)
+        sfMusic_play(scenes.sounds[WALK_S_S5].music);
+    if (settings->current == FOREST)
+        sfMusic_play(scenes.sounds[WALK_S_S3].music);
+}
+
 void player_interaction(game_t *game)
 {
     if (game->settings->_paused == false) {
@@ -18,9 +34,10 @@ void player_interaction(game_t *game)
             sfKeyboard_isKeyPressed(sfKeyQ) == false &&
             sfKeyboard_isKeyPressed(sfKeyD) == false &&
             sfKeyboard_isKeyPressed(sfKeySpace) == false) {
-            if (sfKeyboard_isKeyPressed(sfKeyF) == true)
+            if (sfKeyboard_isKeyPressed(sfKeyF) == true) {
+                sfMusic_play(game->scenes[TOWN].sounds[SWORD_S_S1].music);
                 player_attack(game->stats);
-            else
+            } else
                 player_stop_moving(game->stats, game->settings);
             /*if (sfMouse_isButtonPressed(sfMouseLeft) == true)
               player_attack(game->stats);

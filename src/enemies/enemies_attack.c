@@ -28,6 +28,7 @@ void attack_player(game_scene_t *scenes,
         && stats->player.position.x < vector.x + 80))) {
         stats->life -= scenes[settings->current].objs[tmp].speed;
         if (stats->life <= 0) {
+            sfMusic_play(scenes[DEFEAT].sounds[SOUND_S_S7].music);
             settings->current = DEFEAT;
         }
     }

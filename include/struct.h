@@ -90,6 +90,7 @@ typedef struct timer_clock {
     float enemies_attack;
     float timer2;
     float timer3;
+    float walk;
 } timer_clock_t;
 
 typedef struct game_setting {
