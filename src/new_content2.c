@@ -36,7 +36,7 @@ game_inventory_t new_slot(sfVector2f position, bool _selected)
     slot.item = new_button("assets/invisible.png", position,
     (sfIntRect) {0, 0, 50, 50}, 0);
     slot.content = EMPTY;
-    slot.state = 0;
+    slot.state = -1;
     slot._selected = _selected;
     return (slot);
 }

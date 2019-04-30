@@ -26,6 +26,11 @@ game_quest_t *quests, game_inventory_t *inventory)
             sfText_setPosition(quests[tmp].dialogs_text[tmp2].text, (sfVector2f)
             {center.x - size.x / 2 + quests[tmp].dialogs_text[tmp2].position.x,
             center.y - size.y / 2 + quests[tmp].dialogs_text[tmp2].position.y});
+    for (int tmp = SLOT_0; tmp <= SLOT_4; tmp++)
+        sfRectangleShape_setPosition(inventory[tmp].item.shape,
+        (sfVector2f) {center.x - size.x / 2 +
+        inventory[tmp].item.position.x, center.y - size.y / 2 +
+        inventory[tmp].item.position.y});
 }
 
 void change_maps(game_t *game)

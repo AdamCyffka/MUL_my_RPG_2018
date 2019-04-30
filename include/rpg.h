@@ -182,4 +182,9 @@ void move_rect_enemies(game_scene_t *scenes,
 game_stat_t *stats, int tmp, game_setting_t *settings);
 void enemies_attack_player(game_t *game);
 
+
+
+
+
+void fill_inventory(game_inventory_t *inventory, int content);
 #endif /* RPG_H_ */

@@ -75,6 +75,14 @@ void change_quest_if_validated(game_stat_t *stats, game_quest_t *quests)
 void give_rewards_if_validated(game_stat_t *stats, game_quest_t *quests,
 game_inventory_t *inventory)
 {
+    if (quests[INTRO_Q].state == Q_VALIDATED) {
+        fill_inventory(inventory, MINIMAP_R);
+        fill_inventory(inventory, QBOOK_R);
+    }
+    if (quests[BLACKSMITH_Q].state == Q_VALIDATED) {
+        fill_inventory(inventory, SWORD1_R);
+    }
+
     return;
 }
 
