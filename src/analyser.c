@@ -53,4 +53,12 @@ void analyse_events(game_t *game)
         keyboard_checker_maps(game);
         player_change_map(game->stats, game->settings);
     }
+    if (game->settings->event.type == sfEvtTextEntered) {
+        if (game->settings->current == MAIN_MENU &&
+        game->scenes[MAIN_MENU].objs[CHOOSE_O_S0].speed >= 0)
+            enter_player_name(game->stats, game->settings);
+        if (game->settings->current == TOWN && game->quests[SHEEP_COUNT_Q].state
+        == Q_IN_PROGRESS)
+            enter_quest_answer(game);
+    }
 }

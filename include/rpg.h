@@ -125,6 +125,9 @@ void draw_quest(game_quest_t *quests, game_setting_t *settings);
 //draw_inventory
 void draw_inventory(game_inventory_t *inventory, game_setting_t *settings);
 
+//draw_player_info
+void draw_player_info(game_t *game);
+
 //set_scale
 void set_scale(game_t *game);
 
@@ -158,6 +161,8 @@ int my_strlen(char const *str);
 char *my_itoa(int nb);
 char *my_strcpy(char *str, char *dest);
 void my_putstr(char *str);
+int my_strcmp(char const *str1, char const *str2);
+char *my_stradd(const char *str, char toadd);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
@@ -184,5 +189,10 @@ void loop_rect_enemies(game_t *game);
 void move_rect_enemies(game_scene_t *scenes,
 game_stat_t *stats, int tmp, game_setting_t *settings);
 void enemies_attack_player(game_t *game);
+
+//write_text.c
+int text_entered(game_setting_t *settings);
+void enter_quest_answer(game_t *game);
+void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
 #endif /* RPG_H_ */

@@ -32,6 +32,7 @@ SRC		=	./src/create_game3.c 					\
 			./src/cursor_interaction.c 				\
 			./src/draw_quest.c						\
 			./src/draw_inventory.c					\
+			./src/draw_player_info.c				\
 			./src/set_scale.c 						\
 			./src/clock.c 							\
 			./src/my_libc_functions.c 				\
@@ -65,7 +66,8 @@ SRC		=	./src/create_game3.c 					\
 			./src/fill_scene/fill_scene_vic_def.c	\
 			./src/fill_quest/fill_quest0_4.c		\
 			./src/fill_quest/fill_quest5_9.c		\
-			./src/fill_quest/fill_quest10_12.c
+			./src/fill_quest/fill_quest10_12.c		\
+			./src/write_text.c
 
 SRC_TEST	= 	./tests/my_putstr_test.c \
 				./tests/my_strlen_test.c
