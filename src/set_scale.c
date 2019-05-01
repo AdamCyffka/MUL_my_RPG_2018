@@ -48,5 +48,9 @@ void set_scale(game_t *game)
     if (game->settings->current == FOREST) {
         sfSprite_setScale(game->scenes[FOREST].objs[TOWN_O_S2].sprite,
         (sfVector2f) {1.5, 1.5});
+        for (int tmp = GHOST1_O_S3; tmp <= GHOST15_O_S3; tmp++) {
+            sfSprite_setScale(game->scenes[FOREST].objs[tmp].sprite,
+            (sfVector2f) {3.5, 3.5});
+        }
     }
 }

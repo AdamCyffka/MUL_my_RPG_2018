@@ -12,8 +12,8 @@
 int button_is_clicked(game_setting_t *settings, sfVector2f pos, sfVector2f size)
 {
     int ret;
-    int x = (int)settings->cursor_pos.x;
-    int y = (int)settings->cursor_pos.y;
+    int x = settings->cursor_pos.x;
+    int y = settings->cursor_pos.y;
 
     settings->_mouse = (sfMouse_isButtonPressed(sfMouseLeft)) ? true : false;
     if (settings->_mouse == true) {

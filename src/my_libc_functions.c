@@ -19,6 +19,17 @@ int my_strlen(char const *str)
     return (i);
 }
 
+int my_strcmp(char const *str1, char const *str2)
+{
+    if (my_strlen(str1) != my_strlen(str2))
+        return 0;
+    for (int tmp = 0; str1[tmp]; tmp++) {
+        if (str1[tmp] != str2[tmp])
+            return 0;
+    }
+    return 1;
+}
+
 int nb_len(int nb)
 {
     int len = 0;

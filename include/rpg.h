@@ -59,14 +59,16 @@ void create_settings(game_setting_t *settings);
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
 void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene,
 float delta_time);
-void change_main_menu(game_setting_t *settings, game_scene_t *scene);
+void change_main_menu(game_setting_t *settings, game_scene_t *scene,
+game_stat_t *stats);
 void change_view_main_menu(game_setting_t *settings);
 
 //buttons
 int button_is_clicked(game_setting_t *settings, sfVector2f pos,
 sfVector2f size);
 void disp_button_menu(game_scene_t scenes, int enable, int disable);
-void button_menu(game_setting_t *settings, game_scene_t scenes);
+void button_menu(game_setting_t *settings, game_scene_t scenes,
+game_stat_t *stats);
 void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 
 //save
@@ -127,6 +129,9 @@ void draw_quest(game_quest_t *quests, game_setting_t *settings);
 //draw_inventory
 void draw_inventory(game_inventory_t *inventory, game_setting_t *settings);
 
+//draw_player_info
+void draw_player_info(game_t *game);
+
 //set_scale
 void set_scale(game_t *game);
 
@@ -161,6 +166,8 @@ char *my_itoa(int nb);
 char *my_strcpy(char *str, char *dest);
 void my_putstr(char *str);
 void my_putchar(char c);
+int my_strcmp(char const *str1, char const *str2);
+char *my_stradd(const char *str, char toadd);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
@@ -187,5 +194,12 @@ void loop_rect_enemies(game_t *game);
 void move_rect_enemies(game_scene_t *scenes,
 game_stat_t *stats, int tmp, game_setting_t *settings);
 void enemies_attack_player(game_t *game);
+
+//write_text.c
+int text_entered(game_setting_t *settings);
+void enter_quest_answer(game_t *game);
+void enter_player_name(game_stat_t *stats, game_setting_t *settings);
+
+void fill_inventory(game_inventory_t *inventory, int content);
 
 #endif /* RPG_H_ */

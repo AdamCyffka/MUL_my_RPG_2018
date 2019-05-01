@@ -28,6 +28,8 @@ void play_song_walk(game_scene_t scenes, game_setting_t *settings)
 
 void player_interaction(game_t *game)
 {
+    if (game->settings->current == MAIN_MENU)
+        return;
     if (game->settings->_paused == false) {
         if (sfKeyboard_isKeyPressed(sfKeyZ) == false &&
             sfKeyboard_isKeyPressed(sfKeyS) == false &&
