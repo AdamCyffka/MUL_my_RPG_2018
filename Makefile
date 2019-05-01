@@ -22,12 +22,7 @@ CYAN	=	\033[36;1m
 
 SRC_MAIN =	./src/main.c
 
-SRC		=	./src/create_game3.c 					\
-			./src/create_game2.c 					\
-			./src/create_game.c						\
-			./src/my_rpg.c							\
-			./src/new_content2.c					\
-			./src/new_content.c						\
+SRC		=	./src/my_rpg.c							\
 			./src/analyser.c 						\
 			./src/cursor_interaction.c 				\
 			./src/draw_quest.c						\
@@ -35,9 +30,14 @@ SRC		=	./src/create_game3.c 					\
 			./src/draw_player_info.c				\
 			./src/set_scale.c 						\
 			./src/clock.c 							\
-			./src/my_libc_functions.c 				\
-			./src/my_libc_functions2.c 				\
+			./src/lib_functions/my_libc_functions.c \
+			./src/lib_functions/my_libc_functions2.c\
 			./src/npc_interaction.c 				\
+			./src/new_content/new_content2.c		\
+			./src/new_content/new_content.c			\
+			./src/create_game/create_game3.c 		\
+			./src/create_game/create_game2.c 		\
+			./src/create_game/create_game.c			\
 			./src/buttons/button_close.c 			\
 			./src/buttons/button_event.c			\
 			./src/buttons/button_exit.c 			\

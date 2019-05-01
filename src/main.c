@@ -12,7 +12,10 @@ void help(void)
 {
     write(1, "RPG made with CSFML\n\n", 21);
     write(1, "USAGE:\n", 7);
-    write(1, "DESCRIPTION:", 12);
+    write(1, "  ./my_rpg\n", 11);
+    write(1, "DESCRIPTION:\n", 13);
+    write(1, "  This is a reproduction of Stardew Valley. Made by Adam,", 57);
+    write(1, " Valentin, Maurin and Mattéo.\n", 30);
 }
 
 int main(int ac, char **av, char **env)
