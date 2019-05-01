@@ -77,17 +77,17 @@ void fill_scene_boss3(game_scene_t boss)
     boss.sounds[WALK_S_S2] = new_sound("assets/walk_rock.ogg", sfFalse, 100);
     boss.sounds[SWORD_S_S2] = new_sound("assets/swoosh.ogg", sfFalse, 100);
     boss.texts[VOLUME_T_S2] = new_text("assets/font.ttf", "Volume:",
-    (sfVector2f) {425, 45}, 16);
-    boss.texts[NAME_T_S2] = new_text("assets/font.ttf", "Name:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 400}, 40);
     boss.texts[VSYNC_T_S2] = new_text("assets/font.ttf", "V-sync:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 500}, 40);
+    boss.texts[FRAME_T_S2] = new_text("assets/font.ttf", "Framerate:",
+    (sfVector2f) {640, 580}, 40);
+    boss.texts[NAME_T_S2] = new_text("assets/font.ttf", "Name:",
+    (sfVector2f) {700, 400}, 40);
     boss.texts[XP_T_S2] = new_text("assets/font.ttf", "XP:",
-    (sfVector2f) {425, 45}, 16);
-    boss.texts[POS_T_S2] = new_text("assets/font.ttf", "Position:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 450}, 40);
     boss.texts[LIFE_T_S2] = new_text("assets/font.ttf", "Life:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 500}, 40);
     fill_scene_boss4(boss);
 }
 
@@ -117,11 +117,11 @@ void fill_scene_boss2(game_scene_t boss)
 void fill_scene_boss1(game_scene_t boss)
 {
     boss.buttons[TITLE_B_S2] = new_button("assets/exit_menu.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, -1);
+    (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
     boss.buttons[DESKTOP_B_S2] = new_button("assets/exit_desktop.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);
+    (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
     boss.buttons[CLOSE_B_S2] = new_button("assets/close.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, -1);
+    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
     boss.buttons[V0_B_S2] = new_button("assets/0.png",
     (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     boss.buttons[V25_B_S2] = new_button("assets/25.png",

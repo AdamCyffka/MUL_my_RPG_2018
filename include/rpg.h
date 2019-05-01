@@ -57,7 +57,8 @@ void create_settings(game_setting_t *settings);
 
 //change
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
-void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene, float delta_time);
+void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene,
+float delta_time);
 void change_main_menu(game_setting_t *settings, game_scene_t *scene);
 void change_view_main_menu(game_setting_t *settings);
 
@@ -72,13 +73,13 @@ void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 int save_player_stats(game_t *game);
 int load_player_stats(game_t *game);
 
-//buttons_town
-void button_town(game_setting_t *settings, game_scene_t scenes);
-void button_town_inventory(game_scene_t scenes, int enable, int disable);
-void button_town_option(game_scene_t scenes, int enable, int disable);
-void button_town_exit(game_scene_t scenes, int enable, int disable);
-void button_town_me(game_scene_t scenes, int enable, int disable);
-void button_town_close(game_scene_t scenes, int enable, int disable);
+//buttons
+void all_button(game_setting_t *settings, game_scene_t *scenes);
+void button_inventory1(game_scene_t *scenes, int enable, int disable);
+void button_option1(game_scene_t *scenes, int enable, int disable);
+void button_exit1(game_scene_t *scenes, int enable, int disable);
+void button_me1(game_scene_t *scenes, int enable, int disable);
+void button_close1(game_scene_t *scenes, int enable, int disable);
 
 //quest_interaction
 void quests_interaction(void);
@@ -104,7 +105,8 @@ void player_stop_moving(game_stat_t *stats, game_setting_t *settings);
 void player_attack(game_stat_t *stats);
 int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat,
 game_scene_t scene);
-void player_rect_move(game_scene_t *scenes, game_stat_t *stats, game_setting_t *settings);
+void player_rect_move(game_scene_t *scenes, game_stat_t *stats,
+game_setting_t *settings);
 int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
 void change_vector_view(game_setting_t *settings, sfVector2f vector_view);
 void player_change_map(game_stat_t *stats, game_setting_t *settings);
@@ -158,6 +160,7 @@ int my_strlen(char const *str);
 char *my_itoa(int nb);
 char *my_strcpy(char *str, char *dest);
 void my_putstr(char *str);
+void my_putchar(char c);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,

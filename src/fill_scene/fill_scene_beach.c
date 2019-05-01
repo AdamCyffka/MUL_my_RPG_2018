@@ -78,16 +78,18 @@ void fill_scene_beach2(game_scene_t beach)
     beach.sounds[SWORD_S_S4] = new_sound("assets/swoosh.ogg", sfFalse, 100);
     beach.texts[VOLUME_T_S4] = new_text("assets/font.ttf", "Volume:",
     (sfVector2f) {425, 45}, 16);
-    beach.texts[NAME_T_S4] = new_text("assets/font.ttf", "Name:",
-    (sfVector2f) {425, 45}, 16);
+    beach.texts[VOLUME_T_S4] = new_text("assets/font.ttf", "Volume:",
+    (sfVector2f) {700, 400}, 40);
     beach.texts[VSYNC_T_S4] = new_text("assets/font.ttf", "V-sync:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 500}, 40);
+    beach.texts[FRAME_T_S4] = new_text("assets/font.ttf", "Framerate:",
+    (sfVector2f) {640, 580}, 40);
+    beach.texts[NAME_T_S4] = new_text("assets/font.ttf", "Name:",
+    (sfVector2f) {700, 400}, 40);
     beach.texts[XP_T_S4] = new_text("assets/font.ttf", "XP:",
-    (sfVector2f) {425, 45}, 16);
-    beach.texts[POS_T_S4] = new_text("assets/font.ttf", "Position:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 450}, 40);
     beach.texts[LIFE_T_S4] = new_text("assets/font.ttf", "Life:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 500}, 40);
     beach.objs[OPTION_O_S4] = new_object("assets/option.png",
     (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     fill_scene_beach3(beach);
@@ -96,11 +98,11 @@ void fill_scene_beach2(game_scene_t beach)
 void fill_scene_beach1(game_scene_t beach)
 {
     beach.buttons[TITLE_B_S4] = new_button("assets/exit_menu.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, -1);
+    (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
     beach.buttons[DESKTOP_B_S4] = new_button("assets/exit_desktop.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);
+    (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
     beach.buttons[CLOSE_B_S4] = new_button("assets/close.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, -1);
+    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
     beach.buttons[V0_B_S4] = new_button("assets/0.png",
     (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     beach.buttons[V25_B_S4] = new_button("assets/25.png",
@@ -121,7 +123,7 @@ void fill_scene_beach1(game_scene_t beach)
     (sfVector2f) {1100, 0}, (sfIntRect) {0, 0, 98 * 1.6, 159 * 1.6}, 0);
     beach.buttons[WALKABLE2_B_S4] = new_button("assets/invisible.png",
     (sfVector2f) {190, 159 * 1.6}, (sfIntRect) {0, 0, 731 * 1.6, 452 * 1.6}, 0);
-    beach.buttons[WALKABLE3_B_S4] = new_button("assets/invisible1.png",
+    beach.buttons[WALKABLE3_B_S4] = new_button("assets/invisible.png",
     (sfVector2f) {1300, 529}, (sfIntRect) {0, 0, 317 * 1.6, 250 * 1.6}, 0);
     beach.buttons[INVENTORY_B_S4] = new_button("assets/invisible.png",
     (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);

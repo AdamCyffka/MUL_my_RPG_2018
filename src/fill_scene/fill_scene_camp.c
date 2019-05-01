@@ -19,8 +19,6 @@ void fill_scene_camp4(game_scene_t camp)
 
 void fill_scene_camp3(game_scene_t camp)
 {
-    camp.texts[LIFE_T_S5] = new_text("assets/font.ttf", "Life:",
-    (sfVector2f) {425, 45}, 16);
     camp.objs[OPTION_O_S5] = new_object("assets/option.png",
     (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     camp.objs[INVENTORY_O_S5] = new_object("assets/inventory.png",
@@ -78,26 +76,28 @@ void fill_scene_camp2(game_scene_t camp)
     camp.sounds[WALK_S_S5] = new_sound("assets/walk_forest.ogg", sfFalse, 100);
     camp.sounds[SWORD_S_S5] = new_sound("assets/swoosh.ogg", sfFalse, 100);
     camp.texts[VOLUME_T_S5] = new_text("assets/font.ttf", "Volume:",
-    (sfVector2f) {425, 45}, 16);
-    camp.texts[NAME_T_S5] = new_text("assets/font.ttf", "Name:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 400}, 40);
     camp.texts[VSYNC_T_S5] = new_text("assets/font.ttf", "V-sync:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 500}, 40);
+    camp.texts[FRAME_T_S5] = new_text("assets/font.ttf", "Framerate:",
+    (sfVector2f) {640, 580}, 40);
+    camp.texts[NAME_T_S5] = new_text("assets/font.ttf", "Name:",
+    (sfVector2f) {700, 400}, 40);
     camp.texts[XP_T_S5] = new_text("assets/font.ttf", "XP:",
-    (sfVector2f) {425, 45}, 16);
-    camp.texts[POS_T_S5] = new_text("assets/font.ttf", "Position:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 450}, 40);
+    camp.texts[LIFE_T_S5] = new_text("assets/font.ttf", "Life:",
+    (sfVector2f) {700, 500}, 40);
     fill_scene_camp3(camp);
 }
 
 void fill_scene_camp1(game_scene_t camp)
 {
     camp.buttons[TITLE_B_S5] = new_button("assets/exit_menu.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, -1);
+    (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
     camp.buttons[DESKTOP_B_S5] = new_button("assets/exit_desktop.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);
+    (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
     camp.buttons[CLOSE_B_S5] = new_button("assets/close.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, -1);
+    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
     camp.buttons[V0_B_S5] = new_button("assets/0.png",
     (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     camp.buttons[V25_B_S5] = new_button("assets/25.png",
@@ -110,8 +110,6 @@ void fill_scene_camp1(game_scene_t camp)
     (sfVector2f) {850, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
     camp.buttons[OFF_B_S5] = new_button("assets/off.png",
     (sfVector2f) {955, 515}, (sfIntRect) {0, 0, 75, 25}, -1);
-    camp.buttons[F30_B_S5] = new_button("assets/30.png",
-    (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
     camp.buttons[F30_B_S5] = new_button("assets/30.png",
     (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
     camp.buttons[F60_B_S5] = new_button("assets/60.png",

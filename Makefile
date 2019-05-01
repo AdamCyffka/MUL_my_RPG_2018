@@ -37,10 +37,16 @@ SRC		=	./src/create_game3.c 					\
 			./src/my_libc_functions.c 				\
 			./src/my_libc_functions2.c 				\
 			./src/npc_interaction.c 				\
-			./src/buttons/button_event.c 			\
-			./src/buttons/button_main_menu.c		\
-			./src/buttons/button_town.c 			\
-			./src/buttons/button_town2.c 			\
+			./src/buttons/button_close.c 			\
+			./src/buttons/button_event.c			\
+			./src/buttons/button_exit.c 			\
+			./src/buttons/button_inventory.c 		\
+			./src/buttons/button_main_menu.c 		\
+			./src/buttons/button_me.c 				\
+			./src/buttons/button_option.c 			\
+			./src/buttons/button_ui_ig.c 			\
+			./src/buttons/other_options.c 			\
+			./src/buttons/volume_management.c 		\
 			./src/change/change_main_menu.c			\
 			./src/change/change_maps.c 				\
 			./src/change/change_selection_maps.c 	\
@@ -50,7 +56,7 @@ SRC		=	./src/create_game3.c 					\
 			./src/player/player_change_map.c		\
 			./src/player/player_attack.c			\
 			./src/player/player_rect.c				\
-			./src/player/player_interaction.c			\
+			./src/player/player_interaction.c		\
 			./src/enemies/enemies_die.c				\
 			./src/enemies/enemies_moves.c			\
 			./src/enemies/enemies_positions.c		\
@@ -123,10 +129,15 @@ wc:
 
 clean	:
 			@$(RM) $(OBJS)
+			@$(RM) ./*.gcda
+			@$(RM) ./*.gcno
+			@$(RM) rapport.info
+			@$(RM) ./report
 			@$(ECHO) "$(GREEN)\n> Cleaning repository\t >>>>> \t DONE\n$(WHITE)"
 
-fclean	: 	clean
+fclean	: 	clean 
 			@$(RM) $(NAME)
+			@$(RM) $(TEST_NAME)
 			@$(ECHO) "$(GREEN)\n> Cleaning exec\t\t >>>>> \t DONE\n$(WHITE)"
 
 re		:	fclean all

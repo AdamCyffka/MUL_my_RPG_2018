@@ -58,17 +58,17 @@ void fill_scene_forest4(game_scene_t forest)
 void fill_scene_forest3(game_scene_t forest)
 {
     forest.texts[VOLUME_T_S3] = new_text("assets/font.ttf", "Volume:",
-    (sfVector2f) {425, 45}, 16);
-    forest.texts[NAME_T_S3] = new_text("assets/font.ttf", "Name:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 400}, 40);
     forest.texts[VSYNC_T_S3] = new_text("assets/font.ttf", "V-sync:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 500}, 40);
+    forest.texts[FRAME_T_S3] = new_text("assets/font.ttf", "Framerate:",
+    (sfVector2f) {640, 580}, 40);
+    forest.texts[NAME_T_S3] = new_text("assets/font.ttf", "Name:",
+    (sfVector2f) {700, 400}, 40);
     forest.texts[XP_T_S3] = new_text("assets/font.ttf", "XP:",
-    (sfVector2f) {425, 45}, 16);
-    forest.texts[POS_T_S3] = new_text("assets/font.ttf", "Position:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 450}, 40);
     forest.texts[LIFE_T_S3] = new_text("assets/font.ttf", "Life:",
-    (sfVector2f) {425, 45}, 16);
+    (sfVector2f) {700, 500}, 40);
     forest.objs[OPTION_O_S3] = new_object("assets/option.png",
     (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     forest.objs[INVENTORY_O_S3] = new_object("assets/inventory.png",
@@ -114,11 +114,11 @@ void fill_scene_forest2(game_scene_t forest)
 void fill_scene_forest1(game_scene_t forest)
 {
     forest.buttons[TITLE_B_S3] = new_button("assets/exit_menu.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 280, 96}, -1);
+    (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
     forest.buttons[DESKTOP_B_S3] = new_button("assets/exit_desktop.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 336, 96}, -1);
+    (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
     forest.buttons[CLOSE_B_S3] = new_button("assets/close.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, -1);
+    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
     forest.buttons[V0_B_S3] = new_button("assets/0.png",
     (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     forest.buttons[V25_B_S3] = new_button("assets/25.png",

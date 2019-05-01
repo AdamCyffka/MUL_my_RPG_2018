@@ -34,12 +34,6 @@ void fill_scene_town5(game_scene_t town)
 
 void fill_scene_town4(game_scene_t town)
 {
-    town.texts[NAME_T_S1] = new_text("assets/font.ttf", "Name:",
-    (sfVector2f) {700, 400}, 40);
-    town.texts[XP_T_S1] = new_text("assets/font.ttf", "XP:",
-    (sfVector2f) {700, 450}, 40);
-    town.texts[LIFE_T_S1] = new_text("assets/font.ttf", "Life:",
-    (sfVector2f) {700, 500}, 40);
     town.objs[OBSTACLE_O_S1] = new_object("assets/obstacle.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 1);
     town.objs[OPTION_O_S1] = new_object("assets/option.png",
@@ -81,6 +75,12 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {700, 500}, 40);
     town.texts[FRAME_T_S1] = new_text("assets/font.ttf", "Framerate:",
     (sfVector2f) {640, 580}, 40);
+    town.texts[NAME_T_S1] = new_text("assets/font.ttf", "Name:",
+    (sfVector2f) {700, 400}, 40);
+    town.texts[XP_T_S1] = new_text("assets/font.ttf", "XP:",
+    (sfVector2f) {700, 450}, 40);
+    town.texts[LIFE_T_S1] = new_text("assets/font.ttf", "Life:",
+    (sfVector2f) {700, 500}, 40);
     fill_scene_town4(town);
 }
 

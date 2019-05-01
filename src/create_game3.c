@@ -31,7 +31,7 @@ void create_settings(game_setting_t *settings)
     settings->last_time = 0;
     settings->delta_time = 0;
     settings->_paused = false;
-    settings->current = TOWN;
+    settings->current = MAIN_MENU;
     sfRenderWindow_setFramerateLimit(settings->window, 60);
     sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }
