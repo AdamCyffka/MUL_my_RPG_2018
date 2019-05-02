@@ -215,4 +215,7 @@ void particules_move(game_t *game);
 //refresh_player_data.c
 void refresh_player_data(game_stat_t *stats);
 
+//DICK
+void dick_move_to_spawn(game_t *game);
+
 #endif /* RPG_H_ */
