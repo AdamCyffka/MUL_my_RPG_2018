@@ -9,7 +9,7 @@
 #include "struct.h"
 #include "enum.h"
 
-void rect_die(game_t *game, int tmp)
+void boss_die(game_t *game, int tmp)
 {
     if (game->settings->current == BOSS) {
         if (game->scenes[game->settings->current].objs[tmp].speed < 45)
@@ -27,6 +27,13 @@ void rect_die(game_t *game, int tmp)
         game->scenes[game->settings->current].objs[tmp].sprite,
         game->scenes[game->settings->current].objs[tmp].rect);
     game->scenes[game->settings->current].objs[tmp].speed = 0;
+}
+
+void rect_die(game_t *game, int tmp)
+{
+    boss_die(game, tmp);
+    if (game->settings->current == BOSS)
+        return;
     if (game->settings->current == CAMP
         && game->quests[GOLEMS_Q].progress < game->quests[GOLEMS_Q].nb_of_task)
         game->quests[GOLEMS_Q].progress++;
@@ -88,26 +95,19 @@ void enemies_die(game_t *game, int tmp)
 
 void enemies_detect_hit(game_t *game)
 {
-    if (game->settings->current == BEACH) {
-        for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++) {
+    if (game->settings->current == BEACH)
+        for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++)
             if (game->scenes[BEACH].objs[tmp].speed > 0)
                 enemies_die(game, tmp);
-        }
-    }
-    if (game->settings->current == CAMP) {
-        for (int tmp = GOLEM1_O_S5; tmp <= GOLEM10_O_S5; tmp++) {
+    if (game->settings->current == CAMP)
+        for (int tmp = GOLEM1_O_S5; tmp <= GOLEM10_O_S5; tmp++)
             if (game->scenes[CAMP].objs[tmp].speed > 0)
                 enemies_die(game, tmp);
-        }
-    }
-    if (game->settings->current == FOREST) {
-        for (int tmp = GHOST1_O_S3; tmp <= GHOST15_O_S3; tmp++) {
+    if (game->settings->current == FOREST)
+        for (int tmp = GHOST1_O_S3; tmp <= GHOST15_O_S3; tmp++)
             if (game->scenes[FOREST].objs[tmp].speed > 0)
                 enemies_die(game, tmp);
-        }
-    }
-    if (game->settings->current == BOSS) {
-        if (game->scenes[BOSS].objs[SHAMAN_O_S2].speed > 0)
+    if (game->settings->current == BOSS &&
+        game->scenes[BOSS].objs[SHAMAN_O_S2].speed > 0)
                 enemies_die(game, SHAMAN_O_S2);
-    }
 }

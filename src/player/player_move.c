@@ -55,21 +55,18 @@ void move_window(game_setting_t *settings, game_stat_t *stats)
     if (settings->current == CAMP || settings->current == BEACH)
         return;
     if (player_pos_view(vector_view, stats) == 1) return;
-    if (sfKeyboard_isKeyPressed(sfKeyD)) {
+    if (sfKeyboard_isKeyPressed(sfKeyD))
         if (vector_view.x < 3390)
             vector_view.x += 40 * settings->delta_time;
-    }
-    if (sfKeyboard_isKeyPressed(sfKeyQ)) {
+    if (sfKeyboard_isKeyPressed(sfKeyQ))
         if (vector_view.x > 960)
             vector_view.x -= 40 * settings->delta_time;
-    }
     if (sfKeyboard_isKeyPressed(sfKeyZ))
         if (vector_view.y > 540)
             vector_view.y -= 40 * settings->delta_time;
-    if (sfKeyboard_isKeyPressed(sfKeyS)) {
+    if (sfKeyboard_isKeyPressed(sfKeyS))
         if (vector_view.y < 3225)
             vector_view.y += 40 * settings->delta_time;
-    }
     change_vector_view(settings, vector_view);
 }
 
