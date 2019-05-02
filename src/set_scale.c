@@ -32,6 +32,8 @@ void set_scale(game_t *game)
         (sfVector2f) {3.5, 3.5});
         sfSprite_setScale(game->scenes[BOSS].objs[OBSTACLE_O_S2].sprite,
         (sfVector2f) {3.5, 3.5});
+        sfSprite_setScale(game->scenes[BOSS].objs[SHAMAN_O_S2].sprite,
+        (sfVector2f) {7, 7});
     }
     if (game->settings->current == BEACH) {
         for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++) {

@@ -14,15 +14,15 @@ void create_scenes(game_scene_t *scenes)
 {
     scenes[MAIN_MENU] = new_scene(11, 2, 9, 1);
     fill_scene_main_menu1(scenes[MAIN_MENU]);
-    scenes[TOWN] = new_scene(23, 4, 46, 6);
+    scenes[TOWN] = new_scene(24, 4, 46, 6);
     fill_scene_town1(scenes[TOWN]);
-    scenes[BOSS] = new_scene(12, 4, 32, 6);
+    scenes[BOSS] = new_scene(13, 4, 32, 5);
     fill_scene_boss1(scenes[BOSS]);
-    scenes[FOREST] = new_scene(24, 4, 25, 6);
+    scenes[FOREST] = new_scene(25, 4, 25, 5);
     fill_scene_forest1(scenes[FOREST]);
-    scenes[BEACH] = new_scene(29, 4, 18, 6);
+    scenes[BEACH] = new_scene(30, 4, 18, 5);
     fill_scene_beach1(scenes[BEACH]);
-    scenes[CAMP] = new_scene(19, 4, 20, 6);
+    scenes[CAMP] = new_scene(20, 4, 20, 5);
     fill_scene_camp1(scenes[CAMP]);
     scenes[VICTORY] = new_scene(3, 1, 2, 1);
     fill_scene_victory(scenes[VICTORY]);

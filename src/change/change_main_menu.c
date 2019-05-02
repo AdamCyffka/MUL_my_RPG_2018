@@ -26,7 +26,8 @@ void move_position_flamingo(game_scene_t *scene, float delta_time)
     * delta_time;
 }
 
-void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene, float delta_time)
+void move_sprite_main_menu(game_setting_t *settings,
+    game_scene_t *scene, float delta_time)
 {
     move_position_flamingo(scene, delta_time);
     if (settings->last_time < (settings->timers.main_menu + 1))
@@ -51,14 +52,15 @@ void change_view_main_menu(game_setting_t *settings)
     sfRenderWindow_setView(settings->window, view);
 }
 
-void change_main_menu(game_setting_t *settings, game_scene_t *scene, game_stat_t *stats)
+void change_main_menu(game_setting_t *settings,
+    game_scene_t *scene, game_stat_t *stats)
 {
-    sfSprite_setPosition(stats->player.sprite,(sfVector2f) {750, 450});
+    sfSprite_setPosition(stats->player.sprite, (sfVector2f) {750, 450});
     sfSprite_setTextureRect(stats->player.sprite, (sfIntRect) {0, 0, 16, 32});
     button_menu(settings, scene[MAIN_MENU], stats);
     for (int i = 0; i < scene->how_many[0]; i++) {
         sfSprite_setTextureRect(scene->objs[i].sprite, scene->objs[i].rect);
         sfSprite_setPosition(scene->objs[i].sprite,
-                             scene->objs[i].position);
+        scene->objs[i].position);
     }
 }

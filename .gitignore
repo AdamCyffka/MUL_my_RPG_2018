@@ -1,8 +1,12 @@
 # Created by https://www.gitignore.io/api/c
 # Edit at https://www.gitignore.io/?templates=c
 
+#test
+report
+
 # binary
 my_rpg
+units
 
 ### C ###
 # Prerequisites

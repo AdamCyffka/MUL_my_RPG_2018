@@ -11,7 +11,6 @@
 
 void change_town(game_t *game)
 {
-    button_town(game->settings, game->scenes[TOWN]);
     change_statics_pos_town(game->scenes[TOWN], game->settings);
 }
 
@@ -36,6 +35,5 @@ game_quest_t *quests)
 void change_camp(game_setting_t *settings, game_scene_t scene,
 game_quest_t *quests)
 {
-    //button_camp(settings, scene);
     change_statics_pos_camp(scene, settings);
 }
