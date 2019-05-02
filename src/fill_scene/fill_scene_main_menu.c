@@ -15,9 +15,10 @@ void fill_scene_main_menu3(game_scene_t main_menu)
     (sfVector2f) {700, 340}, (sfIntRect) {0, 0, 148, 122}, 0);
     main_menu.texts[NAME_T_S0] = new_text("assets/font/font.ttf", "Name:",
     (sfVector2f) {875, 495}, 40);
-    main_menu.sounds[MUSIC_S_S0] = new_sound("assets/sounds/music_menu.ogg", sfFalse,
-    100);
-    main_menu.sounds[CLICK_S_S0] = new_sound("assets/sounds/click.ogg", sfFalse, 100);
+    main_menu.sounds[MUSIC_S_S0] = new_sound("assets/sounds/music_menu.ogg",
+    sfFalse, 100);
+    main_menu.sounds[CLICK_S_S0] = new_sound("assets/sounds/click.ogg",
+    sfFalse, 100);
 }
 
 void fill_scene_main_menu2(game_scene_t main_menu)
@@ -32,7 +33,8 @@ void fill_scene_main_menu2(game_scene_t main_menu)
     (sfVector2f) {1210, 615}, (sfIntRect) {0, 0, 79, 84}, -1);
     main_menu.buttons[CLOSE_B_S0] = new_button("assets/images/close.png",
     (sfVector2f) {1555, 175}, (sfIntRect) {0, 0, 30, 30}, -1);
-    main_menu.buttons[CREDITS_B_S0] = new_button("assets/images/button_credits.png",
+    main_menu.buttons[CREDITS_B_S0] = new_button(
+    "assets/images/button_credits.png",
     (sfVector2f) {1800, 900}, (sfIntRect) {0, 0, 40, 45}, 0);
     main_menu.buttons[LOAD_B_S0] = new_button("assets/images/button_load.png",
     (sfVector2f) {900, 340}, (sfIntRect) {0, 0, 148, 122}, 0);

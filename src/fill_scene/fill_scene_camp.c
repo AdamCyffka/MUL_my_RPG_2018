@@ -74,9 +74,12 @@ void fill_scene_camp2(game_scene_t camp)
     (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     camp.sounds[MUSIC_S_S5] = new_sound("assets/sounds/music_camp.ogg", sfFalse,
     100);
-    camp.sounds[CLICK_S_S5] = new_sound("assets/sounds/click.ogg", sfFalse, 100);
-    camp.sounds[WALK_S_S5] = new_sound("assets/sounds/walk_forest.ogg", sfFalse, 100);
-    camp.sounds[SWORD_S_S5] = new_sound("assets/sounds/swoosh.ogg", sfFalse, 100);
+    camp.sounds[CLICK_S_S5] = new_sound("assets/sounds/click.ogg",
+    sfFalse, 100);
+    camp.sounds[WALK_S_S5] = new_sound("assets/sounds/walk_forest.ogg",
+    sfFalse, 100);
+    camp.sounds[SWORD_S_S5] = new_sound("assets/sounds/swoosh.ogg",
+    sfFalse, 100);
     camp.texts[VOLUME_T_S5] = new_text("assets/font/font.ttf", "Volume:",
     (sfVector2f) {700, 400}, 40);
     camp.texts[VSYNC_T_S5] = new_text("assets/font/font.ttf", "V-sync:",

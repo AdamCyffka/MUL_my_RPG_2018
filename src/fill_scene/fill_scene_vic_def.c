@@ -21,8 +21,8 @@ void fill_scene_victory(game_scene_t victory)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, 0);
     victory.objs[CURSOR_O_S6] = new_object("assets/images/cursor.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, 0);
-    victory.texts[VICTORY_T_S6] = new_text("assets/font/font.ttf", "GREAT, YOU WIN",
-    (sfVector2f) {425, 45}, 16);
+    victory.texts[VICTORY_T_S6] = new_text("assets/font/font.ttf",
+    "GREAT, YOU WIN", (sfVector2f) {425, 45}, 16);
     victory.sounds[SOUND_S_S6] = new_sound("assets/sounds/victory.ogg", sfFalse,
     100);
 }
