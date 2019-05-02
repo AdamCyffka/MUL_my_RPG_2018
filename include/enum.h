@@ -166,6 +166,7 @@ enum town {
     SHEEP3_O_S1,
     SHEEP4_O_S1,
     SHEEP5_O_S1,
+    LEAF_O_S1,
     PANNEL_O_S1,
     MINIMAP_O_S1,
     QUEST_O_S1,

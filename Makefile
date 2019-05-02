@@ -39,13 +39,13 @@ SRC		=	./src/my_rpg.c							\
 			./src/create_game/create_game3.c 		\
 			./src/create_game/create_game2.c 		\
 			./src/create_game/create_game.c			\
-			./src/buttons/button_close.c 			\
 			./src/buttons/button_event.c			\
-			./src/buttons/button_exit.c 			\
-			./src/buttons/button_inventory.c 		\
 			./src/buttons/button_main_menu.c 		\
-			./src/buttons/button_me.c 				\
-			./src/buttons/button_option.c 			\
+			./src/buttons/menu/button_close.c		\
+			./src/buttons/menu/button_exit.c 		\
+			./src/buttons/menu/button_inventory.c	\
+			./src/buttons/menu/button_me.c 			\
+			./src/buttons/menu/button_option.c 		\
 			./src/buttons/button_ui_ig.c 			\
 			./src/buttons/other_options.c 			\
 			./src/buttons/volume_management.c 		\
@@ -59,6 +59,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/player/player_attack.c			\
 			./src/player/player_rect.c				\
 			./src/player/player_interaction.c		\
+			./src/player/player_data_refresh.c		\
 			./src/enemies/enemies_die.c				\
 			./src/enemies/enemies_moves.c			\
 			./src/enemies/enemies_positions.c		\
@@ -75,6 +76,8 @@ SRC		=	./src/my_rpg.c							\
 			./src/fill_quest/fill_quest0_4.c		\
 			./src/fill_quest/fill_quest5_9.c		\
 			./src/fill_quest/fill_quest10_12.c		\
+			./src/particules.c				\
+			./src/dick_move.c					\
 			./src/write_text.c
 
 SRC_TEST	= 	./tests/my_putstr_test.c \

@@ -172,6 +172,7 @@ void my_putchar(char c);
 int my_strcmp(char const *str1, char const *str2);
 char *my_stradd(const char *str, char toadd);
 char *my_strrem(const char *str);
+char *my_getstr(int nb);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
@@ -212,4 +213,14 @@ void fill_inventory(game_inventory_t *inventory, int content);
 void delete_item_inventory(game_inventory_t *inventory, int reward);
 void change_item_texture(game_inventory_t *inventory, char const *path, 
 int reward, int tmp);
+
+//PARTICULES
+void particules_move(game_t *game);
+
+//refresh_player_data.c
+void refresh_player_data(game_stat_t *stats);
+
+//DICK
+void dick_move_to_spawn(game_t *game);
+
 #endif /* RPG_H_ */

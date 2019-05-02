@@ -47,12 +47,12 @@ Josh, it's our blacksmith, he'll give you what you need to fight.\n"
     #define Q1_DIAL0 "Hi it's great that you're here. Here is a sword, I just \
 forged it.\n"
     #define Q1_DIAL1 "You should speak to Emily, she lives at the north of the \
-city,she'll have things for you to do.\n"
+city, she'll have things for you to do.\n"
 
 //QUEST EMILY_Q
     #define Q2_BOOK "SPEAK TO EMILY AT THE NORTH OF THE TOWN"
     #define Q2_DIAL0 "Hello, nice to meet you. There are golems blocking the \
-passage across the bridge to the camp,\ncould you help me with this ?\n"
+passage across the bridge to the camp, \ncould you help me with this ?\n"
     #define Q2_DIAL1 "Wonderful ! Kill them all !\n"
 
 //QUEST GOLEMS_Q
@@ -92,7 +92,7 @@ They are beautiful trees down there\n"
     #define Q8_DIAL0 "See this wonderful pink tree. He's older than everyone \
 in this town\n Anyway, Let's play a game...\n"
     #define Q8_DIAL1 "If you win, i'll give you a better armor to fight. \
-Count the number of sheeps in the town,\nyou'll have to tell me the right \
+Count the number of sheeps in the town, \nyou'll have to tell me the right \
 number if you want the armor\n"
 
 //QUEST SHEEP_COUNT_Q
