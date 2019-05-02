@@ -74,8 +74,8 @@ int my_rpg(void)
         if (game->settings->current != MAIN_MENU) {
             draw_quest(game->quests, game->settings);
             draw_inventory(game->inventory, game->settings);
-            draw_player_info(game);
         }
+        draw_player_info(game);
         while (sfRenderWindow_pollEvent(game->settings->window,
         &game->settings->event))
             analyse_events(game);

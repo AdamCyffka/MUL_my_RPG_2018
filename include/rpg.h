@@ -163,6 +163,7 @@ char *my_strcpy(char *str, char *dest);
 void my_putstr(char *str);
 int my_strcmp(char const *str1, char const *str2);
 char *my_stradd(const char *str, char toadd);
+char *my_strrem(const char *str);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,

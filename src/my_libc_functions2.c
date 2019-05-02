@@ -28,6 +28,8 @@ char *my_stradd(const char *str, char toadd)
 	char *new_str = malloc(sizeof(char) * (my_strlen(str) + 2));
 	int tmp = 0;
 
+	if (new_str == NULL)
+		return NULL;
 	for (int tmp2 = 0; str[tmp2]; tmp2++) {
 		new_str[tmp] = str[tmp2];
 		tmp++;
@@ -35,4 +37,17 @@ char *my_stradd(const char *str, char toadd)
 	new_str[tmp] = toadd;
 	new_str[tmp + 1] = '\0';
 	return (new_str);
+}
+
+char *my_strrem(const char *str)
+{
+	char *ret = malloc(sizeof(char) * my_strlen(str));
+	int tmp = 0;
+
+	if (ret == NULL)
+		return NULL;
+	for (; tmp < my_strlen(str) - 1; tmp++)
+		ret[tmp] = str[tmp];
+	ret[tmp] = '\0';
+	return ret;
 }
