@@ -15,11 +15,11 @@ void create_stats(game_stat_t *stats)
     stats->life = 100;
     stats->xp = 0;
     stats->life_t = new_text("assets/font/font.ttf", "100", (sfVector2f)
-    {850, 500}, 24);
+    {1810, 932}, 34);
     stats->xp_t = new_text("assets/font/font.ttf", "0", (sfVector2f)
-    {850, 500}, 24);
+    {895, 460}, 32);
     stats->name_t = new_text("assets/font/font.ttf", "'PLAYER'", (sfVector2f)
-    {1000, 505}, 28);
+    {1000, 505}, 32);
     stats->_mov_allowed = false;
     stats->player = new_object("assets/images/girl1.png",
     (sfVector2f) {300, 500}, (sfIntRect) {0, 32, 16, 32}, 5);
@@ -36,7 +36,7 @@ void create_settings(game_setting_t *settings)
     settings->last_time = 0;
     settings->delta_time = 0;
     settings->_paused = false;
-    settings->current = TOWN;
+    settings->current = MAIN_MENU;
     sfRenderWindow_setFramerateLimit(settings->window, 60);
     sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }

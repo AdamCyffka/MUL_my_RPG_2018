@@ -84,7 +84,7 @@ void fill_scene_town6(game_scene_t town)
     (sfVector2f) {1700, 910}, (sfIntRect) {0, 0, 209, 85}, 0);
     town.objs[ICON_O_S1] = new_object("assets/images/icon.png",
     (sfVector2f) {10, 910}, (sfIntRect) {0, 0, 100, 100}, 0);
-    town.objs[AXE_O_S1] = new_object("assets/icon_axe.png",
+    town.objs[AXE_O_S1] = new_object("assets/images/icon_axe.png",
     (sfVector2f) {780 * 3.5, 80 * 3.5}, (sfIntRect) {0, 0, 50, 50}, 0);
     fill_scene_town7(town);
 }
