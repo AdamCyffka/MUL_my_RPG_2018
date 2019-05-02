@@ -26,7 +26,7 @@ int digits(int nb)
 char *my_getstr(int nb)
 {
     int i = digits(nb);
-    char *my_result = malloc(sizeof(char) * i);
+    char *my_result = malloc(sizeof(char) * i + 1);
 
     if (my_result == NULL)
         return NULL;

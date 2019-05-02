@@ -171,6 +171,7 @@ void my_putchar(char c);
 int my_strcmp(char const *str1, char const *str2);
 char *my_stradd(const char *str, char toadd);
 char *my_strrem(const char *str);
+char *my_getstr(int nb);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
@@ -210,5 +211,8 @@ int reward, int tmp);
 
 //PARTICULES
 void particules_move(game_t *game);
+
+//refresh_player_data.c
+void refresh_player_data(game_stat_t *stats);
 
 #endif /* RPG_H_ */

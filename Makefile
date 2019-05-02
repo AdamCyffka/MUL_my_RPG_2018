@@ -58,6 +58,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/player/player_attack.c			\
 			./src/player/player_rect.c				\
 			./src/player/player_interaction.c		\
+			./src/player/player_data_refresh.c		\
 			./src/enemies/enemies_die.c				\
 			./src/enemies/enemies_moves.c			\
 			./src/enemies/enemies_positions.c		\
@@ -74,7 +75,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/fill_quest/fill_quest0_4.c		\
 			./src/fill_quest/fill_quest5_9.c		\
 			./src/fill_quest/fill_quest10_12.c		\
-			./src/particules.c				\
+			./src/particules.c						\
 			./src/write_text.c
 
 SRC_TEST	= 	./tests/my_putstr_test.c \
