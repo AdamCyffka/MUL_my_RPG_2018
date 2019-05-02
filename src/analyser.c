@@ -53,6 +53,7 @@ void analyse_events(game_t *game)
             enter_player_name(game->stats, game->settings);
         if (game->settings->current == TOWN && game->quests[SHEEP_COUNT_Q].state
         == Q_IN_PROGRESS)
-            enter_quest_answer(game);
+            enter_quest_answer(game->scenes[TOWN].texts[QUEST_ANS_T_S1],
+            game->settings);
     }
 }

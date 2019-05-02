@@ -76,7 +76,8 @@ int save_player_stats(game_t *game);
 int load_player_stats(game_t *game);
 
 //buttons
-void all_button(game_setting_t *settings, game_scene_t *scenes);
+void all_button(game_setting_t *settings, game_scene_t *scenes,
+game_stat_t *stats);
 void button_inventory1(game_scene_t *scenes, int enable, int disable);
 void button_option1(game_scene_t *scenes, int enable, int disable);
 void button_exit1(game_scene_t *scenes, int enable, int disable);
@@ -200,7 +201,7 @@ void rect_chose(sfVector2f vector, game_t *game, int tmp);
 
 //write_text.c
 int text_entered(game_setting_t *settings);
-void enter_quest_answer(game_t *game);
+void enter_quest_answer(game_text_t quest_answer, game_setting_t *settings);
 void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
 void fill_inventory(game_inventory_t *inventory, int content);
