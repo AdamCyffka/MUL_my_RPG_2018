@@ -38,13 +38,13 @@ SRC		=	./src/my_rpg.c							\
 			./src/create_game/create_game3.c 		\
 			./src/create_game/create_game2.c 		\
 			./src/create_game/create_game.c			\
-			./src/buttons/button_close.c 			\
 			./src/buttons/button_event.c			\
-			./src/buttons/button_exit.c 			\
-			./src/buttons/button_inventory.c 		\
 			./src/buttons/button_main_menu.c 		\
-			./src/buttons/button_me.c 				\
-			./src/buttons/button_option.c 			\
+			./src/buttons/menu/button_close.c		\
+			./src/buttons/menu/button_exit.c 		\
+			./src/buttons/menu/button_inventory.c	\
+			./src/buttons/menu/button_me.c 			\
+			./src/buttons/menu/button_option.c 		\
 			./src/buttons/button_ui_ig.c 			\
 			./src/buttons/other_options.c 			\
 			./src/buttons/volume_management.c 		\

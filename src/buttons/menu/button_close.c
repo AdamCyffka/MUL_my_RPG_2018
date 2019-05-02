@@ -9,14 +9,24 @@
 #include "struct.h"
 #include "enum.h"
 
-void button_close6(game_scene_t *scenes, int enable, int disable)
+void button_close7(game_scene_t *scenes, int enable, int disable)
 {
+    scenes[BEACH].texts[NAME_T_S4].state = ((enable == 1) ? disable : enable);
+    scenes[CAMP].texts[NAME_T_S5].state = ((enable == 1) ? disable : enable);
+    scenes[TOWN].texts[XP_T_S1].state = ((enable == 1) ? disable : enable);
+    scenes[BOSS].texts[XP_T_S2].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].texts[XP_T_S3].state = ((enable == 1) ? disable : enable);
     scenes[BEACH].texts[XP_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[XP_T_S5].state = ((enable == 1) ? disable : enable);
 }
 
-void button_close5(game_scene_t *scenes, int enable, int disable)
+void button_close6(game_scene_t *scenes, int enable, int disable)
 {
+    scenes[TOWN].texts[VOLUME_T_S1].state = ((enable == 1) ? disable : enable);
+    scenes[BOSS].texts[VOLUME_T_S2].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].texts[VOLUME_T_S3].state = ((enable == 1) ? disable :
+    enable);
+    scenes[BEACH].texts[VOLUME_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[VOLUME_T_S5].state = ((enable == 1) ? disable : enable);
     scenes[TOWN].texts[FRAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes[BOSS].texts[FRAME_T_S2].state = ((enable == 1) ? disable : enable);
@@ -31,16 +41,16 @@ void button_close5(game_scene_t *scenes, int enable, int disable)
     scenes[TOWN].texts[NAME_T_S1].state = ((enable == 1) ? disable : enable);
     scenes[BOSS].texts[NAME_T_S2].state = ((enable == 1) ? disable : enable);
     scenes[FOREST].texts[NAME_T_S3].state = ((enable == 1) ? disable : enable);
-    scenes[BEACH].texts[NAME_T_S4].state = ((enable == 1) ? disable : enable);
-    scenes[CAMP].texts[NAME_T_S5].state = ((enable == 1) ? disable : enable);
-    scenes[TOWN].texts[XP_T_S1].state = ((enable == 1) ? disable : enable);
-    scenes[BOSS].texts[XP_T_S2].state = ((enable == 1) ? disable : enable);
-    scenes[FOREST].texts[XP_T_S3].state = ((enable == 1) ? disable : enable);
-    button_close6(scenes, 1, -1);
+    button_close7(scenes, 1, -1);
 }
 
-void button_close4(game_scene_t *scenes, int enable, int disable)
+void button_close5(game_scene_t *scenes, int enable, int disable)
 {
+    scenes[CAMP].buttons[V50_B_S5].state = ((enable == 1) ? disable : enable);
+    scenes[TOWN].buttons[V50_B_S1].state = ((enable == 1) ? disable : enable);
+    scenes[BOSS].buttons[V50_B_S2].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].buttons[V50_B_S3].state = ((enable == 1) ? disable : enable);
+    scenes[BEACH].buttons[V50_B_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].buttons[V50_B_S5].state = ((enable == 1) ? disable : enable);
     scenes[TOWN].buttons[V100_B_S1].state = ((enable == 1) ? disable : enable);
     scenes[BOSS].buttons[V100_B_S2].state = ((enable == 1) ? disable : enable);
@@ -55,11 +65,30 @@ void button_close4(game_scene_t *scenes, int enable, int disable)
     scenes[BEACH].buttons[CLOSE_B_S4].state = ((enable == 1) ? disable :
     enable);
     scenes[CAMP].buttons[CLOSE_B_S5].state = ((enable == 1) ? disable : enable);
-    scenes[TOWN].texts[VOLUME_T_S1].state = ((enable == 1) ? disable : enable);
-    scenes[BOSS].texts[VOLUME_T_S2].state = ((enable == 1) ? disable : enable);
-    scenes[FOREST].texts[VOLUME_T_S3].state = ((enable == 1) ? disable :
-    enable);
-    scenes[BEACH].texts[VOLUME_T_S4].state = ((enable == 1) ? disable : enable);
+    button_close6(scenes, 1, -1);
+}
+
+void button_close4(game_scene_t *scenes, int enable, int disable)
+{
+    scenes[TOWN].buttons[F60_B_S1].state = ((enable == 1) ? disable : enable);
+    scenes[BOSS].buttons[F60_B_S2].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].buttons[F60_B_S3].state = ((enable == 1) ? disable : enable);
+    scenes[BEACH].buttons[F60_B_S4].state = ((enable == 1) ? disable : enable);
+    scenes[CAMP].buttons[F60_B_S5].state = ((enable == 1) ? disable : enable);
+    scenes[TOWN].buttons[V0_B_S1].state = ((enable == 1) ? disable : enable);
+    scenes[BOSS].buttons[V0_B_S2].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].buttons[V0_B_S3].state = ((enable == 1) ? disable : enable);
+    scenes[BEACH].buttons[V0_B_S4].state = ((enable == 1) ? disable : enable);
+    scenes[CAMP].buttons[V0_B_S5].state = ((enable == 1) ? disable : enable);
+    scenes[TOWN].buttons[V25_B_S1].state = ((enable == 1) ? disable : enable);
+    scenes[BOSS].buttons[V25_B_S2].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].buttons[V25_B_S3].state = ((enable == 1) ? disable : enable);
+    scenes[BEACH].buttons[V25_B_S4].state = ((enable == 1) ? disable : enable);
+    scenes[CAMP].buttons[V25_B_S5].state = ((enable == 1) ? disable : enable);
+    scenes[TOWN].buttons[V50_B_S1].state = ((enable == 1) ? disable : enable);
+    scenes[BOSS].buttons[V50_B_S2].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].buttons[V50_B_S3].state = ((enable == 1) ? disable : enable);
+    scenes[BEACH].buttons[V50_B_S4].state = ((enable == 1) ? disable : enable);
     button_close5(scenes, 1, -1);
 }
 
