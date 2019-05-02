@@ -13,11 +13,6 @@ void button_close6(game_scene_t *scenes, int enable, int disable)
 {
     scenes[BEACH].texts[XP_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[XP_T_S5].state = ((enable == 1) ? disable : enable);
-    scenes[TOWN].texts[LIFE_T_S1].state = ((enable == 1) ? enable : disable);
-    scenes[BOSS].texts[LIFE_T_S2].state = ((enable == 1) ? enable : disable);
-    scenes[FOREST].texts[LIFE_T_S3].state = ((enable == 1) ? enable : disable);
-    scenes[BEACH].texts[LIFE_T_S4].state = ((enable == 1) ? enable : disable);
-    scenes[FOREST].texts[LIFE_T_S5].state = ((enable == 1) ? enable : disable);
 }
 
 void button_close5(game_scene_t *scenes, int enable, int disable)

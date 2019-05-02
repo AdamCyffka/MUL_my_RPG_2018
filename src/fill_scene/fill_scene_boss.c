@@ -42,7 +42,7 @@ void fill_scene_boss4(game_scene_t boss)
     boss.buttons[WALKABLE17_B_S2] = new_button("assets/images/invisible.png",
     (sfVector2f) {890, 790}, (sfIntRect) {0, 0, 359, 36}, 0);
     boss.objs[OBSTACLE_O_S2] = new_object("assets/images/obstacle.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 1);
     boss.objs[TOWN_O_S2] = new_object("assets/images/map_town.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
     boss.objs[SHAMAN_O_S2] = new_object("assets/images/shaman.png",
@@ -88,8 +88,6 @@ void fill_scene_boss3(game_scene_t boss)
     (sfVector2f) {700, 400}, 40);
     boss.texts[XP_T_S2] = new_text("assets/font/font.ttf", "XP:",
     (sfVector2f) {700, 450}, 40);
-    boss.texts[LIFE_T_S2] = new_text("assets/font/font.ttf", "Life:",
-    (sfVector2f) {1730, 926}, 40);
     fill_scene_boss4(boss);
 }
 

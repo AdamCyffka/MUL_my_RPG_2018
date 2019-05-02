@@ -90,8 +90,6 @@ void fill_scene_beach2(game_scene_t beach)
     (sfVector2f) {700, 400}, 40);
     beach.texts[XP_T_S4] = new_text("assets/font/font.ttf", "XP:",
     (sfVector2f) {700, 450}, 40);
-    beach.texts[LIFE_T_S4] = new_text("assets/font/font.ttf", "Life:",
-    (sfVector2f) {1730, 926}, 40);
     beach.objs[OPTION_O_S4] = new_object("assets/images/option.png",
     (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     fill_scene_beach3(beach);

@@ -69,8 +69,6 @@ void fill_scene_forest3(game_scene_t forest)
     (sfVector2f) {700, 400}, 40);
     forest.texts[XP_T_S3] = new_text("assets/font/font.ttf", "XP:",
     (sfVector2f) {700, 450}, 40);
-    forest.texts[LIFE_T_S3] = new_text("assets/font/font.ttf", "Life:",
-    (sfVector2f) {1730, 926}, 40);
     forest.objs[OPTION_O_S3] = new_object("assets/images/option.png",
     (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     forest.objs[INVENTORY_O_S3] = new_object("assets/images/inventory.png",

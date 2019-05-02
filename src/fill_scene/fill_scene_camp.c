@@ -87,8 +87,6 @@ void fill_scene_camp2(game_scene_t camp)
     (sfVector2f) {700, 400}, 40);
     camp.texts[XP_T_S5] = new_text("assets/font/font.ttf", "XP:",
     (sfVector2f) {700, 450}, 40);
-    camp.texts[LIFE_T_S5] = new_text("assets/font/font.ttf", "Life:",
-    (sfVector2f) {1730, 926}, 40);
     fill_scene_camp3(camp);
 }
 
