@@ -75,6 +75,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/fill_quest/fill_quest5_9.c		\
 			./src/fill_quest/fill_quest10_12.c		\
 			./src/particules.c				\
+			./src/dick_move.c					\
 			./src/write_text.c
 
 SRC_TEST	= 	./tests/my_putstr_test.c \

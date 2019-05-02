@@ -93,6 +93,7 @@ typedef struct timer_clock {
     float timer2;
     float timer3;
     float walk;
+    float dick;
 } timer_clock_t;
 
 typedef struct game_setting {
