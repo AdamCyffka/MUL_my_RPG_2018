@@ -8,24 +8,22 @@
 #include "rpg.h"
 #include <unistd.h>
 
-int digits(int nb)
+int my_intlen(int nb)
 {
-    int n = 1;
-    int i = 10;
+    int i = 0;
 
-    if (nb < 0)
-        nb = -nb;
-    for (; nb >= 1; n++) {
-        if (i > 214748364)
-            break;
-        i *= 10;
+    if (nb <= 0) {
+        nb *= -1;
+        i++;
     }
-    return (n);
+    for (i; nb > 0; i++)
+        nb /= 10;
+    return i;
 }
 
 char *my_getstr(int nb)
 {
-    int i = digits(nb);
+    int i = my_intlen(nb);
     char *my_result = malloc(sizeof(char) * i);
 
     if (my_result == NULL)
