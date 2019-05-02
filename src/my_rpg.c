@@ -35,7 +35,7 @@ void game_change(game_t *game)
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
-                *stats)
+*stats)
 {
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
         if (scene.objs[tmp].speed == 0)

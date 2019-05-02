@@ -190,4 +190,6 @@ void enemies_attack_player(game_t *game);
 
 
 void fill_inventory(game_inventory_t *inventory, int content);
+void change_item_texture(game_inventory_t *inventory, char const *path, 
+int reward, int tmp);
 #endif /* RPG_H_ */

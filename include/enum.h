@@ -152,6 +152,7 @@ enum town {
     FRAME_T_S1,
     LIFE_T_S1,
     TOWN_O_S1 = 0,
+    AXE_O_S1,
     OBSTACLE_O_S1,
     DICK_O_S1,
     LEWIS_O_S1,
