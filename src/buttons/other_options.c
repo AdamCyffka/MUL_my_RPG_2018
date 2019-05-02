@@ -9,22 +9,26 @@
 #include "struct.h"
 #include "enum.h"
 
-int frame_to_60(game_scene_t *scenes, game_setting_t *settings)
+int frame_to_60(game_setting_t *settings)
 {
     sfWindow_setFramerateLimit(settings->window, 60);
+    return (0);
 }
 
-int frame_to_30(game_scene_t *scenes, game_setting_t *settings)
+int frame_to_30(game_setting_t *settings)
 {
     sfWindow_setFramerateLimit(settings->window, 60);
+    return (0);
 }
 
-int vsync_on(game_scene_t *scenes, game_setting_t *settings)
+int vsync_on(game_setting_t *settings)
 {
     sfRenderWindow_setVerticalSyncEnabled(settings->window, sfTrue);
+    return (0);
 }
 
-int vsync_off(game_scene_t *scenes, game_setting_t *settings)
+int vsync_off(game_setting_t *settings)
 {
     sfRenderWindow_setVerticalSyncEnabled(settings->window, sfFalse);
+    return (0);
 }

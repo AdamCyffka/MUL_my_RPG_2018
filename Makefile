@@ -22,25 +22,32 @@ CYAN	=	\033[36;1m
 
 SRC_MAIN =	./src/main.c
 
-SRC		=	./src/create_game3.c 					\
-			./src/create_game2.c 					\
-			./src/create_game.c						\
-			./src/my_rpg.c							\
-			./src/new_content2.c					\
-			./src/new_content.c						\
+SRC		=	./src/my_rpg.c							\
 			./src/analyser.c 						\
 			./src/cursor_interaction.c 				\
 			./src/draw_quest.c						\
 			./src/draw_inventory.c					\
+			./src/draw_player_info.c				\
 			./src/set_scale.c 						\
 			./src/clock.c 							\
-			./src/my_libc_functions.c 				\
-			./src/my_libc_functions2.c 				\
+			./src/lib_functions/my_libc_functions.c \
+			./src/lib_functions/my_libc_functions2.c\
 			./src/npc_interaction.c 				\
-			./src/buttons/button_event.c 			\
-			./src/buttons/button_main_menu.c		\
-			./src/buttons/button_town.c 			\
-			./src/buttons/button_town2.c 			\
+			./src/new_content/new_content2.c		\
+			./src/new_content/new_content.c			\
+			./src/create_game/create_game3.c 		\
+			./src/create_game/create_game2.c 		\
+			./src/create_game/create_game.c			\
+			./src/buttons/button_close.c 			\
+			./src/buttons/button_event.c			\
+			./src/buttons/button_exit.c 			\
+			./src/buttons/button_inventory.c 		\
+			./src/buttons/button_main_menu.c 		\
+			./src/buttons/button_me.c 				\
+			./src/buttons/button_option.c 			\
+			./src/buttons/button_ui_ig.c 			\
+			./src/buttons/other_options.c 			\
+			./src/buttons/volume_management.c 		\
 			./src/change/change_main_menu.c			\
 			./src/change/change_maps.c 				\
 			./src/change/change_selection_maps.c 	\
@@ -50,11 +57,12 @@ SRC		=	./src/create_game3.c 					\
 			./src/player/player_change_map.c		\
 			./src/player/player_attack.c			\
 			./src/player/player_rect.c				\
-			./src/player/player_interaction.c			\
+			./src/player/player_interaction.c		\
 			./src/enemies/enemies_die.c				\
 			./src/enemies/enemies_moves.c			\
 			./src/enemies/enemies_positions.c		\
 			./src/enemies/enemies_attack.c			\
+			./src/enemies/enemies_rect.c			\
 			./src/fill_scene/fill_scene_beach.c		\
 			./src/fill_scene/fill_scene_boss.c		\
 			./src/fill_scene/fill_scene_camp.c		\
@@ -65,7 +73,8 @@ SRC		=	./src/create_game3.c 					\
 			./src/fill_scene/fill_scene_vic_def.c	\
 			./src/fill_quest/fill_quest0_4.c		\
 			./src/fill_quest/fill_quest5_9.c		\
-			./src/fill_quest/fill_quest10_12.c
+			./src/fill_quest/fill_quest10_12.c		\
+			./src/write_text.c
 
 SRC_TEST	= 	./tests/my_putstr_test.c \
 				./tests/my_strlen_test.c
@@ -123,10 +132,15 @@ wc:
 
 clean	:
 			@$(RM) $(OBJS)
+			@$(RM) ./*.gcda
+			@$(RM) ./*.gcno
+			@$(RM) rapport.info
+			@$(RM) ./report
 			@$(ECHO) "$(GREEN)\n> Cleaning repository\t >>>>> \t DONE\n$(WHITE)"
 
-fclean	: 	clean
+fclean	: 	clean 
 			@$(RM) $(NAME)
+			@$(RM) $(TEST_NAME)
 			@$(ECHO) "$(GREEN)\n> Cleaning exec\t\t >>>>> \t DONE\n$(WHITE)"
 
 re		:	fclean all

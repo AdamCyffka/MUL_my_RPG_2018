@@ -26,6 +26,9 @@ void loop_rect_enemies(game_t *game)
             for (int tmp = GHOST1_O_S3; tmp <= GHOST15_O_S3; tmp++)
                 move_rect_enemies(
                 game->scenes, game->stats, tmp, game->settings);
+        if (game->settings->current == BOSS)
+            move_rect_enemies(
+                game->scenes, game->stats, SHAMAN_O_S2, game->settings);
     }
 }
 

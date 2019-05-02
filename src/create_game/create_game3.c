@@ -14,9 +14,14 @@ void create_stats(game_stat_t *stats)
 {
     stats->life = 100;
     stats->xp = 0;
-    stats->name = "ENTER A NAME";
+    stats->life_t = new_text("assets/font/font.ttf", "100", (sfVector2f)
+    {850, 500}, 24);
+    stats->xp_t = new_text("assets/font/font.ttf", "0", (sfVector2f)
+    {850, 500}, 24);
+    stats->name_t = new_text("assets/font/font.ttf", "'PLAYER'", (sfVector2f)
+    {1000, 505}, 28);
     stats->_mov_allowed = false;
-    stats->player = new_object("assets/girl1.png",
+    stats->player = new_object("assets/images/girl1.png",
     (sfVector2f) {300, 500}, (sfIntRect) {0, 32, 16, 32}, 5);
     stats->current_quest = INTRO_Q;
 }

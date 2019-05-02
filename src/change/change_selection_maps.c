@@ -17,7 +17,7 @@ game_quest_t *quests, game_inventory_t *inventory)
     sfVector2f size = sfView_getSize(view);
 
     for (int tmp = TOWN; tmp <= CAMP; tmp++)
-        for (int tmp2 = VOLUME_T_S1; tmp2 <= LIFE_T_S1; tmp2++)
+        for (int tmp2 = VOLUME_T_S1; tmp2 <= FRAME_T_S1; tmp2++)
             sfText_setPosition(scenes[tmp].texts[tmp2].text, (sfVector2f)
             {center.x - size.x / 2 + scenes[tmp].texts[tmp2].position.x,
             center.y - size.y / 2 + scenes[tmp].texts[tmp2].position.y});
@@ -36,6 +36,7 @@ game_quest_t *quests, game_inventory_t *inventory)
 void change_maps(game_t *game)
 {
     npc_interaction(game);
+    all_button(game->settings, game->scenes);
     if (game->quests[INTRO_Q].state == Q_NOT_STARTED)
         game->quests[INTRO_Q].state = Q_ACCEPTED;
     change_statics_pos_common(game->scenes, game->settings, game->quests,

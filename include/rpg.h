@@ -57,28 +57,31 @@ void create_settings(game_setting_t *settings);
 
 //change
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
-void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene, float delta_time);
-void change_main_menu(game_setting_t *settings, game_scene_t *scene, game_stat_t *stats);
+void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene,
+float delta_time);
+void change_main_menu(game_setting_t *settings, game_scene_t *scene,
+game_stat_t *stats);
 void change_view_main_menu(game_setting_t *settings);
 
 //buttons
 int button_is_clicked(game_setting_t *settings, sfVector2f pos,
 sfVector2f size);
 void disp_button_menu(game_scene_t scenes, int enable, int disable);
-void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *stats);
+void button_menu(game_setting_t *settings, game_scene_t scenes,
+game_stat_t *stats);
 void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 
 //save
 int save_player_stats(game_t *game);
 int load_player_stats(game_t *game);
 
-//buttons_town
-void button_town(game_setting_t *settings, game_scene_t scenes);
-void button_town_inventory(game_scene_t scenes, int enable, int disable);
-void button_town_option(game_scene_t scenes, int enable, int disable);
-void button_town_exit(game_scene_t scenes, int enable, int disable);
-void button_town_me(game_scene_t scenes, int enable, int disable);
-void button_town_close(game_scene_t scenes, int enable, int disable);
+//buttons
+void all_button(game_setting_t *settings, game_scene_t *scenes);
+void button_inventory1(game_scene_t *scenes, int enable, int disable);
+void button_option1(game_scene_t *scenes, int enable, int disable);
+void button_exit1(game_scene_t *scenes, int enable, int disable);
+void button_me1(game_scene_t *scenes, int enable, int disable);
+void button_close1(game_scene_t *scenes, int enable, int disable);
 
 //quest_interaction
 void quests_interaction(void);
@@ -104,10 +107,12 @@ void player_stop_moving(game_stat_t *stats, game_setting_t *settings);
 void player_attack(game_stat_t *stats);
 int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat,
 game_scene_t scene);
-void player_rect_move(game_scene_t *scenes, game_stat_t *stats, game_setting_t *settings);
+void player_rect_move(game_scene_t *scenes, game_stat_t *stats,
+game_setting_t *settings);
 int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
 void change_vector_view(game_setting_t *settings, sfVector2f vector_view);
-void player_change_map(game_stat_t *stats, game_setting_t *settings);
+void player_change_map(game_stat_t *stats, game_quest_t *quests,
+    game_setting_t *settings);
 void player_interaction(game_t *game);
 void play_song_walk(game_scene_t scenes, game_setting_t *settings);
 
@@ -124,6 +129,9 @@ void draw_quest(game_quest_t *quests, game_setting_t *settings);
 
 //draw_inventory
 void draw_inventory(game_inventory_t *inventory, game_setting_t *settings);
+
+//draw_player_info
+void draw_player_info(game_t *game);
 
 //set_scale
 void set_scale(game_t *game);
@@ -158,6 +166,10 @@ int my_strlen(char const *str);
 char *my_itoa(int nb);
 char *my_strcpy(char *str, char *dest);
 void my_putstr(char *str);
+void my_putchar(char c);
+int my_strcmp(char const *str1, char const *str2);
+char *my_stradd(const char *str, char toadd);
+char *my_strrem(const char *str);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
@@ -184,10 +196,12 @@ void loop_rect_enemies(game_t *game);
 void move_rect_enemies(game_scene_t *scenes,
 game_stat_t *stats, int tmp, game_setting_t *settings);
 void enemies_attack_player(game_t *game);
+void rect_chose(sfVector2f vector, game_t *game, int tmp);
 
-
-
-
+//write_text.c
+int text_entered(game_setting_t *settings);
+void enter_quest_answer(game_text_t quest_answer, game_setting_t *settings);
+void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
 void fill_inventory(game_inventory_t *inventory, int content);
 void change_item_texture(game_inventory_t *inventory, char const *path, 

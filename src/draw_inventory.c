@@ -21,21 +21,21 @@ void swap_pos_inventory(game_inventory_t *inventory, int tmp, int i)
         inventory[i].item.position.x = pos.x;
         inventory[i].item.position.y = pos.y;
         inventory[i]._selected = false;
-        sfRectangleShape_setPosition(inventory[i].item.shape, 
+        sfRectangleShape_setPosition(inventory[i].item.shape,
         inventory[i].item.position);
     }
 }
 
-void change_my_selected(game_inventory_t *inventory, game_setting_t *settings, 
+void change_my_selected(game_inventory_t *inventory, game_setting_t *settings,
 int tmp)
 {
     if (button_is_clicked(settings, inventory[tmp].item.position,
-    (sfVector2f) {inventory[tmp].item.rect.width, 
+    (sfVector2f) {inventory[tmp].item.rect.width,
     inventory[tmp].item.rect.height}) && inventory[tmp]._selected != true) {
         for (int i = SLOT_0; i <= SLOT_4; i++)
             swap_pos_inventory(inventory, tmp, i);
         inventory[tmp]._selected = true;
-        sfRectangleShape_setPosition(inventory[tmp].item.shape, 
+        sfRectangleShape_setPosition(inventory[tmp].item.shape,
         inventory[tmp].item.position);
     }
 }
@@ -50,12 +50,12 @@ void fill_inventory(game_inventory_t *inventory, int content)
         }
 }
 
-void change_item_texture(game_inventory_t *inventory, char const *path, 
+void change_item_texture(game_inventory_t *inventory, char const *path,
 int reward, int tmp)
 {
     if (inventory[tmp].content == reward) {
         inventory[tmp].item.texture = sfTexture_createFromFile(path, NULL);
-        sfRectangleShape_setTexture(inventory[tmp].item.shape, 
+        sfRectangleShape_setTexture(inventory[tmp].item.shape,
         inventory[tmp].item.texture, sfTrue);
     }
 }
