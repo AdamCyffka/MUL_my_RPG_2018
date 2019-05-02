@@ -207,4 +207,8 @@ void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 void fill_inventory(game_inventory_t *inventory, int content);
 void change_item_texture(game_inventory_t *inventory, char const *path, 
 int reward, int tmp);
+
+//PARTICULES
+void particules_move(game_t *game);
+
 #endif /* RPG_H_ */
