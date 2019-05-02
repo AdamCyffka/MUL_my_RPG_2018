@@ -44,7 +44,7 @@ void player_change_map3(game_stat_t *stats,
             sfView_setCenter((sfView *) {view}, (sfVector2f) {3394, 2697});
             sfRenderWindow_setView(settings->window, view);
             stats->player.position.x = 4300;
-            stats->player.position.y = 2587;
+            stats->player.position.y = 2737;
             sfSprite_setPosition(stats->player.sprite, stats->player.position);
         }
     }
