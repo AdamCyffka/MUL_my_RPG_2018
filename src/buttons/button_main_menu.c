@@ -85,6 +85,7 @@ void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *sta
     .buttons[LEFT_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[LEFT_B_S0].shape)) == true) {
         disp_button_back(scenes, 1, -1);
+        stats->sex = 0;
         stats->player = new_object("assets/images/girl1.png",
         (sfVector2f) {750, 450}, (sfIntRect) {0, 0, 16, 32}, 5);
         sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});
@@ -93,6 +94,7 @@ void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *sta
     .buttons[RIGHT_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[RIGHT_B_S0].shape)) == true) {
         disp_button_back(scenes, 1, -1);
+        stats->sex = 1;
         stats->player = new_object("assets/images/boy1.png",
         (sfVector2f) {750, 450}, (sfIntRect) {0, 0, 16, 32}, 5);
         sfSprite_setScale(stats->player.sprite, (sfVector2f) {4, 4});

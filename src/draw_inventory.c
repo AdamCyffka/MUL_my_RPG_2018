@@ -40,6 +40,16 @@ int tmp)
     }
 }
 
+void delete_item_inventory(game_inventory_t *inventory, int reward)
+{
+    for (int i = SLOT_0; i <= SLOT_4; i++)
+        if (inventory[i].content == reward) {
+            inventory[i].content = EMPTY;
+            inventory[i].state = -1;
+            change_item_texture(inventory, "assets/images/invisible.png", EMPTY, i);
+        }
+}
+
 void fill_inventory(game_inventory_t *inventory, int content)
 {
     for (int i = SLOT_0; i <= SLOT_4; i++)
@@ -80,6 +90,8 @@ void utils_change_texture(game_inventory_t *inventory, int tmp)
 void draw_inventory(game_inventory_t *inventory, game_setting_t *settings)
 {
     for (int tmp = SLOT_0; tmp <= SLOT_4; tmp++) {
+        if (inventory[tmp]._selected == true && inventory[tmp].content != EMPTY)
+            inventory[tmp].state = 1;
         if (tmp == 0 && inventory[tmp].state < 0) {
             utils_change_texture(inventory, tmp);
             sfRenderWindow_drawRectangleShape(settings->window,

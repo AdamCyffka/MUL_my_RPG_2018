@@ -30,6 +30,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/draw_player_info.c				\
 			./src/set_scale.c 						\
 			./src/clock.c 							\
+			./src/quests_rewards.c					\
 			./src/lib_functions/my_libc_functions.c \
 			./src/lib_functions/my_libc_functions2.c\
 			./src/npc_interaction.c 				\

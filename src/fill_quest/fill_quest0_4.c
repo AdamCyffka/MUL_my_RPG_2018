@@ -21,7 +21,7 @@ void fill_quest3(game_quest_t *quest3)
 {
     quest3->dialogs_text[0] = new_text("assets/font/font.ttf", Q3_DIAL0, (sfVector2f)
     {420, 800}, 26);
-    quest3->rewards[0] = BOOTS_R;
+    quest3->rewards[0] = GOLEMHEAD_R;
     quest3->rewards[1] = XP50_R;
     quest3->npc_zone = ZONE6_B_S1;
 }
@@ -53,7 +53,7 @@ void fill_quest0(game_quest_t *quest0)
     {420, 800}, 26);
     quest0->dialogs_text[2] = new_text("assets/font/font.ttf", Q0_DIAL2, (sfVector2f)
     {420, 800}, 26);
-    quest0->rewards[0] = QBOOK_R;
-    quest0->rewards[1] = MINIMAP_R;
+    quest0->rewards[0] = MINIMAP_R;
+    quest0->rewards[1] = QBOOK_R;
     quest0->npc_zone = ZONESPECIAL_B_S1;
 }

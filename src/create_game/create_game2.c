@@ -69,7 +69,7 @@ void create_quests(game_quest_t *quests)
     fill_quest3(&(quests[GOLEMS_Q]));
     quests[ROBIN_Q] = new_quest(1, Q4_BOOK, 1, 0);
     fill_quest4(&(quests[ROBIN_Q]));
-    quests[FIND_LOST_Q] = new_quest(2, Q5_BOOK, 1, 1);
+    quests[FIND_LOST_Q] = new_quest(2, Q5_BOOK, 1, 2);
     fill_quest5(&(quests[FIND_LOST_Q]));
     create_quest2(quests);
 }
