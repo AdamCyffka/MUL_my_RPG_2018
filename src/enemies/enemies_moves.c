@@ -112,4 +112,7 @@ void enemies_detect_player(game_t *game)
                 enemies_move_to_player(game, tmp, game->settings->delta_time);
         }
     }
+    if (game->settings->current == BOSS)
+        if (game->scenes[BOSS].objs[SHAMAN_O_S2].speed > 0)
+                enemies_move_to_player(game, SHAMAN_O_S2, game->settings->delta_time);
 }

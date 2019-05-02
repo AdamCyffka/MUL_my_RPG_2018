@@ -11,12 +11,21 @@
 
 void rect_die(game_t *game, int tmp)
 {
+    if (game->settings->current == BOSS) {
+        if (game->scenes[game->settings->current].objs[tmp].speed < 45)
+            game->scenes[game->settings->current].objs[tmp].speed += 10;
+        else
+            game->scenes[game->settings->current].objs[tmp].speed = -1;
+        sfSprite_setPosition(game->scenes[
+        game->settings->current].objs[tmp].sprite, (sfVector2f) {1575, 1150});
+        return;
+    }
     game->scenes[game->settings->current].objs[tmp].rect.left = 0;
     game->scenes[game->settings->current].objs[tmp].rect.top = 128;
     game->scenes[game->settings->current].objs[tmp].rect.height = 17;
     sfSprite_setTextureRect(
-    game->scenes[game->settings->current].objs[tmp].sprite,
-    game->scenes[game->settings->current].objs[tmp].rect);
+        game->scenes[game->settings->current].objs[tmp].sprite,
+        game->scenes[game->settings->current].objs[tmp].rect);
     game->scenes[game->settings->current].objs[tmp].speed = 0;
     if (game->settings->current == CAMP
         && game->quests[GOLEMS_Q].progress < game->quests[GOLEMS_Q].nb_of_task)
@@ -96,5 +105,9 @@ void enemies_detect_hit(game_t *game)
             if (game->scenes[FOREST].objs[tmp].speed > 0)
                 enemies_die(game, tmp);
         }
+    }
+    if (game->settings->current == BOSS) {
+        if (game->scenes[BOSS].objs[SHAMAN_O_S2].speed > 0)
+                enemies_die(game, SHAMAN_O_S2);
     }
 }

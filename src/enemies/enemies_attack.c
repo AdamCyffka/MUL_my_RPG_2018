@@ -58,4 +58,7 @@ void enemies_attack_player(game_t *game)
                 attack_player(game->scenes, game->stats, tmp, game->settings);
         }
     }
+    if (game->settings->current == BOSS)
+        if (game->scenes[BOSS].objs[SHAMAN_O_S2].speed > 0)
+                attack_player(game->scenes, game->stats, SHAMAN_O_S2, game->settings);
 }

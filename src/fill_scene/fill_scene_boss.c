@@ -46,7 +46,7 @@ void fill_scene_boss4(game_scene_t boss)
     boss.objs[TOWN_O_S2] = new_object("assets/images/map_town.png",
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
     boss.objs[SHAMAN_O_S2] = new_object("assets/images/shaman.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 0, 0}, 0);
+    (sfVector2f) {1575, 1150}, (sfIntRect) {0, 0, 16, 32}, 15);
     boss.objs[OPTION_O_S2] = new_object("assets/images/option.png",
     (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     boss.objs[INVENTORY_O_S2] = new_object("assets/images/inventory.png",
