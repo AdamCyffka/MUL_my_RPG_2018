@@ -73,11 +73,14 @@ void fill_scene_beach3(game_scene_t beach)
 
 void fill_scene_beach2(game_scene_t beach)
 {
-    beach.sounds[MUSIC_S_S4] = new_sound("assets/sounds/music_beach.ogg", sfFalse,
-    100);
-    beach.sounds[CLICK_S_S4] = new_sound("assets/sounds/click.ogg", sfFalse, 100);
-    beach.sounds[WALK_S_S4] = new_sound("assets/sounds/walk_beach.ogg", sfFalse, 100);
-    beach.sounds[SWORD_S_S4] = new_sound("assets/sounds/swoosh.ogg", sfFalse, 100);
+    beach.sounds[MUSIC_S_S4] = new_sound("assets/sounds/music_beach.ogg",
+    sfFalse, 100);
+    beach.sounds[CLICK_S_S4] = new_sound("assets/sounds/click.ogg",
+    sfFalse, 100);
+    beach.sounds[WALK_S_S4] = new_sound("assets/sounds/walk_beach.ogg",
+    sfFalse, 100);
+    beach.sounds[SWORD_S_S4] = new_sound("assets/sounds/swoosh.ogg",
+    sfFalse, 100);
     beach.texts[VOLUME_T_S4] = new_text("assets/font/font.ttf", "Volume:",
     (sfVector2f) {425, 45}, 16);
     beach.texts[VOLUME_T_S4] = new_text("assets/font/font.ttf", "Volume:",

@@ -65,10 +65,14 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[EXIT_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
-    town.sounds[MUSIC_S_S1] = new_sound("assets/sounds/music_town.ogg", sfFalse, 100);
-    town.sounds[CLICK_S_S1] = new_sound("assets/sounds/click.ogg", sfFalse, 100);
-    town.sounds[WALK_S_S1] = new_sound("assets/sounds/walk_rock.ogg", sfFalse, 100);
-    town.sounds[SWORD_S_S1] = new_sound("assets/sounds/swoosh.ogg", sfFalse, 100);
+    town.sounds[MUSIC_S_S1] = new_sound("assets/sounds/music_town.ogg",
+    sfFalse, 100);
+    town.sounds[CLICK_S_S1] = new_sound("assets/sounds/click.ogg",
+    sfFalse, 100);
+    town.sounds[WALK_S_S1] = new_sound("assets/sounds/walk_rock.ogg",
+    sfFalse, 100);
+    town.sounds[SWORD_S_S1] = new_sound("assets/sounds/swoosh.ogg",
+    sfFalse, 100);
     town.texts[VOLUME_T_S1] = new_text("assets/font/font.ttf", "Volume:",
     (sfVector2f) {700, 400}, 40);
     town.texts[VSYNC_T_S1] = new_text("assets/font/font.ttf", "V-sync:",

@@ -111,7 +111,8 @@ void player_rect_move(game_scene_t *scenes, game_stat_t *stats,
 game_setting_t *settings);
 int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
 void change_vector_view(game_setting_t *settings, sfVector2f vector_view);
-void player_change_map(game_stat_t *stats, game_setting_t *settings);
+void player_change_map(game_stat_t *stats, game_quest_t *quests,
+    game_setting_t *settings);
 void player_interaction(game_t *game);
 void play_song_walk(game_scene_t scenes, game_setting_t *settings);
 
@@ -194,6 +195,7 @@ void loop_rect_enemies(game_t *game);
 void move_rect_enemies(game_scene_t *scenes,
 game_stat_t *stats, int tmp, game_setting_t *settings);
 void enemies_attack_player(game_t *game);
+void rect_chose(sfVector2f vector, game_t *game, int tmp);
 
 //write_text.c
 int text_entered(game_setting_t *settings);

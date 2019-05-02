@@ -45,7 +45,7 @@ void analyse_events(game_t *game)
         check_mouse_pos(game);
     if (game->settings->event.type == sfEvtKeyPressed) {
         keyboard_checker_maps(game);
-        player_change_map(game->stats, game->settings);
+        player_change_map(game->stats, game->quests, game->settings);
     }
     if (game->settings->event.type == sfEvtTextEntered) {
         if (game->settings->current == MAIN_MENU &&

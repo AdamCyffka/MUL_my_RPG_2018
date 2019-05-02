@@ -12,19 +12,26 @@
 void fill_scene_town8(game_scene_t town)
 {
     town.buttons[ZONE1_B_S1] = new_button("assets/images/zone.png",
-    (sfVector2f) {185 * 3.5, 750 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {185 * 3.5, 750 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[ZONE2_B_S1] = new_button("assets/images/zone.png",
-    (sfVector2f) {912 * 3.5, 340 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {912 * 3.5, 340 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[ZONE3_B_S1] = new_button("assets/images/zone.png",
-    (sfVector2f) {718 * 3.5, 450 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {718 * 3.5, 450 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[ZONE4_B_S1] = new_button("assets/images/zone.png",
-    (sfVector2f) {1152 * 3.5, 420 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {1152 * 3.5, 420 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[ZONE5_B_S1] = new_button("assets/images/zone.png",
-    (sfVector2f) {320 * 3.5, 750 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {320 * 3.5, 750 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[ZONE6_B_S1] = new_button("assets/images/zone.png",
-    (sfVector2f) {695 * 3.5, 230 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {695 * 3.5, 230 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[ZONESPECIAL_B_S1] = new_button("assets/images/zone.png",
-    (sfVector2f) {70 * 3.5, 170 * 3.5}, (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
+    (sfVector2f) {70 * 3.5, 170 * 3.5},
+    (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
 }
 
 void fill_scene_town7(game_scene_t town)

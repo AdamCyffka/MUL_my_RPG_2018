@@ -62,6 +62,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/enemies/enemies_moves.c			\
 			./src/enemies/enemies_positions.c		\
 			./src/enemies/enemies_attack.c			\
+			./src/enemies/enemies_rect.c			\
 			./src/fill_scene/fill_scene_beach.c		\
 			./src/fill_scene/fill_scene_boss.c		\
 			./src/fill_scene/fill_scene_camp.c		\
