@@ -15,7 +15,7 @@ void game_change(game_t *game)
     set_cursor_pos(game->scenes[game->settings->current], game->settings);
     /*for (int tmp = 0; tmp < game->scenes[game->settings->current].how_many[1]; tmp++) {
         if (game->scenes[game->settings->current].sounds[tmp]._activated == true)
-                sfMusic_play(game->scenes->sounds[MUSIC_S_S1].music);
+                sfMusic_play(game->[game->settings->current].sounds[MUSIC_S_S1].music);
     }*/
     if (game->settings->current == MAIN_MENU)
         change_main_menu(game->settings, game->scenes, game->stats);
@@ -24,7 +24,8 @@ void game_change(game_t *game)
     if (game->settings->current >= VICTORY && game->settings->current <= DEFEAT)
         change_vic_def(game);
     clock(game->scenes, game->settings, game->quests);
-    
+    if (game->settings->current == TOWN)
+        particules_move(game);
     if (game->settings->_paused == false) {
         player_interaction(game);
         enemies_detect_player(game);
@@ -36,7 +37,7 @@ void game_change(game_t *game)
 }
 
 void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
-                *stats)
+*stats)
 {
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
         if (scene.objs[tmp].speed == 0)
@@ -74,8 +75,8 @@ int my_rpg(void)
         if (game->settings->current != MAIN_MENU) {
             draw_quest(game->quests, game->settings);
             draw_inventory(game->inventory, game->settings);
-            draw_player_info(game);
         }
+        draw_player_info(game);
         while (sfRenderWindow_pollEvent(game->settings->window,
         &game->settings->event))
             analyse_events(game);

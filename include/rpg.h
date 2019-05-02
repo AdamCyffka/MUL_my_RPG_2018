@@ -76,7 +76,8 @@ int save_player_stats(game_t *game);
 int load_player_stats(game_t *game);
 
 //buttons
-void all_button(game_setting_t *settings, game_scene_t *scenes);
+void all_button(game_setting_t *settings, game_scene_t *scenes,
+game_stat_t *stats);
 void button_inventory1(game_scene_t *scenes, int enable, int disable);
 void button_option1(game_scene_t *scenes, int enable, int disable);
 void button_exit1(game_scene_t *scenes, int enable, int disable);
@@ -169,6 +170,7 @@ void my_putstr(char *str);
 void my_putchar(char c);
 int my_strcmp(char const *str1, char const *str2);
 char *my_stradd(const char *str, char toadd);
+char *my_strrem(const char *str);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
@@ -199,9 +201,14 @@ void rect_chose(sfVector2f vector, game_t *game, int tmp);
 
 //write_text.c
 int text_entered(game_setting_t *settings);
-void enter_quest_answer(game_t *game);
+void enter_quest_answer(game_text_t quest_answer, game_setting_t *settings);
 void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
 void fill_inventory(game_inventory_t *inventory, int content);
+void change_item_texture(game_inventory_t *inventory, char const *path, 
+int reward, int tmp);
+
+//PARTICULES
+void particules_move(game_t *game);
 
 #endif /* RPG_H_ */

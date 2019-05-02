@@ -11,7 +11,13 @@
 
 void draw_player_info(game_t *game)
 {
-    //if (game->stats->name_t.state >= 0)
+    if (game->settings->current >= TOWN && game->settings->current <= CAMP)
+        sfRenderWindow_drawText(game->settings->window, game->stats->life_t.text,
+        NULL);
+    if (game->stats->xp_t.state >= 0)
+        sfRenderWindow_drawText(game->settings->window, game->stats->xp_t.text,
+        NULL);
+    if (game->stats->name_t.state >= 0)
         sfRenderWindow_drawText(game->settings->window, game->stats->name_t.text,
         NULL);
 }

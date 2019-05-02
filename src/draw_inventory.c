@@ -60,21 +60,34 @@ int reward, int tmp)
     }
 }
 
+void utils_change_texture(game_inventory_t *inventory, int tmp)
+{
+    change_item_texture(inventory, "assets/images/icon_sword1.png", SWORD1_R, 
+    tmp);
+    change_item_texture(inventory, "assets/images/icon_sword2.png", SWORD2_R, 
+    tmp);
+    change_item_texture(inventory, "assets/images/icon_quest.png", QBOOK_R, 
+    tmp);
+    change_item_texture(inventory, "assets/images/icon_map.png", MINIMAP_R, 
+    tmp);
+    change_item_texture(inventory, "assets/images/icon_boots.png", BOOTS_R, 
+    tmp);
+    change_item_texture(inventory, "assets/images/icon_axe.png", AXE_R, tmp);
+    change_item_texture(inventory, "assets/images/icon_golem.png", GOLEMHEAD_R, 
+    tmp);
+}
+
 void draw_inventory(game_inventory_t *inventory, game_setting_t *settings)
 {
     for (int tmp = SLOT_0; tmp <= SLOT_4; tmp++) {
         if (tmp == 0 && inventory[tmp].state < 0) {
-            change_item_texture(inventory, "assets/images/icon_sword1.png", SWORD1_R, tmp);
-            change_item_texture(inventory, "assets/images/icon_quest.png", QBOOK_R, tmp);
-            change_item_texture(inventory, "assets/images/icon_map.png", MINIMAP_R, tmp);
+            utils_change_texture(inventory, tmp);
             sfRenderWindow_drawRectangleShape(settings->window,
             inventory[tmp].item.shape, NULL);
         }
         change_my_selected(inventory, settings, tmp);
         if (inventory[tmp].state >= 0) {
-            change_item_texture(inventory, "assets/images/icon_sword1.png", SWORD1_R, tmp);
-            change_item_texture(inventory, "assets/images/icon_quest.png", QBOOK_R, tmp);
-            change_item_texture(inventory, "assets/images/icon_map.png", MINIMAP_R, tmp);
+            utils_change_texture(inventory, tmp);
             sfRenderWindow_drawRectangleShape(settings->window,
             inventory[tmp].item.shape, NULL);
         }

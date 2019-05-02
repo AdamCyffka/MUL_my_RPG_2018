@@ -82,7 +82,17 @@ game_inventory_t *inventory)
     if (quests[BLACKSMITH_Q].state == Q_VALIDATED) {
         fill_inventory(inventory, SWORD1_R);
     }
-
+    if (quests[GOLEMS_Q].state == Q_VALIDATED) {
+        fill_inventory(inventory, GOLEMHEAD_R);
+    }
+    if (quests[ROBIN_Q].state == Q_FINISHED) {
+        for (int i = SLOT_0; i <= SLOT_4; i++) {
+            if (inventory[i].item.content == GOLEMHEAD_R) {
+                inventory[i].item.content = EMPTY;
+                change_item_texture(inventory, "assets/invisible.png", EMPTY, i);
+            }
+        }
+    }
     return;
 }
 

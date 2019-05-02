@@ -26,13 +26,26 @@ int text_entered(game_setting_t *settings)
 
 void enter_player_name(game_stat_t *stats, game_setting_t *settings)
 {
+    char entered = '\0';
+
     if (my_strcmp(sfText_getString(stats->name_t.text), "'PLAYER'") == 1)
         sfText_setString(stats->name_t.text, "");
-    char entered = text_entered(settings);
-    sfText_setString(stats->name_t.text, my_stradd(sfText_getString(stats->name_t.text), entered));
+    if ((entered = text_entered(settings)) == -1)
+        sfText_setString(stats->name_t.text,
+        my_strrem(sfText_getString(stats->name_t.text)));
+    else if (my_strlen(sfText_getString(stats->name_t.text)) < 11)
+        sfText_setString(stats->name_t.text,
+        my_stradd(sfText_getString(stats->name_t.text), entered));
 }
 
-void enter_quest_answer(game_t *game)
+void enter_quest_answer(game_text_t quest_answer, game_setting_t *settings)
 {
-    return;
+    char entered = '\0';
+
+    if ((entered = text_entered(settings)) == -1)
+        sfText_setString(quest_answer.text,
+        my_strrem(sfText_getString(quest_answer.text)));
+    else if (my_strlen(sfText_getString(quest_answer.text)) < 2)
+        sfText_setString(quest_answer.text,
+        my_stradd(sfText_getString(quest_answer.text), entered));
 }

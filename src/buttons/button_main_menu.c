@@ -103,8 +103,12 @@ void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *sta
         disp_button_menu(scenes, 1, -1);
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[NEW_B_S0].shape), sfRectangleShape_getSize(scenes
-    .buttons[NEW_B_S0].shape)) == true)
+    .buttons[NEW_B_S0].shape)) == true) {
         disp_new_options(scenes, 1, -1);
+        stats->name_t.position = (sfVector2f) {1000, 505};
+        sfText_setPosition(stats->name_t.text, stats->name_t.position);
+        stats->name_t.state = 0;
+    }
     if (scenes.texts[NAME_T_S0].state == 1)
         stats->player.speed = 5;
     else
@@ -119,6 +123,9 @@ void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *sta
         disp_button_back(scenes, 1, -1);
         sfSprite_setPosition(stats->player.sprite,(sfVector2f) {300, 500});
         sfSprite_setTextureRect(stats->player.sprite, (sfIntRect) {0, 32, 16, 32});
+        stats->name_t.position = (sfVector2f) {895, 410};
+        sfText_setPosition(stats->name_t.text, stats->name_t.position);
+        stats->name_t.state = -1;
         stats->player.speed = 5;
         settings->current = TOWN;
     }
