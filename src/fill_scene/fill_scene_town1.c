@@ -83,8 +83,8 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {700, 400}, 40);
     town.texts[XP_T_S1] = new_text("assets/font/font.ttf", "XP:",
     (sfVector2f) {700, 450}, 40);
-    town.texts[QUEST_ANS_T_S1] = new_text("assets/font/font.ttf", "",
-    (sfVector2f) {0, 0}, 40);
+    town.texts[QUEST_ANS_T_S1] = new_text("assets/font/font.ttf",
+    "ENTER A DIGIT : ", (sfVector2f) {800, 720}, 40);
     fill_scene_town4(town);
 }
 
