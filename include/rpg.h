@@ -223,4 +223,7 @@ void refresh_player_data(game_stat_t *stats);
 //DICK
 void dick_move_to_spawn(game_t *game);
 
+//BOSS
+void change_view_boss(game_setting_t *settings);
+
 #endif /* RPG_H_ */

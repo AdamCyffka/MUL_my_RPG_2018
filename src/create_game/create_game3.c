@@ -23,7 +23,7 @@ void create_stats(game_stat_t *stats)
     {1000, 505}, 32);
     stats->_mov_allowed = false;
     stats->player = new_object("assets/images/girl1.png",
-    (sfVector2f) {300, 500}, (sfIntRect) {0, 32, 16, 32}, 5);
+    (sfVector2f) {1300, 1500}, (sfIntRect) {0, 32, 16, 32}, 5);
     stats->current_quest = INTRO_Q;
 }
 
@@ -37,7 +37,7 @@ void create_settings(game_setting_t *settings)
     settings->last_time = 0;
     settings->delta_time = 0;
     settings->_paused = false;
-    settings->current = MAIN_MENU;
+    settings->current = BOSS;
     sfRenderWindow_setFramerateLimit(settings->window, 60);
     sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }

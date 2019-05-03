@@ -143,9 +143,9 @@ void fill_scene_boss1(game_scene_t boss)
     boss.buttons[F60_B_S2] = new_button("assets/images/60.png",
     (sfVector2f) {955, 600}, (sfIntRect) {0, 0, 75, 25}, -1);
     boss.buttons[WALKABLE1_B_S2] = new_button("assets/images/invisible.png",
-    (sfVector2f) {0, 560}, (sfIntRect) {0, 0, 1585.5, 150.5}, 0);
+    (sfVector2f) {10000, 560}, (sfIntRect) {0, 0, 1585.5, 150.5}, 0);
     boss.buttons[WALKABLE2_B_S2] = new_button("assets/images/invisible.png",
-    (sfVector2f) {1400, 703.5}, (sfIntRect) {0, 0, 1267, 311.5}, 0);
+    (sfVector2f) {140000, 70300.5}, (sfIntRect) {0, 0, 1267, 311.5}, 0);
     boss.buttons[WALKABLE3_B_S2] = new_button("assets/images/invisible.png",
     (sfVector2f) {1225, 1015}, (sfIntRect) {0, 0, 927.5, 745.5}, 0);
     fill_scene_boss2(boss);
