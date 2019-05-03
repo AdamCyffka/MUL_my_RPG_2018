@@ -14,6 +14,7 @@ void create_stats(game_stat_t *stats)
 {
     stats->life = 100;
     stats->xp = 0;
+    stats->sex = 0;
     stats->life_t = new_text("assets/font/font.ttf", "100", (sfVector2f)
     {1810, 932}, 34);
     stats->xp_t = new_text("assets/font/font.ttf", "0", (sfVector2f)
@@ -36,7 +37,7 @@ void create_settings(game_setting_t *settings)
     settings->last_time = 0;
     settings->delta_time = 0;
     settings->_paused = false;
-    settings->current = MAIN_MENU;
+    settings->current = TOWN;
     sfRenderWindow_setFramerateLimit(settings->window, 60);
     sfRenderWindow_setMouseCursorVisible(settings->window, sfFalse);
 }

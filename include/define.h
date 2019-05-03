@@ -17,6 +17,12 @@
     #define WRONG_PATH -2
     #define WRONG_CONFIG_PATH -3
 
+    #define AXE_COLISION stats->player.position.x <\
+    town.objs[AXE_O_S1].position.x + 50 && stats->player.position.x + 56 >\
+    town.objs[AXE_O_S1].position.x && stats->player.position.y + 100 <\
+    town].objs[AXE_O_S1].position.y + 50 && stats->player.position.y + 112 >\
+    town.objs[AXE_O_S1].position.y\
+
     #define COLLISION_ZONE stats->player.position.x <\
 town.buttons[quests[stats->current_quest].npc_zone].position.x + 56 &&\
 stats->player.position.x + 56 >\

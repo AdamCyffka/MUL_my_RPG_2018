@@ -46,7 +46,7 @@ void change_maps(game_t *game)
 {
     npc_interaction(game);
     refresh_player_data(game->stats);
-    all_button(game->settings, game->scenes, game->stats);
+    all_button(game->inventory, game->settings, game->scenes, game->stats);
     if (game->quests[INTRO_Q].state == Q_NOT_STARTED)
         game->quests[INTRO_Q].state = Q_ACCEPTED;
     change_statics_pos_common(game);

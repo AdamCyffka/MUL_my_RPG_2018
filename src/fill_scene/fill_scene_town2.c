@@ -36,6 +36,8 @@ void fill_scene_town8(game_scene_t town)
 
 void fill_scene_town7(game_scene_t town)
 {
+    town.objs[STAR_O_S1] = new_object("assets/images/star.png",
+    (sfVector2f) {1650, 400}, (sfIntRect) {0, 0, 16, 16}, 1);
     town.objs[LEAF_O_S1] = new_object("assets/images/leaf.png",
     (sfVector2f) {1650, 400}, (sfIntRect) {0, 0, 9, 10}, 1);
     town.objs[CURSOR_O_S1] = new_object("assets/images/cursor.png",

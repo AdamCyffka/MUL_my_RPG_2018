@@ -77,6 +77,7 @@ typedef struct game_quest {
 typedef struct game_stat {
     int xp;
     int life;
+    int sex;
     game_text_t xp_t;
     game_text_t life_t;
     game_text_t name_t;

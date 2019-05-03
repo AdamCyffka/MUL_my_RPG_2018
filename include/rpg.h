@@ -76,9 +76,10 @@ int save_player_stats(game_t *game);
 int load_player_stats(game_t *game);
 
 //buttons
-void all_button(game_setting_t *settings, game_scene_t *scenes,
-game_stat_t *stats);
-void button_inventory1(game_scene_t *scenes, int enable, int disable);
+void all_button(game_inventory_t *inventory, game_setting_t *settings, 
+game_scene_t *scenes, game_stat_t *stats);
+void button_inventory1(game_inventory_t *inventory, game_scene_t *scenes, 
+int enable, int disable);
 void button_option1(game_scene_t *scenes, int enable, int disable);
 void button_exit1(game_scene_t *scenes, int enable, int disable);
 void button_me1(game_scene_t *scenes, int enable, int disable);
@@ -205,7 +206,11 @@ int text_entered(game_setting_t *settings);
 void enter_quest_answer(game_text_t quest_answer, game_setting_t *settings);
 void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
+//quests_reward
+void pick_up_item(game_t *game);
+
 void fill_inventory(game_inventory_t *inventory, int content);
+void delete_item_inventory(game_inventory_t *inventory, int reward);
 void change_item_texture(game_inventory_t *inventory, char const *path, 
 int reward, int tmp);
 
@@ -217,5 +222,8 @@ void refresh_player_data(game_stat_t *stats);
 
 //DICK
 void dick_move_to_spawn(game_t *game);
+
+//BOSS
+void change_view_boss(game_setting_t *settings);
 
 #endif /* RPG_H_ */

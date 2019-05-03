@@ -14,7 +14,7 @@ void create_scenes(game_scene_t *scenes)
 {
     scenes[MAIN_MENU] = new_scene(11, 2, 9, 1);
     fill_scene_main_menu1(scenes[MAIN_MENU]);
-    scenes[TOWN] = new_scene(25, 4, 46, 6);
+    scenes[TOWN] = new_scene(26, 4, 46, 6);
     fill_scene_town1(scenes[TOWN]);
     scenes[BOSS] = new_scene(13, 4, 32, 5);
     fill_scene_boss1(scenes[BOSS]);
@@ -69,7 +69,7 @@ void create_quests(game_quest_t *quests)
     fill_quest3(&(quests[GOLEMS_Q]));
     quests[ROBIN_Q] = new_quest(1, Q4_BOOK, 1, 0);
     fill_quest4(&(quests[ROBIN_Q]));
-    quests[FIND_LOST_Q] = new_quest(2, Q5_BOOK, 1, 1);
+    quests[FIND_LOST_Q] = new_quest(2, Q5_BOOK, 1, 2);
     fill_quest5(&(quests[FIND_LOST_Q]));
     create_quest2(quests);
 }
