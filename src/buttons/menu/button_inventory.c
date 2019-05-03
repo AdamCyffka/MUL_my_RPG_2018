@@ -14,6 +14,11 @@ int enable, int disable)
 {
     scenes[BEACH].texts[XP_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[XP_T_S5].state = ((enable == 1) ? disable : enable);
+    for (int i = SLOT_0; i <= SLOT_4; i++) {
+        if (inventory[i]._selected != true && inventory[i].state != EMPTY)
+            inventory[i].state = ((enable == 1) ? 2 : disable);
+    }
+
 }
 
 void button_inventory5(game_inventory_t *inventory, game_scene_t *scenes,
@@ -90,8 +95,8 @@ int enable, int disable)
     button_inventory4(inventory, scenes, 1, -1);
 }
 
-void button_inventory2(game_inventory_t *inventory,
-    game_scene_t *scenes, int enable, int disable)
+void button_inventory2(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable)
 {
     scenes[CAMP].objs[OPTION_O_S5].speed = ((enable == 1) ? disable : enable);
     scenes[TOWN].objs[EXIT_O_S1].speed = ((enable == 1) ? disable : enable);
