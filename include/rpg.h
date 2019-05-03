@@ -105,8 +105,9 @@ void destroy_clock(game_t *game);
 
 //player
 void key_to_move_or_not(game_scene_t scenes,
-game_setting_t *settings, game_stat_t *stats);
-void move_player(game_setting_t *settings, game_stat_t *stats);
+game_setting_t *settings, game_stat_t *stats, game_inventory_t *inventory);
+void move_player(game_setting_t *settings, game_stat_t *stats,
+game_inventory_t *inventory);
 void player_stop_moving(game_stat_t *stats, game_setting_t *settings);
 void player_attack(game_stat_t *stats);
 int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat,
@@ -119,6 +120,7 @@ void player_change_map(game_stat_t *stats, game_quest_t *quests,
     game_setting_t *settings);
 void player_interaction(game_t *game);
 void play_song_walk(game_scene_t scenes, game_setting_t *settings);
+int equiped_or_not(game_inventory_t *inventory, int item);
 
 //analyser
 void analyse_events(game_t *game);
