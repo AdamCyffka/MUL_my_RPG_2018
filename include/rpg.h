@@ -208,7 +208,7 @@ void rect_chose(sfVector2f vector, game_t *game, int tmp);
 
 //write_text.c
 int text_entered(game_setting_t *settings);
-int enter_quest_answer(game_text_t quest_answer, game_setting_t *settings);
+void enter_quest_answer(game_text_t quest_answer, game_setting_t *settings);
 void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
 //quests_reward
@@ -230,6 +230,5 @@ void dick_move_to_spawn(game_t *game);
 
 //BOSS
 void change_view_boss(game_setting_t *settings);
-void teleport_player(game_t *game);
 
 #endif /* RPG_H_ */

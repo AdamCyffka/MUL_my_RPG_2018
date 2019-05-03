@@ -9,16 +9,6 @@
 #include "struct.h"
 #include "enum.h"
 
-int digit_entered(game_setting_t *settings)
-{
-    if (settings->event.text.unicode >= '0' &&
-    settings->event.text.unicode <= '9')
-        return settings->event.text.unicode;
-    if (settings->event.text.unicode == 8)
-        return -1;
-    return 0;
-}
-
 int text_entered(game_setting_t *settings)
 {
     if (settings->event.text.unicode >= 'a' &&
@@ -48,19 +38,14 @@ void enter_player_name(game_stat_t *stats, game_setting_t *settings)
         my_stradd(sfText_getString(stats->name_t.text), entered));
 }
 
-int enter_quest_answer(game_text_t quest_answer, game_setting_t *settings)
+void enter_quest_answer(game_text_t quest_answer, game_setting_t *settings)
 {
     char entered = '\0';
 
-    if ((entered = digit_entered(settings)) == -1) {
-        if (my_strlen(sfText_getString(quest_answer.text)) > 16)
-            sfText_setString(quest_answer.text,
-            my_strrem(sfText_getString(quest_answer.text)));
-    } else if (my_strlen(sfText_getString(quest_answer.text)) < 19) {
+    if ((entered = text_entered(settings)) == -1)
+        sfText_setString(quest_answer.text,
+        my_strrem(sfText_getString(quest_answer.text)));
+    else if (my_strlen(sfText_getString(quest_answer.text)) < 2)
         sfText_setString(quest_answer.text,
         my_stradd(sfText_getString(quest_answer.text), entered));
-    }
-    if (my_strcmp(sfText_getString(quest_answer.text), "ENTER A DIGIT : 5"))
-        return 1;
-    return 0;
 }
