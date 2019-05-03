@@ -72,23 +72,17 @@ game_stat_t *stats)
     (sfVector2f) {scenes[TOWN].buttons[OPTION_B_S1].rect.width,
     scenes[TOWN].buttons[OPTION_B_S1].rect.height}) == true) {
         button_option1(scenes, 1, -1);
-        stats->xp_t.state = -1;
-        stats->name_t.state = -1;
     }
     if (button_is_clicked(settings, scenes[TOWN].buttons[EXIT_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[EXIT_B_S1].rect.width,
     scenes[TOWN].buttons[EXIT_B_S1].rect.height}) == true) {
         button_exit1(scenes, 1, -1);
-        stats->xp_t.state = -1;
-        stats->name_t.state = -1;
     }
     else if (button_is_clicked(settings, scenes[TOWN].buttons[CLOSE_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[CLOSE_B_S1].rect.width,
     scenes[TOWN].buttons[CLOSE_B_S1].rect.height}) == true) {
         button_close1(scenes, 1, -1);
         stats->life_t.state = -1;
-        stats->xp_t.state = -1;
-        stats->name_t.state = -1;
         settings->_paused = false;
     }
 }
@@ -111,15 +105,11 @@ void all_button(game_setting_t *settings, game_scene_t *scenes, game_stat_t *sta
     (sfVector2f) {scenes[TOWN].buttons[INVENTORY_B_S1].rect.width,
     scenes[TOWN].buttons[INVENTORY_B_S1].rect.height}) == true) {
         button_inventory1(scenes, 1, -1);
-        stats->xp_t.state = -1;
-        stats->name_t.state = -1;
     }
     if (button_is_clicked(settings, scenes[TOWN].buttons[ME_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[ME_B_S1].rect.width,
     scenes[TOWN].buttons[ME_B_S1].rect.height}) == true) {
         button_me1(scenes, 1, -1);
-        stats->xp_t.state = 0;
-        stats->name_t.state = 0;
     }
     all_button2(settings, scenes, stats);
 }
