@@ -57,12 +57,9 @@ void move_window(game_setting_t *settings, game_stat_t *stats,
     const sfView *view = sfRenderWindow_getView(settings->window);
     sfVector2f vector_view = sfView_getCenter(view);
     int speed = 40;
-
     if (settings->current == CAMP || settings->current == BEACH
-        || settings->current == BOSS)
-        return;
-    if (equiped_or_not(inventory, BOOTS_R) == 1)
-        speed += 10;
+        || settings->current == BOSS) return;
+    if (equiped_or_not(inventory, BOOTS_R) == 1) speed += 10;
     if (player_pos_view(vector_view, stats) == 1) return;
     if (sfKeyboard_isKeyPressed(sfKeyD))
         if (vector_view.x < 3390)
@@ -83,9 +80,7 @@ void move_player(game_setting_t *settings, game_stat_t *stats,
     game_inventory_t *inventory)
 {
     int speed = 40;
-
-    if (equiped_or_not(inventory, BOOTS_R) == 1)
-        speed += 10;
+    if (equiped_or_not(inventory, BOOTS_R) == 1) speed += 10;
     if (sfKeyboard_isKeyPressed(sfKeyD)) {
         stats->player.position.x += speed * settings->delta_time;
         stats->player.rect.top = 32;
