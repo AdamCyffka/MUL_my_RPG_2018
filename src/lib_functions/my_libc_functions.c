@@ -70,8 +70,6 @@ char *my_strcpy(char *str, char *dest)
     int tmp = 0;
 
     dest = malloc(my_strlen(str));
-    if (dest == NULL)
-        return NULL;
     for (; str[tmp]; tmp++)
         dest[tmp] = str[tmp];
     dest[tmp] = '\0';

@@ -21,7 +21,6 @@ void game_change(game_t *game)
     }*/
     dick_move_to_spawn(game);
     particules_star(game);
-    teleport_player(game);
     if (game->settings->current == BOSS)
         change_view_boss(game->settings);
     if (game->settings->current == MAIN_MENU)
@@ -72,10 +71,8 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 int my_rpg(void)
 {
     game_t *game = malloc(sizeof(game_t));
-
-    if (game == NULL)
-        return 84;
     game = create_game(game);
+
     while (sfRenderWindow_isOpen(game->settings->window)) {
         sfRenderWindow_clear(game->settings->window, sfBlack);
         game_change(game);

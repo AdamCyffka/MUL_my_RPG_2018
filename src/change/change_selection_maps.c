@@ -43,9 +43,6 @@ void change_statics_pos_common(game_t *game)
     sfText_setPosition(game->stats->life_t.text, (sfVector2f)
             {center.x - size.x / 2 + game->stats->life_t.position.x,
             center.y - size.y / 2 + game->stats->life_t.position.y});
-    sfText_setPosition(game->scenes[TOWN].texts[QUEST_ANS_T_S1].text, (sfVector2f)
-            {center.x - size.x / 2 + game->scenes[TOWN].texts[QUEST_ANS_T_S1].position.x,
-            center.y - size.y / 2 + game->scenes[TOWN].texts[QUEST_ANS_T_S1].position.y});
 }
 
 void change_maps(game_t *game)
