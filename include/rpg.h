@@ -229,5 +229,6 @@ void dick_move_to_spawn(game_t *game);
 
 //BOSS
 void change_view_boss(game_setting_t *settings);
+void teleport_player(game_t *game);
 
 #endif /* RPG_H_ */
