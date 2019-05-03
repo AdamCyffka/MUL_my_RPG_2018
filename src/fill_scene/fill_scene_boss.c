@@ -29,20 +29,6 @@ void fill_scene_boss5(game_scene_t boss)
     (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 30, 30}, 0);
 }
 
-void fill_scene_boss4_1(game_scene_t boss)
-{
-    boss.objs[OBSTACLE_O_S2] = new_object("assets/images/obstacle.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 1);
-    boss.objs[TOWN_O_S2] = new_object("assets/images/map_town.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
-    boss.objs[SHAMAN_O_S2] = new_object("assets/images/shaman.png",
-    (sfVector2f) {1575, 1150}, (sfIntRect) {0, 0, 16, 32}, 15);
-    boss.objs[OPTION_O_S2] = new_object("assets/images/option.png",
-    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
-    boss.objs[INVENTORY_O_S2] = new_object("assets/images/inventory.png",
-    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
-}
-
 void fill_scene_boss4(game_scene_t boss)
 {
     boss.buttons[WALKABLE13_B_S2] = new_button("assets/images/invisible.png",
@@ -55,32 +41,17 @@ void fill_scene_boss4(game_scene_t boss)
     (sfVector2f) {850, 600}, (sfIntRect) {0, 0, 41, 428}, 0);
     boss.buttons[WALKABLE17_B_S2] = new_button("assets/images/invisible.png",
     (sfVector2f) {890, 790}, (sfIntRect) {0, 0, 359, 36}, 0);
-    fill_scene_boss4_1(boss);
+    boss.objs[OBSTACLE_O_S2] = new_object("assets/images/obstacle.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 1);
+    boss.objs[TOWN_O_S2] = new_object("assets/images/map_town.png",
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
+    boss.objs[SHAMAN_O_S2] = new_object("assets/images/shaman.png",
+    (sfVector2f) {1575, 1150}, (sfIntRect) {0, 0, 16, 32}, 15);
+    boss.objs[OPTION_O_S2] = new_object("assets/images/option.png",
+    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
+    boss.objs[INVENTORY_O_S2] = new_object("assets/images/inventory.png",
+    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
     fill_scene_boss5(boss);
-}
-
-void fill_scene_boss3_1(game_scene_t boss)
-{
-    boss.buttons[EXIT_B_S2] = new_button("assets/images/invisible.png",
-    (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
-    boss.sounds[MUSIC_S_S2] = new_sound("assets/sounds/music_boss.ogg",
-    sfFalse, 100);
-    boss.sounds[CLICK_S_S2] = new_sound("assets/sounds/click.ogg",
-    sfFalse, 100);
-    boss.sounds[WALK_S_S2] = new_sound("assets/sounds/walk_rock.ogg",
-    sfFalse, 100);
-    boss.sounds[SWORD_S_S2] = new_sound("assets/sounds/swoosh.ogg",
-    sfFalse, 100);
-    boss.texts[VOLUME_T_S2] = new_text("assets/font/font.ttf", "Volume:",
-    (sfVector2f) {700, 400}, 40);
-    boss.texts[VSYNC_T_S2] = new_text("assets/font/font.ttf", "V-sync:",
-    (sfVector2f) {700, 500}, 40);
-    boss.texts[FRAME_T_S2] = new_text("assets/font/font.ttf", "Framerate:",
-    (sfVector2f) {640, 580}, 40);
-    boss.texts[NAME_T_S2] = new_text("assets/font/font.ttf", "Name:",
-    (sfVector2f) {700, 400}, 40);
-    boss.texts[XP_T_S2] = new_text("assets/font/font.ttf", "XP:",
-    (sfVector2f) {700, 450}, 40);
 }
 
 void fill_scene_boss3(game_scene_t boss)
@@ -101,7 +72,26 @@ void fill_scene_boss3(game_scene_t boss)
     (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     boss.buttons[OPTION_B_S2] = new_button("assets/images/invisible.png",
     (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
-    fill_scene_boss3_1(boss);
+    boss.buttons[EXIT_B_S2] = new_button("assets/images/invisible.png",
+    (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
+    boss.sounds[MUSIC_S_S2] = new_sound("assets/sounds/music_boss.ogg",
+    sfFalse, 100);
+    boss.sounds[CLICK_S_S2] = new_sound("assets/sounds/click.ogg",
+    sfFalse, 100);
+    boss.sounds[WALK_S_S2] = new_sound("assets/sounds/walk_rock.ogg",
+    sfFalse, 100);
+    boss.sounds[SWORD_S_S2] = new_sound("assets/sounds/swoosh.ogg",
+    sfFalse, 100);
+    boss.texts[VOLUME_T_S2] = new_text("assets/font/font.ttf", "Volume:",
+    (sfVector2f) {700, 400}, 40);
+    boss.texts[VSYNC_T_S2] = new_text("assets/font/font.ttf", "V-sync:",
+    (sfVector2f) {700, 500}, 40);
+    boss.texts[FRAME_T_S2] = new_text("assets/font/font.ttf", "Framerate:",
+    (sfVector2f) {640, 580}, 40);
+    boss.texts[NAME_T_S2] = new_text("assets/font/font.ttf", "Name:",
+    (sfVector2f) {700, 400}, 40);
+    boss.texts[XP_T_S2] = new_text("assets/font/font.ttf", "XP:",
+    (sfVector2f) {700, 450}, 40);
     fill_scene_boss4(boss);
 }
 
@@ -128,8 +118,20 @@ void fill_scene_boss2(game_scene_t boss)
     fill_scene_boss3(boss);
 }
 
-void fill_scene_boss1_1(game_scene_t boss)
+void fill_scene_boss1(game_scene_t boss)
 {
+    boss.buttons[TITLE_B_S2] = new_button("assets/images/exit_menu.png",
+    (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
+    boss.buttons[DESKTOP_B_S2] = new_button("assets/images/exit_desktop.png",
+    (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
+    boss.buttons[CLOSE_B_S2] = new_button("assets/images/close.png",
+    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
+    boss.buttons[V0_B_S2] = new_button("assets/images/0.png",
+    (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    boss.buttons[V25_B_S2] = new_button("assets/images/25.png",
+    (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    boss.buttons[V50_B_S2] = new_button("assets/images/50.png",
+    (sfVector2f) {970, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     boss.buttons[V100_B_S2] = new_button("assets/images/100.png",
     (sfVector2f) {1030, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     boss.buttons[ON_B_S2] = new_button("assets/images/on.png",
@@ -146,22 +148,5 @@ void fill_scene_boss1_1(game_scene_t boss)
     (sfVector2f) {140000, 70300.5}, (sfIntRect) {0, 0, 1267, 311.5}, 0);
     boss.buttons[WALKABLE3_B_S2] = new_button("assets/images/invisible.png",
     (sfVector2f) {1225, 1015}, (sfIntRect) {0, 0, 927.5, 745.5}, 0);
-}
-
-void fill_scene_boss1(game_scene_t boss)
-{
-    boss.buttons[TITLE_B_S2] = new_button("assets/images/exit_menu.png",
-    (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
-    boss.buttons[DESKTOP_B_S2] = new_button("assets/images/exit_desktop.png",
-    (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
-    boss.buttons[CLOSE_B_S2] = new_button("assets/images/close.png",
-    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
-    boss.buttons[V0_B_S2] = new_button("assets/images/0.png",
-    (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
-    boss.buttons[V25_B_S2] = new_button("assets/images/25.png",
-    (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
-    boss.buttons[V50_B_S2] = new_button("assets/images/50.png",
-    (sfVector2f) {970, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
-    fill_scene_boss1_1(boss);
     fill_scene_boss2(boss);
 }

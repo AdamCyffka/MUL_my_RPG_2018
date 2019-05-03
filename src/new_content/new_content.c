@@ -77,10 +77,20 @@ game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons, int nb_texts)
     game_scene_t new_scene;
 
     new_scene.objs = malloc(sizeof(game_object_t) * nb_objs);
+    if (new_scene.objs == NULL)
+        return new_scene;
     new_scene.sounds = malloc(sizeof(game_sound_t) * nb_musics);
+    if (new_scene.sounds == NULL)
+        return new_scene;
     new_scene.buttons = malloc(sizeof(game_button_t) * nb_buttons);
+    if (new_scene.buttons == NULL)
+        return new_scene;
     new_scene.texts = malloc(sizeof(game_text_t) * nb_texts);
+    if (new_scene.texts == NULL)
+        return new_scene;
     new_scene.how_many = malloc(sizeof(int) * 4);
+    if (new_scene.how_many == NULL)
+        return new_scene;
     new_scene.how_many[0] = nb_objs;
     new_scene.how_many[1] = nb_musics;
     new_scene.how_many[2] = nb_buttons;

@@ -1,16 +1,11 @@
 /*
 ** EPITECH PROJECT, 2019
-** MUL_my_rpg_2018
-** File description:
 ** save
+** File description:
+** rpg
 */
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdbool.h>
-
-static const char *data_filename = "data/player_stats.cfg";
+static const char *data_filename = "save.dat";
 
 void save_game(gui_t *gui, stage_t *stage, bag_t *mybag)
 {

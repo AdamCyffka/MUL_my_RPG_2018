@@ -14,10 +14,8 @@ void game_change(game_t *game)
     set_scale(game);
     set_cursor_pos(game->scenes[game->settings->current], game->settings);
     /*for (int tmp = 0; tmp < game->scenes[game->settings->current].how_many[1]; tmp++) {
-        if (game->scenes[game->settings->current].sounds[tmp]._activated == true) {
-                sfMusic_play(game->scenes[game->settings->current].sounds[MUSIC_S_S1].music);
-                game->scenes[MUSIC_S_S1].sounds[tmp]._activated == false;
-        }
+        if (game->scenes[game->settings->current].sounds[tmp]._activated == true)
+                sfMusic_play(game->[game->settings->current].sounds[MUSIC_S_S1].music);
     }*/
     dick_move_to_spawn(game);
     particules_star(game);
@@ -71,8 +69,10 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 int my_rpg(void)
 {
     game_t *game = malloc(sizeof(game_t));
-    game = create_game(game);
 
+    if (game == NULL)
+        return 84;
+    game = create_game(game);
     while (sfRenderWindow_isOpen(game->settings->window)) {
         sfRenderWindow_clear(game->settings->window, sfBlack);
         game_change(game);
@@ -80,7 +80,7 @@ int my_rpg(void)
         game->settings, game->stats);
         if (game->settings->current != MAIN_MENU) {
             draw_quest(game->quests, game->settings);
-            draw_inventory(game->scenes, game->inventory, game->settings);
+            draw_inventory(game->inventory, game->settings);
         }
         draw_player_info(game);
         while (sfRenderWindow_pollEvent(game->settings->window,

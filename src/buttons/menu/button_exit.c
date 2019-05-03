@@ -9,8 +9,7 @@
 #include "struct.h"
 #include "enum.h"
 
-void button_exit6(game_inventory_t *inventory, game_scene_t *scenes,
-int enable, int disable)
+void button_exit6(game_scene_t *scenes, int enable, int disable)
 {
     scenes[BEACH].texts[VSYNC_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[VSYNC_T_S5].state = ((enable == 1) ? disable : enable);
@@ -24,14 +23,9 @@ int enable, int disable)
     scenes[FOREST].texts[XP_T_S3].state = ((enable == 1) ? disable : enable);
     scenes[BEACH].texts[XP_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[XP_T_S5].state = ((enable == 1) ? disable : enable);
-    for (int i = SLOT_0; i <= SLOT_4; i++) {
-        if (inventory[i]._selected != true && inventory[i].state != EMPTY)
-            inventory[i].state = ((enable == 1) ? disable : enable);
-    }
 }
 
-void button_exit5(game_inventory_t *inventory, game_scene_t *scenes,
-int enable, int disable)
+void button_exit5(game_scene_t *scenes, int enable, int disable)
 {
     scenes[TOWN].buttons[F60_B_S1].state = ((enable == 1) ? disable : enable);
     scenes[BOSS].buttons[F60_B_S2].state = ((enable == 1) ? disable : enable);
@@ -52,11 +46,10 @@ int enable, int disable)
     scenes[TOWN].texts[VSYNC_T_S1].state = ((enable == 1) ? disable : enable);
     scenes[BOSS].texts[VSYNC_T_S2].state = ((enable == 1) ? disable : enable);
     scenes[FOREST].texts[VSYNC_T_S3].state = ((enable == 1) ? disable : enable);
-    button_exit6(inventory, scenes, 1, -1);
+    button_exit6(scenes, 1, -1);
 }
 
-void button_exit4(game_inventory_t *inventory, game_scene_t *scenes,
-int enable, int disable)
+void button_exit4(game_scene_t *scenes, int enable, int disable)
 {
     scenes[BEACH].buttons[DESKTOP_B_S4].state = ((enable == 1) ? enable :
     disable);
@@ -77,11 +70,10 @@ int enable, int disable)
     scenes[FOREST].buttons[F30_B_S3].state = ((enable == 1) ? disable : enable);
     scenes[BEACH].buttons[F30_B_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].buttons[F30_B_S5].state = ((enable == 1) ? disable : enable);
-    button_exit5(inventory, scenes, 1, -1);
+    button_exit5(scenes, 1, -1);
 }
 
-void button_exit3(game_inventory_t *inventory, game_scene_t *scenes,
-int enable, int disable)
+void button_exit3(game_scene_t *scenes, int enable, int disable)
 {
     scenes[CAMP].buttons[V100_B_S5].state = ((enable == 1) ? disable : enable);
     scenes[TOWN].objs[EXIT_O_S1].speed = ((enable == 1) ? enable : disable);
@@ -102,11 +94,10 @@ int enable, int disable)
     disable);
     scenes[FOREST].buttons[DESKTOP_B_S3].state = ((enable == 1) ? enable :
     disable);
-    button_exit4(inventory, scenes, 1, -1);
+    button_exit4(scenes, 1, -1);
 }
 
-void button_exit2(game_inventory_t *inventory, game_scene_t *scenes,
-int enable, int disable)
+void button_exit2(game_scene_t *scenes, int enable, int disable)
 {
     scenes[TOWN].buttons[V0_B_S1].state = ((enable == 1) ? disable : enable);
     scenes[BOSS].buttons[V0_B_S2].state = ((enable == 1) ? disable : enable);
@@ -125,14 +116,12 @@ int enable, int disable)
     scenes[CAMP].buttons[V50_B_S5].state = ((enable == 1) ? disable : enable);
     scenes[TOWN].buttons[V100_B_S1].state = ((enable == 1) ? disable : enable);
     scenes[BOSS].buttons[V100_B_S2].state = ((enable == 1) ? disable : enable);
-    scenes[FOREST].buttons[V100_B_S3].state =
-    ((enable == 1) ? disable : enable);
+    scenes[FOREST].buttons[V100_B_S3].state = ((enable == 1) ? disable : enable);
     scenes[BEACH].buttons[V100_B_S4].state = ((enable == 1) ? disable : enable);
-    button_exit3(inventory, scenes, 1, -1);
+    button_exit3(scenes, 1, -1);
 }
 
-void button_exit1(game_inventory_t *inventory, game_scene_t *scenes,
-int enable, int disable)
+void button_exit1(game_scene_t *scenes, int enable, int disable)
 {
     scenes[TOWN].objs[INVENTORY_O_S1].speed = ((enable == 1) ? disable :
     enable);
@@ -153,5 +142,5 @@ int enable, int disable)
     scenes[BOSS].objs[OPTION_O_S2].speed = ((enable == 1) ? disable : enable);
     scenes[FOREST].objs[OPTION_O_S3].speed = ((enable == 1) ? disable : enable);
     scenes[BEACH].objs[OPTION_O_S4].speed = ((enable == 1) ? disable : enable);
-    button_exit2(inventory, scenes, 1, -1);
+    button_exit2(scenes, 1, -1);
 }

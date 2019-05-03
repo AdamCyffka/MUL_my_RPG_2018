@@ -58,7 +58,7 @@ void fill_scene_town3(game_scene_t town)
     town.buttons[WALKABLE17_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {3115, 2765}, (sfIntRect) {0, 0, 1256.5, 126}, 0);
     town.buttons[INVENTORY_B_S1] = new_button("assets/images/invisible1.png",
-    (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
+    (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, 0);
     town.buttons[ME_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[OPTION_B_S1] = new_button("assets/images/invisible1.png",
@@ -83,8 +83,8 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {700, 400}, 40);
     town.texts[XP_T_S1] = new_text("assets/font/font.ttf", "XP:",
     (sfVector2f) {700, 450}, 40);
-    town.texts[QUEST_ANS_T_S1] = new_text("assets/font/font.ttf", "",
-    (sfVector2f) {0, 0}, 40);
+    town.texts[QUEST_ANS_T_S1] = new_text("assets/font/font.ttf",
+    "ENTER A DIGIT : ", (sfVector2f) {800, 720}, 40);
     fill_scene_town4(town);
 }
 

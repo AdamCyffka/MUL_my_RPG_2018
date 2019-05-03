@@ -26,8 +26,7 @@ void dick_move_to_case(game_t *game)
 
     if (game->quests[INTRO_Q].state == Q_FINISHED
         && game->settings->current == TOWN) {
-        vector = sfSprite_getPosition(
-        game->scenes[TOWN].objs[DICK_O_S1].sprite);
+        vector = sfSprite_getPosition(game->scenes[TOWN].objs[DICK_O_S1].sprite);
         if (vector.y <= 500 && vector.x < 1450) {
             vector.x += 10 * game->settings->delta_time;
             game->scenes[TOWN].objs[DICK_O_S1].rect.top = 32;
@@ -57,12 +56,9 @@ void dick_move_to_spawn(game_t *game)
 {
     sfVector2f vector;
 
-    if (game->settings->_paused == true)
-        return;
     if (game->quests[INTRO_Q].state == Q_ACCEPTED
         && game->settings->current == TOWN) {
-        vector = sfSprite_getPosition(
-        game->scenes[TOWN].objs[DICK_O_S1].sprite);
+        vector = sfSprite_getPosition(game->scenes[TOWN].objs[DICK_O_S1].sprite);
         if (vector.y > 500 && vector.x > 1450) {
             vector.x -= 10 * game->settings->delta_time;
             game->scenes[TOWN].objs[DICK_O_S1].rect.top = 96;

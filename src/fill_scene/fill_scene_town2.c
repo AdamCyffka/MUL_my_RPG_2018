@@ -81,7 +81,7 @@ void fill_scene_town6(game_scene_t town)
     town.objs[GEORGE_O_S1] = new_object("assets/images/george.png",
     (sfVector2f) {320 * 3.5, 710 * 3.5}, (sfIntRect) {0, 0, 16, 32}, 0);
     town.objs[MINIMAP_O_S1] = new_object("assets/images/minimap.png",
-    (sfVector2f) {490, 200}, (sfIntRect) {0, 0, 1920, 1080}, -1);
+    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1920, 1080}, -1);
     town.objs[QUEST_O_S1] = new_object("assets/images/quest.png",
     (sfVector2f) {550, 235}, (sfIntRect) {0, 0, 848, 584}, -1);
     town.objs[LIFE_O_S1] = new_object("assets/images/life.png",

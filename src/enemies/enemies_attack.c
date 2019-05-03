@@ -14,7 +14,8 @@ void attack_player(game_scene_t *scenes,
 {
     sfVector2f vector;
 
-    if (settings->current == DEFEAT) return;
+    if (settings->current == DEFEAT)
+        return;
     vector = sfSprite_getPosition(
     scenes[settings->current].objs[tmp].sprite);
     if (((stats->player.position.y < vector.y
