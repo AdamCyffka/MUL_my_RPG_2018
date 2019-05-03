@@ -19,6 +19,7 @@ int enable, int disable)
     scenes[FOREST].texts[XP_T_S3].state = ((enable == 1) ? disable : enable);
     scenes[BEACH].texts[XP_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[XP_T_S5].state = ((enable == 1) ? disable : enable);
+    scenes[TOWN].objs[MINIMAP_O_S1].speed = ((enable == 1) ? disable : enable);
     for (int i = SLOT_0; i <= SLOT_4; i++) {
         if (inventory[i]._selected != true && inventory[i].state != EMPTY)
             inventory[i].state = ((enable == 1) ? disable : enable);

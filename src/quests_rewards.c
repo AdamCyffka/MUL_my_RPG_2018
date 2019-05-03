@@ -13,14 +13,14 @@
 void change_sprite_player(game_stat_t *stats)
 {
     if (stats->sex == 0) {
-        stats->player.texture = 
+        stats->player.texture =
         sfTexture_createFromFile("assets/images/girl2.png", NULL);
-        sfSprite_setTexture(stats->player.sprite, stats->player.texture, 
+        sfSprite_setTexture(stats->player.sprite, stats->player.texture,
         sfFalse);
     } else {
-        stats->player.texture = 
+        stats->player.texture =
         sfTexture_createFromFile("assets/images/boy2.png", NULL);
-        sfSprite_setTexture(stats->player.sprite, stats->player.texture, 
+        sfSprite_setTexture(stats->player.sprite, stats->player.texture,
         sfFalse);
     }
 }

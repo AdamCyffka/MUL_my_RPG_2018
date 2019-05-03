@@ -134,7 +134,8 @@ void draw_cursor(game_scene_t scene, game_setting_t *settings);
 void draw_quest(game_quest_t *quests, game_setting_t *settings);
 
 //draw_inventory
-void draw_inventory(game_inventory_t *inventory, game_setting_t *settings);
+void draw_inventory(game_scene_t *scene, game_inventory_t *inventory, 
+game_setting_t *settings);
 
 //draw_player_info
 void draw_player_info(game_t *game);

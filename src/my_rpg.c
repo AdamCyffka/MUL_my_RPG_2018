@@ -80,7 +80,7 @@ int my_rpg(void)
         game->settings, game->stats);
         if (game->settings->current != MAIN_MENU) {
             draw_quest(game->quests, game->settings);
-            draw_inventory(game->inventory, game->settings);
+            draw_inventory(game->scenes, game->inventory, game->settings);
         }
         draw_player_info(game);
         while (sfRenderWindow_pollEvent(game->settings->window,
