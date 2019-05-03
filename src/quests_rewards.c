@@ -83,13 +83,13 @@ void pick_up_item(game_t *game)
     static int check = 0;
     
     if (game->quests[FIND_LOST_Q].state == Q_IN_PROGRESS && check == 0) {
-        if (game->stats->player.position.x < 
-        game->scenes[TOWN].objs[AXE_O_S1].position.x + 50 && 
-        game->stats->player.position.x + 56 > 
-        game->scenes[TOWN].objs[AXE_O_S1].position.x && 
-        game->stats->player.position.y + 100 < 
-        game->scenes[TOWN].objs[AXE_O_S1].position.y + 50 &&  
-        game->stats->player.position.y + 112 > 
+        if (game->stats->player.position.x <
+        game->scenes[TOWN].objs[AXE_O_S1].position.x + 50 &&
+        game->stats->player.position.x + 56 >
+        game->scenes[TOWN].objs[AXE_O_S1].position.x &&
+        game->stats->player.position.y + 100 <
+        game->scenes[TOWN].objs[AXE_O_S1].position.y + 50 &&
+        game->stats->player.position.y + 112 >
         game->scenes[TOWN].objs[AXE_O_S1].position.y) {
             check++;
             fill_inventory(game->inventory, AXE_R);

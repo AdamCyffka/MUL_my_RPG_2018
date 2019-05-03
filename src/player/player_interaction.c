@@ -26,14 +26,25 @@ void play_song_walk(game_scene_t scenes, game_setting_t *settings)
         sfMusic_play(scenes.sounds[WALK_S_S3].music);
 }
 
+int equiped_or_not(game_inventory_t *inventory, int item)
+{
+    for (int tmp = SLOT_0; tmp <= SLOT_4; tmp++) {
+        if (inventory[tmp]._selected == true
+            && inventory[tmp].content == item)
+            return 1;
+    }
+    return 0;
+}
+
 void player_interaction_attack(game_t *game)
 {
     if (sfKeyboard_isKeyPressed(sfKeyZ) == false &&
         sfKeyboard_isKeyPressed(sfKeyS) == false &&
         sfKeyboard_isKeyPressed(sfKeyQ) == false &&
-        sfKeyboard_isKeyPressed(sfKeyD) == false &&
-        sfKeyboard_isKeyPressed(sfKeySpace) == false) {
-        if (sfKeyboard_isKeyPressed(sfKeyF) == true) {
+        sfKeyboard_isKeyPressed(sfKeyD) == false) {
+        if (sfKeyboard_isKeyPressed(sfKeySpace) == true &&
+            (equiped_or_not(game->inventory, SWORD1_R) == 1 ||
+            equiped_or_not(game->inventory, SWORD2_R) == 1)) {
             sfMusic_play(game->scenes[TOWN].sounds[SWORD_S_S1].music);
             player_attack(game->stats);
         } else
@@ -53,6 +64,6 @@ void player_interaction(game_t *game)
             sfKeyboard_isKeyPressed(sfKeyD) == true) &&
             sfKeyboard_isKeyPressed(sfKeySpace) == false)
             key_to_move_or_not(game->scenes[game->settings->current],
-            game->settings, game->stats);
+            game->settings, game->stats, game->inventory);
     }
 }
