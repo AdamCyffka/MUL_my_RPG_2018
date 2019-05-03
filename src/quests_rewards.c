@@ -13,14 +13,14 @@
 void change_sprite_player(game_stat_t *stats)
 {
     if (stats->sex == 0) {
-        stats->player.texture = 
+        stats->player.texture =
         sfTexture_createFromFile("assets/images/girl2.png", NULL);
-        sfSprite_setTexture(stats->player.sprite, stats->player.texture, 
+        sfSprite_setTexture(stats->player.sprite, stats->player.texture,
         sfFalse);
     } else {
-        stats->player.texture = 
+        stats->player.texture =
         sfTexture_createFromFile("assets/images/boy2.png", NULL);
-        sfSprite_setTexture(stats->player.sprite, stats->player.texture, 
+        sfSprite_setTexture(stats->player.sprite, stats->player.texture,
         sfFalse);
     }
 }
@@ -83,13 +83,13 @@ void pick_up_item(game_t *game)
     static int check = 0;
     
     if (game->quests[FIND_LOST_Q].state == Q_IN_PROGRESS && check == 0) {
-        if (game->stats->player.position.x < 
-        game->scenes[TOWN].objs[AXE_O_S1].position.x + 50 && 
-        game->stats->player.position.x + 56 > 
-        game->scenes[TOWN].objs[AXE_O_S1].position.x && 
-        game->stats->player.position.y + 100 < 
-        game->scenes[TOWN].objs[AXE_O_S1].position.y + 50 &&  
-        game->stats->player.position.y + 112 > 
+        if (game->stats->player.position.x <
+        game->scenes[TOWN].objs[AXE_O_S1].position.x + 50 &&
+        game->stats->player.position.x + 56 >
+        game->scenes[TOWN].objs[AXE_O_S1].position.x &&
+        game->stats->player.position.y + 100 <
+        game->scenes[TOWN].objs[AXE_O_S1].position.y + 50 &&
+        game->stats->player.position.y + 112 >
         game->scenes[TOWN].objs[AXE_O_S1].position.y) {
             check++;
             fill_inventory(game->inventory, AXE_R);
