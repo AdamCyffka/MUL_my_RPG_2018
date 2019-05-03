@@ -9,14 +9,14 @@
 #include "struct.h"
 #include "enum.h"
 
-void button_inventory6(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_inventory6(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable)
 {
     scenes[BEACH].texts[XP_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[XP_T_S5].state = ((enable == 1) ? disable : enable);
 }
 
-void button_inventory5(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_inventory5(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable)
 {
     scenes[CAMP].texts[VOLUME_T_S5].state = ((enable == 1) ? disable : enable);
@@ -41,7 +41,7 @@ int enable, int disable)
     button_inventory6(inventory, scenes, 1, -1);
 }
 
-void button_inventory4(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_inventory4(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable)
 {
     scenes[TOWN].buttons[V100_B_S1].state = ((enable == 1) ? disable : enable);
@@ -65,7 +65,7 @@ int enable, int disable)
     button_inventory5(inventory, scenes, 1, -1);
 }
 
-void button_inventory3(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_inventory3(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable)
 {
     scenes[BEACH].buttons[DESKTOP_B_S4].state = ((enable == 1) ? disable :
@@ -90,7 +90,8 @@ int enable, int disable)
     button_inventory4(inventory, scenes, 1, -1);
 }
 
-void button_inventory2(game_inventory_t *inventory, game_scene_t *scenes, int enable, int disable)
+void button_inventory2(game_inventory_t *inventory,
+    game_scene_t *scenes, int enable, int disable)
 {
     scenes[CAMP].objs[OPTION_O_S5].speed = ((enable == 1) ? disable : enable);
     scenes[TOWN].objs[EXIT_O_S1].speed = ((enable == 1) ? disable : enable);
@@ -114,7 +115,7 @@ void button_inventory2(game_inventory_t *inventory, game_scene_t *scenes, int en
     button_inventory3(inventory, scenes, 1, -1);
 }
 
-void button_inventory1(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_inventory1(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable)
 {
     scenes[TOWN].objs[INVENTORY_O_S1].speed = ((enable == 1) ? enable :

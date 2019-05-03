@@ -19,6 +19,7 @@ void button_option7(game_scene_t *scenes, int enable, int disable)
     scenes[BEACH].texts[XP_T_S4].state = ((enable == 1) ? disable : enable);
     scenes[CAMP].texts[XP_T_S5].state = ((enable == 1) ? disable : enable);
 }
+
 void button_option6(game_scene_t *scenes, int enable, int disable)
 {
     scenes[TOWN].texts[VOLUME_T_S1].state = ((enable == 1) ? enable : disable);
