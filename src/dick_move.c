@@ -57,6 +57,8 @@ void dick_move_to_spawn(game_t *game)
 {
     sfVector2f vector;
 
+    if (game->settings->_paused == true)
+        return;
     if (game->quests[INTRO_Q].state == Q_ACCEPTED
         && game->settings->current == TOWN) {
         vector = sfSprite_getPosition(

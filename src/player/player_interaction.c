@@ -31,9 +31,8 @@ void player_interaction_attack(game_t *game)
     if (sfKeyboard_isKeyPressed(sfKeyZ) == false &&
         sfKeyboard_isKeyPressed(sfKeyS) == false &&
         sfKeyboard_isKeyPressed(sfKeyQ) == false &&
-        sfKeyboard_isKeyPressed(sfKeyD) == false &&
-        sfKeyboard_isKeyPressed(sfKeySpace) == false) {
-        if (sfKeyboard_isKeyPressed(sfKeyF) == true) {
+        sfKeyboard_isKeyPressed(sfKeyD) == false) {
+        if (sfKeyboard_isKeyPressed(sfKeySpace) == true) {
             sfMusic_play(game->scenes[TOWN].sounds[SWORD_S_S1].music);
             player_attack(game->stats);
         } else

@@ -72,8 +72,6 @@ game_stat_t *stats);
 void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 
 //save
-int save_player_stats(game_t *game);
-int load_player_stats(game_t *game);
 
 //buttons
 void all_button(game_inventory_t *inventory, game_setting_t *settings, 
