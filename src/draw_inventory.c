@@ -72,18 +72,18 @@ int reward, int tmp)
 
 void utils_change_texture(game_inventory_t *inventory, int tmp)
 {
-    change_item_texture(inventory, "assets/images/icon_sword1.png", SWORD1_R, 
+    change_item_texture(inventory, "assets/images/icon_sword1.png", SWORD1_R,
     tmp);
-    change_item_texture(inventory, "assets/images/icon_sword2.png", SWORD2_R, 
+    change_item_texture(inventory, "assets/images/icon_sword2.png", SWORD2_R,
     tmp);
-    change_item_texture(inventory, "assets/images/icon_quest.png", QBOOK_R, 
+    change_item_texture(inventory, "assets/images/icon_quest.png", QBOOK_R,
     tmp);
-    change_item_texture(inventory, "assets/images/icon_map.png", MINIMAP_R, 
+    change_item_texture(inventory, "assets/images/icon_map.png", MINIMAP_R,
     tmp);
-    change_item_texture(inventory, "assets/images/icon_boots.png", BOOTS_R, 
+    change_item_texture(inventory, "assets/images/icon_boots.png", BOOTS_R,
     tmp);
     change_item_texture(inventory, "assets/images/icon_axe.png", AXE_R, tmp);
-    change_item_texture(inventory, "assets/images/icon_golem.png", GOLEMHEAD_R, 
+    change_item_texture(inventory, "assets/images/icon_golem.png", GOLEMHEAD_R,
     tmp);
 }
 

@@ -25,7 +25,7 @@ void particules_move3(game_t *game, sfVector2f vector)
     sfSprite_setPosition(
         game->scenes[TOWN].objs[LEAF_O_S1].sprite, vector);
     sfSprite_setRotation(game->scenes[TOWN].objs[LEAF_O_S1].sprite,
-                         game->scenes[TOWN].objs[LEAF_O_S1].speed);
+    game->scenes[TOWN].objs[LEAF_O_S1].speed);
 }
 
 void particules_move2(game_t *game, sfVector2f vector)
@@ -49,7 +49,6 @@ void particules_star2(game_t *game, int tmp)
 {
     sfVector2f vector = game->stats->player.position;
     float speed = game->scenes[TOWN].objs[STAR_O_S1].speed;
-
     if (game->scenes[TOWN].objs[STAR_O_S1].speed < ((tmp + 1) * 100.0)) {
         if (speed > 100)
             speed -= 100 * tmp;
@@ -62,8 +61,10 @@ void particules_star2(game_t *game, int tmp)
         game->scenes[TOWN].objs[STAR_O_S1].speed++;
     }
     if (game->scenes[TOWN].objs[STAR_O_S1].speed == ((tmp + 1) * 100.0)) {
-        sfSprite_setScale(game->scenes[TOWN].objs[STAR_O_S1].sprite, (sfVector2f) {1, 1});
-        sfSprite_setPosition(game->scenes[TOWN].objs[STAR_O_S1].sprite, (sfVector2f) {-500, -500});
+        sfSprite_setScale(game->scenes[TOWN].objs[STAR_O_S1].sprite,
+        (sfVector2f) {1, 1});
+        sfSprite_setPosition(game->scenes[TOWN].objs[STAR_O_S1].sprite,
+        (sfVector2f) {-500, -500});
         game->scenes[TOWN].objs[STAR_O_S1].speed++;
     }
 }
