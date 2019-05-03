@@ -14,18 +14,26 @@ void keyboard_checker_scenes(game_t *game)
     if (sfKeyboard_isKeyPressed(sfKeyI)) {
         button_inventory1(game->inventory, game->scenes, 1, -1);
         game->settings->_paused = true;
+        game->stats->xp_t.state = -1;
+        game->stats->name_t.state = -1;
     }
     if (sfKeyboard_isKeyPressed(sfKeyM)) {
         button_me1(game->scenes, 1, -1);
         game->settings->_paused = true;
+        game->stats->xp_t.state = 0;
+        game->stats->name_t.state = 0;
     }
     if (sfKeyboard_isKeyPressed(sfKeyO)) {
         button_option1(game->scenes, 1, -1);
+        game->settings->_paused = true;
         game->stats->xp_t.state = -1;
+        game->stats->name_t.state = -1;
     }
     if (sfKeyboard_isKeyPressed(sfKeyEscape)) {
         button_exit1(game->scenes, 1, -1);
         game->settings->_paused = true;
+        game->stats->xp_t.state = -1;
+        game->stats->name_t.state = -1;
     }
 }
 
