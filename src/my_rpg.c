@@ -18,6 +18,7 @@ void game_change(game_t *game)
                 sfMusic_play(game->[game->settings->current].sounds[MUSIC_S_S1].music);
     }*/
     dick_move_to_spawn(game);
+    particules_star(game);
     if (game->settings->current == BOSS)
         change_view_boss(game->settings);
     if (game->settings->current == MAIN_MENU)
