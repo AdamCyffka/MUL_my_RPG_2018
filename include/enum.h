@@ -44,12 +44,12 @@ enum rewards {
     BOOTS_R,
     AXE_R,
     GOLEMHEAD_R,
-    LIFE_R,
+    LIFE_R = 100,
     DAMAGE_R,
-    XP50_R,
-    XP100_R,
-    XP500_R,
-    XPMAX_R
+    XP50_R = 50,
+    XP100_R = 100,
+    XP500_R = 500,
+    XPMAX_R = 9999999
 };
 
 enum quest {

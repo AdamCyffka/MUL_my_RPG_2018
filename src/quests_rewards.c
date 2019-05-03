@@ -25,9 +25,35 @@ void change_sprite_player(game_stat_t *stats)
     }
 }
 
+void give_xp_rewards(game_scene_t town, game_stat_t *stats, 
+game_quest_t *quests)
+{
+    if (stats->current_quest == GOLEMS_Q && quests[GOLEMS_Q].state ==
+    Q_VALIDATED)
+        stats->xp += XP50_R;
+    if (stats->current_quest == FIND_LOST_Q && quests[FIND_LOST_Q].state ==
+    Q_VALIDATED)
+        stats->xp += XP100_R;
+    if (stats->current_quest == GHOSTS_Q && quests[GHOSTS_Q].state ==
+    Q_VALIDATED)
+        stats->xp += XP500_R;
+    if (stats->current_quest == SHEEP_COUNT_Q && quests[SHEEP_COUNT_Q].state ==
+    Q_VALIDATED) {
+        stats->xp += XP50_R;
+        stats->life += 50;
+    }
+    if (stats->current_quest == SKELETONS_Q && quests[SKELETONS_Q].state ==
+    Q_VALIDATED)
+        stats->xp += XP500_R;
+    if (stats->current_quest == BOSS_Q && quests[BOSS_Q].state ==
+    Q_VALIDATED)
+        stats->xp += XPMAX_R;
+}
+
 void give_rewards_if_validated(game_scene_t town, game_stat_t *stats, 
 game_quest_t *quests, game_inventory_t *inventory)
 {
+    give_xp_rewards(town, stats, quests);
     if (quests[INTRO_Q].state == Q_VALIDATED) {
         fill_inventory(inventory, quests[INTRO_Q].rewards[0]);
         fill_inventory(inventory, quests[INTRO_Q].rewards[1]);
