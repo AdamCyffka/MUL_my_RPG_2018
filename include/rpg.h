@@ -80,10 +80,14 @@ void all_button(game_inventory_t *inventory, game_setting_t *settings,
 game_scene_t *scenes, game_stat_t *stats);
 void button_inventory1(game_inventory_t *inventory, game_scene_t *scenes, 
 int enable, int disable);
-void button_option1(game_scene_t *scenes, int enable, int disable);
-void button_exit1(game_scene_t *scenes, int enable, int disable);
-void button_me1(game_scene_t *scenes, int enable, int disable);
-void button_close1(game_scene_t *scenes, int enable, int disable);
+void button_option1(game_inventory_t *inventory, game_scene_t *scenes, 
+int enable, int disable);
+void button_exit1(game_inventory_t *inventory, game_scene_t *scenes, 
+int enable, int disable);
+void button_me1(game_inventory_t *inventory, game_scene_t *scenes, 
+int enable, int disable);
+void button_close1(game_inventory_t *inventory, game_scene_t *scenes, 
+int enable, int disable);
 
 //quest_interaction
 void quests_interaction(void);

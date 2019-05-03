@@ -16,15 +16,15 @@ void keyboard_checker_scenes(game_t *game)
         game->settings->_paused = true;
     }
     if (sfKeyboard_isKeyPressed(sfKeyM)) {
-        button_me1(game->scenes, 1, -1);
+        button_me1(game->inventory, game->scenes, 1, -1);
         game->settings->_paused = true;
     }
     if (sfKeyboard_isKeyPressed(sfKeyO)) {
-        button_option1(game->scenes, 1, -1);
+        button_option1(game->inventory, game->scenes, 1, -1);
         game->settings->_paused = true;
     }
     if (sfKeyboard_isKeyPressed(sfKeyEscape)) {
-        button_exit1(game->scenes, 1, -1);
+        button_exit1(game->inventory, game->scenes, 1, -1);
         game->settings->_paused = true;
     }
 }
