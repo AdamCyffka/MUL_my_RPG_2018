@@ -120,7 +120,7 @@ void npc_interaction(game_t *game)
             game->quests);
     }
     quest_validation(game);
-    //give_rewards_if_validated(game->scenes[TOWN], game->stats, game->quests, 
-    //game->inventory);
+    give_rewards_if_validated(game->scenes[TOWN], game->stats, game->quests, 
+    game->inventory);
     change_quest_if_validated(game->stats, game->quests);
 }
