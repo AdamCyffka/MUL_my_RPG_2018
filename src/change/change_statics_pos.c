@@ -93,4 +93,7 @@ void change_statics_pos_town(game_scene_t scene, game_setting_t *settings)
         (sfVector2f) {center.x - size.x / 2 +
         scene.buttons[tmp].position.x, center.y - size.y / 2 +
         scene.buttons[tmp].position.y});
+    sfText_setPosition(scene.texts[QUEST_ANS_T_S1].text, (sfVector2f)
+    {center.x - size.x / 2 + scene.texts[QUEST_ANS_T_S1].position.x,
+    center.y - size.y / 2 + scene.texts[QUEST_ANS_T_S1].position.y});
 }
