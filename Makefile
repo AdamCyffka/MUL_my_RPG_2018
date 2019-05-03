@@ -30,6 +30,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/draw_player_info.c				\
 			./src/set_scale.c 						\
 			./src/clock.c 							\
+			./src/quests_rewards.c					\
 			./src/lib_functions/my_libc_functions.c \
 			./src/lib_functions/my_libc_functions2.c\
 			./src/npc_interaction.c 				\
@@ -58,6 +59,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/player/player_attack.c			\
 			./src/player/player_rect.c				\
 			./src/player/player_interaction.c		\
+			./src/player/player_data_refresh.c		\
 			./src/enemies/enemies_die.c				\
 			./src/enemies/enemies_moves.c			\
 			./src/enemies/enemies_positions.c		\
@@ -75,6 +77,8 @@ SRC		=	./src/my_rpg.c							\
 			./src/fill_quest/fill_quest5_9.c		\
 			./src/fill_quest/fill_quest10_12.c		\
 			./src/particules.c				\
+			./src/dick_move.c				\
+			./src/boss.c					\
 			./src/write_text.c
 
 SRC_TEST	= 	./tests/my_putstr_test.c \

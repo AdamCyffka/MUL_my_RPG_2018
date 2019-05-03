@@ -72,30 +72,6 @@ void change_quest_if_validated(game_stat_t *stats, game_quest_t *quests)
     }
 }
 
-void give_rewards_if_validated(game_stat_t *stats, game_quest_t *quests,
-game_inventory_t *inventory)
-{
-    if (quests[INTRO_Q].state == Q_VALIDATED) {
-        fill_inventory(inventory, MINIMAP_R);
-        fill_inventory(inventory, QBOOK_R);
-    }
-    if (quests[BLACKSMITH_Q].state == Q_VALIDATED) {
-        fill_inventory(inventory, SWORD1_R);
-    }
-    if (quests[GOLEMS_Q].state == Q_VALIDATED) {
-        fill_inventory(inventory, GOLEMHEAD_R);
-    }
-    if (quests[ROBIN_Q].state == Q_FINISHED) {
-        for (int i = SLOT_0; i <= SLOT_4; i++) {
-            if (inventory[i].item.content == GOLEMHEAD_R) {
-                inventory[i].item.content = EMPTY;
-                change_item_texture(inventory, "assets/invisible.png", EMPTY, i);
-            }
-        }
-    }
-    return;
-}
-
 void change_quest_objective(game_stat_t *stats, game_quest_t *quests)
 {
     if (quests[stats->current_quest].state == Q_ACCEPTED &&
@@ -120,6 +96,7 @@ void npc_interaction(game_t *game)
     game->scenes[TOWN], game->quests);
 
     //printf("current quest: %i, quest state: %i, quest progress: %i/%i\n", game->stats->current_quest, game->quests[game->stats->current_quest].state, game->quests[game->stats->current_quest].progress, game->quests[game->stats->current_quest].nb_of_task);
+    pick_up_item(game);
     if (player_in_zone == false)
         return;
     change_quest_objective(game->stats, game->quests);
@@ -132,6 +109,7 @@ void npc_interaction(game_t *game)
             game->quests);
     }
     quest_validation(game);
-    give_rewards_if_validated(game->stats, game->quests, game->inventory);
+    give_rewards_if_validated(game->scenes[TOWN], game->stats, game->quests, 
+    game->inventory);
     change_quest_if_validated(game->stats, game->quests);
 }

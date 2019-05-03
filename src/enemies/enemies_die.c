@@ -34,6 +34,7 @@ void rect_die(game_t *game, int tmp)
     boss_die(game, tmp);
     if (game->settings->current == BOSS)
         return;
+    game->stats->xp += 5;
     if (game->settings->current == CAMP
         && game->quests[GOLEMS_Q].progress < game->quests[GOLEMS_Q].nb_of_task)
         game->quests[GOLEMS_Q].progress++;

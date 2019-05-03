@@ -116,7 +116,8 @@ void button_exit2(game_scene_t *scenes, int enable, int disable)
     scenes[CAMP].buttons[V50_B_S5].state = ((enable == 1) ? disable : enable);
     scenes[TOWN].buttons[V100_B_S1].state = ((enable == 1) ? disable : enable);
     scenes[BOSS].buttons[V100_B_S2].state = ((enable == 1) ? disable : enable);
-    scenes[FOREST].buttons[V100_B_S3].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].buttons[V100_B_S3].state =
+    ((enable == 1) ? disable : enable);
     scenes[BEACH].buttons[V100_B_S4].state = ((enable == 1) ? disable : enable);
     button_exit3(scenes, 1, -1);
 }

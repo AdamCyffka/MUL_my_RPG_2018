@@ -74,9 +74,10 @@ void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 //save
 
 //buttons
-void all_button(game_setting_t *settings, game_scene_t *scenes,
-game_stat_t *stats);
-void button_inventory1(game_scene_t *scenes, int enable, int disable);
+void all_button(game_inventory_t *inventory, game_setting_t *settings, 
+game_scene_t *scenes, game_stat_t *stats);
+void button_inventory1(game_inventory_t *inventory, game_scene_t *scenes, 
+int enable, int disable);
 void button_option1(game_scene_t *scenes, int enable, int disable);
 void button_exit1(game_scene_t *scenes, int enable, int disable);
 void button_me1(game_scene_t *scenes, int enable, int disable);
@@ -169,6 +170,7 @@ void my_putchar(char c);
 int my_strcmp(char const *str1, char const *str2);
 char *my_stradd(const char *str, char toadd);
 char *my_strrem(const char *str);
+char *my_getstr(int nb);
 
 //new_content
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons,
@@ -202,11 +204,24 @@ int text_entered(game_setting_t *settings);
 void enter_quest_answer(game_text_t quest_answer, game_setting_t *settings);
 void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
+//quests_reward
+void pick_up_item(game_t *game);
+
 void fill_inventory(game_inventory_t *inventory, int content);
+void delete_item_inventory(game_inventory_t *inventory, int reward);
 void change_item_texture(game_inventory_t *inventory, char const *path, 
 int reward, int tmp);
 
 //PARTICULES
 void particules_move(game_t *game);
+
+//refresh_player_data.c
+void refresh_player_data(game_stat_t *stats);
+
+//DICK
+void dick_move_to_spawn(game_t *game);
+
+//BOSS
+void change_view_boss(game_setting_t *settings);
 
 #endif /* RPG_H_ */

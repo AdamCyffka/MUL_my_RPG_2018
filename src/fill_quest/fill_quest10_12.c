@@ -1,3 +1,4 @@
+
 /*
 ** EPITECH PROJECT, 2019
 ** MUL_my_rpg_2018
@@ -26,8 +27,7 @@ void fill_quest11(game_quest_t *quest11)
 {
     quest11->dialogs_text[0] = new_text("assets/font/font.ttf", Q11_DIAL0,
     (sfVector2f) {420, 800}, 26);
-    quest11->rewards[0] = DAMAGE_R;
-    quest11->rewards[1] = XP500_R;
+    quest11->rewards[0] = XP500_R;
     quest11->npc_zone = ZONE1_B_S1;
 }
 

@@ -87,7 +87,7 @@ game_stat_t *stats)
     }
 }
 
-void all_button(game_setting_t *settings, game_scene_t *scenes, game_stat_t *stats)
+void all_button(game_inventory_t *inventory, game_setting_t *settings, game_scene_t *scenes, game_stat_t *stats)
 {
     if (scenes[TOWN].buttons[DESKTOP_B_S1].state >= 0
     || scenes[TOWN].buttons[TITLE_B_S1].state >= 0)
@@ -104,7 +104,9 @@ void all_button(game_setting_t *settings, game_scene_t *scenes, game_stat_t *sta
     if (button_is_clicked(settings, scenes[TOWN].buttons[INVENTORY_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[INVENTORY_B_S1].rect.width,
     scenes[TOWN].buttons[INVENTORY_B_S1].rect.height}) == true) {
-        button_inventory1(scenes, 1, -1);
+        button_inventory1(inventory, scenes, 1, -1);
+        stats->xp_t.state = -1;
+        stats->name_t.state = -1;
     }
     if (button_is_clicked(settings, scenes[TOWN].buttons[ME_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[ME_B_S1].rect.width,

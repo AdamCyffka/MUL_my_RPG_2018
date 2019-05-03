@@ -30,12 +30,14 @@ void fill_scene_town8(game_scene_t town)
     (sfVector2f) {695 * 3.5, 230 * 3.5},
     (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
     town.buttons[ZONESPECIAL_B_S1] = new_button("assets/images/zone.png",
-    (sfVector2f) {70 * 3.5, 170 * 3.5},
+    (sfVector2f) {105 * 3.5, 165 * 3.5},
     (sfIntRect) {0, 0, 16 * 3.5, 16 * 3.5}, 0);
 }
 
 void fill_scene_town7(game_scene_t town)
 {
+    town.objs[STAR_O_S1] = new_object("assets/images/star.png",
+    (sfVector2f) {1650, 400}, (sfIntRect) {0, 0, 16, 16}, 1);
     town.objs[LEAF_O_S1] = new_object("assets/images/leaf.png",
     (sfVector2f) {1650, 400}, (sfIntRect) {0, 0, 9, 10}, 1);
     town.objs[CURSOR_O_S1] = new_object("assets/images/cursor.png",

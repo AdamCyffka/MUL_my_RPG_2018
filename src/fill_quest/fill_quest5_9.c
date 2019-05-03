@@ -57,5 +57,6 @@ void fill_quest5(game_quest_t *quest5)
     quest5->dialogs_text[1] = new_text("assets/font/font.ttf", Q5_DIAL1, (sfVector2f)
     {420, 800}, 26);
     quest5->rewards[0] = XP100_R;
+    quest5->rewards[1] = BOOTS_R;
     quest5->npc_zone = ZONE4_B_S1;
 }

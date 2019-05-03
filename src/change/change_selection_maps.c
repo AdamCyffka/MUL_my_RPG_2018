@@ -22,9 +22,12 @@ void change_statics_pos_common(game_t *game)
             center.y - size.y / 2 + game->scenes[tmp].texts[tmp2].position.y});
     for (int tmp = INTRO_Q; tmp <= BOSS_Q; tmp++)
         for (int tmp2 = 0; tmp2 < game->quests[tmp].nb_of_dial; tmp2++)
-            sfText_setPosition(game->quests[tmp].dialogs_text[tmp2].text, (sfVector2f)
-            {center.x - size.x / 2 + game->quests[tmp].dialogs_text[tmp2].position.x,
-            center.y - size.y / 2 + game->quests[tmp].dialogs_text[tmp2].position.y});
+            sfText_setPosition(game->quests[tmp].dialogs_text[tmp2].text,
+            (sfVector2f)
+            {center.x - size.x /
+            2 + game->quests[tmp].dialogs_text[tmp2].position.x,
+            center.y - size.y /
+            2 + game->quests[tmp].dialogs_text[tmp2].position.y});
     for (int tmp = SLOT_0; tmp <= SLOT_4; tmp++)
         sfRectangleShape_setPosition(game->inventory[tmp].item.shape,
         (sfVector2f) {center.x - size.x / 2 +
@@ -45,7 +48,8 @@ void change_statics_pos_common(game_t *game)
 void change_maps(game_t *game)
 {
     npc_interaction(game);
-    all_button(game->settings, game->scenes, game->stats);
+    refresh_player_data(game->stats);
+    all_button(game->inventory, game->settings, game->scenes, game->stats);
     if (game->quests[INTRO_Q].state == Q_NOT_STARTED)
         game->quests[INTRO_Q].state = Q_ACCEPTED;
     change_statics_pos_common(game);

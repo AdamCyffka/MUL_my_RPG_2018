@@ -12,7 +12,7 @@
 void keyboard_checker_scenes(game_t *game)
 {
     if (sfKeyboard_isKeyPressed(sfKeyI)) {
-        button_inventory1(game->scenes, 1, -1);
+        button_inventory1(game->inventory, game->scenes, 1, -1);
         game->settings->_paused = true;
     }
     if (sfKeyboard_isKeyPressed(sfKeyM)) {

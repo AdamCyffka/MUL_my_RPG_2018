@@ -17,6 +17,10 @@ void game_change(game_t *game)
         if (game->scenes[game->settings->current].sounds[tmp]._activated == true)
                 sfMusic_play(game->[game->settings->current].sounds[MUSIC_S_S1].music);
     }*/
+    dick_move_to_spawn(game);
+    particules_star(game);
+    if (game->settings->current == BOSS)
+        change_view_boss(game->settings);
     if (game->settings->current == MAIN_MENU)
         change_main_menu(game->settings, game->scenes, game->stats);
     if (game->settings->current >= TOWN && game->settings->current <= CAMP)
