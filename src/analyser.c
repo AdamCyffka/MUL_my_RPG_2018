@@ -9,6 +9,22 @@
 #include "struct.h"
 #include "enum.h"
 
+void keyboard_checker_scenes2(game_t *game)
+{
+    if (sfKeyboard_isKeyPressed(sfKeyO)) {
+        button_option1(game->inventory, game->scenes, 1, -1);
+        game->settings->_paused = true;
+        game->stats->xp_t.state = -1;
+        game->stats->name_t.state = -1;
+    }
+    if (sfKeyboard_isKeyPressed(sfKeyEscape)) {
+        button_exit1(game->inventory, game->scenes, 1, -1);
+        game->settings->_paused = true;
+        game->stats->xp_t.state = -1;
+        game->stats->name_t.state = -1;
+    }
+}
+
 void keyboard_checker_scenes(game_t *game)
 {
     if (sfKeyboard_isKeyPressed(sfKeyI)) {
@@ -23,18 +39,7 @@ void keyboard_checker_scenes(game_t *game)
         game->stats->xp_t.state = 0;
         game->stats->name_t.state = 0;
     }
-    if (sfKeyboard_isKeyPressed(sfKeyO)) {
-        button_option1(game->inventory, game->scenes, 1, -1);
-        game->settings->_paused = true;
-        game->stats->xp_t.state = -1;
-        game->stats->name_t.state = -1;
-    }
-    if (sfKeyboard_isKeyPressed(sfKeyEscape)) {
-        button_exit1(game->inventory, game->scenes, 1, -1);
-        game->settings->_paused = true;
-        game->stats->xp_t.state = -1;
-        game->stats->name_t.state = -1;
-    }
+    keyboard_checker_scenes2(game);
 }
 
 void keyboard_checker_maps(game_t *game)

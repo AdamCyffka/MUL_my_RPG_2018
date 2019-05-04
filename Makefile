@@ -25,16 +25,15 @@ SRC_MAIN =	./src/main.c
 SRC		=	./src/my_rpg.c							\
 			./src/analyser.c 						\
 			./src/cursor_interaction.c 				\
-			./src/draw_quest.c						\
 			./src/inventory/draw_inventory.c		\
 			./src/inventory/event_inventory.c		\
-			./src/draw_player_info.c				\
+			./src/stats/draw_player_info.c			\
 			./src/set_scale.c 						\
 			./src/clock.c 							\
-			./src/quests_rewards.c					\
+			./src/quests/draw_quest.c				\
+			./src/quests/quests_rewards.c			\
 			./src/lib_functions/my_libc_functions.c \
 			./src/lib_functions/my_libc_functions2.c\
-			./src/npc_interaction.c 				\
 			./src/new_content/new_content2.c		\
 			./src/new_content/new_content.c			\
 			./src/create_game/create_game3.c 		\
@@ -50,6 +49,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/buttons/button_ui_ig.c 			\
 			./src/buttons/other_options.c 			\
 			./src/buttons/volume_management.c 		\
+			./src/change/change_view.c				\
 			./src/change/change_main_menu.c			\
 			./src/change/change_maps.c 				\
 			./src/change/change_selection_maps.c 	\
@@ -83,9 +83,9 @@ SRC		=	./src/my_rpg.c							\
 			./src/particules/particule_leaf_pink.c	\
 			./src/save/load_game.c 					\
 			./src/save/save_game.c 					\
-			./src/dick_move.c						\
-			./src/boss.c							\
-			./src/write_text.c
+			./src/npc/npc_interaction.c 			\
+			./src/npc/dick_move.c					\
+			./src/text_input/write_text.c
 
 SRC_TEST	= 	./tests/my_putstr_test.c \
 				./tests/my_strlen_test.c
