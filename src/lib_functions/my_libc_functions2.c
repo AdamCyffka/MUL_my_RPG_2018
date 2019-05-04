@@ -16,7 +16,7 @@ int my_intlen(int nb)
         nb *= -1;
         i++;
     }
-    for (i; nb > 0; i++)
+    for (i = 0; nb > 0; i++) {}
         nb /= 10;
     return i;
 }

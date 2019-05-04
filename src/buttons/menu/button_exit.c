@@ -9,6 +9,16 @@
 #include "struct.h"
 #include "enum.h"
 
+void button_exit7(game_scene_t *scenes, int enable, int disable)
+{
+    scenes[TOWN].buttons[CLOSE_B_S1].state = ((enable == 1) ? enable : disable);
+    scenes[BOSS].buttons[CLOSE_B_S2].state = ((enable == 1) ? enable : disable);
+    scenes[FOREST].buttons[CLOSE_B_S3].state = ((enable == 1) ? enable :
+    enable);
+    scenes[BEACH].buttons[CLOSE_B_S4].state = ((enable == 1) ? enable :
+    disable);
+    scenes[CAMP].buttons[CLOSE_B_S5].state = ((enable == 1) ? enable : disable);
+}
 void button_exit6(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable)
 {
@@ -28,6 +38,7 @@ int enable, int disable)
         if (inventory[i]._selected != true && inventory[i].state != EMPTY)
             inventory[i].state = ((enable == 1) ? disable : enable);
     }
+    button_exit7(scenes, 1, -1);
 }
 
 void button_exit5(game_inventory_t *inventory, game_scene_t *scenes,

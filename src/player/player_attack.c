@@ -1,16 +1,15 @@
 /*
 ** EPITECH PROJECT, 2019
-** player_attack
+** MUL_my_rpg_2018
 ** File description:
-** rpg
+** player_attack
 */
 
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
 
-int button_crossed(game_stat_t *stats,
-    game_scene_t scenes, game_setting_t *settings, int nbr)
+int button_crossed(game_stat_t *stats, game_scene_t scenes, int nbr)
 {
     int x = (int)stats->player.position.x;
     int y = (int)stats->player.position.y;
@@ -33,12 +32,11 @@ int button_crossed(game_stat_t *stats,
         return 0;
 }
 
-int player_is_on_rectangle(game_setting_t *settings,
-    game_stat_t *stats, game_scene_t scene)
+int player_is_on_rectangle(game_stat_t *stats, game_scene_t scene)
 {
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++) {
         if (scene.buttons[tmp].state >= 0 &&
-            button_crossed(stats, scene, settings, tmp) == 1)
+            button_crossed(stats, scene, tmp) == 1)
             return 1;
     }
     return 0;

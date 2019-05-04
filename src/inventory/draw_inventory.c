@@ -53,13 +53,12 @@ void utils_change_texture(game_inventory_t *inventory, int tmp)
     tmp);
 }
 
-void check_minimap(game_scene_t *scene, game_inventory_t *inventory,
-game_setting_t *settings, int i)
+void check_minimap(game_scene_t *scene, game_setting_t *settings)
 {
     if (sfKeyboard_isKeyPressed(sfKeySpace) == true) {
         sfSprite_setScale(scene[TOWN].objs[MINIMAP_O_S1].sprite,
         (sfVector2f) {0.5, 0.5});
-        if (settings->current = TOWN) {
+        if (settings->current == TOWN) {
             scene[TOWN].objs[MINIMAP_O_S1].speed = 1;
             scene[TOWN].buttons[CLOSE_B_S1].state = 1;
         }
@@ -75,7 +74,7 @@ game_setting_t *settings)
         change_my_selected(inventory, settings, tmp);
         if (settings->current == TOWN && inventory[tmp]._selected == true &&
         inventory[tmp].content == MINIMAP_R)
-            check_minimap(scene, inventory, settings, tmp);
+            check_minimap(scene, settings);
         if (inventory[tmp].state >= 2) {
             utils_change_texture(inventory, tmp);
             sfRenderWindow_drawRectangleShape(settings->window,

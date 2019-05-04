@@ -72,7 +72,8 @@ void disp_button_back(game_scene_t scenes, int enable, int disable)
     scenes.objs[CHOOSE_O_S0].speed = ((enable == 1) ? disable : enable);
 }
 
-void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *stats)
+void button_menu(game_setting_t *settings, game_scene_t scenes,
+game_stat_t *stats)
 {
     if (scenes.buttons[NEW_B_S0].state >= 0 &&
     scenes.buttons[EXIT_B_S0].state >= 0 &&
@@ -117,14 +118,18 @@ void button_menu(game_setting_t *settings, game_scene_t scenes, game_stat_t *sta
         stats->player.speed = -1;
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[BACK_B_S0].shape), sfRectangleShape_getSize(scenes
-    .buttons[BACK_B_S0].shape)) == true)
+    .buttons[BACK_B_S0].shape)) == true) {
         disp_button_back(scenes, 1, -1);
+        stats->xp_t.state = -1;
+        stats->name_t.state = -1;
+    }
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[OK_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[OK_B_S0].shape)) == true) {
         disp_button_back(scenes, 1, -1);
-        sfSprite_setPosition(stats->player.sprite,(sfVector2f) {300, 500});
-        sfSprite_setTextureRect(stats->player.sprite, (sfIntRect) {0, 32, 16, 32});
+        sfSprite_setPosition(stats->player.sprite, (sfVector2f) {300, 500});
+        sfSprite_setTextureRect(stats->player.sprite,
+        (sfIntRect) {0, 32, 16, 32});
         stats->name_t.position = (sfVector2f) {895, 410};
         sfText_setPosition(stats->name_t.text, stats->name_t.position);
         stats->name_t.state = -1;

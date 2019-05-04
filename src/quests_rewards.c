@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** quest_reward.c
+** MUL_my_rpg_2018
 ** File description:
-** All function to give reward and fill inventory
+** quests_rewards
 */
 
 #include "rpg.h"
@@ -25,8 +25,7 @@ void change_sprite_player(game_stat_t *stats)
     }
 }
 
-void give_xp_rewards(game_scene_t town, game_stat_t *stats, 
-game_quest_t *quests)
+void give_xp_rewards(game_stat_t *stats, game_quest_t *quests)
 {
     if (stats->current_quest == GOLEMS_Q && quests[GOLEMS_Q].state ==
     Q_VALIDATED)
@@ -50,10 +49,10 @@ game_quest_t *quests)
         stats->xp += XPMAX_R;
 }
 
-void give_rewards_if_validated(game_scene_t town, game_stat_t *stats, 
-game_quest_t *quests, game_inventory_t *inventory)
+void give_rewards_if_validated(game_stat_t *stats, game_quest_t *quests,
+game_inventory_t *inventory)
 {
-    give_xp_rewards(town, stats, quests);
+    give_xp_rewards(stats, quests);
     if (quests[INTRO_Q].state == Q_VALIDATED) {
         fill_inventory(inventory, quests[INTRO_Q].rewards[0]);
         fill_inventory(inventory, quests[INTRO_Q].rewards[1]);

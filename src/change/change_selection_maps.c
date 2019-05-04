@@ -56,13 +56,13 @@ void change_maps(game_t *game)
     if (game->settings->current == TOWN)
         change_town(game);
     if (game->settings->current == BOSS)
-        change_boss(game->settings, game->scenes[BOSS], game->quests);
+        change_boss(game->settings, game->scenes[BOSS]);
     if (game->settings->current == FOREST)
-        change_forest(game->settings, game->scenes[FOREST], game->quests);
+        change_forest(game->settings, game->scenes[FOREST]);
     if (game->settings->current == BEACH)
-        change_beach(game->settings, game->scenes[BEACH], game->quests);
+        change_beach(game->settings, game->scenes[BEACH]);
     if (game->settings->current == CAMP)
-        change_camp(game->settings, game->scenes[CAMP], game->quests);
+        change_camp(game->settings, game->scenes[CAMP]);
 }
 
 void change_vic_def(game_t *game)

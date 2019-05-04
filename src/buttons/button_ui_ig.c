@@ -9,7 +9,7 @@
 #include "struct.h"
 #include "enum.h"
 
-void buttons_action_exit(game_inventory_t *inventory, game_setting_t *settings, 
+void buttons_action_exit(game_inventory_t *inventory, game_setting_t *settings,
 game_scene_t *scenes, game_stat_t *stats)
 {
     if (button_is_clicked(settings, scenes[TOWN].buttons[DESKTOP_B_S1].position,
@@ -34,38 +34,38 @@ void buttons_action_option(game_setting_t *settings, game_scene_t *scenes)
     if (button_is_clicked(settings, scenes[TOWN].buttons[V0_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[V0_B_S1].rect.width,
     scenes[TOWN].buttons[V0_B_S1].rect.height}) == true)
-        printf("0");
+        btn_snd_one(scenes, settings);
     if (button_is_clicked(settings, scenes[TOWN].buttons[V25_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[V25_B_S1].rect.width,
     scenes[TOWN].buttons[V25_B_S1].rect.height}) == true)
-        printf("25");
+        btn_snd_two(scenes, settings);
     if (button_is_clicked(settings, scenes[TOWN].buttons[V50_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[V50_B_S1].rect.width,
     scenes[TOWN].buttons[V50_B_S1].rect.height}) == true)
-        printf("50");
+        btn_snd_three(scenes, settings);
     if (button_is_clicked(settings, scenes[TOWN].buttons[V100_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[V100_B_S1].rect.width,
     scenes[TOWN].buttons[V100_B_S1].rect.height}) == true)
-        printf("100");
+        btn_snd_four(scenes, settings);
     if (button_is_clicked(settings, scenes[TOWN].buttons[ON_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[ON_B_S1].rect.width,
     scenes[TOWN].buttons[ON_B_S1].rect.height}) == true)
-        printf("on");
+        vsync_on(settings);
     if (button_is_clicked(settings, scenes[TOWN].buttons[OFF_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[OFF_B_S1].rect.width,
     scenes[TOWN].buttons[OFF_B_S1].rect.height}) == true)
-        printf("off");
+        vsync_off(settings);
     if (button_is_clicked(settings, scenes[TOWN].buttons[F30_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[F30_B_S1].rect.width,
     scenes[TOWN].buttons[F30_B_S1].rect.height}) == true)
-        printf("frame30");
+        frame_to_30(settings);
     if (button_is_clicked(settings, scenes[TOWN].buttons[F60_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[F60_B_S1].rect.width,
     scenes[TOWN].buttons[F60_B_S1].rect.height}) == true)
-        printf("frame60");
+        frame_to_60(settings);
 }
 
-void all_button2(game_inventory_t *inventory, game_setting_t *settings, 
+void all_button2(game_inventory_t *inventory, game_setting_t *settings,
 game_scene_t *scenes, game_stat_t *stats)
 {
     if (button_is_clicked(settings, scenes[TOWN].buttons[OPTION_B_S1].position,
@@ -91,7 +91,7 @@ game_scene_t *scenes, game_stat_t *stats)
     }
 }
 
-void all_button(game_inventory_t *inventory, game_setting_t *settings, 
+void all_button(game_inventory_t *inventory, game_setting_t *settings,
 game_scene_t *scenes, game_stat_t *stats)
 {
     if (scenes[TOWN].buttons[DESKTOP_B_S1].state >= 0

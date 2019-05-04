@@ -9,7 +9,7 @@
 #include "struct.h"
 #include "enum.h"
 
-void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests)
+void clock(game_scene_t *scene, game_setting_t *settings)
 {
     sfTime time = sfClock_getElapsedTime(settings->clock);
     float seconds = time.microseconds / 100000.0;

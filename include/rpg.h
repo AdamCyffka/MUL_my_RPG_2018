@@ -110,8 +110,7 @@ void move_player(game_setting_t *settings, game_stat_t *stats,
 game_inventory_t *inventory);
 void player_stop_moving(game_stat_t *stats, game_setting_t *settings);
 void player_attack(game_stat_t *stats);
-int player_is_on_rectangle(game_setting_t *settings, game_stat_t *stat,
-game_scene_t scene);
+int player_is_on_rectangle(game_stat_t *stat, game_scene_t scene);
 void player_rect_move(game_scene_t *scenes, game_stat_t *stats,
 game_setting_t *settings);
 int player_pos_view(sfVector2f vector_view, game_stat_t *stats);
@@ -144,20 +143,16 @@ void draw_player_info(game_t *game);
 void set_scale(game_t *game);
 
 //clock
-void clock(game_scene_t *scene, game_setting_t *settings, game_quest_t *quests);
+void clock(game_scene_t *scene, game_setting_t *settings);
 
 //change_maps
 void change_maps(game_t *game);
 void change_vic_def(game_t *game);
 void change_town(game_t *game);
-void change_boss(game_setting_t *settings,
-game_scene_t scene, game_quest_t *quests);
-void change_forest(game_setting_t *settings,
-game_scene_t scene, game_quest_t *quests);
-void change_beach(game_setting_t *settings,
-game_scene_t scene, game_quest_t *quests);
-void change_camp(game_setting_t *settings,
-game_scene_t scene, game_quest_t *quests);
+void change_boss(game_setting_t *settings, game_scene_t scene);
+void change_forest(game_setting_t *settings, game_scene_t scene);
+void change_beach(game_setting_t *settings, game_scene_t scene);
+void change_camp(game_setting_t *settings, game_scene_t scene);
 void change_victory(void);
 void change_defeat(game_setting_t *settings);
 
@@ -213,14 +208,21 @@ void enter_player_name(game_stat_t *stats, game_setting_t *settings);
 
 //quests_reward
 void pick_up_item(game_t *game);
+void give_rewards_if_validated(game_stat_t *stats, game_quest_t *quests,
+game_inventory_t *inventory);
 
+//inventory
 void fill_inventory(game_inventory_t *inventory, int content);
 void delete_item_inventory(game_inventory_t *inventory, int reward);
 void change_item_texture(game_inventory_t *inventory, char const *path, 
 int reward, int tmp);
+void swap_pos_inventory(game_inventory_t *inventory, int tmp, int i);
+void change_my_selected(game_inventory_t *inventory, game_setting_t *settings,
+int tmp);
 
 //PARTICULES
 void particules_move(game_t *game);
+void particules_star(game_t *game);
 
 //refresh_player_data.c
 void refresh_player_data(game_stat_t *stats);
@@ -230,5 +232,15 @@ void dick_move_to_spawn(game_t *game);
 
 //BOSS
 void change_view_boss(game_setting_t *settings);
+
+//options_menu
+int btn_snd_four(game_scene_t *scenes, game_setting_t *settings);
+int btn_snd_three(game_scene_t *scenes, game_setting_t *settings);
+int btn_snd_two(game_scene_t *scenes, game_setting_t *settings);
+int btn_snd_one(game_scene_t *scenes, game_setting_t *settings);
+int frame_to_60(game_setting_t *settings);
+int frame_to_30(game_setting_t *settings);
+int vsync_on(game_setting_t *settings);
+int vsync_off(game_setting_t *settings);
 
 #endif /* RPG_H_ */

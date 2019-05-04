@@ -113,7 +113,7 @@ void key_to_move_or_not(game_scene_t scenes, game_setting_t *settings,
         || sfKeyboard_isKeyPressed(sfKeyQ)
         || sfKeyboard_isKeyPressed(sfKeyZ)
         || sfKeyboard_isKeyPressed(sfKeyS)) {
-        if (player_is_on_rectangle(settings, stats, scenes) == 0)
+        if (player_is_on_rectangle(stats, scenes) == 0)
             return;
         move_window(settings, stats, inventory);
         play_song_walk(scenes, settings);
