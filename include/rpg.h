@@ -221,7 +221,9 @@ void change_my_selected(game_inventory_t *inventory, game_setting_t *settings,
 int tmp);
 
 //PARTICULES
-void particules_move(game_t *game);
+void particules_move_green(game_t *game);
+void particules_move_pink(game_t *game);
+void particules_move_orange(game_t *game);
 void particules_star(game_t *game);
 
 //refresh_player_data.c

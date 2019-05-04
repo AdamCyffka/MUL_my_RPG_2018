@@ -30,8 +30,11 @@ void game_change(game_t *game)
     if (game->settings->current >= VICTORY && game->settings->current <= DEFEAT)
         change_vic_def(game);
     clock(game->scenes, game->settings);
-    if (game->settings->current == TOWN)
-        particules_move(game);
+    if (game->settings->current == TOWN) {
+        particules_move_green(game);
+        particules_move_pink(game);
+        particules_move_orange(game);
+    }
     if (game->settings->_paused == false) {
         player_interaction(game);
         enemies_detect_player(game);

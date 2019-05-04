@@ -77,7 +77,10 @@ SRC		=	./src/my_rpg.c							\
 			./src/fill_quest/fill_quest0_4.c		\
 			./src/fill_quest/fill_quest5_9.c		\
 			./src/fill_quest/fill_quest10_12.c		\
-			./src/particules/particules.c			\
+			./src/particules/particule_stars.c		\
+			./src/particules/particule_leaf_green.c	\
+			./src/particules/particule_leaf_orange.c\
+			./src/particules/particule_leaf_pink.c	\
 			./src/dick_move.c						\
 			./src/boss.c							\
 			./src/write_text.c
