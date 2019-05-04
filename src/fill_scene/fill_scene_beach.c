@@ -83,6 +83,8 @@ void fill_scene_beach3(game_scene_t beach)
 
 void fill_scene_beach2_1(game_scene_t beach)
 {
+    beach.buttons[SAVE_B_S4] = new_button("assets/images/exit_save.png",
+    (sfVector2f) {800, 600}, (sfIntRect) {0, 0, 280, 96}, -1);
     beach.texts[VSYNC_T_S4] = new_text("assets/font/font.ttf", "V-sync:",
     (sfVector2f) {700, 500}, 40);
     beach.texts[FRAME_T_S4] = new_text("assets/font/font.ttf", "Framerate:",

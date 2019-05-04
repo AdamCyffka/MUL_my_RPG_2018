@@ -69,6 +69,8 @@ void fill_scene_forest4(game_scene_t forest)
 
 void fill_scene_forest3(game_scene_t forest)
 {
+    forest.buttons[SAVE_B_S3] = new_button("assets/images/exit_save.png",
+    (sfVector2f) {800, 600}, (sfIntRect) {0, 0, 280, 96}, -1);
     forest.texts[VOLUME_T_S3] = new_text("assets/font/font.ttf", "Volume:",
     (sfVector2f) {700, 400}, 40);
     forest.texts[VSYNC_T_S3] = new_text("assets/font/font.ttf", "V-sync:",

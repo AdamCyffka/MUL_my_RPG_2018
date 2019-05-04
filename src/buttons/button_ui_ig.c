@@ -12,6 +12,12 @@
 void buttons_action_exit(game_inventory_t *inventory, game_setting_t *settings,
 game_scene_t *scenes, game_stat_t *stats)
 {
+    save_t *player;
+
+    if (button_is_clicked(settings, scenes[TOWN].buttons[SAVE_B_S1].position,
+    (sfVector2f) {scenes[TOWN].buttons[SAVE_B_S1].rect.width,
+    scenes[TOWN].buttons[SAVE_B_S1].rect.height}) == true)
+        save_game(player);
     if (button_is_clicked(settings, scenes[TOWN].buttons[DESKTOP_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[DESKTOP_B_S1].rect.width,
     scenes[TOWN].buttons[DESKTOP_B_S1].rect.height}) == true)
@@ -95,7 +101,8 @@ void all_button(game_inventory_t *inventory, game_setting_t *settings,
 game_scene_t *scenes, game_stat_t *stats)
 {
     if (scenes[TOWN].buttons[DESKTOP_B_S1].state >= 0
-    || scenes[TOWN].buttons[TITLE_B_S1].state >= 0)
+    || scenes[TOWN].buttons[TITLE_B_S1].state >= 0
+    || scenes[TOWN].buttons[SAVE_B_S1].state >= 0)
         buttons_action_exit(inventory, settings, scenes, stats);
     if (scenes[TOWN].buttons[V0_B_S1].state >= 0
     || scenes[TOWN].buttons[V25_B_S1].state >= 0

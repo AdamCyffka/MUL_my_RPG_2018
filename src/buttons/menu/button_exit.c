@@ -11,6 +11,13 @@
 
 void button_exit7(game_scene_t *scenes, int enable, int disable)
 {
+    scenes[TOWN].buttons[SAVE_B_S1].state = ((enable == 1) ? enable : disable);
+    scenes[BOSS].buttons[SAVE_B_S2].state = ((enable == 1) ? enable : disable);
+    scenes[FOREST].buttons[SAVE_B_S3].state = ((enable == 1) ? enable :
+    enable);
+    scenes[BEACH].buttons[SAVE_B_S4].state = ((enable == 1) ? enable :
+    disable);
+    scenes[CAMP].buttons[SAVE_B_S5].state = ((enable == 1) ? enable : disable);
     scenes[TOWN].buttons[CLOSE_B_S1].state = ((enable == 1) ? enable : disable);
     scenes[BOSS].buttons[CLOSE_B_S2].state = ((enable == 1) ? enable : disable);
     scenes[FOREST].buttons[CLOSE_B_S3].state = ((enable == 1) ? enable :

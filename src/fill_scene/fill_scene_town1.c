@@ -117,6 +117,8 @@ void fill_scene_town1(game_scene_t town)
     (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
     town.buttons[DESKTOP_B_S1] = new_button("assets/images/exit_desktop.png",
     (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
+    town.buttons[SAVE_B_S1] = new_button("assets/images/exit_save.png",
+    (sfVector2f) {800, 600}, (sfIntRect) {0, 0, 280, 96}, -1);
     town.buttons[CLOSE_B_S1] = new_button("assets/images/close.png",
     (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
     town.buttons[V0_B_S1] = new_button("assets/images/0.png",

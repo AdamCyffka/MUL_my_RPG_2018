@@ -12,6 +12,13 @@
 void button_me7(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable)
 {
+    scenes[TOWN].buttons[SAVE_B_S1].state = ((enable == 1) ? disable : enable);
+    scenes[BOSS].buttons[SAVE_B_S2].state = ((enable == 1) ? disable : enable);
+    scenes[FOREST].buttons[SAVE_B_S3].state = ((enable == 1) ? disable :
+    enable);
+    scenes[BEACH].buttons[SAVE_B_S4].state = ((enable == 1) ? disable :
+    enable);
+    scenes[CAMP].buttons[SAVE_B_S5].state = ((enable == 1) ? disable : enable);
     scenes[BEACH].texts[NAME_T_S4].state = ((enable == 1) ? enable : disable);
     scenes[CAMP].texts[NAME_T_S5].state = ((enable == 1) ? enable : disable);
     scenes[TOWN].texts[XP_T_S1].state = ((enable == 1) ? enable : disable);

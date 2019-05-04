@@ -162,6 +162,8 @@ void fill_scene_boss1(game_scene_t boss)
     (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     boss.buttons[V50_B_S2] = new_button("assets/images/50.png",
     (sfVector2f) {970, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    boss.buttons[SAVE_B_S2] = new_button("assets/images/exit_save.png",
+    (sfVector2f) {800, 600}, (sfIntRect) {0, 0, 280, 96}, -1);
     fill_scene_boss1_1(boss);
     fill_scene_boss2(boss);
 }

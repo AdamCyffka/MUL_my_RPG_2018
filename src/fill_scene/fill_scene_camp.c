@@ -11,6 +11,8 @@
 
 void fill_scene_camp4(game_scene_t camp)
 {
+    camp.buttons[SAVE_B_S5] = new_button("assets/images/exit_save.png",
+    (sfVector2f) {800, 600}, (sfIntRect) {0, 0, 280, 96}, -1);
     camp.objs[LIFE_O_S5] = new_object("assets/images/life.png",
     (sfVector2f) {1700, 910}, (sfIntRect) {0, 0, 209, 85}, 0);
     camp.objs[ICON_O_S5] = new_object("assets/images/icon.png",

@@ -75,6 +75,8 @@ void disp_button_back(game_scene_t scenes, int enable, int disable)
 void button_menu(game_setting_t *settings, game_scene_t scenes,
 game_stat_t *stats)
 {
+    int fd_player;
+
     if (scenes.buttons[NEW_B_S0].state >= 0 &&
     scenes.buttons[EXIT_B_S0].state >= 0 &&
     scenes.buttons[LOAD_B_S0].state >= 0) {
@@ -136,6 +138,10 @@ game_stat_t *stats)
         stats->player.speed = 5;
         settings->current = TOWN;
     }
+     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+    .buttons[LOAD_B_S0].shape), sfRectangleShape_getSize(scenes
+    .buttons[LOAD_B_S0].shape)) == true)
+        load_save(fd_player);
     else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CLOSE_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[CLOSE_B_S0].shape)) == true)

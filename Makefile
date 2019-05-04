@@ -81,6 +81,8 @@ SRC		=	./src/my_rpg.c							\
 			./src/particules/particule_leaf_green.c	\
 			./src/particules/particule_leaf_orange.c\
 			./src/particules/particule_leaf_pink.c	\
+			./src/save/load_game.c 					\
+			./src/save/save_game.c 					\
 			./src/dick_move.c						\
 			./src/boss.c							\
 			./src/write_text.c

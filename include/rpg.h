@@ -245,4 +245,8 @@ int frame_to_30(game_setting_t *settings);
 int vsync_on(game_setting_t *settings);
 int vsync_off(game_setting_t *settings);
 
+//save
+int load_save(int fd_player);
+int save_game(save_t *player);
+
 #endif /* RPG_H_ */

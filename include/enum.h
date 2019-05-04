@@ -97,6 +97,7 @@ enum main_menu {
 enum town {
     TITLE_B_S1,
     DESKTOP_B_S1,
+    SAVE_B_S1,
     CLOSE_B_S1,
     V0_B_S1,
     V25_B_S1,
@@ -185,6 +186,7 @@ enum town {
 enum boss {
     TITLE_B_S2,
     DESKTOP_B_S2,
+    SAVE_B_S2,
     CLOSE_B_S2,
     V0_B_S2,
     V25_B_S2,
@@ -242,6 +244,7 @@ enum boss {
 enum forest {
     TITLE_B_S3,
     DESKTOP_B_S3,
+    SAVE_B_S3,
     CLOSE_B_S3,
     V0_B_S3,
     V25_B_S3,
@@ -304,6 +307,7 @@ enum forest {
 enum beach {
     TITLE_B_S4,
     DESKTOP_B_S4,
+    SAVE_B_S4,
     CLOSE_B_S4,
     V0_B_S4,
     V25_B_S4,
@@ -364,6 +368,7 @@ enum beach {
 enum camp {
     TITLE_B_S5,
     DESKTOP_B_S5,
+    SAVE_B_S5,
     CLOSE_B_S5,
     V0_B_S5,
     V25_B_S5,

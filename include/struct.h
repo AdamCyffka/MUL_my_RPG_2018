@@ -120,4 +120,11 @@ typedef struct game {
     game_setting_t *settings;
 } game_t;
 
+typedef struct save {
+    game_inventory_t *inventory;
+    game_quest_t *quests;
+    game_stat_t *stats;
+    game_setting_t *settings;
+} save_t;
+
 #endif /* STRUCT_H_ */
