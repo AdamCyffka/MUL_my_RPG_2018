@@ -70,6 +70,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/change/change_selection_maps.c 	\
 			./src/change/change_vic_def.c 			\
 			./src/change/change_statics_pos.c		\
+			./src/change/change_global.c			\
 			./src/player/player_move.c				\
 			./src/player/player_change_map.c		\
 			./src/player/player_attack.c			\
