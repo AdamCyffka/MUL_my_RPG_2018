@@ -52,7 +52,7 @@ int bordure_crossed(game_setting_t *settings, game_stat_t *stats,
 }
 
 void move_window(game_setting_t *settings, game_stat_t *stats,
-    game_inventory_t *inventory)
+game_inventory_t *inventory)
 {
     const sfView *view = sfRenderWindow_getView(settings->window);
     sfVector2f vector_view = sfView_getCenter(view);
@@ -79,8 +79,23 @@ void move_window(game_setting_t *settings, game_stat_t *stats,
     change_vector_view(settings, vector_view);
 }
 
+void move_player2(game_setting_t *settings, game_stat_t *stats)
+{
+    int speed = 40;
+
+    if (sfKeyboard_isKeyPressed(sfKeyZ)) {
+        if (stats->player.position.y - 4 > 10)
+            stats->player.position.y -= speed * settings->delta_time;
+        stats->player.rect.top = 64;
+    }
+    if (sfKeyboard_isKeyPressed(sfKeyS)) {
+        stats->player.position.y += speed * settings->delta_time;
+        stats->player.rect.top = 0;
+    }
+}
+
 void move_player(game_setting_t *settings, game_stat_t *stats,
-    game_inventory_t *inventory)
+game_inventory_t *inventory)
 {
     int speed = 40;
 
@@ -95,15 +110,7 @@ void move_player(game_setting_t *settings, game_stat_t *stats,
             stats->player.position.x -= speed * settings->delta_time;
         stats->player.rect.top = 96;
     }
-    if (sfKeyboard_isKeyPressed(sfKeyZ)) {
-        if (stats->player.position.y - 4 > 10)
-            stats->player.position.y -= speed * settings->delta_time;
-        stats->player.rect.top = 64;
-    }
-    if (sfKeyboard_isKeyPressed(sfKeyS)) {
-        stats->player.position.y += speed * settings->delta_time;
-        stats->player.rect.top = 0;
-    }
+    move_player2(settings, stats);
 }
 
 void key_to_move_or_not(game_scene_t scenes, game_setting_t *settings,

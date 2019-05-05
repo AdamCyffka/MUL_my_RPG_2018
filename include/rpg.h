@@ -31,6 +31,9 @@ void fill_scene_town1(game_scene_t town);
 void fill_scene_town6(game_scene_t town);
 void fill_scene_victory(game_scene_t victory);
 void fill_scene_defeat(game_scene_t defeat);
+void fill_scene_beach5(game_scene_t beach);
+void fill_scene_beach4(game_scene_t beach);
+void fill_scene_beach3(game_scene_t beach);
 
 //fill_quest
 void fill_quest0(game_quest_t *quest0);
@@ -244,6 +247,34 @@ int frame_to_60(game_setting_t *settings);
 int frame_to_30(game_setting_t *settings);
 int vsync_on(game_setting_t *settings);
 int vsync_off(game_setting_t *settings);
+void buttons_action_volume(game_setting_t *settings, game_scene_t *scenes);
+void buttons_action_option(game_setting_t *settings, game_scene_t *scenes);
+void buttons_action_exit(game_inventory_t *inventory, game_setting_t *settings,
+game_scene_t *scenes, game_stat_t *stats);
+void buttons_action_title(game_inventory_t *inventory, game_setting_t *settings,
+game_scene_t *scenes, game_stat_t *stats);
+void state_men_button(game_scene_t scenes, int but);
+void men_game_button(game_setting_t *settings, game_scene_t scenes, int nbr);
+void disp_new_options(game_scene_t scenes, int enable, int disable);
+void disp_button_menu(game_scene_t scenes, int enable, int disable);
+void disp_button_back(game_scene_t scenes, int enable, int disable);
+void button_close7(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable);
+void button_close6(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable);
+void button_exit7(game_scene_t *scenes, int enable, int disable);
+void button_exit6(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable);
+void button_inventory6(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable);
+void button_option6(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable);
+void button_option7(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable);
+void button_me7(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable);
+void button_me6(game_inventory_t *inventory, game_scene_t *scenes,
+int enable, int disable);
 
 //save
 int load_save(int fd_player);
