@@ -16,7 +16,7 @@ void change_victory(void)
 
 void change_defeat(game_setting_t *settings)
 {
-    sfView *view = sfRenderWindow_getView(settings->window);
+    sfView *view = (sfView *)sfRenderWindow_getView(settings->window);
 
     sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
     sfRenderWindow_setView(settings->window, view);

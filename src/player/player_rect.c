@@ -11,7 +11,7 @@
 
 void change_vector_view(game_setting_t *settings, sfVector2f vector_view)
 {
-    const sfView *view = sfRenderWindow_getView(settings->window);
+    sfView *view = (sfView *)sfRenderWindow_getView(settings->window);
 
     sfView_setCenter((sfView *) {view}, vector_view);
     sfRenderWindow_setView(settings->window, view);

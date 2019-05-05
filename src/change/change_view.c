@@ -11,7 +11,7 @@
 
 void change_view_boss(game_setting_t *settings)
 {
-    sfView *view = sfRenderWindow_getView(settings->window);
+    sfView *view = (sfView *)sfRenderWindow_getView(settings->window);
 
     sfView_setCenter((sfView *) {view}, (sfVector2f) {1660, 1400});
     sfRenderWindow_setView(settings->window, view);
