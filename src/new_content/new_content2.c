@@ -16,6 +16,8 @@ int nb_reward)
     game_quest_t quest;
 
     quest.dialogs_text = malloc(sizeof(game_text_t) * nb_dial);
+    if (quest.dialogs_text == NULL)
+        return (game_quest_t) {0};
     quest.statement_text = new_text("assets/font/font.ttf", statement,
     (sfVector2f) {500, 500}, 24);
     quest.nb_of_dial = nb_dial;
@@ -25,6 +27,8 @@ int nb_reward)
     quest.current_dial = 0;
     quest.nb_of_task = nb_of_task;
     quest.rewards = malloc(sizeof(int) * (nb_reward + 1));
+    if (quest.rewards == NULL)
+        return (game_quest_t) {0};
     quest.rewards[nb_reward] = EOA;
     return (quest);
 }

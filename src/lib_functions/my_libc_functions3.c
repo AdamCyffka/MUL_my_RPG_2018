@@ -10,8 +10,8 @@
 
 char *my_strrem(const char *str)
 {
-    char *ret = malloc(sizeof(char) * my_strlen(str));
     int tmp = 0;
+    char *ret = malloc(sizeof(char) * my_strlen(str));
 
     if (ret == NULL)
         return NULL;
