@@ -14,8 +14,10 @@ void boss_die(game_t *game, int tmp)
     if (game->settings->current == BOSS) {
         if (game->scenes[game->settings->current].objs[tmp].speed < 45)
             game->scenes[game->settings->current].objs[tmp].speed += 10;
-        else
+        else {
+            game->settings->current = VICTORY;
             game->scenes[game->settings->current].objs[tmp].speed = -1;
+        }
         sfSprite_setPosition(game->scenes[
         game->settings->current].objs[tmp].sprite, (sfVector2f) {1575, 1150});
         return;

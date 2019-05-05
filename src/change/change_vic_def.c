@@ -11,7 +11,11 @@
 
 void change_victory(game_t *game)
 {
+    sfView *view = (sfView *)sfRenderWindow_getView(game->settings->window);
+
     button_victory(game->settings, game->scenes, game->stats);
+    sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
+    sfRenderWindow_setView(game->settings->window, view);
 }
 
 void change_defeat(game_t *game)
