@@ -9,6 +9,7 @@
 #include "struct.h"
 #include "enum.h"
 #include "define.h"
+#include "fill_scene.h"
 
 int create_scenes2(game_scene_t *scenes)
 {
