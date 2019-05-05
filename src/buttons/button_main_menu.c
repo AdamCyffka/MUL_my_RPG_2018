@@ -138,7 +138,7 @@ game_stat_t *stats)
         stats->player.speed = 5;
         settings->current = TOWN;
     }
-     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
+    if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[LOAD_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[LOAD_B_S0].shape)) == true)
         load_save(fd_player);
