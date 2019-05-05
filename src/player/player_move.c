@@ -9,45 +9,16 @@
 #include "struct.h"
 #include "enum.h"
 
-void player_stop_moving(game_stat_t *stats, game_setting_t *settings)
-{
-    stats->player.rect.width = 16;
-    stats->player.rect.height = 32;
-    if (stats->player.rect.top == 157 && stats->player.rect.left == 0)
-        stats->player.rect.top = 0;
-    if (stats->player.rect.top == 157 && stats->player.rect.left == 16)
-        stats->player.rect.top = 64;
-    if (stats->player.rect.top == 129 && stats->player.rect.left == 0) {
-        stats->player.position.y -= 4;
-        stats->player.rect.top = 32;
-    }
-    if (stats->player.rect.top == 129 && stats->player.rect.left == 32) {
-        stats->player.position.y -= 40 * settings->delta_time;
-        stats->player.position.x += 500 * settings->delta_time;
-        stats->player.rect.top = 96;
-    }
-    stats->player.rect.left = 0;
-    sfSprite_setPosition(stats->player.sprite, stats->player.position);
-    sfSprite_setTextureRect(stats->player.sprite, stats->player.rect);
-}
-
-int bordure_crossed(game_setting_t *settings, game_stat_t *stats,
-    game_inventory_t *inventory)
+int dont_move_window(game_setting_t *settings, game_stat_t *stats)
 {
     const sfView *view = sfRenderWindow_getView(settings->window);
     sfVector2f vector_view = sfView_getCenter(view);
-    int speed = 4;
 
-    if (equiped_or_not(inventory, BOOTS_R) == 1)
-        speed += 1;
-    if (sfKeyboard_isKeyPressed(sfKeyD)) {
-        if (stats->player.position.x + 4 >= (vector_view.x - 960) + 1900)
-            return 1;
-    }
-    if (sfKeyboard_isKeyPressed(sfKeyS)) {
-        if (stats->player.position.y + 4 >= (vector_view.y - 540) + 870)
-            return 1;
-    }
+    if (player_pos_view(vector_view, stats) == 1)
+        return 1;
+    if (settings->current == CAMP || settings->current == BEACH
+        || settings->current == BOSS)
+        return 1;
     return 0;
 }
 
@@ -56,14 +27,10 @@ game_inventory_t *inventory)
 {
     const sfView *view = sfRenderWindow_getView(settings->window);
     sfVector2f vector_view = sfView_getCenter(view);
-    int speed = 40;
+    int speed = (equiped_or_not(inventory, BOOTS_R) == 1) ? 50 : 40;
 
-    if (settings->current == CAMP || settings->current == BEACH
-        || settings->current == BOSS)
+    if (dont_move_window(settings, stats) == 1)
         return;
-    if (equiped_or_not(inventory, BOOTS_R) == 1)
-        speed += 10;
-    if (player_pos_view(vector_view, stats) == 1) return;
     if (sfKeyboard_isKeyPressed(sfKeyD))
         if (vector_view.x < 3390)
             vector_view.x += speed * settings->delta_time;
@@ -79,10 +46,13 @@ game_inventory_t *inventory)
     change_vector_view(settings, vector_view);
 }
 
-void move_player2(game_setting_t *settings, game_stat_t *stats)
+void move_player2(game_setting_t *settings, game_stat_t *stats,
+game_inventory_t *inventory)
 {
     int speed = 40;
 
+    if (equiped_or_not(inventory, BOOTS_R) == 1)
+        speed += 10;
     if (sfKeyboard_isKeyPressed(sfKeyZ)) {
         if (stats->player.position.y - 4 > 10)
             stats->player.position.y -= speed * settings->delta_time;
@@ -110,7 +80,7 @@ game_inventory_t *inventory)
             stats->player.position.x -= speed * settings->delta_time;
         stats->player.rect.top = 96;
     }
-    move_player2(settings, stats);
+    move_player2(settings, stats, inventory);
 }
 
 void key_to_move_or_not(game_scene_t scenes, game_setting_t *settings,

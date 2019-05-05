@@ -98,6 +98,8 @@ game_setting_t *settings);
 void player_interaction(game_t *game);
 void play_song_walk(game_scene_t scenes, game_setting_t *settings);
 int equiped_or_not(game_inventory_t *inventory, int item);
+int bordure_crossed(game_setting_t *settings, game_stat_t *stats,
+game_inventory_t *inventory);
 
 //analyser
 void analyse_events(game_t *game);
