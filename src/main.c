@@ -28,6 +28,6 @@ int main(int ac, char **av, char **env)
         write(1, "Usage : my_rpg -h\n", 18);
         return (84);
     } else
-        my_rpg();
+        return (my_rpg());
     return (0);
 }
