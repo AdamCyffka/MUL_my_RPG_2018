@@ -11,13 +11,13 @@
 
 int frame_to_60(game_setting_t *settings)
 {
-    sfWindow_setFramerateLimit(settings->window, 60);
+    sfRenderWindow_setFramerateLimit(settings->window, 60);
     return (0);
 }
 
 int frame_to_30(game_setting_t *settings)
 {
-    sfWindow_setFramerateLimit(settings->window, 60);
+    sfRenderWindow_setFramerateLimit(settings->window, 60);
     return (0);
 }
 

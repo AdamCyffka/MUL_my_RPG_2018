@@ -63,6 +63,12 @@ int enable, int disable);
 
 //quest_interaction
 void quests_interaction(void);
+void quest_action(game_t *game);
+void quest_speak(game_t *game);
+void quest_validation(game_t *game);
+void player_is_interacting(game_scene_t *scenes, game_stat_t *stats,
+game_setting_t *settings, game_quest_t *quests);
+
 
 //play_sounds
 void check_bg_music(game_t *game);
@@ -174,6 +180,9 @@ void move_rect_enemies(game_scene_t *scenes,
 game_stat_t *stats, int tmp, game_setting_t *settings);
 void enemies_attack_player(game_t *game);
 void rect_chose(sfVector2f vector, game_t *game, int tmp);
+
+//music
+void set_music(game_t *game);
 
 //write_text.c
 int text_entered(game_setting_t *settings);

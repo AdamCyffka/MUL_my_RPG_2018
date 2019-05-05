@@ -11,7 +11,7 @@
 
 void button_menu5(game_setting_t *settings, game_scene_t scenes)
 {
-    int fd_player;
+    int fd_player = 0;
 
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[LOAD_B_S0].shape), sfRectangleShape_getSize(scenes

@@ -24,6 +24,7 @@ SRC_MAIN =	./src/main.c
 
 SRC		=	./src/my_rpg.c							\
 			./src/analyser.c 						\
+			./src/play_sounds.c 					\
 			./src/cursor_interaction.c 				\
 			./src/cursor_interaction2.c 			\
 			./src/inventory/draw_inventory.c		\
@@ -102,6 +103,8 @@ SRC		=	./src/my_rpg.c							\
 			./src/save/load_game.c 					\
 			./src/save/save_game.c 					\
 			./src/npc/npc_interaction.c 			\
+			./src/npc/quest_action.c 				\
+			./src/npc/player_interacting.c 			\
 			./src/npc/dick_move.c					\
 			./src/text_input/write_text.c
 

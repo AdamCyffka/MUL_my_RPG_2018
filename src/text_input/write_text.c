@@ -40,7 +40,8 @@ void enter_player_name(game_stat_t *stats, game_setting_t *settings)
 
     if (my_strcmp(sfText_getString(stats->name_t.text), "'PLAYER'") == 1)
         sfText_setString(stats->name_t.text, "");
-    if ((entered = text_entered(settings)) == -1)
+    entered = digit_entered(settings);
+    if (entered == -1)
         sfText_setString(stats->name_t.text,
         my_strrem(sfText_getString(stats->name_t.text)));
     else if (my_strlen(sfText_getString(stats->name_t.text)) < 11)
@@ -52,7 +53,8 @@ int enter_quest_answer(game_text_t quest_answer, game_setting_t *settings)
 {
     char entered = '\0';
 
-    if ((entered = digit_entered(settings)) == -1) {
+    entered = digit_entered(settings);
+    if (entered == -1) {
         if (my_strlen(sfText_getString(quest_answer.text)) > 16)
             sfText_setString(quest_answer.text,
             my_strrem(sfText_getString(quest_answer.text)));

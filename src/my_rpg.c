@@ -13,12 +13,9 @@ void game_change(game_t *game)
 {
     set_scale(game);
     set_cursor_pos(game->scenes[game->settings->current], game->settings);
-    /*for (int tmp = 0; tmp < game->scenes[game->settings->current].how_many[1]; tmp++) {
-        if (game->scenes[game->settings->current].sounds[tmp]._activated == true) {
-                sfMusic_play(game->scenes[game->settings->current].sounds[MUSIC_S_S1].music);
-                game->scenes[MUSIC_S_S1].sounds[tmp]._activated == false;
-        }
-    }*/
+    /*for (int tmp = 0; tmp < game->scenes[game->settings->current].how_many[1]; tmp++)
+        if (game->scenes[game->settings->current].sounds[tmp]._activated == true)
+            set_music(game);*/
     dick_move_to_spawn(game);
     particules_star(game);
     teleport_player_boss(game);

@@ -28,7 +28,7 @@ game_scene_t *scenes, game_stat_t *stats)
 void buttons_action_exit(game_inventory_t *inventory, game_setting_t *settings,
 game_scene_t *scenes, game_stat_t *stats)
 {
-    save_t *player;
+    save_t *player = 0;
 
     if (button_is_clicked(settings, scenes[TOWN].buttons[SAVE_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[SAVE_B_S1].rect.width,
