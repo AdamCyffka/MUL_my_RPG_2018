@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** RPG
+** MUL_my_rpg_2018
 ** File description:
-** All function to manage button main_menu
+** button_main_menu
 */
 
 #include "rpg.h"
