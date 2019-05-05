@@ -25,6 +25,7 @@ SRC_MAIN =	./src/main.c
 SRC		=	./src/my_rpg.c							\
 			./src/analyser.c 						\
 			./src/cursor_interaction.c 				\
+			./src/cursor_interaction2.c 			\
 			./src/inventory/draw_inventory.c		\
 			./src/inventory/event_inventory.c		\
 			./src/stats/draw_player_info.c			\
