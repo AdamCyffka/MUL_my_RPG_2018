@@ -14,8 +14,8 @@ void draw_scene2(game_scene_t scene, game_setting_t *settings, game_stat_t
 {
     for (int tmp = 0; tmp < scene.how_many[2]; tmp++)
         if (scene.buttons[tmp].state >= 0)
-            sfRenderWindow_drawRectangleShape(settings->window, scene
-            .buttons[tmp].shape, NULL);
+            sfRenderWindow_drawRectangleShape(settings->window,
+            scene.buttons[tmp].shape, NULL);
     for (int tmp = 0; tmp < scene.how_many[3]; tmp++)
         if (scene.texts[tmp].state >= 0)
             sfRenderWindow_drawText(settings->window, scene.texts[tmp].text,
@@ -30,8 +30,8 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 {
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
         if (scene.objs[tmp].speed == 0)
-            sfRenderWindow_drawSprite(settings->window, scene.objs[tmp]
-            .sprite, NULL);
+            sfRenderWindow_drawSprite(settings->window,
+            scene.objs[tmp].sprite, NULL);
     if (stats->player.speed > 0)
         sfRenderWindow_drawSprite(settings->window, stats->player.sprite, NULL);
     for (int tmp = 0; tmp < scene.how_many[0]; tmp++)
