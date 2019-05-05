@@ -82,8 +82,7 @@ void change_quest_if_validated(game_stat_t *stats, game_quest_t *quests)
     quests[stats->current_quest].nb_of_task) {
         quests[stats->current_quest].state = Q_FINISHED;
         stats->current_quest += (stats->current_quest != BOSS_Q) ? 1 : 0;
-        if (stats->current_quest != BOSS_Q)
-            quests[stats->current_quest].state = Q_ACCEPTED;
+        quests[stats->current_quest].state = Q_ACCEPTED;
     }
 }
 
@@ -110,7 +109,6 @@ void npc_interaction(game_t *game)
     bool player_in_zone = check_player_in_npc_zone(game->stats,
     game->scenes[TOWN], game->quests);
 
-    printf("current quest: %i, quest state: %i, quest progress: %i/%i\n", game->stats->current_quest, game->quests[game->stats->current_quest].state, game->quests[game->stats->current_quest].progress, game->quests[game->stats->current_quest].nb_of_task);
     pick_up_item(game);
     if (player_in_zone == false)
         return;
