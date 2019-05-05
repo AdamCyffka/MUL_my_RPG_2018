@@ -8,22 +8,6 @@
 #include "rpg.h"
 #include "struct.h"
 
-game_text_t new_text(const char *path_to_font, const char *towrite,
-sfVector2f pos, int size)
-{
-    game_text_t text;
-
-    text.text = sfText_create();
-    text.font = sfFont_createFromFile(path_to_font);
-    text.state = -1;
-    text.position = pos;
-    sfText_setPosition(text.text, pos);
-    sfText_setString(text.text, towrite);
-    sfText_setFont(text.text, text.font);
-    sfText_setCharacterSize(text.text, size);
-    return (text);
-}
-
 game_button_t new_button(const char *path_to_img,
     sfVector2f pos, sfIntRect rect, int state)
 {

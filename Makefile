@@ -38,6 +38,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/lib_functions/my_libc_functions2.c\
 			./src/lib_functions/my_libc_functions3.c\
 			./src/new_content/new_content2.c		\
+			./src/new_content/new_text.c			\
 			./src/new_content/new_content.c			\
 			./src/create_game/create_quest.c		\
 			./src/create_game/create_inventory.c	\
@@ -97,21 +98,21 @@ SRC		=	./src/my_rpg.c							\
 			./src/fill_quest/fill_quest0_4.c		\
 			./src/fill_quest/fill_quest5_9.c		\
 			./src/fill_quest/fill_quest10_12.c		\
-			./src/assets_load/assets_load.c				\
-			./src/assets_load/assets_load_scenes.c		\
-			./src/assets_load/assets_load_inventory.c	\
-			./src/assets_load/assets_load_quests.c		\
-			./src/assets_load/assets_load_stats.c		\
+			./src/assets_load/assets_load.c			\
+			./src/assets_load/assets_load_scenes.c	\
+			./src/assets_load/assets_load_inventory.c\
+			./src/assets_load/assets_load_quests.c	\
+			./src/assets_load/assets_load_stats.c	\
 			./src/particules/particule_stars.c		\
 			./src/particules/particule_leaf_green.c	\
 			./src/particules/particule_leaf_orange.c\
 			./src/particules/particule_leaf_pink.c	\
-			./src/destroy/destroy_all.c					\
-			./src/destroy/destroy_quests.c				\
-			./src/destroy/destroy_inventory.c			\
-			./src/destroy/destroy_scenes.c				\
-			./src/destroy/destroy_stats.c				\
-			./src/destroy/destroy_settings.c			\
+			./src/destroy/destroy_all.c				\
+			./src/destroy/destroy_quests.c			\
+			./src/destroy/destroy_inventory.c		\
+			./src/destroy/destroy_scenes.c			\
+			./src/destroy/destroy_stats.c			\
+			./src/destroy/destroy_settings.c		\
 			./src/save/load_game.c 					\
 			./src/save/save_game.c 					\
 			./src/npc/npc_interaction.c 			\
