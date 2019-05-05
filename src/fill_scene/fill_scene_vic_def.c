@@ -14,7 +14,7 @@ void fill_scene_victory(game_scene_t victory)
 {
     victory.buttons[EXIT_B_S6] = new_button("assets/images/exit_menu.png",
     (sfVector2f) {800, 520}, (sfIntRect) {0, 0, 280, 96}, 0);
-    victory.buttons[DESKTOP_B_S4] = new_button("assets/images/exit_desktop.png",
+    victory.buttons[DESKTOP_B_S6] = new_button("assets/images/exit_desktop.png",
     (sfVector2f) {770, 390}, (sfIntRect) {0, 0, 336, 96}, 0);
     victory.objs[LOGO_O_S6] = new_object("assets/images/logo.png",
     (sfVector2f) {560, 50}, (sfIntRect) {0, 0, 803, 285}, 0);
@@ -25,7 +25,7 @@ void fill_scene_victory(game_scene_t victory)
     victory.texts[VICTORY_T_S6] = new_text("assets/font/font.ttf", "",
     (sfVector2f) {0, 0}, 60);
     victory.sounds[SOUND_S_S6] = new_sound("assets/sounds/victory.ogg", sfFalse,
-    100);
+    100, sfFalse);
 }
 
 void fill_scene_defeat(game_scene_t defeat)
@@ -43,5 +43,5 @@ void fill_scene_defeat(game_scene_t defeat)
     defeat.texts[DEFEAT_T_S7] = new_text("assets/font/font.ttf", "",
     (sfVector2f) {0, 0}, 100);
     defeat.sounds[SOUND_S_S7] = new_sound("assets/sounds/defeat.ogg", sfFalse,
-    100);
+    100, sfFalse);
 }

@@ -11,12 +11,9 @@
 
 void button_menu5(game_setting_t *settings, game_scene_t scenes)
 {
-    int fd_player = 0;
-
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[LOAD_B_S0].shape), sfRectangleShape_getSize(scenes
-    .buttons[LOAD_B_S0].shape)) == true)
-        load_save(fd_player);
+    .buttons[LOAD_B_S0].shape)) == true);
     else if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[CLOSE_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[CLOSE_B_S0].shape)) == true)
@@ -85,6 +82,7 @@ game_stat_t *stats)
         disp_button_menu(scenes, 1, -1);
     button_menu3(settings, scenes, stats);
 }
+
 void button_menu(game_setting_t *settings, game_scene_t scenes,
 game_stat_t *stats)
 {

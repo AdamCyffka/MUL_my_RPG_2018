@@ -13,13 +13,13 @@
 void fill_scene_town3_1(game_scene_t town)
 {
     town.sounds[MUSIC_S_S1] = new_sound("assets/sounds/music_town.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfTrue);
     town.sounds[CLICK_S_S1] = new_sound("assets/sounds/click.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfFalse);
     town.sounds[WALK_S_S1] = new_sound("assets/sounds/walk_rock.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfFalse);
     town.sounds[SWORD_S_S1] = new_sound("assets/sounds/swoosh.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfFalse);
     town.texts[VOLUME_T_S1] = new_text("assets/font/font.ttf", "Volume:",
     (sfVector2f) {700, 400}, 40);
     town.texts[VSYNC_T_S1] = new_text("assets/font/font.ttf", "V-sync:",

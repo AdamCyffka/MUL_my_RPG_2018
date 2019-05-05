@@ -17,6 +17,8 @@ game_scene_t *scenes, game_stat_t *stats)
     scenes[TOWN].buttons[CLOSE_B_S1].rect.height}) == true) {
         button_close1(inventory, scenes, 1, -1);
         stats->life_t.state = -1;
+        stats->xp_t.state = -1;
+        stats->name_t.state = -1;
         settings->_paused = false;
     }
 }

@@ -15,13 +15,13 @@ void fill_scene_boss3_1(game_scene_t boss)
     boss.buttons[EXIT_B_S2] = new_button("assets/images/invisible.png",
     (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     boss.sounds[MUSIC_S_S2] = new_sound("assets/sounds/music_boss.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfTrue);
     boss.sounds[CLICK_S_S2] = new_sound("assets/sounds/click.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfFalse);
     boss.sounds[WALK_S_S2] = new_sound("assets/sounds/walk_rock.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfFalse);
     boss.sounds[SWORD_S_S2] = new_sound("assets/sounds/swoosh.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfFalse);
     boss.texts[VOLUME_T_S2] = new_text("assets/font/font.ttf", "Volume:",
     (sfVector2f) {700, 400}, 40);
     boss.texts[VSYNC_T_S2] = new_text("assets/font/font.ttf", "V-sync:",

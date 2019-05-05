@@ -77,7 +77,7 @@ void change_maps(game_t *game)
 void change_vic_def(game_t *game)
 {
     if (game->settings->current == VICTORY)
-        change_victory();
+        change_victory(game);
     if (game->settings->current == DEFEAT)
-        change_defeat(game->settings);
+        change_defeat(game);
 }
