@@ -1,30 +1,27 @@
 /*
 ** EPITECH PROJECT, 2019
-** enemies_attack
+** MUL_my_rpg_2018
 ** File description:
-** rpg
+** enemies_attack
 */
 
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
 
-void attack_player(game_scene_t *scenes,
-    game_stat_t *stats, int tmp, game_setting_t *settings)
+void attack_player(game_scene_t *scenes, game_stat_t *stats, int tmp,
+game_setting_t *settings)
 {
     sfVector2f vector;
 
-    if (settings->current == DEFEAT) return;
-    vector = sfSprite_getPosition(
-    scenes[settings->current].objs[tmp].sprite);
-    if (((stats->player.position.y < vector.y
-        && stats->player.position.y > vector.y - 80)
-        || (stats->player.position.y > vector.y
-        && stats->player.position.y < vector.y + 80))
-        && ((stats->player.position.x < vector.x
-        && stats->player.position.x > vector.x - 80)
-        || (stats->player.position.x > vector.x
-        && stats->player.position.x < vector.x + 80))) {
+    if (settings->current == DEFEAT)
+        return;
+    vector = sfSprite_getPosition(scenes[settings->current].objs[tmp].sprite);
+    if (((stats->player.position.y < vector.y && stats->player.position.y >
+    vector.y - 80) || (stats->player.position.y > vector.y && stats->player.
+    position.y < vector.y + 80)) && ((stats->player.position.x < vector.x
+    && stats->player.position.x > vector.x - 80) || (stats->player.position.x >
+    vector.x && stats->player.position.x < vector.x + 80))) {
         stats->life -= scenes[settings->current].objs[tmp].speed;
         if (stats->life <= 0) {
             stats->player.speed = -1;

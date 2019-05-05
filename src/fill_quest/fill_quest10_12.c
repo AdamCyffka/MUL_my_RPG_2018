@@ -10,6 +10,7 @@
 #include "define.h"
 #include "enum.h"
 #include "struct.h"
+#include "fill_quest.h"
 
 void fill_quest12(game_quest_t *quest12)
 {

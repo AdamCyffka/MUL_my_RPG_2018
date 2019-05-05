@@ -1,14 +1,13 @@
 /*
 ** EPITECH PROJECT, 2019
-** RPG
+** MUL_my_rpg_2018
 ** File description:
-** fill_scene.h
+** fill_scene
 */
 
 #ifndef FILL_SCENE_H_
 #define FILL_SCENE_H_
 
-//fill_scene
 void fill_scene_beach1(game_scene_t beach);
 void fill_scene_beach3(game_scene_t beach);
 void fill_scene_boss1(game_scene_t boss);

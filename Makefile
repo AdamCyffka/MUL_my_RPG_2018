@@ -25,6 +25,7 @@ SRC_MAIN =	./src/main.c
 SRC		=	./src/my_rpg.c							\
 			./src/analyser.c 						\
 			./src/cursor_interaction.c 				\
+			./src/cursor_interaction2.c 			\
 			./src/inventory/draw_inventory.c		\
 			./src/inventory/event_inventory.c		\
 			./src/stats/draw_player_info.c			\
@@ -77,6 +78,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/enemies/enemies_positions.c		\
 			./src/enemies/enemies_attack.c			\
 			./src/enemies/enemies_rect.c			\
+			./src/enemies/boss.c					\
 			./src/fill_scene/fill_scene_beach.c		\
 			./src/fill_scene/fill_scene_beach1.c	\
 			./src/fill_scene/fill_scene_boss.c		\
@@ -165,7 +167,7 @@ clean	:
 			@$(RM) ./report
 			@$(ECHO) "$(GREEN)\n> Cleaning repository\t >>>>> \t DONE\n$(WHITE)"
 
-fclean	: 	clean 
+fclean	: 	clean
 			@$(RM) $(NAME)
 			@$(RM) $(TEST_NAME)
 			@$(ECHO) "$(GREEN)\n> Cleaning exec\t\t >>>>> \t DONE\n$(WHITE)"

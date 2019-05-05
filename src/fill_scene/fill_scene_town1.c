@@ -46,11 +46,11 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {2975, 2100}, (sfIntRect) {0, 0, 143.5, 1498}, 0);
     town.buttons[WALKABLE17_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {3115, 2765}, (sfIntRect) {0, 0, 1256.5, 126}, 0);
-    town.buttons[INVENTORY_B_S1] = new_button("assets/images/invisible1.png",
+    town.buttons[INVENTORY_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {570, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[ME_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {635, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
-    town.buttons[OPTION_B_S1] = new_button("assets/images/invisible1.png",
+    town.buttons[OPTION_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[EXIT_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);

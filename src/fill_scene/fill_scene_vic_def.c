@@ -8,6 +8,7 @@
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
+#include "fill_scene.h"
 
 void fill_scene_victory(game_scene_t victory)
 {

@@ -7,6 +7,7 @@
 
 #include "rpg.h"
 #include "enum.h"
+#include "fill_quest.h"
 
 int create_quest4(game_quest_t *quests)
 {
