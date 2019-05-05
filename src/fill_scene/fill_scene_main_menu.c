@@ -56,6 +56,7 @@ void fill_scene_main_menu1_1(game_scene_t main_menu)
     (sfVector2f) {320, 150}, (sfIntRect) {0, 0, 1289, 708}, -1);
     main_menu.objs[CHOOSE_O_S0] = new_object("assets/images/choose.png",
     (sfVector2f) {625, 350}, (sfIntRect) {0, 0, 696, 375}, -1);
+    fill_scene_main_menu2(main_menu);
 }
 
 void fill_scene_main_menu1(game_scene_t main_menu)
@@ -73,5 +74,4 @@ void fill_scene_main_menu1(game_scene_t main_menu)
     main_menu.objs[FLAMINGO1_O_S0] = new_object("assets/images/flamingo1.png",
     (sfVector2f) {1940, 700}, (sfIntRect) {0, 0, 105, 104}, 5);
     fill_scene_main_menu1_1(main_menu);
-    fill_scene_main_menu2(main_menu);
 }

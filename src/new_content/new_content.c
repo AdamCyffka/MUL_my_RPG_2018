@@ -72,6 +72,19 @@ sfVector2f pos, sfIntRect rect, float speed)
     return (obj);
 }
 
+int *new_scene2(int nb_objs, int nb_musics, int nb_buttons, int nb_texts)
+{
+    int *how_many = malloc(sizeof(int) * 4);
+
+    if (how_many == NULL)
+        return NULL;
+    how_many[0] = nb_objs;
+    how_many[1] = nb_musics;
+    how_many[2] = nb_buttons;
+    how_many[3] = nb_texts;
+    return how_many;
+}
+
 game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons, int nb_texts)
 {
     game_scene_t new_scene;
@@ -91,10 +104,6 @@ game_scene_t new_scene(int nb_objs, int nb_musics, int nb_buttons, int nb_texts)
     new_scene.how_many = malloc(sizeof(int) * 4);
     if (new_scene.how_many == NULL)
         return (game_scene_t) {0};
-    new_scene.how_many[0] = nb_objs;
-    new_scene.how_many[1] = nb_musics;
-    new_scene.how_many[2] = nb_buttons;
-    new_scene.how_many[3] = nb_texts;
-
+    new_scene.how_many = new_scene2(nb_objs, nb_musics, nb_buttons, nb_texts);
     return (new_scene);
 }
