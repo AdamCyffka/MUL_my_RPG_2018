@@ -40,7 +40,7 @@ void enter_player_name(game_stat_t *stats, game_setting_t *settings)
 
     if (my_strcmp(sfText_getString(stats->name_t.text), "'PLAYER'") == 1)
         sfText_setString(stats->name_t.text, "");
-    entered = digit_entered(settings);
+    entered = text_entered(settings);
     if (entered == -1)
         sfText_setString(stats->name_t.text,
         my_strrem(sfText_getString(stats->name_t.text)));

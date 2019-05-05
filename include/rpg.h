@@ -267,4 +267,11 @@ void teleport_player_boss(game_t *game);
 int load_save(int fd_player);
 int save_game(save_t *player);
 
+//assets_load
+int assets_load(game_t *game);
+int assets_load_scenes(game_scene_t *scenes);
+int assets_load_inventory(game_inventory_t *inventory);
+int assets_load_quests(game_quest_t *quests);
+int assets_load_stats(game_stat_t *stats);
+
 #endif /* RPG_H_ */

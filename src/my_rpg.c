@@ -82,6 +82,8 @@ int my_rpg(void)
     game = create_game(game);
     if (game == NULL)
         return 84;
+    if (assets_load(game) == 84)
+        return 84;
     while (sfRenderWindow_isOpen(game->settings->window)) {
         sfRenderWindow_clear(game->settings->window, sfBlack);
         game_change(game);

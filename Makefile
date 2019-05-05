@@ -97,6 +97,11 @@ SRC		=	./src/my_rpg.c							\
 			./src/fill_quest/fill_quest0_4.c		\
 			./src/fill_quest/fill_quest5_9.c		\
 			./src/fill_quest/fill_quest10_12.c		\
+			./src/assets_load/assets_load.c				\
+			./src/assets_load/assets_load_scenes.c		\
+			./src/assets_load/assets_load_inventory.c	\
+			./src/assets_load/assets_load_quests.c		\
+			./src/assets_load/assets_load_stats.c		\
 			./src/particules/particule_stars.c		\
 			./src/particules/particule_leaf_green.c	\
 			./src/particules/particule_leaf_orange.c\
