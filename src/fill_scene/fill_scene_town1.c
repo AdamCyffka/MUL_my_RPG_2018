@@ -8,41 +8,30 @@
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
+#include "fill_scene.h"
 
-void fill_scene_town5(game_scene_t town)
+void fill_scene_town3_1(game_scene_t town)
 {
-    town.objs[ME_O_S1] = new_object("assets/images/me.png",
-    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
-    town.objs[PANNEL_O_S1] = new_object("assets/images/pannel.png",
-    (sfVector2f) {350, 750}, (sfIntRect) {0, 0, 1292, 482}, -1);
-    town.objs[TOWN_O_S1] = new_object("assets/images/map_town.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 0);
-    town.objs[DICK_O_S1] = new_object("assets/images/dick.png",
-    (sfVector2f) {575 * 3.5, 190 * 3.5}, (sfIntRect) {0, 0, 16, 32}, 0);
-    town.objs[EMILY_O_S1] = new_object("assets/images/emily.png",
-    (sfVector2f) {695 * 3.5, 190 * 3.5}, (sfIntRect) {0, 0, 16, 32}, 0);
-    town.objs[SHEEP1_O_S1] = new_object("assets/images/sheep.png",
-    (sfVector2f) {310 * 3.5, 90 * 3.5}, (sfIntRect) {0, 0, 32, 32}, 0);
-    town.objs[SHEEP2_O_S1] = new_object("assets/images/sheep.png",
-    (sfVector2f) {180 * 3.5, 385 * 3.5}, (sfIntRect) {0, 0, 32, 32}, 0);
-    town.objs[SHEEP3_O_S1] = new_object("assets/images/sheep.png",
-    (sfVector2f) {1000 * 3.5, 840 * 3.5}, (sfIntRect) {0, 0, 32, 32}, 0);
-    town.objs[SHEEP4_O_S1] = new_object("assets/images/sheep.png",
-    (sfVector2f) {590 * 3.5, 510 * 3.5}, (sfIntRect) {0, 0, 32, 32}, 0);
-    fill_scene_town6(town);
-}
-
-void fill_scene_town4(game_scene_t town)
-{
-    town.objs[OBSTACLE_O_S1] = new_object("assets/images/obstacle.png",
-    (sfVector2f) {0, 0}, (sfIntRect) {0, 0, 1243, 1058}, 1);
-    town.objs[OPTION_O_S1] = new_object("assets/images/option.png",
-    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
-    town.objs[INVENTORY_O_S1] = new_object("assets/images/inventory.png",
-    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
-    town.objs[EXIT_O_S1] = new_object("assets/images/exit.png",
-    (sfVector2f) {500, 150}, (sfIntRect) {0, 0, 902, 696}, -1);
-    fill_scene_town5(town);
+    town.sounds[MUSIC_S_S1] = new_sound("assets/sounds/music_town.ogg",
+    sfFalse, 100);
+    town.sounds[CLICK_S_S1] = new_sound("assets/sounds/click.ogg",
+    sfFalse, 100);
+    town.sounds[WALK_S_S1] = new_sound("assets/sounds/walk_rock.ogg",
+    sfFalse, 100);
+    town.sounds[SWORD_S_S1] = new_sound("assets/sounds/swoosh.ogg",
+    sfFalse, 100);
+    town.texts[VOLUME_T_S1] = new_text("assets/font/font.ttf", "Volume:",
+    (sfVector2f) {700, 400}, 40);
+    town.texts[VSYNC_T_S1] = new_text("assets/font/font.ttf", "V-sync:",
+    (sfVector2f) {700, 500}, 40);
+    town.texts[FRAME_T_S1] = new_text("assets/font/font.ttf", "Framerate:",
+    (sfVector2f) {640, 580}, 40);
+    town.texts[NAME_T_S1] = new_text("assets/font/font.ttf", "Name:",
+    (sfVector2f) {700, 400}, 40);
+    town.texts[XP_T_S1] = new_text("assets/font/font.ttf", "XP:",
+    (sfVector2f) {700, 450}, 40);
+    town.texts[QUEST_ANS_T_S1] = new_text("assets/font/font.ttf",
+    "ENTER A DIGIT : ", (sfVector2f) {850, 700}, 40);
 }
 
 void fill_scene_town3(game_scene_t town)
@@ -65,26 +54,7 @@ void fill_scene_town3(game_scene_t town)
     (sfVector2f) {698, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
     town.buttons[EXIT_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {765, 188}, (sfIntRect) {0, 0, 51, 56}, -1);
-    town.sounds[MUSIC_S_S1] = new_sound("assets/sounds/music_town.ogg",
-    sfFalse, 100);
-    town.sounds[CLICK_S_S1] = new_sound("assets/sounds/click.ogg",
-    sfFalse, 100);
-    town.sounds[WALK_S_S1] = new_sound("assets/sounds/walk_rock.ogg",
-    sfFalse, 100);
-    town.sounds[SWORD_S_S1] = new_sound("assets/sounds/swoosh.ogg",
-    sfFalse, 100);
-    town.texts[VOLUME_T_S1] = new_text("assets/font/font.ttf", "Volume:",
-    (sfVector2f) {700, 400}, 40);
-    town.texts[VSYNC_T_S1] = new_text("assets/font/font.ttf", "V-sync:",
-    (sfVector2f) {700, 500}, 40);
-    town.texts[FRAME_T_S1] = new_text("assets/font/font.ttf", "Framerate:",
-    (sfVector2f) {640, 580}, 40);
-    town.texts[NAME_T_S1] = new_text("assets/font/font.ttf", "Name:",
-    (sfVector2f) {700, 400}, 40);
-    town.texts[XP_T_S1] = new_text("assets/font/font.ttf", "XP:",
-    (sfVector2f) {700, 450}, 40);
-    town.texts[QUEST_ANS_T_S1] = new_text("assets/font/font.ttf",
-    "ENTER A DIGIT : ", (sfVector2f) {850, 700}, 40);
+    fill_scene_town3_1(town);
     fill_scene_town4(town);
 }
 
@@ -111,20 +81,8 @@ void fill_scene_town2(game_scene_t town)
     fill_scene_town3(town);
 }
 
-void fill_scene_town1(game_scene_t town)
+void fill_scene_town1_1(game_scene_t town)
 {
-    town.buttons[TITLE_B_S1] = new_button("assets/images/exit_menu.png",
-    (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
-    town.buttons[DESKTOP_B_S1] = new_button("assets/images/exit_desktop.png",
-    (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
-    town.buttons[SAVE_B_S1] = new_button("assets/images/exit_save.png",
-    (sfVector2f) {800, 600}, (sfIntRect) {0, 0, 280, 96}, -1);
-    town.buttons[CLOSE_B_S1] = new_button("assets/images/close.png",
-    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
-    town.buttons[V0_B_S1] = new_button("assets/images/0.png",
-    (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
-    town.buttons[V25_B_S1] = new_button("assets/images/25.png",
-    (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     town.buttons[V50_B_S1] = new_button("assets/images/50.png",
     (sfVector2f) {970, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
     town.buttons[V100_B_S1] = new_button("assets/images/100.png",
@@ -143,5 +101,22 @@ void fill_scene_town1(game_scene_t town)
     (sfVector2f) {1400, 703.5}, (sfIntRect) {0, 0, 1267, 311.5}, 0);
     town.buttons[WALKABLE3_B_S1] = new_button("assets/images/invisible.png",
     (sfVector2f) {1225, 1015}, (sfIntRect) {0, 0, 927.5, 745.5}, 0);
+}
+
+void fill_scene_town1(game_scene_t town)
+{
+    town.buttons[TITLE_B_S1] = new_button("assets/images/exit_menu.png",
+    (sfVector2f) {800, 470}, (sfIntRect) {0, 0, 280, 96}, -1);
+    town.buttons[DESKTOP_B_S1] = new_button("assets/images/exit_desktop.png",
+    (sfVector2f) {770, 330}, (sfIntRect) {0, 0, 336, 96}, -1);
+    town.buttons[SAVE_B_S1] = new_button("assets/images/exit_save.png",
+    (sfVector2f) {800, 600}, (sfIntRect) {0, 0, 280, 96}, -1);
+    town.buttons[CLOSE_B_S1] = new_button("assets/images/close.png",
+    (sfVector2f) {1400, 200}, (sfIntRect) {0, 0, 30, 30}, -1);
+    town.buttons[V0_B_S1] = new_button("assets/images/0.png",
+    (sfVector2f) {850, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    town.buttons[V25_B_S1] = new_button("assets/images/25.png",
+    (sfVector2f) {910, 420}, (sfIntRect) {0, 0, 51, 25}, -1);
+    fill_scene_town1_1(town);
     fill_scene_town2(town);
 }

@@ -67,13 +67,18 @@ SRC		=	./src/my_rpg.c							\
 			./src/enemies/enemies_attack.c			\
 			./src/enemies/enemies_rect.c			\
 			./src/fill_scene/fill_scene_beach.c		\
+			./src/fill_scene/fill_scene_beach1.c		\
 			./src/fill_scene/fill_scene_boss.c		\
+			./src/fill_scene/fill_scene_boss1.c		\
 			./src/fill_scene/fill_scene_camp.c		\
-			./src/fill_scene/fill_scene_forest.c	\
-			./src/fill_scene/fill_scene_main_menu.c	\
+			./src/fill_scene/fill_scene_camp1.c		\
+			./src/fill_scene/fill_scene_forest.c		\
+			./src/fill_scene/fill_scene_forest1.c		\
+			./src/fill_scene/fill_scene_main_menu.c		\
 			./src/fill_scene/fill_scene_town1.c		\
-			./src/fill_scene/fill_scene_town2.c	    \
-			./src/fill_scene/fill_scene_vic_def.c	\
+			./src/fill_scene/fill_scene_town2.c	    	\
+			./src/fill_scene/fill_scene_town3.c	    	\
+			./src/fill_scene/fill_scene_vic_def.c		\
 			./src/fill_quest/fill_quest0_4.c		\
 			./src/fill_quest/fill_quest5_9.c		\
 			./src/fill_quest/fill_quest10_12.c		\
