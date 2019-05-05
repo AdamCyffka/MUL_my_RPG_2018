@@ -8,6 +8,7 @@
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
+#include "fill_scene.h"
 
 void fill_scene_beach2_1(game_scene_t beach)
 {

@@ -1,13 +1,14 @@
 /*
 ** EPITECH PROJECT, 2019
-** MUL_my_rpg_2018
+** RPG
 ** File description:
-** fill_scene_beach2
+** fill scene beach 1
 */
 
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
+#include "fill_scene.h"
 
 void fill_scene_beach5(game_scene_t beach)
 {
