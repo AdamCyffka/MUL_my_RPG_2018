@@ -23,11 +23,11 @@ int my_rpg(void);
 
 //create_game
 game_t *create_game();
-void create_scenes(game_scene_t *scenes);
-void create_inventory(game_inventory_t *inventory);
-void create_quests(game_quest_t *quests);
-void create_stats(game_stat_t *stats);
-void create_settings(game_setting_t *settings);
+int create_scenes(game_scene_t *scenes);
+int create_inventory(game_inventory_t *inventory);
+int create_quests(game_quest_t *quests);
+int create_stats(game_stat_t *stats);
+int create_settings(game_setting_t *settings);
 
 //change
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);

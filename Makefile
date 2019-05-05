@@ -38,8 +38,10 @@ SRC		=	./src/my_rpg.c							\
 			./src/lib_functions/my_libc_functions3.c\
 			./src/new_content/new_content2.c		\
 			./src/new_content/new_content.c			\
-			./src/create_game/create_game3.c 		\
-			./src/create_game/create_game2.c 		\
+			./src/create_game/create_quest.c		\
+			./src/create_game/create_inventory.c	\
+			./src/create_game/create_scene.c 		\
+			./src/create_game/create_stat_setting.c \
 			./src/create_game/create_game.c			\
 			./src/buttons/state_menu.c 				\
 			./src/buttons/disp_keyboard_menu.c 		\

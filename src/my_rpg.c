@@ -75,8 +75,12 @@ void draw_scene(game_scene_t scene, game_setting_t *settings, game_stat_t
 int my_rpg(void)
 {
     game_t *game = malloc(sizeof(game_t));
-    game = create_game(game);
 
+    if (game == NULL)
+        return 84;
+    game = create_game(game);
+    if (game == NULL)
+        return 84;
     while (sfRenderWindow_isOpen(game->settings->window)) {
         sfRenderWindow_clear(game->settings->window, sfBlack);
         game_change(game);
