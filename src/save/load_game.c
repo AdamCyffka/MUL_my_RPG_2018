@@ -25,7 +25,7 @@ int load_player(int fd_player, save_t *player)
 
 int load_save(int fd_player)
 {
-    save_t *player;
+    save_t player = {0};
 
     if (load_player(fd_player, &player) != 0)
         return (84);
