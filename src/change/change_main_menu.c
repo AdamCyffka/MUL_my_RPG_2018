@@ -46,7 +46,7 @@ void move_sprite_main_menu(game_setting_t *settings,
 
 void change_view_main_menu(game_setting_t *settings)
 {
-    sfView *view = sfRenderWindow_getView(settings->window);
+    sfView *view = (sfView *)   sfRenderWindow_getView(settings->window);
 
     sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
     sfRenderWindow_setView(settings->window, view);

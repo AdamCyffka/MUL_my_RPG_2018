@@ -11,7 +11,7 @@
 
 void player_change_map4(game_stat_t *stats, game_setting_t *settings)
 {
-    sfView *view = sfRenderWindow_getView(settings->window);
+    sfView *view = (sfView *)sfRenderWindow_getView(settings->window);
 
     if (settings->current == BEACH) {
         if (stats->player.position.y <= 20) {
@@ -53,7 +53,7 @@ void player_change_map3(game_stat_t *stats,
 void player_change_map2(game_stat_t *stats, game_quest_t *quests,
     game_setting_t *settings)
 {
-    sfView *view = sfRenderWindow_getView(settings->window);
+    sfView *view = (sfView *)sfRenderWindow_getView(settings->window);
 
     if (stats->player.position.x >= 4320 && stats->player.position.y > 1000
         && quests[GHOSTS_Q].state == Q_IN_PROGRESS) {
@@ -78,7 +78,7 @@ void player_change_map2(game_stat_t *stats, game_quest_t *quests,
 void player_change_map(game_stat_t *stats, game_quest_t *quests,
     game_setting_t *settings)
 {
-    sfView *view = sfRenderWindow_getView(settings->window);
+    sfView *view = (sfView *)sfRenderWindow_getView(settings->window);
 
     if (settings->current == TOWN) {
         if (stats->player.position.x >= 4320
