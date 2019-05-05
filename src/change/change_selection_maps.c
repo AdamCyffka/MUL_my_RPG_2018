@@ -9,6 +9,29 @@
 #include "struct.h"
 #include "enum.h"
 
+void change_statics_pos_common2(game_t *game)
+{
+    const sfView *view = sfRenderWindow_getView(game->settings->window);
+    sfVector2f center = sfView_getCenter(view);
+    sfVector2f size = sfView_getSize(view);
+
+    for (int tmp = SLOT_0; tmp <= SLOT_4; tmp++)
+        sfRectangleShape_setPosition(game->inventory[tmp].item.shape,
+        (sfVector2f) {center.x - size.x / 2 +
+        game->inventory[tmp].item.position.x, center.y - size.y / 2 +
+        game->inventory[tmp].item.position.y});
+
+    sfText_setPosition(game->stats->name_t.text, (sfVector2f)
+            {center.x - size.x / 2 + game->stats->name_t.position.x,
+            center.y - size.y / 2 + game->stats->name_t.position.y});
+    sfText_setPosition(game->stats->xp_t.text, (sfVector2f)
+            {center.x - size.x / 2 + game->stats->xp_t.position.x,
+            center.y - size.y / 2 + game->stats->xp_t.position.y});
+    sfText_setPosition(game->stats->life_t.text, (sfVector2f)
+            {center.x - size.x / 2 + game->stats->life_t.position.x,
+            center.y - size.y / 2 + game->stats->life_t.position.y});
+}
+
 void change_statics_pos_common(game_t *game)
 {
     const sfView *view = sfRenderWindow_getView(game->settings->window);
@@ -28,21 +51,7 @@ void change_statics_pos_common(game_t *game)
             2 + game->quests[tmp].dialogs_text[tmp2].position.x,
             center.y - size.y /
             2 + game->quests[tmp].dialogs_text[tmp2].position.y});
-    for (int tmp = SLOT_0; tmp <= SLOT_4; tmp++)
-        sfRectangleShape_setPosition(game->inventory[tmp].item.shape,
-        (sfVector2f) {center.x - size.x / 2 +
-        game->inventory[tmp].item.position.x, center.y - size.y / 2 +
-        game->inventory[tmp].item.position.y});
-
-    sfText_setPosition(game->stats->name_t.text, (sfVector2f)
-            {center.x - size.x / 2 + game->stats->name_t.position.x,
-            center.y - size.y / 2 + game->stats->name_t.position.y});
-    sfText_setPosition(game->stats->xp_t.text, (sfVector2f)
-            {center.x - size.x / 2 + game->stats->xp_t.position.x,
-            center.y - size.y / 2 + game->stats->xp_t.position.y});
-    sfText_setPosition(game->stats->life_t.text, (sfVector2f)
-            {center.x - size.x / 2 + game->stats->life_t.position.x,
-            center.y - size.y / 2 + game->stats->life_t.position.y});
+    change_statics_pos_common2(game);
 }
 
 void change_maps(game_t *game)

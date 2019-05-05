@@ -80,7 +80,7 @@ game_inventory_t *inventory)
 void pick_up_item(game_t *game)
 {
     static int check = 0;
-    
+
     if (game->quests[FIND_LOST_Q].state == Q_IN_PROGRESS && check == 0) {
         if (game->stats->player.position.x <
         game->scenes[TOWN].objs[AXE_O_S1].position.x + 50 &&

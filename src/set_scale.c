@@ -15,26 +15,8 @@ void set_scale_npc(game_object_t *objs)
         sfSprite_setScale(objs[tmp].sprite, (sfVector2f) {4, 4});
 }
 
-void set_scale(game_t *game)
+void set_scale2(game_t *game)
 {
-    sfSprite_setScale(game->stats->player.sprite, (sfVector2f) {4, 4});
-    if (game->settings->current == TOWN) {
-        sfSprite_setScale(game->scenes[TOWN].objs[TOWN_O_S1].sprite,
-        (sfVector2f) {3.5, 3.5});
-        sfSprite_setScale(game->scenes[TOWN].objs[OBSTACLE_O_S1].sprite,
-        (sfVector2f) {3.5, 3.5});
-        sfSprite_setScale(game->scenes[TOWN].objs[PANNEL_O_S1].sprite,
-        (sfVector2f) {1, 0.5});
-        set_scale_npc(game->scenes[TOWN].objs);
-    }
-    if (game->settings->current == BOSS) {
-        sfSprite_setScale(game->scenes[BOSS].objs[TOWN_O_S2].sprite,
-        (sfVector2f) {3.5, 3.5});
-        sfSprite_setScale(game->scenes[BOSS].objs[OBSTACLE_O_S2].sprite,
-        (sfVector2f) {3.5, 3.5});
-        sfSprite_setScale(game->scenes[BOSS].objs[SHAMAN_O_S2].sprite,
-        (sfVector2f) {7, 7});
-    }
     if (game->settings->current == BEACH) {
         for (int tmp = SKELETON1_O_S4; tmp <= SKELETON20_O_S4; tmp++) {
             sfSprite_setScale(game->scenes[BEACH].objs[tmp].sprite,
@@ -55,4 +37,27 @@ void set_scale(game_t *game)
             (sfVector2f) {3.5, 3.5});
         }
     }
+}
+
+void set_scale(game_t *game)
+{
+    sfSprite_setScale(game->stats->player.sprite, (sfVector2f) {4, 4});
+    if (game->settings->current == TOWN) {
+        sfSprite_setScale(game->scenes[TOWN].objs[TOWN_O_S1].sprite,
+        (sfVector2f) {3.5, 3.5});
+        sfSprite_setScale(game->scenes[TOWN].objs[OBSTACLE_O_S1].sprite,
+        (sfVector2f) {3.5, 3.5});
+        sfSprite_setScale(game->scenes[TOWN].objs[PANNEL_O_S1].sprite,
+        (sfVector2f) {1, 0.5});
+        set_scale_npc(game->scenes[TOWN].objs);
+    }
+    if (game->settings->current == BOSS) {
+        sfSprite_setScale(game->scenes[BOSS].objs[TOWN_O_S2].sprite,
+        (sfVector2f) {3.5, 3.5});
+        sfSprite_setScale(game->scenes[BOSS].objs[OBSTACLE_O_S2].sprite,
+        (sfVector2f) {3.5, 3.5});
+        sfSprite_setScale(game->scenes[BOSS].objs[SHAMAN_O_S2].sprite,
+        (sfVector2f) {7, 7});
+    }
+    set_scale2(game);
 }
