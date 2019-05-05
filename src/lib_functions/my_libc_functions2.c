@@ -23,16 +23,16 @@ int my_intlen(int nb)
 
 char *my_getstr(int nb)
 {
-    int i = my_intlen(nb);
-    char *my_result = malloc(sizeof(char) * i + 1);
+    int size = my_intlen(nb);
+    char *my_result = malloc(sizeof(char) * size + 1);
 
     if (my_result == NULL)
         return NULL;
-    my_result[i] = '\0';
-    while (i--) {
-        my_result[i] = nb % 10 + 48;
+    for (int i = 0; i < size; i++) {
+        my_result[size - 1 -i] = nb % 10 + '0';
         nb /= 10;
     }
+    my_result[size] = '\0';
     return (my_result);
 }
 
