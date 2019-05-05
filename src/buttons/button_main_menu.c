@@ -11,7 +11,7 @@
 
 void button_menu5(game_setting_t *settings, game_scene_t scenes)
 {
-    int fd_player;
+    int fd_player = 0;
 
     if (button_is_clicked(settings, sfRectangleShape_getPosition(scenes
     .buttons[LOAD_B_S0].shape), sfRectangleShape_getSize(scenes
@@ -49,7 +49,6 @@ game_stat_t *stats)
     .buttons[NEW_B_S0].shape), sfRectangleShape_getSize(scenes
     .buttons[NEW_B_S0].shape)) == true) {
         disp_new_options(scenes, 1, -1);
-        scenes.buttons[LEFT_B_S0].state = 1;
         stats->name_t.position = (sfVector2f) {1000, 505};
         sfText_setPosition(stats->name_t.text, stats->name_t.position);
         stats->name_t.state = 0;
