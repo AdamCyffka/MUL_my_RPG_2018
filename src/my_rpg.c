@@ -21,6 +21,7 @@ void game_change(game_t *game)
     }*/
     dick_move_to_spawn(game);
     particules_star(game);
+    teleport_player_boss(game);
     if (game->settings->current == BOSS)
         change_view_boss(game->settings);
     if (game->settings->current == MAIN_MENU)
