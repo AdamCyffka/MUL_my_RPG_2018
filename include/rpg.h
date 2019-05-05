@@ -247,6 +247,8 @@ int enable, int disable);
 void button_me6(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable);
 
+void teleport_player_boss(game_t *game);
+
 //save
 int load_save(int fd_player);
 int save_game(save_t *player);
