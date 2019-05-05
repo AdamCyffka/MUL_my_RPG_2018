@@ -71,7 +71,7 @@ game_setting_t *settings, game_quest_t *quests);
 
 
 //play_sounds
-void check_bg_music(game_t *game);
+void stop_desactivated_music(game_t *game);
 
 //destroy
 void destroy_all(game_t *game);
@@ -133,8 +133,8 @@ void change_boss(game_setting_t *settings, game_scene_t scene);
 void change_forest(game_setting_t *settings, game_scene_t scene);
 void change_beach(game_setting_t *settings, game_scene_t scene);
 void change_camp(game_setting_t *settings, game_scene_t scene);
-void change_victory(void);
-void change_defeat(game_setting_t *settings);
+void change_victory(game_t *game);
+void change_defeat(game_t *game);
 
 //change_statics_pos
 void change_statics_pos_town(game_scene_t scene, game_setting_t *settings);
@@ -161,7 +161,8 @@ game_text_t new_text(const char *path_to_font, const char *towrite,
 sfVector2f pos,  int size);
 game_button_t new_button(const char *path_to_img,
 sfVector2f pos, sfIntRect rect, int state);
-game_sound_t new_sound(const char *path_to_sound, sfBool state, float volume);
+game_sound_t new_sound(const char *path_to_sound, sfBool state, float volume,
+bool _activated);
 game_object_t new_object(const char *path_to_spsheet, sfVector2f pos,
 sfIntRect rect, float speed);
 game_quest_t new_quest(int nb_dial, char *statement, int nb_of_task,
@@ -219,6 +220,10 @@ void dick_move_to_spawn(game_t *game);
 void change_view_boss(game_setting_t *settings);
 
 //options_menu
+void button_victory(game_setting_t *settings, game_scene_t *scenes,
+game_stat_t *stats);
+void button_defeat(game_setting_t *settings, game_scene_t *scenes,
+game_stat_t *stats);
 int btn_snd_four(game_scene_t *scenes, game_setting_t *settings);
 int btn_snd_three(game_scene_t *scenes, game_setting_t *settings);
 int btn_snd_two(game_scene_t *scenes, game_setting_t *settings);

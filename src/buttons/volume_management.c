@@ -7,6 +7,7 @@
 
 #include "rpg.h"
 #include "struct.h"
+#include "enum.h"
 
 int btn_snd_four(game_scene_t *scenes, game_setting_t *settings)
 {

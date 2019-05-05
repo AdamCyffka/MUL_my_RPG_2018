@@ -13,13 +13,13 @@
 void fill_scene_camp2_1(game_scene_t camp)
 {
     camp.sounds[MUSIC_S_S5] = new_sound("assets/sounds/music_camp.ogg", sfFalse,
-    100);
+    100, sfFalse);
     camp.sounds[CLICK_S_S5] = new_sound("assets/sounds/click.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfTrue);
     camp.sounds[WALK_S_S5] = new_sound("assets/sounds/walk_forest.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfFalse);
     camp.sounds[SWORD_S_S5] = new_sound("assets/sounds/swoosh.ogg",
-    sfFalse, 100);
+    sfFalse, 100, sfFalse);
     camp.texts[VOLUME_T_S5] = new_text("assets/font/font.ttf", "Volume:",
     (sfVector2f) {700, 400}, 40);
     camp.texts[VSYNC_T_S5] = new_text("assets/font/font.ttf", "V-sync:",

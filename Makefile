@@ -62,6 +62,7 @@ SRC		=	./src/my_rpg.c							\
 			./src/buttons/button_ui_ig.c 			\
 			./src/buttons/other_options.c 			\
 			./src/buttons/volume_management.c 		\
+			./src/buttons/button_vic_def.c 			\
 			./src/change/change_view.c				\
 			./src/change/change_main_menu.c			\
 			./src/change/change_maps.c 				\

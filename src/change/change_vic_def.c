@@ -9,15 +9,16 @@
 #include "struct.h"
 #include "enum.h"
 
-void change_victory(void)
+void change_victory(game_t *game)
 {
-
+    button_victory(game->settings, game->scenes, game->stats);
 }
 
-void change_defeat(game_setting_t *settings)
+void change_defeat(game_t *game)
 {
-    sfView *view = (sfView *)sfRenderWindow_getView(settings->window);
+    sfView *view = (sfView *)sfRenderWindow_getView(game->settings->window);
 
+    button_defeat(game->settings, game->scenes, game->stats);
     sfView_setCenter((sfView *) {view}, (sfVector2f) {960, 540});
-    sfRenderWindow_setView(settings->window, view);
+    sfRenderWindow_setView(game->settings->window, view);
 }

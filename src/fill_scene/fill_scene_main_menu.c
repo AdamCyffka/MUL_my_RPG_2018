@@ -17,9 +17,9 @@ void fill_scene_main_menu3(game_scene_t main_menu)
     main_menu.texts[NAME_T_S0] = new_text("assets/font/font.ttf", "Name:",
     (sfVector2f) {875, 495}, 40);
     main_menu.sounds[MUSIC_S_S0] = new_sound("assets/sounds/music_menu.ogg",
-    sfFalse, 100);
+    sfFalse, 100, true);
     main_menu.sounds[CLICK_S_S0] = new_sound("assets/sounds/click.ogg",
-    sfFalse, 100);
+    sfFalse, 100, false);
 }
 
 void fill_scene_main_menu2(game_scene_t main_menu)
