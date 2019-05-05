@@ -163,7 +163,7 @@ clean	:
 			@$(RM) ./report
 			@$(ECHO) "$(GREEN)\n> Cleaning repository\t >>>>> \t DONE\n$(WHITE)"
 
-fclean	: 	clean 
+fclean	: 	clean
 			@$(RM) $(NAME)
 			@$(RM) $(TEST_NAME)
 			@$(ECHO) "$(GREEN)\n> Cleaning exec\t\t >>>>> \t DONE\n$(WHITE)"

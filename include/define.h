@@ -24,13 +24,13 @@
     town.objs[AXE_O_S1].position.y\
 
     #define COLLISION_ZONE stats->player.position.x <\
-town.buttons[quests[stats->current_quest].npc_zone].position.x + 56 &&\
-stats->player.position.x + 56 >\
-town.buttons[quests[stats->current_quest].npc_zone].position.x &&\
-stats->player.position.y + 100 <\
-town.buttons[quests[stats->current_quest].npc_zone].position.y + 56 &&\
-stats->player.position.y + 112 >\
-town.buttons[quests[stats->current_quest].npc_zone].position.y\
+    town.buttons[quests[stats->current_quest].npc_zone].position.x + 56 &&\
+    stats->player.position.x + 56 >\
+    town.buttons[quests[stats->current_quest].npc_zone].position.x &&\
+    stats->player.position.y + 100 <\
+    town.buttons[quests[stats->current_quest].npc_zone].position.y + 56 &&\
+    stats->player.position.y + 112 >\
+    town.buttons[quests[stats->current_quest].npc_zone].position.y\
 
 
 //QUEST INTRO_Q

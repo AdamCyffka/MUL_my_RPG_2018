@@ -5,9 +5,9 @@
 ** fill scene boss
 */
 
-#include "rpg.h"
 #include "struct.h"
 #include "enum.h"
+#include "rpg.h"
 #include "fill_scene.h"
 
 void fill_scene_boss3_1(game_scene_t boss)

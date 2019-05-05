@@ -21,35 +21,6 @@
 int main(int ac, char **av, char **env);
 int my_rpg(void);
 
-//fill_scene
-void fill_scene_beach1(game_scene_t beach);
-void fill_scene_boss1(game_scene_t boss);
-void fill_scene_forest1(game_scene_t forest);
-void fill_scene_main_menu1(game_scene_t main_menu);
-void fill_scene_camp1(game_scene_t camp);
-void fill_scene_town1(game_scene_t town);
-void fill_scene_town6(game_scene_t town);
-void fill_scene_victory(game_scene_t victory);
-void fill_scene_defeat(game_scene_t defeat);
-void fill_scene_beach5(game_scene_t beach);
-void fill_scene_beach4(game_scene_t beach);
-void fill_scene_beach3(game_scene_t beach);
-
-//fill_quest
-void fill_quest0(game_quest_t *quest0);
-void fill_quest1(game_quest_t *quest1);
-void fill_quest2(game_quest_t *quest2);
-void fill_quest3(game_quest_t *quest3);
-void fill_quest4(game_quest_t *quest4);
-void fill_quest5(game_quest_t *quest5);
-void fill_quest6(game_quest_t *quest6);
-void fill_quest7(game_quest_t *quest7);
-void fill_quest8(game_quest_t *quest8);
-void fill_quest9(game_quest_t *quest9);
-void fill_quest10(game_quest_t *quest10);
-void fill_quest11(game_quest_t *quest11);
-void fill_quest12(game_quest_t *quest12);
-
 //create_game
 game_t *create_game();
 void create_scenes(game_scene_t *scenes);
@@ -77,17 +48,17 @@ void button_hover(game_scene_t scenes, game_setting_t *settings, int nbr);
 //save
 
 //buttons
-void all_button(game_inventory_t *inventory, game_setting_t *settings, 
+void all_button(game_inventory_t *inventory, game_setting_t *settings,
 game_scene_t *scenes, game_stat_t *stats);
-void button_inventory1(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_inventory1(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable);
-void button_option1(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_option1(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable);
-void button_exit1(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_exit1(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable);
-void button_me1(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_me1(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable);
-void button_close1(game_inventory_t *inventory, game_scene_t *scenes, 
+void button_close1(game_inventory_t *inventory, game_scene_t *scenes,
 int enable, int disable);
 
 //quest_interaction
@@ -136,7 +107,7 @@ void draw_cursor(game_scene_t scene, game_setting_t *settings);
 void draw_quest(game_quest_t *quests, game_setting_t *settings);
 
 //draw_inventory
-void draw_inventory(game_scene_t *scene, game_inventory_t *inventory, 
+void draw_inventory(game_scene_t *scene, game_inventory_t *inventory,
 game_setting_t *settings);
 
 //draw_player_info
@@ -217,7 +188,7 @@ game_inventory_t *inventory);
 //inventory
 void fill_inventory(game_inventory_t *inventory, int content);
 void delete_item_inventory(game_inventory_t *inventory, int reward);
-void change_item_texture(game_inventory_t *inventory, char const *path, 
+void change_item_texture(game_inventory_t *inventory, char const *path,
 int reward, int tmp);
 void swap_pos_inventory(game_inventory_t *inventory, int tmp, int i);
 void change_my_selected(game_inventory_t *inventory, game_setting_t *settings,

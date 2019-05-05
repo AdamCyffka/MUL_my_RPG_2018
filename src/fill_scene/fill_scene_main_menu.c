@@ -8,6 +8,7 @@
 #include "rpg.h"
 #include "struct.h"
 #include "enum.h"
+#include "fill_scene.h"
 
 void fill_scene_main_menu3(game_scene_t main_menu)
 {
