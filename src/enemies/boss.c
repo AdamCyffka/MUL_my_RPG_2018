@@ -14,7 +14,9 @@ void teleport_player_boss(game_t *game)
     if (game->quests[BOSS_Q].state == Q_ACCEPTED &&
         game->settings->current != BOSS) {
         game->settings->current = BOSS;
+        game->stats->player.position.x = 1600;
+        game->stats->player.position.y = 1600;
         sfSprite_setPosition(game->stats->player.sprite,
-        (sfVector2f) {1500, 1500});
+        game->stats->player.position);
     }
 }
