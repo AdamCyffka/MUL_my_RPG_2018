@@ -34,7 +34,7 @@ int create_scenes2(game_scene_t *scenes)
 
 int create_scenes(game_scene_t *scenes)
 {
-    scenes[MAIN_MENU] = new_scene(11, 1, 9, 1);
+    scenes[MAIN_MENU] = new_scene(11, 2, 9, 1);
     if (&(scenes[MAIN_MENU]) == (game_scene_t *) {0})
         return 84;
     fill_scene_main_menu1(scenes[MAIN_MENU]);
