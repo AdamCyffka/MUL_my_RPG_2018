@@ -105,6 +105,12 @@ SRC		=	./src/my_rpg.c								\
 			./src/particules/particule_leaf_green.c		\
 			./src/particules/particule_leaf_orange.c	\
 			./src/particules/particule_leaf_pink.c		\
+			./src/destroy/destroy_all.c					\
+			./src/destroy/destroy_quests.c				\
+			./src/destroy/destroy_inventory.c			\
+			./src/destroy/destroy_scenes.c				\
+			./src/destroy/destroy_stats.c				\
+			./src/destroy/destroy_settings.c			\
 			./src/save/load_game.c 						\
 			./src/save/save_game.c 						\
 			./src/npc/npc_interaction.c 				\

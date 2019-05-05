@@ -75,13 +75,11 @@ void check_bg_music(game_t *game);
 
 //destroy
 void destroy_all(game_t *game);
-void destroy_window(game_t *game);
-void destroy_texts(game_t *game, int nbr);
-void destroy_buttons(game_t *game, int nbr);
-void destroy_sounds(game_t *game, int nbr);
-void destroy_objs(game_t *game, int nbr);
-void destroy_views(game_t *game);
-void destroy_clock(game_t *game);
+void destroy_scenes(game_scene_t *scenes);
+void destroy_inventory(game_inventory_t *inventory);
+void destroy_quests(game_quest_t *quests);
+void destroy_stats(game_stat_t *stats);
+void destroy_settings(game_setting_t *settings);
 
 //player
 void key_to_move_or_not(game_scene_t scenes,

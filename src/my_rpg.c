@@ -95,6 +95,6 @@ int my_rpg(void)
             analyse_events(game);
         sfRenderWindow_display(game->settings->window);
     }
-    //destroy_all(game);
+    destroy_all(game);
     return (0);
 }
