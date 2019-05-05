@@ -30,6 +30,7 @@ int create_stats(game_stat_t *stats);
 int create_settings(game_setting_t *settings);
 
 //change
+void game_change(game_t *game);
 void print_all_main_menu(game_scene_t scene, game_setting_t *settings);
 void move_sprite_main_menu(game_setting_t *settings, game_scene_t *scene,
 float delta_time);
