@@ -31,17 +31,13 @@ game_inventory_t *inventory)
 
     if (dont_move_window(settings, stats) == 1)
         return;
-    if (sfKeyboard_isKeyPressed(sfKeyD))
-        if (vector_view.x < 3390)
+    if (sfKeyboard_isKeyPressed(sfKeyD) && (vector_view.x < 3390))
             vector_view.x += speed * settings->delta_time;
-    if (sfKeyboard_isKeyPressed(sfKeyQ))
-        if (vector_view.x > 960)
+    if (sfKeyboard_isKeyPressed(sfKeyQ) && (vector_view.x > 960))
             vector_view.x -= speed * settings->delta_time;
-    if (sfKeyboard_isKeyPressed(sfKeyZ))
-        if (vector_view.y > 540)
+    if (sfKeyboard_isKeyPressed(sfKeyZ) && (vector_view.y > 540))
             vector_view.y -= speed * settings->delta_time;
-    if (sfKeyboard_isKeyPressed(sfKeyS))
-        if (vector_view.y < 3225)
+    if (sfKeyboard_isKeyPressed(sfKeyS) && (vector_view.y < 3225))
             vector_view.y += speed * settings->delta_time;
     change_vector_view(settings, vector_view);
 }
