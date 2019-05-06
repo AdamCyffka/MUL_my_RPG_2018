@@ -49,6 +49,22 @@ void give_xp_rewards(game_stat_t *stats, game_quest_t *quests)
         stats->xp += XPMAX_R;
 }
 
+void give_rewards_if_validated2(game_stat_t *stats, game_quest_t *quests,
+game_inventory_t *inventory)
+{
+    if (quests[ROBIN_Q].state == Q_FINISHED)
+        delete_item_inventory(inventory, GOLEMHEAD_R);
+    if (quests[FIND_LOST_Q].state == Q_VALIDATED) {
+        delete_item_inventory(inventory, AXE_R);
+        fill_inventory(inventory, quests[FIND_LOST_Q].rewards[1]);
+    }
+    if (quests[GHOSTS_Q].state == Q_VALIDATED) {
+        change_sprite_player(stats);
+        delete_item_inventory(inventory, quests[BLACKSMITH_Q].rewards[0]);
+        fill_inventory(inventory, quests[GHOSTS_Q].rewards[0]);
+    }
+}
+
 void give_rewards_if_validated(game_stat_t *stats, game_quest_t *quests,
 game_inventory_t *inventory)
 {
@@ -63,18 +79,7 @@ game_inventory_t *inventory)
     if (quests[GOLEMS_Q].state == Q_VALIDATED) {
         fill_inventory(inventory, quests[GOLEMS_Q].rewards[0]);
     }
-    if (quests[ROBIN_Q].state == Q_FINISHED)
-        delete_item_inventory(inventory, GOLEMHEAD_R);
-    if (quests[FIND_LOST_Q].state == Q_VALIDATED) {
-        delete_item_inventory(inventory, AXE_R);
-        fill_inventory(inventory, quests[FIND_LOST_Q].rewards[1]);
-    }
-    if (quests[GHOSTS_Q].state == Q_VALIDATED) {
-        change_sprite_player(stats);
-        delete_item_inventory(inventory, quests[BLACKSMITH_Q].rewards[0]);
-        fill_inventory(inventory, quests[GHOSTS_Q].rewards[0]);
-    }
-    return;
+    give_rewards_if_validated2(stats, quests, inventory);
 }
 
 void pick_up_item(game_t *game)

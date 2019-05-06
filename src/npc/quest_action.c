@@ -37,4 +37,3 @@ void quest_validation(game_t *game)
     else
         quest_action(game);
 }
-
