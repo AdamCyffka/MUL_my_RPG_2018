@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** RPG
+** MUL_my_rpg_2018
 ** File description:
-** struct.h
+** struct
 */
 
 #ifndef STRUCT_H_

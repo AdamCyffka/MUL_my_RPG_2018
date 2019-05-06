@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** RPG
+** MUL_my_rpg_2018
 ** File description:
-** rpg.h
+** rpg
 */
 
 #ifndef RPG_H_
@@ -225,10 +225,10 @@ void button_victory(game_setting_t *settings, game_scene_t *scenes,
 game_stat_t *stats);
 void button_defeat(game_setting_t *settings, game_scene_t *scenes,
 game_stat_t *stats);
-int btn_snd_four(game_scene_t *scenes, game_setting_t *settings);
-int btn_snd_three(game_scene_t *scenes, game_setting_t *settings);
-int btn_snd_two(game_scene_t *scenes, game_setting_t *settings);
-int btn_snd_one(game_scene_t *scenes, game_setting_t *settings);
+void btn_snd_four(void);
+void btn_snd_three(void);
+void btn_snd_two(void);
+void btn_snd_one(void);
 int frame_to_60(game_setting_t *settings);
 int frame_to_30(game_setting_t *settings);
 int vsync_on(game_setting_t *settings);

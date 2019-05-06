@@ -46,19 +46,19 @@ void buttons_action_volume(game_setting_t *settings, game_scene_t *scenes)
     if (button_is_clicked(settings, scenes[TOWN].buttons[V0_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[V0_B_S1].rect.width,
     scenes[TOWN].buttons[V0_B_S1].rect.height}) == true)
-        btn_snd_one(scenes, settings);
+        btn_snd_one();
     if (button_is_clicked(settings, scenes[TOWN].buttons[V25_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[V25_B_S1].rect.width,
     scenes[TOWN].buttons[V25_B_S1].rect.height}) == true)
-        btn_snd_two(scenes, settings);
+        btn_snd_two();
     if (button_is_clicked(settings, scenes[TOWN].buttons[V50_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[V50_B_S1].rect.width,
     scenes[TOWN].buttons[V50_B_S1].rect.height}) == true)
-        btn_snd_three(scenes, settings);
+        btn_snd_three();
     if (button_is_clicked(settings, scenes[TOWN].buttons[V100_B_S1].position,
     (sfVector2f) {scenes[TOWN].buttons[V100_B_S1].rect.width,
     scenes[TOWN].buttons[V100_B_S1].rect.height}) == true)
-        btn_snd_four(scenes, settings);
+        btn_snd_four();
 }
 
 void buttons_action_option(game_setting_t *settings, game_scene_t *scenes)

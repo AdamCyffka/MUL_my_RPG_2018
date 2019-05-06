@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** button_event.c
+** MUL_my_rpg_2018
 ** File description:
-** All function to manag button event
+** button_event
 */
 
 #include "rpg.h"

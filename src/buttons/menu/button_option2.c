@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2019
 ** MUL_my_rpg_2018
 ** File description:
-** button_option
+** button_option2
 */
 
 #include "rpg.h"

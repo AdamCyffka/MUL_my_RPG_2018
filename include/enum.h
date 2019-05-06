@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2019
-** RPG
+** MUL_my_rpg_2018
 ** File description:
-** enum.h
+** enum
 */
 
 #ifndef ENUM_H_
