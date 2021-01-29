@@ -1,6 +1,8 @@
 # MUL_my_rpg_2018
 
-## THE PROJECT
+![image](https://i.imgur.com/5LrFJA2.png)
+
+## The project
 
 This project is a RPG.
 
@@ -13,11 +15,11 @@ Your game must follow the following rules:
     • The player can earn experience by winning fights and accomplishing specific actions.
     • With enough experience, the player can level up, upgrading its statistics.
 
-## REQUIREMENT
+## Requirement
 
 CSFML
 
-## USAGE
+## Usage
 
 1) `make re`
 
@@ -25,7 +27,7 @@ CSFML
 
 3) For more information, type `./my_rpg -h`
 
-## REQUIREMENTS REALIZED
+## Requirements realized
 
 MANDATORY
 • the window can be closed using events,
@@ -66,3 +68,7 @@ COULD
 
 WOULD
 • Your program would be a real video game.
+
+## Preview
+
+![image](https://i.imgur.com/5LrFJA2.png)
