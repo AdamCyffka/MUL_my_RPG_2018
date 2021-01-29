@@ -1,7 +1,5 @@
 # MUL_my_rpg_2018
 
-![image](https://i.imgur.com/5LrFJA2.png)
-
 ## The project
 
 This project is a RPG.
