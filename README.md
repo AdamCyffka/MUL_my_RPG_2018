@@ -15,7 +15,7 @@ Your game must follow the following rules:
 
 ## Requirement
 
-CSFML
+CSFML ([Download](https://www.sfml-dev.org/download/csfml/index-fr.php))
 
 ## Usage
 
@@ -69,4 +69,4 @@ WOULD
 
 ## Preview
 
-![image](https://i.imgur.com/5LrFJA2.png)
+![5LrFJA2](https://user-images.githubusercontent.com/45879662/145066366-c1e766fd-24e0-453e-a4e9-9b355139dc2c.png)
